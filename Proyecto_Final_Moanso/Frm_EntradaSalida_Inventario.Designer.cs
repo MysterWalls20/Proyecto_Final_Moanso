@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Final_Moanso
 {
-    partial class Frm_Producto
+    partial class Frm_EntradaSalida_Inventario
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Producto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_EntradaSalida_Inventario));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -70,10 +70,10 @@
             // 
             this.btnSalir.ImageKey = "exit_closethesession_close_6317.png";
             this.btnSalir.ImageList = this.imageList1;
-            this.btnSalir.Location = new System.Drawing.Point(404, 279);
+            this.btnSalir.Location = new System.Drawing.Point(400, 279);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(90, 70);
-            this.btnSalir.TabIndex = 12;
+            this.btnSalir.TabIndex = 18;
             this.btnSalir.Text = "\r\n\r\n\r\nSalir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
@@ -81,10 +81,10 @@
             // 
             this.btnReporte.ImageKey = "Product-sale-report_25407.png";
             this.btnReporte.ImageList = this.imageList1;
-            this.btnReporte.Location = new System.Drawing.Point(308, 279);
+            this.btnReporte.Location = new System.Drawing.Point(304, 279);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(90, 70);
-            this.btnReporte.TabIndex = 11;
+            this.btnReporte.TabIndex = 17;
             this.btnReporte.Text = "\r\n\r\n\r\nReporte";
             this.btnReporte.UseVisualStyleBackColor = true;
             // 
@@ -92,10 +92,10 @@
             // 
             this.btnEliminar.ImageKey = "task_update_folder_progress_icon_142270.png";
             this.btnEliminar.ImageList = this.imageList1;
-            this.btnEliminar.Location = new System.Drawing.Point(212, 278);
+            this.btnEliminar.Location = new System.Drawing.Point(208, 278);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(90, 70);
-            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "\r\n\r\n\r\nEliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
@@ -103,10 +103,10 @@
             // 
             this.btnActualizar.ImageKey = "save_file_disk_open_searsh_loading_clipboard_1513(1).png";
             this.btnActualizar.ImageList = this.imageList1;
-            this.btnActualizar.Location = new System.Drawing.Point(116, 279);
+            this.btnActualizar.Location = new System.Drawing.Point(112, 279);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(90, 70);
-            this.btnActualizar.TabIndex = 9;
+            this.btnActualizar.TabIndex = 15;
             this.btnActualizar.Text = "\r\n\r\n\r\nActualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             // 
@@ -114,10 +114,10 @@
             // 
             this.btnNuevo.ImageKey = "new_file256_25213(1).png";
             this.btnNuevo.ImageList = this.imageList1;
-            this.btnNuevo.Location = new System.Drawing.Point(20, 278);
+            this.btnNuevo.Location = new System.Drawing.Point(16, 278);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(90, 70);
-            this.btnNuevo.TabIndex = 8;
+            this.btnNuevo.TabIndex = 14;
             this.btnNuevo.Text = "\r\n\r\n\r\nNuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
@@ -129,7 +129,7 @@
             this.tbpPrincipal.Name = "tbpPrincipal";
             this.tbpPrincipal.SelectedIndex = 0;
             this.tbpPrincipal.Size = new System.Drawing.Size(740, 260);
-            this.tbpPrincipal.TabIndex = 7;
+            this.tbpPrincipal.TabIndex = 13;
             // 
             // tabPage1
             // 
@@ -262,7 +262,7 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Almacenes:";
             // 
-            // Frm_Producto
+            // Frm_EntradaSalida_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -273,8 +273,8 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.tbpPrincipal);
-            this.Name = "Frm_Producto";
-            this.Text = "Producto";
+            this.Name = "Frm_EntradaSalida_Inventario";
+            this.Text = "Entrada_Inventario";
             this.tbpPrincipal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
