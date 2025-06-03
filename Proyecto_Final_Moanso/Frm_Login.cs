@@ -16,5 +16,16 @@ namespace Proyecto_Final_Moanso
         {
             InitializeComponent();
         }
+
+        private void btnCerrarLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            Form formMenu = new Frm_Menu();
+            formMenu.Show();
+        }
     }
 }

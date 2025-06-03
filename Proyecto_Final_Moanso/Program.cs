@@ -16,7 +16,9 @@ namespace Proyecto_Final_Moanso
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Menu());
+            Application.Run(new Frm_Login());
+            //Frm_Login
+            //Frm_Menu
         }
     }
 }
