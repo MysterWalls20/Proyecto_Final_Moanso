@@ -24,6 +24,7 @@ namespace Proyecto_Final_Moanso
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form formMenu = new Frm_Menu();
             formMenu.Show();
         }

@@ -33,14 +33,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAcceder = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrarLogin = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -96,17 +96,6 @@
             this.txtUsuario.Size = new System.Drawing.Size(371, 34);
             this.txtUsuario.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proyecto_Final_Moanso.Properties.Resources.Corporacion_Rubio;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 72);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(345, 318);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
@@ -132,6 +121,7 @@
             this.btnAcceder.BackColor = System.Drawing.Color.White;
             this.btnAcceder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAcceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.btnAcceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(50)))));
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -143,17 +133,30 @@
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proyecto_Final_Moanso.Properties.Resources.Corporacion_Rubio;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 72);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(345, 318);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnCerrarLogin
             // 
+            this.btnCerrarLogin.BackgroundImage = global::Proyecto_Final_Moanso.Properties.Resources.close_480px;
+            this.btnCerrarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrarLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarLogin.FlatAppearance.BorderSize = 0;
             this.btnCerrarLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnCerrarLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
             this.btnCerrarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarLogin.Location = new System.Drawing.Point(967, 3);
+            this.btnCerrarLogin.Location = new System.Drawing.Point(963, 3);
             this.btnCerrarLogin.Name = "btnCerrarLogin";
-            this.btnCerrarLogin.Size = new System.Drawing.Size(62, 55);
+            this.btnCerrarLogin.Size = new System.Drawing.Size(66, 55);
             this.btnCerrarLogin.TabIndex = 6;
-            this.btnCerrarLogin.Text = "X";
             this.btnCerrarLogin.UseVisualStyleBackColor = true;
             this.btnCerrarLogin.Click += new System.EventHandler(this.btnCerrarLogin_Click);
             // 
@@ -176,9 +179,9 @@
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
