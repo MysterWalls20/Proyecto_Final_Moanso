@@ -16,5 +16,25 @@ namespace Proyecto_Final_Moanso
         {
             InitializeComponent();
         }
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            btnActualizar.Enabled = false;
+            Form actualPodruct = new ActualizarProducto();
+            actualPodruct.Show();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Frm_Producto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
