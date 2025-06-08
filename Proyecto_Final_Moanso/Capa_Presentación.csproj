@@ -52,11 +52,11 @@
     <Compile Include="ActualizarProducto.Designer.cs">
       <DependentUpon>ActualizarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Almacen.cs">
+    <Compile Include="Frm_Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Almacen.Designer.cs">
-      <DependentUpon>Frm_Almacen.cs</DependentUpon>
+    <Compile Include="Frm_Pedidos.Designer.cs">
+      <DependentUpon>Frm_Pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Clientes.cs">
       <SubType>Form</SubType>
@@ -88,19 +88,25 @@
     <Compile Include="Frm_Orden_Compra.Designer.cs">
       <DependentUpon>Frm_Orden_Compra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Producto.cs">
+    <Compile Include="Frm_Almacen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Producto.Designer.cs">
-      <DependentUpon>Frm_Producto.cs</DependentUpon>
+    <Compile Include="Frm_Almacen.Designer.cs">
+      <DependentUpon>Frm_Almacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoProducto.Designer.cs">
+      <DependentUpon>NuevoProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ActualizarProducto.resx">
       <DependentUpon>ActualizarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Almacen.resx">
-      <DependentUpon>Frm_Almacen.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Pedidos.resx">
+      <DependentUpon>Frm_Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Clientes.resx">
       <DependentUpon>Frm_Clientes.cs</DependentUpon>
@@ -117,8 +123,11 @@
     <EmbeddedResource Include="Frm_Orden_Compra.resx">
       <DependentUpon>Frm_Orden_Compra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Producto.resx">
-      <DependentUpon>Frm_Producto.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Almacen.resx">
+      <DependentUpon>Frm_Almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoProducto.resx">
+      <DependentUpon>NuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

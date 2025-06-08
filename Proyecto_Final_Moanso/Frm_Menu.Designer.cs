@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAlmacen = new System.Windows.Forms.Button();
-            this.btnOrden = new System.Windows.Forms.Button();
             this.pnTop = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnCerrarPrograma = new System.Windows.Forms.Button();
+            this.pbMinimizar = new System.Windows.Forms.PictureBox();
+            this.pbCerrarPrograma = new System.Windows.Forms.PictureBox();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnClientes = new System.Windows.Forms.Button();
@@ -41,95 +39,57 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnProducto = new System.Windows.Forms.Button();
+            this.btnOrdenCompras = new System.Windows.Forms.Button();
+            this.btnAlmacen = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
             this.btnNuevaVenta = new System.Windows.Forms.Button();
             this.pnPrincipal = new System.Windows.Forms.Panel();
             this.pbLogo2 = new System.Windows.Forms.PictureBox();
             this.pnTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrarPrograma)).BeginInit();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo1)).BeginInit();
             this.pnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo2)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAlmacen
-            // 
-            this.btnAlmacen.BackColor = System.Drawing.Color.White;
-            this.btnAlmacen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlmacen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.btnAlmacen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlmacen.Image = global::Proyecto_Final_Moanso.Properties.Resources.almacen_40;
-            this.btnAlmacen.Location = new System.Drawing.Point(42, 459);
-            this.btnAlmacen.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAlmacen.Name = "btnAlmacen";
-            this.btnAlmacen.Size = new System.Drawing.Size(309, 72);
-            this.btnAlmacen.TabIndex = 3;
-            this.btnAlmacen.Text = " Almacen";
-            this.btnAlmacen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAlmacen.UseVisualStyleBackColor = false;
-            this.btnAlmacen.Click += new System.EventHandler(this.btnAlmacen_Click);
-            // 
-            // btnOrden
-            // 
-            this.btnOrden.BackColor = System.Drawing.Color.White;
-            this.btnOrden.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOrden.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.btnOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrden.Image = global::Proyecto_Final_Moanso.Properties.Resources.distribuidor_40;
-            this.btnOrden.Location = new System.Drawing.Point(42, 541);
-            this.btnOrden.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOrden.Name = "btnOrden";
-            this.btnOrden.Size = new System.Drawing.Size(309, 72);
-            this.btnOrden.TabIndex = 1;
-            this.btnOrden.Text = " Compras";
-            this.btnOrden.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOrden.UseVisualStyleBackColor = false;
-            // 
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.DarkOrange;
-            this.pnTop.Controls.Add(this.btnMinimizar);
-            this.pnTop.Controls.Add(this.btnCerrarPrograma);
+            this.pnTop.Controls.Add(this.pbMinimizar);
+            this.pnTop.Controls.Add(this.pbCerrarPrograma);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1230, 67);
+            this.pnTop.Size = new System.Drawing.Size(1240, 67);
             this.pnTop.TabIndex = 1;
             this.pnTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTop_MouseDown);
             // 
-            // btnMinimizar
+            // pbMinimizar
             // 
-            this.btnMinimizar.BackgroundImage = global::Proyecto_Final_Moanso.Properties.Resources.minimazar;
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(1073, 3);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(69, 58);
-            this.btnMinimizar.TabIndex = 1;
-            this.btnMinimizar.UseVisualStyleBackColor = true;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.pbMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMinimizar.Image = global::Proyecto_Final_Moanso.Properties.Resources.minimazar;
+            this.pbMinimizar.Location = new System.Drawing.Point(1079, 6);
+            this.pbMinimizar.Name = "pbMinimizar";
+            this.pbMinimizar.Size = new System.Drawing.Size(71, 58);
+            this.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMinimizar.TabIndex = 2;
+            this.pbMinimizar.TabStop = false;
+            this.pbMinimizar.Click += new System.EventHandler(this.pbMinimizar_Click);
             // 
-            // btnCerrarPrograma
+            // pbCerrarPrograma
             // 
-            this.btnCerrarPrograma.BackgroundImage = global::Proyecto_Final_Moanso.Properties.Resources.cerrar;
-            this.btnCerrarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarPrograma.FlatAppearance.BorderSize = 0;
-            this.btnCerrarPrograma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btnCerrarPrograma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(75)))), ((int)(((byte)(100)))));
-            this.btnCerrarPrograma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarPrograma.Location = new System.Drawing.Point(1163, 3);
-            this.btnCerrarPrograma.Name = "btnCerrarPrograma";
-            this.btnCerrarPrograma.Size = new System.Drawing.Size(60, 58);
-            this.btnCerrarPrograma.TabIndex = 0;
-            this.btnCerrarPrograma.UseVisualStyleBackColor = true;
-            this.btnCerrarPrograma.Click += new System.EventHandler(this.btnCerrarPrograma_Click);
+            this.pbCerrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCerrarPrograma.Image = global::Proyecto_Final_Moanso.Properties.Resources.cerrar;
+            this.pbCerrarPrograma.Location = new System.Drawing.Point(1164, 3);
+            this.pbCerrarPrograma.Name = "pbCerrarPrograma";
+            this.pbCerrarPrograma.Size = new System.Drawing.Size(71, 58);
+            this.pbCerrarPrograma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCerrarPrograma.TabIndex = 1;
+            this.pbCerrarPrograma.TabStop = false;
+            this.pbCerrarPrograma.Click += new System.EventHandler(this.pbCerrarPrograma_Click);
+            this.pbCerrarPrograma.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbCerrarPrograma_MouseDown);
             // 
             // pnMenu
             // 
@@ -141,9 +101,9 @@
             this.pnMenu.Controls.Add(this.panel3);
             this.pnMenu.Controls.Add(this.panel2);
             this.pnMenu.Controls.Add(this.panel1);
-            this.pnMenu.Controls.Add(this.btnOrden);
-            this.pnMenu.Controls.Add(this.btnProducto);
+            this.pnMenu.Controls.Add(this.btnOrdenCompras);
             this.pnMenu.Controls.Add(this.btnAlmacen);
+            this.pnMenu.Controls.Add(this.btnPedidos);
             this.pnMenu.Controls.Add(this.btnNuevaVenta);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 67);
@@ -176,6 +136,7 @@
             this.btnClientes.Text = " Clientes";
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // pbLogo1
             // 
@@ -225,23 +186,59 @@
             this.panel1.Size = new System.Drawing.Size(43, 70);
             this.panel1.TabIndex = 0;
             // 
-            // btnProducto
+            // btnOrdenCompras
             // 
-            this.btnProducto.BackColor = System.Drawing.Color.White;
-            this.btnProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducto.Image = global::Proyecto_Final_Moanso.Properties.Resources.producto_40;
-            this.btnProducto.Location = new System.Drawing.Point(42, 295);
-            this.btnProducto.Margin = new System.Windows.Forms.Padding(4);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(309, 72);
-            this.btnProducto.TabIndex = 3;
-            this.btnProducto.Text = " Productos";
-            this.btnProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProducto.UseVisualStyleBackColor = false;
-            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
+            this.btnOrdenCompras.BackColor = System.Drawing.Color.White;
+            this.btnOrdenCompras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrdenCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnOrdenCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdenCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrdenCompras.Image = global::Proyecto_Final_Moanso.Properties.Resources.distribuidor_40;
+            this.btnOrdenCompras.Location = new System.Drawing.Point(42, 541);
+            this.btnOrdenCompras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOrdenCompras.Name = "btnOrdenCompras";
+            this.btnOrdenCompras.Size = new System.Drawing.Size(309, 72);
+            this.btnOrdenCompras.TabIndex = 1;
+            this.btnOrdenCompras.Text = " Compras";
+            this.btnOrdenCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrdenCompras.UseVisualStyleBackColor = false;
+            this.btnOrdenCompras.Click += new System.EventHandler(this.btnOrdenCompras_Click);
+            // 
+            // btnAlmacen
+            // 
+            this.btnAlmacen.BackColor = System.Drawing.Color.White;
+            this.btnAlmacen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlmacen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnAlmacen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlmacen.Image = global::Proyecto_Final_Moanso.Properties.Resources.producto_40;
+            this.btnAlmacen.Location = new System.Drawing.Point(42, 295);
+            this.btnAlmacen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAlmacen.Name = "btnAlmacen";
+            this.btnAlmacen.Size = new System.Drawing.Size(309, 72);
+            this.btnAlmacen.TabIndex = 3;
+            this.btnAlmacen.Text = " Almacen";
+            this.btnAlmacen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlmacen.UseVisualStyleBackColor = false;
+            this.btnAlmacen.Click += new System.EventHandler(this.btnAlmacen_Click_1);
+            // 
+            // btnPedidos
+            // 
+            this.btnPedidos.BackColor = System.Drawing.Color.White;
+            this.btnPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedidos.Image = global::Proyecto_Final_Moanso.Properties.Resources.almacen_40;
+            this.btnPedidos.Location = new System.Drawing.Point(42, 459);
+            this.btnPedidos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(309, 72);
+            this.btnPedidos.TabIndex = 3;
+            this.btnPedidos.Text = " Pedidos";
+            this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPedidos.UseVisualStyleBackColor = false;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // btnNuevaVenta
             // 
@@ -260,7 +257,7 @@
             this.btnNuevaVenta.Text = " Nueva Venta";
             this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
-            this.btnNuevaVenta.Click += new System.EventHandler(this.btnInventario_Click);
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // pnPrincipal
             // 
@@ -269,7 +266,7 @@
             this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnPrincipal.Location = new System.Drawing.Point(351, 67);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(879, 649);
+            this.pnPrincipal.Size = new System.Drawing.Size(889, 649);
             this.pnPrincipal.TabIndex = 5;
             // 
             // pbLogo2
@@ -287,7 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1230, 716);
+            this.ClientSize = new System.Drawing.Size(1240, 716);
             this.Controls.Add(this.pnPrincipal);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnTop);
@@ -297,6 +294,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.pnTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrarPrograma)).EndInit();
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo1)).EndInit();
             this.pnPrincipal.ResumeLayout(false);
@@ -307,15 +306,13 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pbLogo2;
+        private System.Windows.Forms.Button btnPedidos;
         private System.Windows.Forms.Button btnAlmacen;
-        private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Button btnNuevaVenta;
-        private System.Windows.Forms.Button btnOrden;
+        private System.Windows.Forms.Button btnOrdenCompras;
         private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Panel pnMenu;
-        private System.Windows.Forms.Button btnCerrarPrograma;
         private System.Windows.Forms.Panel pnPrincipal;
-        private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
@@ -323,6 +320,8 @@
         private System.Windows.Forms.PictureBox pbLogo1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.PictureBox pbCerrarPrograma;
+        private System.Windows.Forms.PictureBox pbMinimizar;
     }
 }
 

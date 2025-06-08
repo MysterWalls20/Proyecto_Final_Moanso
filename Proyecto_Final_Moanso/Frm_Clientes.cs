@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class Frm_EntradaSalida_Inventario : Form
+    public partial class Frm_Clientes : Form
     {
-        public Frm_EntradaSalida_Inventario()
+        public Frm_Clientes()
         {
             InitializeComponent();
         }

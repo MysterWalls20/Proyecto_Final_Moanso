@@ -10,21 +10,25 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class ActualizarProducto : Form
+    public partial class NuevoProducto : Form
     {
-        public ActualizarProducto()
+        public NuevoProducto()
         {
             InitializeComponent();
         }
 
-        private void pbCerrarAP_Click(object sender, EventArgs e)
+        private void pbCerrarNP_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void pbCerrarAP_MouseDown(object sender, MouseEventArgs e)
+        private void pbCerrarNP_MouseDown(object sender, MouseEventArgs e)
         {
-            pbCerrarAP.BackColor = Color.Red;
+            pbCerrarNP.BackColor = Color.Red;
+        }
+        private void btnNuevoP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
