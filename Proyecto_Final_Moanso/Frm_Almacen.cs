@@ -16,10 +16,15 @@ namespace Proyecto_Final_Moanso
         {
             InitializeComponent();
         }
-
-        private void btnReporte_Click(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            NuevoProducto nuevoProducto = new NuevoProducto();
+            nuevoProducto.ShowDialog();
+        }
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarProducto actualPodruct = new ActualizarProducto();
+            actualPodruct.ShowDialog();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -27,14 +32,14 @@ namespace Proyecto_Final_Moanso
 
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void Frm_Producto_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-
+            //dgvProductos.Columns["ID"].HeaderText = "Id:";
+            //dgvProductos.Columns["NombreP"].HeaderText = "Nombre del Producto:";
+            //dgvProductos.Columns["MarcaP"].HeaderText = "Marca:";
+            //dgvProductos.Columns["ColorP"].HeaderText = "Color:";
+            //dgvProductos.Columns["PrecioP"].HeaderText = "Precio ($):";
+            //dgvProductos.Columns["StockP"].HeaderText = "Stock:";
         }
     }
 }

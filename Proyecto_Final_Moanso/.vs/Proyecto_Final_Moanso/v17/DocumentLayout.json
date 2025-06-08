@@ -3,71 +3,75 @@
   "WorkspaceRootPath": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|c:\\users\\acer\\onedrive\\escritorio\\sistema epp\\proyecto_final_moanso\\frm_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_nuevaventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_nuevaventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|c:\\users\\acer\\onedrive\\escritorio\\sistema epp\\proyecto_final_moanso\\actualizarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:actualizarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|c:\\users\\acer\\onedrive\\escritorio\\sistema epp\\proyecto_final_moanso\\actualizarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:actualizarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF397693-3B87-4C08-B969-6BE26E844BBE}|..\\Capa_Datos\\Capa_Datos.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Capa_Datos\\Conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|c:\\users\\acer\\onedrive\\escritorio\\sistema epp\\proyecto_final_moanso\\frm_orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|c:\\users\\acer\\onedrive\\escritorio\\sistema epp\\proyecto_final_moanso\\frm_almacen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_almacen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\actualizarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:actualizarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_almacen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_almacen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\actualizarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:actualizarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|c:\\users\\acer\\onedrive\\escritorio\\sistema epp\\proyecto_final_moanso\\frm_pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_nuevaventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_nuevaventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|c:\\users\\acer\\onedrive\\escritorio\\sistema epp\\proyecto_final_moanso\\nuevoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:nuevoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_nuevaventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_nuevaventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|c:\\users\\acer\\onedrive\\escritorio\\sistema epp\\proyecto_final_moanso\\frm_almacen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_almacen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_almacen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_almacen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF397693-3B87-4C08-B969-6BE26E844BBE}|..\\Capa_Datos\\Capa_Datos.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Capa_Datos\\Conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|c:\\users\\acer\\onedrive\\escritorio\\sistema epp\\proyecto_final_moanso\\nuevoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:nuevoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\frm_clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|c:\\users\\acer\\onedrive\\escritorio\\sistema epp\\proyecto_final_moanso\\frm_pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93687DF7-59F7-487C-90B9-5CE9042089AA}|Capa_Presentaci\u00F3n.csproj|solutionrelative:frm_pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -77,11 +81,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "Frm_Login.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Login.cs",
               "RelativeDocumentMoniker": "Frm_Login.cs",
@@ -95,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "Frm_Login.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Login.cs",
               "RelativeDocumentMoniker": "Frm_Login.cs",
@@ -108,12 +112,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Frm_Producto.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Producto.cs",
-              "RelativeDocumentMoniker": "Frm_Producto.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Producto.cs [Design]",
-              "RelativeToolTip": "Frm_Producto.cs [Design]",
+              "DocumentIndex": 11,
+              "Title": "Frm_Almacen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Almacen.cs",
+              "RelativeDocumentMoniker": "Frm_Almacen.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Almacen.cs [Design]",
+              "RelativeToolTip": "Frm_Almacen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T20:58:42.63Z",
               "IsPinned": true,
@@ -121,13 +125,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Frm_Producto.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Producto.cs",
-              "RelativeDocumentMoniker": "Frm_Producto.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Producto.cs",
-              "RelativeToolTip": "Frm_Producto.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAMwBYAAABEAAAA",
+              "DocumentIndex": 5,
+              "Title": "Frm_Almacen.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Almacen.cs",
+              "RelativeDocumentMoniker": "Frm_Almacen.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Almacen.cs",
+              "RelativeToolTip": "Frm_Almacen.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAADgvykAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T05:51:47.777Z",
               "IsPinned": true,
@@ -135,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Frm_Menu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Menu.cs",
               "RelativeDocumentMoniker": "Frm_Menu.cs",
@@ -148,13 +152,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "Frm_Menu.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Menu.cs",
               "RelativeDocumentMoniker": "Frm_Menu.cs",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Menu.cs",
               "RelativeToolTip": "Frm_Menu.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAgwDcAAABCAAAA",
+              "ViewState": "AQIAAFUAAAAAAAAAAIAzwGQAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T22:08:00.977Z",
               "IsPinned": true,
@@ -162,46 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Frm_Almacen.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Almacen.cs",
-              "RelativeDocumentMoniker": "Frm_Almacen.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Almacen.cs [Design]",
-              "RelativeToolTip": "Frm_Almacen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:58:42.645Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T21:19:20.556Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Frm_Orden_Compra.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Orden_Compra.cs",
-              "RelativeDocumentMoniker": "Frm_Orden_Compra.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Orden_Compra.cs [Design]",
-              "RelativeToolTip": "Frm_Orden_Compra.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:58:42.646Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 0,
               "Title": "Frm_NuevaVenta.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_NuevaVenta.cs",
               "RelativeDocumentMoniker": "Frm_NuevaVenta.cs",
@@ -214,21 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Frm_NuevaVenta.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_NuevaVenta.cs",
-              "RelativeDocumentMoniker": "Frm_NuevaVenta.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_NuevaVenta.cs",
-              "RelativeToolTip": "Frm_NuevaVenta.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T05:44:30.811Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "Frm_Clientes.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Clientes.cs",
               "RelativeDocumentMoniker": "Frm_Clientes.cs",
@@ -241,13 +192,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "Frm_Clientes.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Clientes.cs",
               "RelativeDocumentMoniker": "Frm_Clientes.cs",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Clientes.cs",
               "RelativeToolTip": "Frm_Clientes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T05:43:44.688Z",
               "IsPinned": true,
@@ -255,12 +206,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Frm_Almacen.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Almacen.cs",
-              "RelativeDocumentMoniker": "Frm_Almacen.cs",
-              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Almacen.cs",
-              "RelativeToolTip": "Frm_Almacen.cs",
+              "DocumentIndex": 8,
+              "Title": "Frm_Pedidos.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Pedidos.cs",
+              "RelativeDocumentMoniker": "Frm_Pedidos.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Pedidos.cs [Design]",
+              "RelativeToolTip": "Frm_Pedidos.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T20:58:42.645Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Frm_Pedidos.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Pedidos.cs",
+              "RelativeDocumentMoniker": "Frm_Pedidos.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Pedidos.cs",
+              "RelativeToolTip": "Frm_Pedidos.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T05:44:02.973Z",
@@ -269,13 +233,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Conexion.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Capa_Datos\\Conexion.cs",
               "RelativeDocumentMoniker": "..\\Capa_Datos\\Conexion.cs",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Capa_Datos\\Conexion.cs",
               "RelativeToolTip": "..\\Capa_Datos\\Conexion.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBgAAAAjAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAgwEEAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T20:58:42.596Z",
               "IsPinned": true,
@@ -283,7 +247,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
+              "Title": "NuevoProducto.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\NuevoProducto.cs",
+              "RelativeDocumentMoniker": "NuevoProducto.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\NuevoProducto.cs [Design]",
+              "RelativeToolTip": "NuevoProducto.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T01:45:20.02Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "NuevoProducto.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\NuevoProducto.cs",
+              "RelativeDocumentMoniker": "NuevoProducto.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\NuevoProducto.cs",
+              "RelativeToolTip": "NuevoProducto.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAArwB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T02:21:42.937Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ActualizarProducto.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\ActualizarProducto.cs",
               "RelativeDocumentMoniker": "ActualizarProducto.cs",
@@ -296,15 +287,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ActualizarProducto.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\ActualizarProducto.cs",
               "RelativeDocumentMoniker": "ActualizarProducto.cs",
               "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\ActualizarProducto.cs",
               "RelativeToolTip": "ActualizarProducto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAjwBkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T08:17:32.079Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Frm_Orden_Compra.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Orden_Compra.cs",
+              "RelativeDocumentMoniker": "Frm_Orden_Compra.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Orden_Compra.cs [Design]",
+              "RelativeToolTip": "Frm_Orden_Compra.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T20:58:42.646Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Frm_Orden_Compra.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Orden_Compra.cs",
+              "RelativeDocumentMoniker": "Frm_Orden_Compra.cs",
+              "ToolTip": "C:\\Users\\ACER\\OneDrive\\Escritorio\\Sistema EPP\\Proyecto_Final_Moanso\\Frm_Orden_Compra.cs",
+              "RelativeToolTip": "Frm_Orden_Compra.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T09:29:49.138Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
