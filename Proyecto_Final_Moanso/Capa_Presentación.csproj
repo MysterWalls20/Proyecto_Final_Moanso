@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarProducto.Designer.cs">
+      <DependentUpon>ActualizarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Almacen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Almacen.Designer.cs">
       <DependentUpon>Frm_Almacen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_EntradaSalida_Inventario.cs">
+    <Compile Include="Frm_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_EntradaSalida_Inventario.Designer.cs">
-      <DependentUpon>Frm_EntradaSalida_Inventario.cs</DependentUpon>
+    <Compile Include="Frm_Clientes.Designer.cs">
+      <DependentUpon>Frm_Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="Frm_Menu.Designer.cs">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_NuevaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_NuevaVenta.Designer.cs">
+      <DependentUpon>Frm_NuevaVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Orden_Compra.cs">
       <SubType>Form</SubType>
@@ -84,17 +96,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActualizarProducto.resx">
+      <DependentUpon>ActualizarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Almacen.resx">
       <DependentUpon>Frm_Almacen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_EntradaSalida_Inventario.resx">
-      <DependentUpon>Frm_EntradaSalida_Inventario.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Clientes.resx">
+      <DependentUpon>Frm_Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NuevaVenta.resx">
+      <DependentUpon>Frm_NuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Orden_Compra.resx">
       <DependentUpon>Frm_Orden_Compra.cs</DependentUpon>
@@ -155,6 +173,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimazar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logorubio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dinero-efectivo-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almacen-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\distribuidor-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\añadir-product-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar-archivo-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

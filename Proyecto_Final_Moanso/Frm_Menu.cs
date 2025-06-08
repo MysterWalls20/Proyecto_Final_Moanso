@@ -65,5 +65,10 @@ namespace Proyecto_Final_Moanso
             btnProducto.BackColor = Color.White;
             btnAlmacen.BackColor = Color.DarkOrange;
         }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

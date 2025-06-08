@@ -28,5 +28,17 @@ namespace Proyecto_Final_Moanso
             Form formMenu = new Frm_Menu();
             formMenu.Show();
         }
+
+        private void pbMostrar_Click(object sender, EventArgs e)
+        {
+            pbOcultar.BringToFront();
+            txtContraseña.PasswordChar = '\0';
+        }
+
+        private void pbOcultar_Click(object sender, EventArgs e)
+        {
+            pbMostrar.BringToFront();
+            txtContraseña.PasswordChar = '*';
+        }
     }
 }

@@ -18,3 +18,5 @@ C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Ca
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Capa_Pre.3C51E38A.Up2Date
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.exe
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_NuevaVenta.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.ActualizarProducto.resources

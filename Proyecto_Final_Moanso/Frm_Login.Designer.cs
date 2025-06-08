@@ -36,18 +36,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAcceder = new System.Windows.Forms.Button();
+            this.pbOcultar = new System.Windows.Forms.PictureBox();
+            this.pbMostrar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrarLogin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(524, 317);
+            this.label3.Location = new System.Drawing.Point(524, 322);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(269, 46);
@@ -60,7 +64,8 @@
             this.txtContraseña.Location = new System.Drawing.Point(532, 372);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(371, 37);
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(319, 37);
             this.txtContraseña.TabIndex = 3;
             // 
             // label2
@@ -78,12 +83,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(523, 181);
+            this.label1.Location = new System.Drawing.Point(524, 185);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 53);
+            this.label1.Size = new System.Drawing.Size(166, 49);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario:";
             // 
@@ -120,8 +125,8 @@
             // 
             this.btnAcceder.BackColor = System.Drawing.Color.White;
             this.btnAcceder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAcceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
-            this.btnAcceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(50)))));
+            this.btnAcceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnAcceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -132,6 +137,30 @@
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
+            // 
+            // pbOcultar
+            // 
+            this.pbOcultar.BackgroundImage = global::Proyecto_Final_Moanso.Properties.Resources.icons_ocultar;
+            this.pbOcultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbOcultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbOcultar.Location = new System.Drawing.Point(858, 372);
+            this.pbOcultar.Name = "pbOcultar";
+            this.pbOcultar.Size = new System.Drawing.Size(45, 37);
+            this.pbOcultar.TabIndex = 7;
+            this.pbOcultar.TabStop = false;
+            this.pbOcultar.Click += new System.EventHandler(this.pbOcultar_Click);
+            // 
+            // pbMostrar
+            // 
+            this.pbMostrar.BackgroundImage = global::Proyecto_Final_Moanso.Properties.Resources.icon_visible;
+            this.pbMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbMostrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMostrar.Location = new System.Drawing.Point(858, 372);
+            this.pbMostrar.Name = "pbMostrar";
+            this.pbMostrar.Size = new System.Drawing.Size(45, 37);
+            this.pbMostrar.TabIndex = 6;
+            this.pbMostrar.TabStop = false;
+            this.pbMostrar.Click += new System.EventHandler(this.pbMostrar_Click);
             // 
             // pictureBox1
             // 
@@ -166,6 +195,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(1032, 570);
+            this.Controls.Add(this.pbMostrar);
+            this.Controls.Add(this.pbOcultar);
             this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.panel3);
@@ -181,6 +212,8 @@
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,5 +231,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnCerrarLogin;
         private System.Windows.Forms.Button btnAcceder;
+        private System.Windows.Forms.PictureBox pbMostrar;
+        private System.Windows.Forms.PictureBox pbOcultar;
     }
 }
