@@ -30,26 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Clientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.IDc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MarcaP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNIc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechRc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnMostrar = new System.Windows.Forms.Button();
-            this.btnEliminarCli = new System.Windows.Forms.Button();
-            this.btnNuevoCli = new System.Windows.Forms.Button();
-            this.btnActualizarCli = new System.Windows.Forms.Button();
             this.dtpFechRegC = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,6 +51,17 @@
             this.txtApeC = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNomC = new System.Windows.Forms.TextBox();
+            this.IDc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNIc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechRc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.btnEliminarCli = new System.Windows.Forms.Button();
+            this.btnNuevoCli = new System.Windows.Forms.Button();
+            this.btnActualizarCli = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,40 +75,23 @@
             this.imageList1.Images.SetKeyName(3, "save_file_disk_open_searsh_loading_clipboard_1513(1).png");
             this.imageList1.Images.SetKeyName(4, "task_update_folder_progress_icon_142270.png");
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Proyecto_Final_Moanso.Properties.Resources.search_26px;
-            this.button1.Location = new System.Drawing.Point(421, 62);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 38);
-            this.button1.TabIndex = 20;
-            this.button1.Text = " Buscar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(23, 62);
+            this.textBox1.Location = new System.Drawing.Point(23, 45);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.MaxLength = 30;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(390, 38);
+            this.textBox1.Size = new System.Drawing.Size(268, 38);
             this.textBox1.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 32);
+            this.label2.Location = new System.Drawing.Point(20, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 25);
@@ -119,63 +102,177 @@
             // 
             this.dgvProductos.AllowUserToAddRows = false;
             this.dgvProductos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvProductos.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvProductos.ColumnHeadersHeight = 35;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDc,
             this.NombreC,
-            this.MarcaP,
+            this.Apellic,
             this.NumC,
             this.DNIc,
             this.FechRc});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProductos.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProductos.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvProductos.EnableHeadersVisualStyles = false;
             this.dgvProductos.GridColor = System.Drawing.Color.Orange;
-            this.dgvProductos.Location = new System.Drawing.Point(23, 115);
+            this.dgvProductos.Location = new System.Drawing.Point(23, 98);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.RowHeadersWidth = 60;
             this.dgvProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(836, 276);
             this.dgvProductos.TabIndex = 21;
+            // 
+            // dtpFechRegC
+            // 
+            this.dtpFechRegC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechRegC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechRegC.Location = new System.Drawing.Point(214, 562);
+            this.dtpFechRegC.Name = "dtpFechRegC";
+            this.dtpFechRegC.Size = new System.Drawing.Size(191, 33);
+            this.dtpFechRegC.TabIndex = 37;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 567);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(186, 26);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Fecha de registro :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 416);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 26);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "ID :";
+            // 
+            // txtIDc
+            // 
+            this.txtIDc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIDc.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDc.Location = new System.Drawing.Point(66, 413);
+            this.txtIDc.Name = "txtIDc";
+            this.txtIDc.Size = new System.Drawing.Size(84, 33);
+            this.txtIDc.TabIndex = 34;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(337, 514);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 26);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "DNI :";
+            // 
+            // txtDniC
+            // 
+            this.txtDniC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDniC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDniC.Location = new System.Drawing.Point(402, 511);
+            this.txtDniC.Name = "txtDniC";
+            this.txtDniC.Size = new System.Drawing.Size(164, 33);
+            this.txtDniC.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 514);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 26);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Número :";
+            // 
+            // txtNumC
+            // 
+            this.txtNumC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNumC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumC.Location = new System.Drawing.Point(122, 511);
+            this.txtNumC.Name = "txtNumC";
+            this.txtNumC.Size = new System.Drawing.Size(181, 33);
+            this.txtNumC.TabIndex = 30;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(303, 464);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 26);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Apellido :";
+            // 
+            // txtApeC
+            // 
+            this.txtApeC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApeC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApeC.Location = new System.Drawing.Point(413, 461);
+            this.txtApeC.Name = "txtApeC";
+            this.txtApeC.Size = new System.Drawing.Size(153, 33);
+            this.txtApeC.TabIndex = 28;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(13, 464);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 26);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Nombre :";
+            // 
+            // txtNomC
+            // 
+            this.txtNomC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomC.Location = new System.Drawing.Point(121, 461);
+            this.txtNomC.Name = "txtNomC";
+            this.txtNomC.Size = new System.Drawing.Size(170, 33);
+            this.txtNomC.TabIndex = 26;
             // 
             // IDc
             // 
@@ -193,13 +290,13 @@
             this.NombreC.ReadOnly = true;
             this.NombreC.Width = 123;
             // 
-            // MarcaP
+            // Apellic
             // 
-            this.MarcaP.HeaderText = "Apellido:";
-            this.MarcaP.MinimumWidth = 6;
-            this.MarcaP.Name = "MarcaP";
-            this.MarcaP.ReadOnly = true;
-            this.MarcaP.Width = 125;
+            this.Apellic.HeaderText = "Apellido:";
+            this.Apellic.MinimumWidth = 6;
+            this.Apellic.Name = "Apellic";
+            this.Apellic.ReadOnly = true;
+            this.Apellic.Width = 125;
             // 
             // NumC
             // 
@@ -230,16 +327,17 @@
             this.btnMostrar.BackColor = System.Drawing.Color.DarkOrange;
             this.btnMostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMostrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMostrar.FlatAppearance.BorderSize = 2;
             this.btnMostrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.ForeColor = System.Drawing.Color.White;
             this.btnMostrar.ImageKey = "Product-sale-report_25407.png";
             this.btnMostrar.ImageList = this.imageList1;
-            this.btnMostrar.Location = new System.Drawing.Point(736, 530);
+            this.btnMostrar.Location = new System.Drawing.Point(735, 524);
             this.btnMostrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(124, 96);
+            this.btnMostrar.Size = new System.Drawing.Size(124, 100);
             this.btnMostrar.TabIndex = 25;
             this.btnMostrar.Text = "\r\n\r\n\r\nMostrar";
             this.btnMostrar.UseVisualStyleBackColor = false;
@@ -249,16 +347,17 @@
             this.btnEliminarCli.BackColor = System.Drawing.Color.DarkOrange;
             this.btnEliminarCli.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarCli.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminarCli.FlatAppearance.BorderSize = 2;
             this.btnEliminarCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnEliminarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarCli.ForeColor = System.Drawing.Color.White;
             this.btnEliminarCli.ImageKey = "task_update_folder_progress_icon_142270.png";
             this.btnEliminarCli.ImageList = this.imageList1;
-            this.btnEliminarCli.Location = new System.Drawing.Point(736, 408);
+            this.btnEliminarCli.Location = new System.Drawing.Point(735, 402);
             this.btnEliminarCli.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarCli.Name = "btnEliminarCli";
-            this.btnEliminarCli.Size = new System.Drawing.Size(124, 96);
+            this.btnEliminarCli.Size = new System.Drawing.Size(124, 100);
             this.btnEliminarCli.TabIndex = 24;
             this.btnEliminarCli.Text = "\r\n\r\n\r\nEliminar-";
             this.btnEliminarCli.UseVisualStyleBackColor = false;
@@ -268,16 +367,17 @@
             this.btnNuevoCli.BackColor = System.Drawing.Color.DarkOrange;
             this.btnNuevoCli.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevoCli.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnNuevoCli.FlatAppearance.BorderSize = 2;
             this.btnNuevoCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnNuevoCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoCli.ForeColor = System.Drawing.Color.White;
             this.btnNuevoCli.ImageKey = "new_file256_25213(1).png";
             this.btnNuevoCli.ImageList = this.imageList1;
-            this.btnNuevoCli.Location = new System.Drawing.Point(592, 408);
+            this.btnNuevoCli.Location = new System.Drawing.Point(590, 402);
             this.btnNuevoCli.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevoCli.Name = "btnNuevoCli";
-            this.btnNuevoCli.Size = new System.Drawing.Size(124, 96);
+            this.btnNuevoCli.Size = new System.Drawing.Size(124, 100);
             this.btnNuevoCli.TabIndex = 22;
             this.btnNuevoCli.Text = "\r\n\r\n\r\nNuevo+";
             this.btnNuevoCli.UseVisualStyleBackColor = false;
@@ -287,132 +387,37 @@
             this.btnActualizarCli.BackColor = System.Drawing.Color.DarkOrange;
             this.btnActualizarCli.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizarCli.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnActualizarCli.FlatAppearance.BorderSize = 2;
             this.btnActualizarCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnActualizarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarCli.ForeColor = System.Drawing.Color.White;
             this.btnActualizarCli.ImageKey = "save_file_disk_open_searsh_loading_clipboard_1513(1).png";
             this.btnActualizarCli.ImageList = this.imageList1;
-            this.btnActualizarCli.Location = new System.Drawing.Point(592, 530);
+            this.btnActualizarCli.Location = new System.Drawing.Point(590, 524);
             this.btnActualizarCli.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizarCli.Name = "btnActualizarCli";
-            this.btnActualizarCli.Size = new System.Drawing.Size(124, 96);
+            this.btnActualizarCli.Size = new System.Drawing.Size(124, 100);
             this.btnActualizarCli.TabIndex = 23;
             this.btnActualizarCli.Text = "\r\n\r\n\r\nActualizar";
             this.btnActualizarCli.UseVisualStyleBackColor = false;
             // 
-            // dtpFechRegC
+            // button1
             // 
-            this.dtpFechRegC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechRegC.Location = new System.Drawing.Point(220, 568);
-            this.dtpFechRegC.Name = "dtpFechRegC";
-            this.dtpFechRegC.Size = new System.Drawing.Size(286, 33);
-            this.dtpFechRegC.TabIndex = 37;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 573);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(186, 26);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Fecha de registro :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 422);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 26);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "ID :";
-            // 
-            // txtIDc
-            // 
-            this.txtIDc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDc.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDc.Location = new System.Drawing.Point(72, 419);
-            this.txtIDc.Name = "txtIDc";
-            this.txtIDc.Size = new System.Drawing.Size(84, 33);
-            this.txtIDc.TabIndex = 34;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(337, 520);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 26);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "DNI :";
-            // 
-            // txtDniC
-            // 
-            this.txtDniC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDniC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDniC.Location = new System.Drawing.Point(404, 518);
-            this.txtDniC.Name = "txtDniC";
-            this.txtDniC.Size = new System.Drawing.Size(164, 33);
-            this.txtDniC.TabIndex = 32;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 520);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 26);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Número :";
-            // 
-            // txtNumC
-            // 
-            this.txtNumC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumC.Location = new System.Drawing.Point(128, 517);
-            this.txtNumC.Name = "txtNumC";
-            this.txtNumC.Size = new System.Drawing.Size(181, 33);
-            this.txtNumC.TabIndex = 30;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(304, 470);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 26);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Apellido :";
-            // 
-            // txtApeC
-            // 
-            this.txtApeC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtApeC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApeC.Location = new System.Drawing.Point(415, 467);
-            this.txtApeC.Name = "txtApeC";
-            this.txtApeC.Size = new System.Drawing.Size(153, 33);
-            this.txtApeC.TabIndex = 28;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 470);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 26);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Nombre :";
-            // 
-            // txtNomC
-            // 
-            this.txtNomC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomC.Location = new System.Drawing.Point(127, 467);
-            this.txtNomC.Name = "txtNomC";
-            this.txtNomC.Size = new System.Drawing.Size(170, 33);
-            this.txtNomC.TabIndex = 26;
+            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Proyecto_Final_Moanso.Properties.Resources.search_26px;
+            this.button1.Location = new System.Drawing.Point(299, 45);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 38);
+            this.button1.TabIndex = 20;
+            this.button1.Text = " Buscar";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Frm_Clientes
             // 
@@ -456,12 +461,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MarcaP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNIc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechRc;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnEliminarCli;
         private System.Windows.Forms.Button btnNuevoCli;
@@ -478,5 +477,11 @@
         private System.Windows.Forms.TextBox txtApeC;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNomC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DNIc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechRc;
     }
 }

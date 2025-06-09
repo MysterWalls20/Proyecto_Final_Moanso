@@ -83,6 +83,16 @@ namespace Proyecto_Final_Moanso.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap card_empleado_40 {
+            get {
+                object obj = ResourceManager.GetObject("card-empleado-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
@@ -116,6 +126,16 @@ namespace Proyecto_Final_Moanso.Properties {
         internal static System.Drawing.Bitmap Corporacion_Rubio {
             get {
                 object obj = ResourceManager.GetObject("Corporacion-Rubio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dinero_40 {
+            get {
+                object obj = ResourceManager.GetObject("dinero-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

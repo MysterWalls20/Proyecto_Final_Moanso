@@ -39,7 +39,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnOrdenCompras = new System.Windows.Forms.Button();
+            this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnAlmacen = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
             this.btnNuevaVenta = new System.Windows.Forms.Button();
@@ -101,7 +101,7 @@
             this.pnMenu.Controls.Add(this.panel3);
             this.pnMenu.Controls.Add(this.panel2);
             this.pnMenu.Controls.Add(this.panel1);
-            this.pnMenu.Controls.Add(this.btnOrdenCompras);
+            this.pnMenu.Controls.Add(this.btnEmpleados);
             this.pnMenu.Controls.Add(this.btnAlmacen);
             this.pnMenu.Controls.Add(this.btnPedidos);
             this.pnMenu.Controls.Add(this.btnNuevaVenta);
@@ -186,23 +186,23 @@
             this.panel1.Size = new System.Drawing.Size(43, 70);
             this.panel1.TabIndex = 0;
             // 
-            // btnOrdenCompras
+            // btnEmpleados
             // 
-            this.btnOrdenCompras.BackColor = System.Drawing.Color.White;
-            this.btnOrdenCompras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOrdenCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.btnOrdenCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrdenCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdenCompras.Image = global::Proyecto_Final_Moanso.Properties.Resources.distribuidor_40;
-            this.btnOrdenCompras.Location = new System.Drawing.Point(42, 541);
-            this.btnOrdenCompras.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOrdenCompras.Name = "btnOrdenCompras";
-            this.btnOrdenCompras.Size = new System.Drawing.Size(309, 72);
-            this.btnOrdenCompras.TabIndex = 1;
-            this.btnOrdenCompras.Text = " Compras";
-            this.btnOrdenCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOrdenCompras.UseVisualStyleBackColor = false;
-            this.btnOrdenCompras.Click += new System.EventHandler(this.btnOrdenCompras_Click);
+            this.btnEmpleados.BackColor = System.Drawing.Color.White;
+            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.Image = global::Proyecto_Final_Moanso.Properties.Resources.card_empleado_40;
+            this.btnEmpleados.Location = new System.Drawing.Point(42, 541);
+            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(309, 72);
+            this.btnEmpleados.TabIndex = 1;
+            this.btnEmpleados.Text = " Empleados";
+            this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmpleados.UseVisualStyleBackColor = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnAlmacen
             // 
@@ -309,7 +309,7 @@
         private System.Windows.Forms.Button btnPedidos;
         private System.Windows.Forms.Button btnAlmacen;
         private System.Windows.Forms.Button btnNuevaVenta;
-        private System.Windows.Forms.Button btnOrdenCompras;
+        private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.Panel pnPrincipal;

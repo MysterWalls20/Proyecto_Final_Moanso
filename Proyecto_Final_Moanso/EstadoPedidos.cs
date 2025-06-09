@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class Frm_Clientes : Form
+    public partial class EstadoPedidos : Form
     {
-        public Frm_Clientes()
+        public EstadoPedidos()
         {
             InitializeComponent();
-            dtpFechRegC.MinDate = DateTime.Now;
-            dtpFechRegC.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void pbCerrarEstado_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

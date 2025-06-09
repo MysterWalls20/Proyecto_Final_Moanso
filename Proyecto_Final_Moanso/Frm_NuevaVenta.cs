@@ -16,5 +16,19 @@ namespace Proyecto_Final_Moanso
         {
             InitializeComponent();
         }
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void chEnviar_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chEnviar.Checked)
+            {
+                txtDireccionPed.Enabled = true;
+            }else
+            {
+                txtDireccionPed.Enabled = false;
+            }
+        }
     }
 }

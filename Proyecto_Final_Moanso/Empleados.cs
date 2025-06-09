@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class Frm_Orden_Compra : Form
+    public partial class Empleados : Form
     {
-        public Frm_Orden_Compra()
+        public Empleados()
         {
             InitializeComponent();
         }

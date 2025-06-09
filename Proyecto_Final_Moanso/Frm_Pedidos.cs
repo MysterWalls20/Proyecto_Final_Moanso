@@ -15,26 +15,34 @@ namespace Proyecto_Final_Moanso
         public Frm_Pedidos()
         {
             InitializeComponent();
+            dtpHoraEnvio.MinDate = DateTime.Now;
+            dtpHoraEnvio.CustomFormat = "hh:mm  tt";
+            dtpHoraEntrega.MinDate = DateTime.Now;
+            dtpHoraEntrega.CustomFormat = "hh:mm  tt";
+            dtpFechaEntrega.MinDate = DateTime.Now;
+            dtpFechaEntrega.CustomFormat = "dd/MM/yyyy";
         }
-
-        private void btnReporte_Click(object sender, EventArgs e)
+        private void chConfirmaDiaEnv_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chConfirmaDiaEnv.Checked)
+            {
+                dtpHoraEntrega.Enabled = true;
+                dtpFechaEntrega.Enabled = false;
+            }
+            else
+            {
+                dtpHoraEntrega.Enabled = false;
+                dtpFechaEntrega.Enabled = true;
+            }
+        }
+        private void btnAsignar_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnVerEstadosPed_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-
+            EstadoPedidos estadoPedidos = new EstadoPedidos();
+            estadoPedidos.ShowDialog();
         }
     }
 }
