@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Proyecto_Final_Moanso
 {
     public partial class Frm_Almacen : Form
     {
+
+
         public Frm_Almacen()
         {
             InitializeComponent();
@@ -46,9 +49,43 @@ namespace Proyecto_Final_Moanso
             }
         }
 
+        private void MostrarProductos()
+        {
+            dgvProductosAlm.DataSource = Logica_Productos.ListadoPR("");
+
+            // Asegúrate que estos nombres coincidan con los campos del DataTable
+            dgvProductosAlm.Columns["id"].HeaderText = "ID";
+            dgvProductosAlm.Columns["nombre"].HeaderText = "Nombre";
+            dgvProductosAlm.Columns["marca"].HeaderText = "Marca";
+            dgvProductosAlm.Columns["color"].HeaderText = "Color";
+            dgvProductosAlm.Columns["stock"].HeaderText = "Stock";
+            dgvProductosAlm.Columns["categoria"].HeaderText = "Categoría";
+            dgvProductosAlm.Columns["precio_unidad"].HeaderText = "Precio ($)";
+        }
+
         private void Frm_Producto_Load(object sender, EventArgs e)
         {
-            
+            MostrarProductos(); // llamado al método
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            MostrarProductos(); // llamado al método
+        }
+
+        private void dgvProductosAlm_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                ActualizarProducto frm = new ActualizarProducto();
+                // Puedes pasarle los datos seleccionados aquí si lo configuras
+                frm.ShowDialog();
+
+                if (frm.ProductoActualizado)
+                {
+                    MostrarProductos();
+                }
+            }
         }
     }
 }

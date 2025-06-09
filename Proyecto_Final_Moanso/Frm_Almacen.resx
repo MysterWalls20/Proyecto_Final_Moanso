@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADQ
-        NwAAAk1TRnQBSQFMAgEBBQEAAQgBAQEIAQEBGAEAARgBAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFg
+        NwAAAk1TRnQBSQFMAgEBBQEAARABAQEQAQEBGAEAARgBAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFg
         AwABMAMAAQEBAAEgBgABSP8AlwADNQFWAl8BWwHYAmMBXQHfAmMBXQHfAmMBXQHfAmMBXQHfAmMBXQHf
         AmMBXQHfAmMBXQHfAmYBYAHgA2IB4QNiAeEDYgHhA2IB4QNiAeEDYgHhA2IB4QNiAeEDYgHhA2IB4QJj
         AV8B2gM2AVn/ACkAAl8BWwHYAZ0BZQEAAf8BnQFlAQAB/wG8AYkBLgH/Ab8BjQEzAf8BvwGNATMB/wG5
@@ -179,7 +179,7 @@
         Af8BwgHdAYsB/wHCAd0BiwH/AcIB3QGLAf8BwgHdAYsB/wHCAd0BiwH/AcIB3QGLAf8BwgHdAYsB/wHC
         Ad0BiwH/AdUB6AGwAf8B3AHsAb0B/wHaAeoBuwH/A1EBn/8AQQADWgG/AdAB5QGmAf8ByAHhAZcB/wHI
         AeEBlwH/AcgB4QGXAf8ByAHhAZcB/wHIAeEBlwH/AcgB4QGXAf8ByAHhAZcB/wHIAeEBlwH/AcgB4QGX
-        Af8B0gHmAaoB/wHRAeYBqQH/Aa4B0QFlAf8BrQG+AUMB/QM2AVn/AEEAA1oBvwHQAeUBpgH/AcgB4QGY
+        Af8B0gHmAaoB/wHRAeYBqQH/Aa4B0QFlAf8BrQG+AUIB/QM2AVn/AEEAA1oBvwHQAeUBpgH/AcgB4QGY
         Af8ByAHhAZgB/wHIAeEBmAH/AcgB4QGYAf8ByAHhAZgB/wHIAeEBmAH/AcgB4QGYAf8ByAHhAZgB/wHI
         AeEBmAH/AdIB5gGqAf8BxAHfAZAB/wGdAb4BQAH9AzwBZf8ARQADSQGIA2MB3wNjAd8DYwHfA2MB3wNj
         Ad8DYwHfA2MB3wNjAd8DYwHfA2MB3wNjAd8DYQHeAzsBY/8A/wC+AAMCAQMDGAEhAysBQgMuAUcDLgFH
@@ -366,25 +366,4 @@
         AQ8G/wHAAQABPwP/Cw==
 </value>
   </data>
-  <metadata name="IDp.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="CategP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="NombreP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MarcaP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColorP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PrecioP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="StockP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

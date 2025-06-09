@@ -38,13 +38,6 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.dgvProductosAlm = new System.Windows.Forms.DataGridView();
-            this.IDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MarcaP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StockP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBuscarProduct = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbCategoriaLP = new System.Windows.Forms.ComboBox();
@@ -72,9 +65,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(272, 10);
+            this.label3.Location = new System.Drawing.Point(204, 8);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(317, 36);
+            this.label3.Size = new System.Drawing.Size(260, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Listado de Productos";
             // 
@@ -97,14 +91,6 @@
             this.dgvProductosAlm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProductosAlm.ColumnHeadersHeight = 35;
             this.dgvProductosAlm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProductosAlm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDp,
-            this.CategP,
-            this.NombreP,
-            this.MarcaP,
-            this.ColorP,
-            this.PrecioP,
-            this.StockP});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,8 +101,7 @@
             this.dgvProductosAlm.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductosAlm.EnableHeadersVisualStyles = false;
             this.dgvProductosAlm.GridColor = System.Drawing.Color.Orange;
-            this.dgvProductosAlm.Location = new System.Drawing.Point(10, 145);
-            this.dgvProductosAlm.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvProductosAlm.Location = new System.Drawing.Point(8, 118);
             this.dgvProductosAlm.Name = "dgvProductosAlm";
             this.dgvProductosAlm.ReadOnly = true;
             this.dgvProductosAlm.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -138,85 +123,28 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             this.dgvProductosAlm.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProductosAlm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductosAlm.Size = new System.Drawing.Size(868, 345);
+            this.dgvProductosAlm.Size = new System.Drawing.Size(651, 280);
             this.dgvProductosAlm.TabIndex = 2;
-            // 
-            // IDp
-            // 
-            this.IDp.HeaderText = "Id:";
-            this.IDp.MinimumWidth = 6;
-            this.IDp.Name = "IDp";
-            this.IDp.ReadOnly = true;
-            this.IDp.Width = 61;
-            // 
-            // CategP
-            // 
-            this.CategP.HeaderText = "Categoria:";
-            this.CategP.MinimumWidth = 6;
-            this.CategP.Name = "CategP";
-            this.CategP.ReadOnly = true;
-            this.CategP.Width = 126;
-            // 
-            // NombreP
-            // 
-            this.NombreP.HeaderText = "Nombre:";
-            this.NombreP.MinimumWidth = 6;
-            this.NombreP.Name = "NombreP";
-            this.NombreP.ReadOnly = true;
-            this.NombreP.Width = 113;
-            // 
-            // MarcaP
-            // 
-            this.MarcaP.HeaderText = "Marca:";
-            this.MarcaP.MinimumWidth = 6;
-            this.MarcaP.Name = "MarcaP";
-            this.MarcaP.ReadOnly = true;
-            this.MarcaP.Width = 97;
-            // 
-            // ColorP
-            // 
-            this.ColorP.HeaderText = "Color:";
-            this.ColorP.MinimumWidth = 6;
-            this.ColorP.Name = "ColorP";
-            this.ColorP.ReadOnly = true;
-            this.ColorP.Width = 89;
-            // 
-            // PrecioP
-            // 
-            this.PrecioP.HeaderText = "Precio U:";
-            this.PrecioP.MinimumWidth = 6;
-            this.PrecioP.Name = "PrecioP";
-            this.PrecioP.ReadOnly = true;
-            this.PrecioP.Width = 115;
-            // 
-            // StockP
-            // 
-            this.StockP.HeaderText = "Stock:";
-            this.StockP.MinimumWidth = 6;
-            this.StockP.Name = "StockP";
-            this.StockP.ReadOnly = true;
-            this.StockP.Width = 91;
+            this.dgvProductosAlm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductosAlm_CellContentClick);
             // 
             // txtBuscarProduct
             // 
             this.txtBuscarProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscarProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarProduct.Location = new System.Drawing.Point(9, 97);
-            this.txtBuscarProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarProduct.Location = new System.Drawing.Point(7, 79);
             this.txtBuscarProduct.MaxLength = 30;
             this.txtBuscarProduct.Multiline = true;
             this.txtBuscarProduct.Name = "txtBuscarProduct";
-            this.txtBuscarProduct.Size = new System.Drawing.Size(390, 38);
+            this.txtBuscarProduct.Size = new System.Drawing.Size(293, 31);
             this.txtBuscarProduct.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 67);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(4, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 25);
+            this.label1.Size = new System.Drawing.Size(181, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del producto:";
             // 
@@ -243,19 +171,19 @@
             "Equipo de Bioseguridad",
             "Equipo de Desinfeccion",
             "Equipo de Seguridad"});
-            this.cbCategoriaLP.Location = new System.Drawing.Point(531, 98);
+            this.cbCategoriaLP.Location = new System.Drawing.Point(398, 80);
+            this.cbCategoriaLP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbCategoriaLP.Name = "cbCategoriaLP";
-            this.cbCategoriaLP.Size = new System.Drawing.Size(347, 37);
+            this.cbCategoriaLP.Size = new System.Drawing.Size(261, 31);
             this.cbCategoriaLP.TabIndex = 32;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(526, 67);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(394, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 25);
+            this.label2.Size = new System.Drawing.Size(97, 20);
             this.label2.TabIndex = 33;
             this.label2.Text = "Categoria :";
             // 
@@ -267,10 +195,9 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::Proyecto_Final_Moanso.Properties.Resources.search_26px;
-            this.btnBuscar.Location = new System.Drawing.Point(407, 97);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(305, 79);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(64, 38);
+            this.btnBuscar.Size = new System.Drawing.Size(48, 31);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -287,13 +214,13 @@
             this.btnMostrar.ForeColor = System.Drawing.Color.White;
             this.btnMostrar.ImageKey = "Product-sale-report_25407.png";
             this.btnMostrar.ImageList = this.imageList1;
-            this.btnMostrar.Location = new System.Drawing.Point(605, 517);
-            this.btnMostrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMostrar.Location = new System.Drawing.Point(454, 420);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(124, 100);
+            this.btnMostrar.Size = new System.Drawing.Size(93, 81);
             this.btnMostrar.TabIndex = 11;
             this.btnMostrar.Text = "\r\n\r\n\r\nMostrar";
             this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // btnEliminar
             // 
@@ -307,10 +234,9 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageKey = "task_update_folder_progress_icon_142270.png";
             this.btnEliminar.ImageList = this.imageList1;
-            this.btnEliminar.Location = new System.Drawing.Point(450, 517);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(338, 420);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(124, 100);
+            this.btnEliminar.Size = new System.Drawing.Size(93, 81);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "\r\n\r\n\r\nEliminar-";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -328,10 +254,9 @@
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.ImageKey = "new_file256_25213(1).png";
             this.btnNuevo.ImageList = this.imageList1;
-            this.btnNuevo.Location = new System.Drawing.Point(137, 517);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevo.Location = new System.Drawing.Point(103, 420);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(124, 100);
+            this.btnNuevo.Size = new System.Drawing.Size(93, 81);
             this.btnNuevo.TabIndex = 8;
             this.btnNuevo.Text = "\r\n\r\n\r\nNuevo+";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -349,10 +274,9 @@
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.ImageKey = "save_file_disk_open_searsh_loading_clipboard_1513(1).png";
             this.btnActualizar.ImageList = this.imageList1;
-            this.btnActualizar.Location = new System.Drawing.Point(294, 517);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Location = new System.Drawing.Point(220, 420);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(124, 100);
+            this.btnActualizar.Size = new System.Drawing.Size(93, 81);
             this.btnActualizar.TabIndex = 9;
             this.btnActualizar.Text = "\r\n\r\n\r\nActualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -360,10 +284,10 @@
             // 
             // Frm_Almacen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(889, 649);
+            this.ClientSize = new System.Drawing.Size(667, 527);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbCategoriaLP);
             this.Controls.Add(this.label3);
@@ -376,7 +300,6 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnActualizar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Almacen";
             this.Load += new System.EventHandler(this.Frm_Producto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosAlm)).EndInit();
@@ -399,12 +322,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbCategoriaLP;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CategP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MarcaP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StockP;
     }
 }
