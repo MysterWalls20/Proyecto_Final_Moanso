@@ -37,11 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbCategoriaLP = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dgvProductosAlm = new System.Windows.Forms.DataGridView();
             this.IDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,12 +45,16 @@
             this.ColorP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StockP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBuscarProduct = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbCategoriaLP = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosAlm)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -78,15 +78,15 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Listado de Productos";
             // 
-            // dgvProductos
+            // dgvProductosAlm
             // 
-            this.dgvProductos.AllowUserToAddRows = false;
-            this.dgvProductos.AllowUserToDeleteRows = false;
+            this.dgvProductosAlm.AllowUserToAddRows = false;
+            this.dgvProductosAlm.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProductos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProductosAlm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProductosAlm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvProductosAlm.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProductosAlm.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkOrange;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,10 +94,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProductos.ColumnHeadersHeight = 35;
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProductosAlm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProductosAlm.ColumnHeadersHeight = 35;
+            this.dgvProductosAlm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProductosAlm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDp,
             this.CategP,
             this.NombreP,
@@ -112,14 +112,14 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProductos.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProductos.EnableHeadersVisualStyles = false;
-            this.dgvProductos.GridColor = System.Drawing.Color.Orange;
-            this.dgvProductos.Location = new System.Drawing.Point(10, 145);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvProductosAlm.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProductosAlm.EnableHeadersVisualStyles = false;
+            this.dgvProductosAlm.GridColor = System.Drawing.Color.Orange;
+            this.dgvProductosAlm.Location = new System.Drawing.Point(10, 145);
+            this.dgvProductosAlm.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvProductosAlm.Name = "dgvProductosAlm";
+            this.dgvProductosAlm.ReadOnly = true;
+            this.dgvProductosAlm.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkOrange;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,81 +127,19 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Orange;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvProductos.RowHeadersVisible = false;
-            this.dgvProductos.RowHeadersWidth = 60;
-            this.dgvProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvProductosAlm.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvProductosAlm.RowHeadersVisible = false;
+            this.dgvProductosAlm.RowHeadersWidth = 60;
+            this.dgvProductosAlm.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(868, 345);
-            this.dgvProductos.TabIndex = 2;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(9, 97);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscar.MaxLength = 30;
-            this.txtBuscar.Multiline = true;
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(390, 38);
-            this.txtBuscar.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 67);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre del producto:";
-            // 
-            // cbCategoriaLP
-            // 
-            this.cbCategoriaLP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategoriaLP.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCategoriaLP.FormattingEnabled = true;
-            this.cbCategoriaLP.Items.AddRange(new object[] {
-            "Herramientas/Accesorios",
-            "Calzado de Seguridad",
-            "Protección Manual",
-            "Protección Anticaidas",
-            "Proteccion Auditiva",
-            "Protección Corporal",
-            "Proteccion De Cabeza",
-            "Protección Respiratoria",
-            "Protección para Soldadura",
-            "Ropa De Protección Textiles",
-            "Prootección Facial",
-            "Proteccion Visual",
-            "Reflectivos y Señalización",
-            "Bloqueo y Mas Seguridad",
-            "Equipo de Bioseguridad",
-            "Equipo de Desinfeccion",
-            "Equipo de Seguridad"});
-            this.cbCategoriaLP.Location = new System.Drawing.Point(531, 98);
-            this.cbCategoriaLP.Name = "cbCategoriaLP";
-            this.cbCategoriaLP.Size = new System.Drawing.Size(347, 37);
-            this.cbCategoriaLP.TabIndex = 32;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(526, 67);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 25);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Categoria :";
+            this.dgvProductosAlm.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvProductosAlm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProductosAlm.Size = new System.Drawing.Size(868, 345);
+            this.dgvProductosAlm.TabIndex = 2;
             // 
             // IDp
             // 
@@ -258,6 +196,68 @@
             this.StockP.Name = "StockP";
             this.StockP.ReadOnly = true;
             this.StockP.Width = 91;
+            // 
+            // txtBuscarProduct
+            // 
+            this.txtBuscarProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBuscarProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarProduct.Location = new System.Drawing.Point(9, 97);
+            this.txtBuscarProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarProduct.MaxLength = 30;
+            this.txtBuscarProduct.Multiline = true;
+            this.txtBuscarProduct.Name = "txtBuscarProduct";
+            this.txtBuscarProduct.Size = new System.Drawing.Size(390, 38);
+            this.txtBuscarProduct.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 67);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(219, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre del producto:";
+            // 
+            // cbCategoriaLP
+            // 
+            this.cbCategoriaLP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoriaLP.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategoriaLP.FormattingEnabled = true;
+            this.cbCategoriaLP.Items.AddRange(new object[] {
+            "Herramientas/Accesorios",
+            "Calzado de Seguridad",
+            "Protección Manual",
+            "Protección Anticaidas",
+            "Proteccion Auditiva",
+            "Protección Corporal",
+            "Proteccion De Cabeza",
+            "Protección Respiratoria",
+            "Protección para Soldadura",
+            "Ropa De Protección Textiles",
+            "Prootección Facial",
+            "Proteccion Visual",
+            "Reflectivos y Señalización",
+            "Bloqueo y Mas Seguridad",
+            "Equipo de Bioseguridad",
+            "Equipo de Desinfeccion",
+            "Equipo de Seguridad"});
+            this.cbCategoriaLP.Location = new System.Drawing.Point(531, 98);
+            this.cbCategoriaLP.Name = "cbCategoriaLP";
+            this.cbCategoriaLP.Size = new System.Drawing.Size(347, 37);
+            this.cbCategoriaLP.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(526, 67);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 25);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Categoria :";
             // 
             // btnBuscar
             // 
@@ -368,10 +368,10 @@
             this.Controls.Add(this.cbCategoriaLP);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.txtBuscarProduct);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvProductos);
+            this.Controls.Add(this.dgvProductosAlm);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnActualizar);
@@ -379,7 +379,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Almacen";
             this.Load += new System.EventHandler(this.Frm_Producto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosAlm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,9 +393,9 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.DataGridView dgvProductosAlm;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.TextBox txtBuscarProduct;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbCategoriaLP;
         private System.Windows.Forms.Label label2;

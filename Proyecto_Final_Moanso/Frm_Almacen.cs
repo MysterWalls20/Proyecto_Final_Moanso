@@ -29,17 +29,26 @@ namespace Proyecto_Final_Moanso
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (dgvProductosAlm.SelectedRows.Count > 0)
+            {
+                // Confirmación opcional
+                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar esta fila?", "Confirmar eliminación", MessageBoxButtons.YesNo);
 
+                if (result == DialogResult.Yes)
+                {
+                    // Elimina la fila seleccionada
+                    dgvProductosAlm.Rows.RemoveAt(dgvProductosAlm.SelectedRows[0].Index);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona una fila para eliminar.");
+            }
         }
 
         private void Frm_Producto_Load(object sender, EventArgs e)
         {
-            //dgvProductos.Columns["ID"].HeaderText = "Id:";
-            //dgvProductos.Columns["NombreP"].HeaderText = "Nombre del Producto:";
-            //dgvProductos.Columns["MarcaP"].HeaderText = "Marca:";
-            //dgvProductos.Columns["ColorP"].HeaderText = "Color:";
-            //dgvProductos.Columns["PrecioP"].HeaderText = "Precio ($):";
-            //dgvProductos.Columns["StockP"].HeaderText = "Stock:";
+            
         }
     }
 }
