@@ -36,15 +36,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.IDc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNIc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechRc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpFechRegC = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,16 +69,16 @@
             this.imageList1.Images.SetKeyName(3, "save_file_disk_open_searsh_loading_clipboard_1513(1).png");
             this.imageList1.Images.SetKeyName(4, "task_update_folder_progress_icon_142270.png");
             // 
-            // textBox1
+            // txtBuscar
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(17, 37);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 31);
-            this.textBox1.TabIndex = 19;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(17, 37);
+            this.txtBuscar.MaxLength = 30;
+            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(202, 31);
+            this.txtBuscar.TabIndex = 19;
             // 
             // label2
             // 
@@ -115,13 +109,6 @@
             this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClientes.ColumnHeadersHeight = 35;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDc,
-            this.NombreC,
-            this.Apellic,
-            this.NumC,
-            this.DNIc,
-            this.FechRc});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,61 +143,14 @@
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(627, 224);
             this.dgvClientes.TabIndex = 21;
-            // 
-            // IDc
-            // 
-            this.IDc.HeaderText = "Id:";
-            this.IDc.MinimumWidth = 6;
-            this.IDc.Name = "IDc";
-            this.IDc.ReadOnly = true;
-            this.IDc.Width = 54;
-            // 
-            // NombreC
-            // 
-            this.NombreC.HeaderText = "Nombre:";
-            this.NombreC.MinimumWidth = 6;
-            this.NombreC.Name = "NombreC";
-            this.NombreC.ReadOnly = true;
-            this.NombreC.Width = 102;
-            // 
-            // Apellic
-            // 
-            this.Apellic.HeaderText = "Apellido:";
-            this.Apellic.MinimumWidth = 6;
-            this.Apellic.Name = "Apellic";
-            this.Apellic.ReadOnly = true;
-            this.Apellic.Width = 104;
-            // 
-            // NumC
-            // 
-            this.NumC.HeaderText = "Número:";
-            this.NumC.MinimumWidth = 6;
-            this.NumC.Name = "NumC";
-            this.NumC.ReadOnly = true;
-            this.NumC.Width = 102;
-            // 
-            // DNIc
-            // 
-            this.DNIc.HeaderText = "Dni:";
-            this.DNIc.MinimumWidth = 6;
-            this.DNIc.Name = "DNIc";
-            this.DNIc.ReadOnly = true;
-            this.DNIc.Width = 66;
-            // 
-            // FechRc
-            // 
-            this.FechRc.HeaderText = "Fecha de registro:";
-            this.FechRc.MinimumWidth = 6;
-            this.FechRc.Name = "FechRc";
-            this.FechRc.ReadOnly = true;
-            this.FechRc.Width = 169;
+            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
             // dtpFechRegC
             // 
             this.dtpFechRegC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechRegC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechRegC.Location = new System.Drawing.Point(160, 457);
-            this.dtpFechRegC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechRegC.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechRegC.Name = "dtpFechRegC";
             this.dtpFechRegC.Size = new System.Drawing.Size(144, 28);
             this.dtpFechRegC.TabIndex = 37;
@@ -242,7 +182,7 @@
             this.txtIDc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDc.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDc.Location = new System.Drawing.Point(50, 336);
-            this.txtIDc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIDc.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDc.Name = "txtIDc";
             this.txtIDc.Size = new System.Drawing.Size(64, 28);
             this.txtIDc.TabIndex = 34;
@@ -263,7 +203,7 @@
             this.txtDniC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDniC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDniC.Location = new System.Drawing.Point(302, 415);
-            this.txtDniC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDniC.Margin = new System.Windows.Forms.Padding(2);
             this.txtDniC.Name = "txtDniC";
             this.txtDniC.Size = new System.Drawing.Size(124, 28);
             this.txtDniC.TabIndex = 32;
@@ -284,7 +224,7 @@
             this.txtNumC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumC.Location = new System.Drawing.Point(92, 415);
-            this.txtNumC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumC.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumC.Name = "txtNumC";
             this.txtNumC.Size = new System.Drawing.Size(136, 28);
             this.txtNumC.TabIndex = 30;
@@ -305,7 +245,7 @@
             this.txtApeC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApeC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApeC.Location = new System.Drawing.Point(310, 375);
-            this.txtApeC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApeC.Margin = new System.Windows.Forms.Padding(2);
             this.txtApeC.Name = "txtApeC";
             this.txtApeC.Size = new System.Drawing.Size(115, 28);
             this.txtApeC.TabIndex = 28;
@@ -326,7 +266,7 @@
             this.txtNomC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomC.Location = new System.Drawing.Point(91, 375);
-            this.txtNomC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNomC.Margin = new System.Windows.Forms.Padding(2);
             this.txtNomC.Name = "txtNomC";
             this.txtNomC.Size = new System.Drawing.Size(128, 28);
             this.txtNomC.TabIndex = 26;
@@ -349,6 +289,7 @@
             this.btnMostrar.TabIndex = 25;
             this.btnMostrar.Text = "\r\n\r\n\r\nMostrar";
             this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // btnEliminarCli
             // 
@@ -368,6 +309,7 @@
             this.btnEliminarCli.TabIndex = 24;
             this.btnEliminarCli.Text = "\r\n\r\n\r\nEliminar-";
             this.btnEliminarCli.UseVisualStyleBackColor = false;
+            this.btnEliminarCli.Click += new System.EventHandler(this.btnEliminarCli_Click);
             // 
             // btnNuevoCli
             // 
@@ -407,6 +349,7 @@
             this.btnActualizarCli.TabIndex = 23;
             this.btnActualizarCli.Text = "\r\n\r\n\r\nActualizar";
             this.btnActualizarCli.UseVisualStyleBackColor = false;
+            this.btnActualizarCli.Click += new System.EventHandler(this.btnActualizarCli_Click);
             // 
             // button1
             // 
@@ -448,7 +391,7 @@
             this.Controls.Add(this.btnActualizarCli);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Clientes";
@@ -462,7 +405,7 @@
 
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Button btnMostrar;
@@ -481,11 +424,5 @@
         private System.Windows.Forms.TextBox txtApeC;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNomC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellic;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNIc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechRc;
     }
 }

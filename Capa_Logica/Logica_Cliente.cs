@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Logica
 {
-    internal class Logica_Cliente
+    public class Logica_Cliente
     {
         Datos_Cliente datos = new Datos_Cliente();
 

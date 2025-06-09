@@ -53,7 +53,10 @@ namespace Capa_Datos
                 command.Parameters.Add("@nApellido", SqlDbType.VarChar).Value = eCl.apellido;
                 command.Parameters.Add("@nNumero", SqlDbType.Int).Value = eCl.numero;
                 command.Parameters.Add("@nDNI", SqlDbType.VarChar).Value = eCl.dni;
-                command.Parameters.Add("@nFechaRegistro", SqlDbType.VarChar).Value = eCl.fecha_registro;
+
+                command.Parameters.AddWithValue("@nFechaRegistro", eCl.fecha_registro); // ✅ sin .ToString()
+
+                //command.Parameters.Add("@nFechaRegistro", SqlDbType.VarChar).Value = eCl.fecha_registro;
                 sqlcon.Open();
                 rpta = command.ExecuteNonQuery() == 1 ? "Vale" : "No se pudo registrar los datos";
             }

@@ -12,7 +12,7 @@ namespace Capa_Entidad
         public string nombre { get; set; }  
         public string apellido { get; set;}
         public int numero { get; set; }
-        public char dni { get; set; }
+        public string dni { get; set; } // Para mayor facilidad en manejo de string
         public DateTime fecha_registro { get; set; }
     }
 }

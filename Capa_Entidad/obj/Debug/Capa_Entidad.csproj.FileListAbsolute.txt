@@ -10,3 +10,9 @@ C:\Users\OPEN SERVICE EIRL\Documents\Proyecto_Final_Moanso\Capa_Entidad\obj\Debu
 C:\Users\OPEN SERVICE EIRL\Documents\Proyecto_Final_Moanso\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.CoreCompileInputs.cache
 C:\Users\OPEN SERVICE EIRL\Documents\Proyecto_Final_Moanso\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\Users\OPEN SERVICE EIRL\Documents\Proyecto_Final_Moanso\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.AssemblyReference.cache
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.CoreCompileInputs.cache
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
