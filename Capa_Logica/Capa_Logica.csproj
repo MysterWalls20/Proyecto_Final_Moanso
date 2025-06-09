@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logica_Cliente.cs" />
     <Compile Include="Logica_Productos.cs" />
     <Compile Include="Logica_Empleado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

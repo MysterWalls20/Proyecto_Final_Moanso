@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Capa_Datos
 {
-    public class Datos_Productos
+    public class Datos_Cliente
     {
-        public DataTable ListadoPR (string cTexto)
+        public DataTable Listadocl(string cTexto)
         {
             SqlDataReader resultado;
             DataTable tabla = new DataTable();
@@ -20,7 +20,7 @@ namespace Capa_Datos
             try
             {
                 sqlcon = Conexion.getInstancia().CrearConexion();
-                SqlCommand command = new SqlCommand("USP_Listado_Productos", sqlcon);
+                SqlCommand command = new SqlCommand("USP_Listado_Cliente", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 sqlcon.Open();
@@ -38,23 +38,22 @@ namespace Capa_Datos
             }
         }
 
-        public string Guardar_pr(int nOpcion, Entidad_Productos ePr)
+        public string Guardar_cl(int nOpcion, Entidad_Cliente eCl)
         {
             string rpta = "";
             SqlConnection sqlcon = new SqlConnection();
             try
             {
                 sqlcon = Conexion.getInstancia().CrearConexion();
-                SqlCommand command = new SqlCommand("usp_GuardarProducto", sqlcon);
+                SqlCommand command = new SqlCommand("USP_Guardado_Cliente", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add("@nOpcion", SqlDbType.Int).Value = nOpcion;
-                command.Parameters.Add("@nId", SqlDbType.Int).Value = ePr.id;
-                command.Parameters.Add("@cNombre", SqlDbType.VarChar).Value = ePr.nombre;
-                command.Parameters.Add("@cMarca", SqlDbType.VarChar).Value = ePr.marca;
-                command.Parameters.Add("@cColor", SqlDbType.VarChar).Value = ePr.color;
-                command.Parameters.Add("@nStock", SqlDbType.Int).Value = ePr.stock;
-                command.Parameters.Add("@cCategoria", SqlDbType.VarChar).Value = ePr.categoria;
-                command.Parameters.Add("@nPrecio", SqlDbType.Decimal).Value = ePr.precio_unidad;
+                command.Parameters.Add("@nId", SqlDbType.Int).Value = eCl.id;
+                command.Parameters.Add("@nNombre", SqlDbType.VarChar).Value = eCl.nombre;
+                command.Parameters.Add("@nApellido", SqlDbType.VarChar).Value = eCl.apellido;
+                command.Parameters.Add("@nNumero", SqlDbType.Int).Value = eCl.numero;
+                command.Parameters.Add("@nDNI", SqlDbType.VarChar).Value = eCl.dni;
+                command.Parameters.Add("@nFechaRegistro", SqlDbType.VarChar).Value = eCl.fecha_registro;
                 sqlcon.Open();
                 rpta = command.ExecuteNonQuery() == 1 ? "Vale" : "No se pudo registrar los datos";
             }
@@ -70,14 +69,14 @@ namespace Capa_Datos
             return rpta;
         }
 
-        public string Eliminar_pr(int codigo_ca)
+        public string Eliminar_cl(int codigo_ca)
         {
             string rpta = "";
             SqlConnection sqlcon = new SqlConnection();
             try
             {
                 sqlcon = Conexion.getInstancia().CrearConexion();
-                SqlCommand command = new SqlCommand("usp_EliminarProducto", sqlcon);
+                SqlCommand command = new SqlCommand("USP_Eliminar_Cliente", sqlcon);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add("@nId", SqlDbType.Int).Value = codigo_ca;
                 sqlcon.Open();
@@ -94,7 +93,5 @@ namespace Capa_Datos
             }
             return rpta;
         }
-
     }
 }
-

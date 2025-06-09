@@ -18,5 +18,10 @@ namespace Proyecto_Final_Moanso
             dtpFechRegC.MinDate = DateTime.Now;
             dtpFechRegC.CustomFormat = "dd/MM/yyyy";
         }
+
+        private void btnNuevoCli_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
