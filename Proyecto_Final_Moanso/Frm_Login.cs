@@ -24,9 +24,29 @@ namespace Proyecto_Final_Moanso
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form formMenu = new Frm_Menu();
-            formMenu.Show();
+
+            Capa_Entidad.Entidad_Empleado login = new Capa_Entidad.Entidad_Empleado()
+            {
+                usuario = txtUsuario.Text,
+                contrasena = txtContraseña.Text
+            };
+
+            Capa_Logica.Logica_Empleado loginBL = new Capa_Logica.Logica_Empleado();
+
+            if (loginBL.ValidarLogin(login))
+            {
+                MessageBox.Show("¡Login exitoso!");
+                // Abrir el formulario principal, por ejemplo:
+                // new FormPrincipal().Show();
+                // this.Hide();
+                this.Hide();
+                Form formMenu = new Frm_Menu();
+                formMenu.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos.");
+            }
         }
 
         private void pbMostrar_Click(object sender, EventArgs e)
