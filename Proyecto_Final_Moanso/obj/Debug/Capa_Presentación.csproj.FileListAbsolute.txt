@@ -49,3 +49,5 @@ C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proye
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.CopyComplete
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.exe
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Datos.dll
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Datos.pdb

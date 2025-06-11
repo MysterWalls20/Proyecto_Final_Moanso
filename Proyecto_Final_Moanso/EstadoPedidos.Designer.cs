@@ -225,12 +225,14 @@
             // 
             this.pbCerrarEstado.BackgroundImage = global::Proyecto_Final_Moanso.Properties.Resources.cerrar;
             this.pbCerrarEstado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbCerrarEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCerrarEstado.Location = new System.Drawing.Point(825, 3);
             this.pbCerrarEstado.Name = "pbCerrarEstado";
             this.pbCerrarEstado.Size = new System.Drawing.Size(61, 39);
             this.pbCerrarEstado.TabIndex = 26;
             this.pbCerrarEstado.TabStop = false;
             this.pbCerrarEstado.Click += new System.EventHandler(this.pbCerrarEstado_Click);
+            this.pbCerrarEstado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbCerrarEstado_MouseDown);
             // 
             // EstadoPedidos
             // 

@@ -43,9 +43,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnNuevoP = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbCerrarNP = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.pbCerrarNP = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrarNP)).BeginInit();
@@ -190,6 +190,8 @@
             // 
             this.btnNuevoP.BackColor = System.Drawing.Color.DarkOrange;
             this.btnNuevoP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevoP.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnNuevoP.FlatAppearance.BorderSize = 2;
             this.btnNuevoP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnNuevoP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnNuevoP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -212,6 +214,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(850, 44);
             this.panel1.TabIndex = 29;
+            // 
+            // pbCerrarNP
+            // 
+            this.pbCerrarNP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbCerrarNP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCerrarNP.Image = global::Proyecto_Final_Moanso.Properties.Resources.close_480px;
+            this.pbCerrarNP.Location = new System.Drawing.Point(788, 3);
+            this.pbCerrarNP.Name = "pbCerrarNP";
+            this.pbCerrarNP.Size = new System.Drawing.Size(58, 36);
+            this.pbCerrarNP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCerrarNP.TabIndex = 0;
+            this.pbCerrarNP.TabStop = false;
+            this.pbCerrarNP.Click += new System.EventHandler(this.pbCerrarNP_Click);
+            this.pbCerrarNP.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbCerrarNP_MouseDown);
             // 
             // label8
             // 
@@ -251,20 +267,6 @@
             this.cbCategoria.Size = new System.Drawing.Size(347, 39);
             this.cbCategoria.TabIndex = 31;
             // 
-            // pbCerrarNP
-            // 
-            this.pbCerrarNP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbCerrarNP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbCerrarNP.Image = global::Proyecto_Final_Moanso.Properties.Resources.close_480px;
-            this.pbCerrarNP.Location = new System.Drawing.Point(788, 3);
-            this.pbCerrarNP.Name = "pbCerrarNP";
-            this.pbCerrarNP.Size = new System.Drawing.Size(58, 36);
-            this.pbCerrarNP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCerrarNP.TabIndex = 0;
-            this.pbCerrarNP.TabStop = false;
-            this.pbCerrarNP.Click += new System.EventHandler(this.pbCerrarNP_Click);
-            this.pbCerrarNP.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbCerrarNP_MouseDown);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyecto_Final_Moanso.Properties.Resources.añadir_product_100;
@@ -302,6 +304,7 @@
             this.Name = "NuevoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoProducto";
+            this.Load += new System.EventHandler(this.NuevoProducto_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrarNP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

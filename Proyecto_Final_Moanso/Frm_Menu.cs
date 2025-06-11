@@ -13,9 +13,11 @@ namespace Proyecto_Final_Moanso
 {
     public partial class Frm_Menu : Form
     {
+        Control panelP = new Control();
         public Frm_Menu()
         {
             InitializeComponent();
+            panelP = pnPrincipal;
         }
         public void abrirFormHijo(Form formhijo)
         {
@@ -58,7 +60,7 @@ namespace Proyecto_Final_Moanso
         }
         private void btnNuevaVenta_Click(object sender, EventArgs e)
         {
-            abrirFormHijo(new Frm_NuevaVenta());
+            abrirFormHijo(new Frm_NuevaVenta(panelP));
             btnNuevaVenta.BackColor = Color.DarkOrange;
             btnAlmacen.BackColor = Color.White;
             btnClientes.BackColor = Color.White;

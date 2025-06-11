@@ -20,12 +20,33 @@ namespace Proyecto_Final_Moanso
         {
             InitializeComponent();
         }
-
+        private void ActualizarProducto_Load(object sender, EventArgs e)
+        {
+            txtNomA.KeyPress += textBoxSoloLetras_KeyPress;
+            MarcaA.KeyPress += textBoxSoloLetras_KeyPress;
+            txtPrecioA.KeyPress += textBoxSoloNumeros_KeyPress;
+            txtStockA.KeyPress += textBoxSoloNumeros_KeyPress;
+        }
         private void pbCerrarAP_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        private void textBoxSoloLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir letras, tecla de borrar (Backspace) y espacio
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void textBoxSoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo números y tecla de borrar (Backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
         private void pbCerrarAP_MouseDown(object sender, MouseEventArgs e)
         {
             pbCerrarAP.BackColor = Color.Red;
@@ -36,7 +57,7 @@ namespace Proyecto_Final_Moanso
             if (txtIDa.Text == string.Empty || txtNomA.Text == string.Empty ||
            txtStockA.Text == string.Empty || txtPrecioA.Text == string.Empty)
             {
-                MessageBox.Show("Faltan datos obligatorios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Faltan datos obligatorios", "Érror", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

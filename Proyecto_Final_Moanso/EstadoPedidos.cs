@@ -21,5 +21,10 @@ namespace Proyecto_Final_Moanso
         {
             this.Close();
         }
+
+        private void pbCerrarEstado_MouseDown(object sender, MouseEventArgs e)
+        {
+            pbCerrarEstado.BackColor = Color.Red;
+        }
     }
 }

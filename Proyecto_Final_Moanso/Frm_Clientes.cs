@@ -43,7 +43,7 @@ namespace Proyecto_Final_Moanso
         {
             if (txtNomC.Text == "" || txtApeC.Text == "" || txtNumC.Text == "" || txtDniC.Text == "")
             {
-                MessageBox.Show("Faltan datos obligatorios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingresa todos los datos del cliente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -61,7 +61,7 @@ namespace Proyecto_Final_Moanso
 
             if (rpta == "Vale")
             {
-                MessageBox.Show("Cliente guardado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cliente guardado exitosamente", "Nuevo cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarClientes();
                 LimpiarCampos();
             }
@@ -79,7 +79,7 @@ namespace Proyecto_Final_Moanso
                 return;
             }
 
-            DialogResult confirm = MessageBox.Show("¿Estás seguro de eliminar este cliente?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult confirm = MessageBox.Show("¿Estás seguro de eliminar este cliente?", "Eliminar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (confirm == DialogResult.Yes)
             {
                 string rpta = Logica_Cliente.Eliminar_cl(int.Parse(txtIDc.Text));
@@ -100,7 +100,7 @@ namespace Proyecto_Final_Moanso
         {
             if (txtIDc.Text == "")
             {
-                MessageBox.Show("El ID del cliente es obligatorio para actualizar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El ID del cliente es obligatorio para actualizar.", "Actualizar cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -156,8 +156,6 @@ namespace Proyecto_Final_Moanso
                         dtpFechRegC.Value = dtpFechRegC.MinDate;
                     else
                         dtpFechRegC.Value = fecha;
-
-
                 }
             }
             else

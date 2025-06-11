@@ -35,6 +35,7 @@ namespace Proyecto_Final_Moanso
 
             if (loginBL.ValidarLogin(login))
             {
+                btnAcceder.BackColor = Color.DarkOrange;
                 MessageBox.Show("¡Login exitoso!");
                 // Abrir el formulario principal, por ejemplo:
                 // new FormPrincipal().Show();

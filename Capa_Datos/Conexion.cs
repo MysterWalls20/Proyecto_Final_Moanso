@@ -18,13 +18,14 @@ namespace Capa_Datos
 
         private Conexion()
         {
+
             this.Base = "BD_Compania_Rubio";
-            this.Servidor = "DESKTOP-8TP23M5";
+            this.Servidor = "USER"; //Poner el nombre de tu servidor sql
             this.Usuario = "sa";
             this.Clave = "clavedelSA";
             this.Seguridad = false;
         }
-
+        //Falta inplementar metodo sigleton :'v
         public SqlConnection CrearConexion()
         {
             SqlConnection cadena = new SqlConnection();

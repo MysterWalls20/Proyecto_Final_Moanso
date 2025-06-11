@@ -20,3 +20,14 @@ C:\Users\OPEN SERVICE EIRL\Documents\Proyecto_Final_Moanso\Capa_Logica\obj\Debug
 C:\Users\OPEN SERVICE EIRL\Documents\Proyecto_Final_Moanso\Capa_Logica\obj\Debug\Capa_Logica.csproj.CopyComplete
 C:\Users\OPEN SERVICE EIRL\Documents\Proyecto_Final_Moanso\Capa_Logica\obj\Debug\Capa_Logica.dll
 C:\Users\OPEN SERVICE EIRL\Documents\Proyecto_Final_Moanso\Capa_Logica\obj\Debug\Capa_Logica.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\bin\Debug\Capa_Logica.dll
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\bin\Debug\Capa_Logica.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\bin\Debug\Capa_Datos.dll
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\bin\Debug\Capa_Entidad.dll
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\bin\Debug\Capa_Datos.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\bin\Debug\Capa_Entidad.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\obj\Debug\Capa_Logica.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\obj\Debug\Capa_Logica.csproj.CoreCompileInputs.cache
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\obj\Debug\Capa_Log.4C98AF80.Up2Date
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\obj\Debug\Capa_Logica.dll
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Logica\obj\Debug\Capa_Logica.pdb

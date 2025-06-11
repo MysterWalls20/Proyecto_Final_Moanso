@@ -60,7 +60,7 @@ namespace Proyecto_Final_Moanso
             dgvProductosAlm.Columns["color"].HeaderText = "Color";
             dgvProductosAlm.Columns["stock"].HeaderText = "Stock";
             dgvProductosAlm.Columns["categoria"].HeaderText = "Categoría";
-            dgvProductosAlm.Columns["precio_unidad"].HeaderText = "Precio ($)";
+            dgvProductosAlm.Columns["precio_unidad"].HeaderText = "Precio s/";
         }
 
         private void Frm_Producto_Load(object sender, EventArgs e)
