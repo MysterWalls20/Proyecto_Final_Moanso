@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_Entidad;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,32 +12,36 @@ namespace Capa_Datos
 {
     public class Datos_Empleado
     {
-        public bool VerificarLogin(Capa_Entidad.Entidad_Empleado login)
+        // Singleton
+        private static readonly Datos_Empleado _instancia = new Datos_Empleado();
+        public static Datos_Empleado Instancia => _instancia;
+
+        public bool Login(Entidad_Empleado empleado)
         {
+            SqlConnection cn = null;
             bool existe = false;
 
             try
             {
-                // Aquí se crea la conexión usando tu clase Conexion
-                using (SqlConnection cn = Conexion.getInstancia().CrearConexion())
-                {
-                    cn.Open();
-                    using (SqlCommand cmd = new SqlCommand("sp_VerificarLogin", cn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@usuario", login.usuario);
-                        cmd.Parameters.AddWithValue("@contraseña", login.contrasena);
+                cn = Conexion.Instancia.Conectar();
+                SqlCommand cmd = new SqlCommand("sp_Login_Empleado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
-                        object result = cmd.ExecuteScalar();
-                        int count = Convert.ToInt32(result);
+                cmd.Parameters.AddWithValue("@usuario", empleado.usuario);
+                cmd.Parameters.AddWithValue("@contrasena", empleado.contrasena);
 
-                        existe = count > 0;
-                    }
-                }
+                cn.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                existe = count > 0;
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al verificar el login: " + ex.Message);
+                throw new Exception("Error al ejecutar sp_Login_Empleado: " + ex.Message);
+            }
+            finally
+            {
+                if (cn != null && cn.State == ConnectionState.Open)
+                    cn.Close();
             }
 
             return existe;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Capa_Entidad;
+using Capa_Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,29 +26,25 @@ namespace Proyecto_Final_Moanso
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-
-            Capa_Entidad.Entidad_Empleado login = new Capa_Entidad.Entidad_Empleado()
+            Entidad_Empleado emp = new Entidad_Empleado()
             {
-                usuario = txtUsuario.Text,
-                contrasena = txtContraseña.Text
+                usuario = txtUsuario.Text.Trim(),
+                contrasena = txtContraseña.Text.Trim()
             };
 
-            Capa_Logica.Logica_Empleado loginBL = new Capa_Logica.Logica_Empleado();
+            bool loginCorrecto = Logica_Empleado.Instancia.Login(emp);
 
-            if (loginBL.ValidarLogin(login))
+            if (loginCorrecto)
             {
-                btnAcceder.BackColor = Color.DarkOrange;
-                MessageBox.Show("¡Login exitoso!");
-                // Abrir el formulario principal, por ejemplo:
-                // new FormPrincipal().Show();
-                // this.Hide();
+                MessageBox.Show("Acceso correcto", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Abrir siguiente ventana
                 this.Hide();
                 Form formMenu = new Frm_Menu();
                 formMenu.Show();
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos.");
+                MessageBox.Show("Usuario o contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -41,8 +41,6 @@
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.dtpFechRegC = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtIDc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDniC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,6 +54,8 @@
             this.btnNuevoCli = new System.Windows.Forms.Button();
             this.btnActualizarCli = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtIDc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,22 +73,20 @@
             // 
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(23, 46);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Location = new System.Drawing.Point(17, 37);
             this.txtBuscar.MaxLength = 30;
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(269, 38);
+            this.txtBuscar.Size = new System.Drawing.Size(202, 31);
             this.txtBuscar.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(15, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 25);
+            this.label2.Size = new System.Drawing.Size(163, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "Nombre del cliente:";
             // 
@@ -121,8 +119,7 @@
             this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvClientes.EnableHeadersVisualStyles = false;
             this.dgvClientes.GridColor = System.Drawing.Color.Orange;
-            this.dgvClientes.Location = new System.Drawing.Point(23, 98);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvClientes.Location = new System.Drawing.Point(17, 80);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -144,7 +141,7 @@
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(836, 276);
+            this.dgvClientes.Size = new System.Drawing.Size(627, 224);
             this.dgvClientes.TabIndex = 21;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
@@ -152,49 +149,31 @@
             // 
             this.dtpFechRegC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechRegC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechRegC.Location = new System.Drawing.Point(213, 562);
-            this.dtpFechRegC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpFechRegC.Location = new System.Drawing.Point(160, 457);
+            this.dtpFechRegC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechRegC.Name = "dtpFechRegC";
-            this.dtpFechRegC.Size = new System.Drawing.Size(191, 33);
+            this.dtpFechRegC.Size = new System.Drawing.Size(144, 28);
             this.dtpFechRegC.TabIndex = 37;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 567);
+            this.label6.Location = new System.Drawing.Point(10, 461);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(186, 26);
+            this.label6.Size = new System.Drawing.Size(148, 21);
             this.label6.TabIndex = 36;
             this.label6.Text = "Fecha de registro :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 416);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 26);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "ID :";
-            // 
-            // txtIDc
-            // 
-            this.txtIDc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDc.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDc.Location = new System.Drawing.Point(67, 414);
-            this.txtIDc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIDc.Name = "txtIDc";
-            this.txtIDc.Size = new System.Drawing.Size(85, 33);
-            this.txtIDc.TabIndex = 34;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(337, 514);
+            this.label4.Location = new System.Drawing.Point(253, 418);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 26);
+            this.label4.Size = new System.Drawing.Size(48, 21);
             this.label4.TabIndex = 33;
             this.label4.Text = "DNI :";
             // 
@@ -202,19 +181,20 @@
             // 
             this.txtDniC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDniC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDniC.Location = new System.Drawing.Point(403, 511);
-            this.txtDniC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDniC.Location = new System.Drawing.Point(302, 415);
+            this.txtDniC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDniC.Name = "txtDniC";
-            this.txtDniC.Size = new System.Drawing.Size(165, 33);
+            this.txtDniC.Size = new System.Drawing.Size(124, 28);
             this.txtDniC.TabIndex = 32;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 514);
+            this.label3.Location = new System.Drawing.Point(10, 418);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 26);
+            this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 31;
             this.label3.Text = "Número :";
             // 
@@ -222,19 +202,20 @@
             // 
             this.txtNumC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumC.Location = new System.Drawing.Point(123, 511);
-            this.txtNumC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNumC.Location = new System.Drawing.Point(92, 415);
+            this.txtNumC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumC.Name = "txtNumC";
-            this.txtNumC.Size = new System.Drawing.Size(181, 33);
+            this.txtNumC.Size = new System.Drawing.Size(136, 28);
             this.txtNumC.TabIndex = 30;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(303, 464);
+            this.label1.Location = new System.Drawing.Point(227, 377);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 26);
+            this.label1.Size = new System.Drawing.Size(83, 21);
             this.label1.TabIndex = 29;
             this.label1.Text = "Apellido :";
             // 
@@ -242,19 +223,20 @@
             // 
             this.txtApeC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApeC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApeC.Location = new System.Drawing.Point(413, 462);
-            this.txtApeC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtApeC.Location = new System.Drawing.Point(310, 375);
+            this.txtApeC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtApeC.Name = "txtApeC";
-            this.txtApeC.Size = new System.Drawing.Size(153, 33);
+            this.txtApeC.Size = new System.Drawing.Size(115, 28);
             this.txtApeC.TabIndex = 28;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 464);
+            this.label7.Location = new System.Drawing.Point(10, 377);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 26);
+            this.label7.Size = new System.Drawing.Size(81, 21);
             this.label7.TabIndex = 27;
             this.label7.Text = "Nombre :";
             // 
@@ -262,10 +244,10 @@
             // 
             this.txtNomC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomC.Location = new System.Drawing.Point(121, 462);
-            this.txtNomC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNomC.Location = new System.Drawing.Point(91, 375);
+            this.txtNomC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNomC.Name = "txtNomC";
-            this.txtNomC.Size = new System.Drawing.Size(170, 33);
+            this.txtNomC.Size = new System.Drawing.Size(128, 28);
             this.txtNomC.TabIndex = 26;
             // 
             // btnMostrar
@@ -280,10 +262,9 @@
             this.btnMostrar.ForeColor = System.Drawing.Color.White;
             this.btnMostrar.ImageKey = "Product-sale-report_25407.png";
             this.btnMostrar.ImageList = this.imageList1;
-            this.btnMostrar.Location = new System.Drawing.Point(735, 524);
-            this.btnMostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMostrar.Location = new System.Drawing.Point(551, 426);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(124, 100);
+            this.btnMostrar.Size = new System.Drawing.Size(93, 81);
             this.btnMostrar.TabIndex = 25;
             this.btnMostrar.Text = "\r\n\r\n\r\nMostrar";
             this.btnMostrar.UseVisualStyleBackColor = false;
@@ -301,10 +282,9 @@
             this.btnEliminarCli.ForeColor = System.Drawing.Color.White;
             this.btnEliminarCli.ImageKey = "task_update_folder_progress_icon_142270.png";
             this.btnEliminarCli.ImageList = this.imageList1;
-            this.btnEliminarCli.Location = new System.Drawing.Point(735, 402);
-            this.btnEliminarCli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCli.Location = new System.Drawing.Point(551, 327);
             this.btnEliminarCli.Name = "btnEliminarCli";
-            this.btnEliminarCli.Size = new System.Drawing.Size(124, 100);
+            this.btnEliminarCli.Size = new System.Drawing.Size(93, 81);
             this.btnEliminarCli.TabIndex = 24;
             this.btnEliminarCli.Text = "\r\n\r\n\r\nEliminar-";
             this.btnEliminarCli.UseVisualStyleBackColor = false;
@@ -322,10 +302,9 @@
             this.btnNuevoCli.ForeColor = System.Drawing.Color.White;
             this.btnNuevoCli.ImageKey = "new_file256_25213(1).png";
             this.btnNuevoCli.ImageList = this.imageList1;
-            this.btnNuevoCli.Location = new System.Drawing.Point(589, 402);
-            this.btnNuevoCli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevoCli.Location = new System.Drawing.Point(442, 327);
             this.btnNuevoCli.Name = "btnNuevoCli";
-            this.btnNuevoCli.Size = new System.Drawing.Size(124, 100);
+            this.btnNuevoCli.Size = new System.Drawing.Size(93, 81);
             this.btnNuevoCli.TabIndex = 22;
             this.btnNuevoCli.Text = "\r\n\r\n\r\nNuevo+";
             this.btnNuevoCli.UseVisualStyleBackColor = false;
@@ -343,10 +322,9 @@
             this.btnActualizarCli.ForeColor = System.Drawing.Color.White;
             this.btnActualizarCli.ImageKey = "save_file_disk_open_searsh_loading_clipboard_1513(1).png";
             this.btnActualizarCli.ImageList = this.imageList1;
-            this.btnActualizarCli.Location = new System.Drawing.Point(589, 524);
-            this.btnActualizarCli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizarCli.Location = new System.Drawing.Point(442, 426);
             this.btnActualizarCli.Name = "btnActualizarCli";
-            this.btnActualizarCli.Size = new System.Drawing.Size(124, 100);
+            this.btnActualizarCli.Size = new System.Drawing.Size(93, 81);
             this.btnActualizarCli.TabIndex = 23;
             this.btnActualizarCli.Text = "\r\n\r\n\r\nActualizar";
             this.btnActualizarCli.UseVisualStyleBackColor = false;
@@ -360,21 +338,41 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::Proyecto_Final_Moanso.Properties.Resources.search_26px;
-            this.button1.Location = new System.Drawing.Point(299, 46);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(224, 37);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 38);
+            this.button1.Size = new System.Drawing.Size(110, 31);
             this.button1.TabIndex = 20;
             this.button1.Text = " Buscar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(10, 338);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 21);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "ID :";
+            // 
+            // txtIDc
+            // 
+            this.txtIDc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIDc.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDc.Location = new System.Drawing.Point(50, 336);
+            this.txtIDc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIDc.Name = "txtIDc";
+            this.txtIDc.Size = new System.Drawing.Size(64, 28);
+            this.txtIDc.TabIndex = 34;
+            // 
             // Frm_Clientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(889, 649);
+            this.ClientSize = new System.Drawing.Size(667, 527);
             this.Controls.Add(this.dtpFechRegC);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -396,7 +394,6 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
@@ -417,8 +414,6 @@
         private System.Windows.Forms.Button btnActualizarCli;
         private System.Windows.Forms.DateTimePicker dtpFechRegC;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtIDc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDniC;
         private System.Windows.Forms.Label label3;
@@ -427,5 +422,7 @@
         private System.Windows.Forms.TextBox txtApeC;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNomC;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtIDc;
     }
 }

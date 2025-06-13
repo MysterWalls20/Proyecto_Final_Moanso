@@ -35,10 +35,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtMarcaNP = new System.Windows.Forms.TextBox();
             this.txtNombreNP = new System.Windows.Forms.TextBox();
-            this.txtIDnp = new System.Windows.Forms.TextBox();
             this.cbColorN = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnNuevoP = new System.Windows.Forms.Button();
@@ -56,18 +54,20 @@
             // 
             this.txtPrecioN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecioN.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioN.Location = new System.Drawing.Point(287, 353);
+            this.txtPrecioN.Location = new System.Drawing.Point(215, 287);
+            this.txtPrecioN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrecioN.Name = "txtPrecioN";
-            this.txtPrecioN.Size = new System.Drawing.Size(115, 37);
+            this.txtPrecioN.Size = new System.Drawing.Size(87, 31);
             this.txtPrecioN.TabIndex = 25;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 357);
+            this.label7.Location = new System.Drawing.Point(14, 290);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(209, 31);
+            this.label7.Size = new System.Drawing.Size(175, 25);
             this.label7.TabIndex = 24;
             this.label7.Text = "Precio de Unidad :";
             // 
@@ -75,18 +75,20 @@
             // 
             this.txtStockNP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStockNP.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStockNP.Location = new System.Drawing.Point(417, 231);
+            this.txtStockNP.Location = new System.Drawing.Point(313, 188);
+            this.txtStockNP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtStockNP.Name = "txtStockNP";
-            this.txtStockNP.Size = new System.Drawing.Size(125, 37);
+            this.txtStockNP.Size = new System.Drawing.Size(94, 31);
             this.txtStockNP.TabIndex = 22;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(325, 233);
+            this.label6.Location = new System.Drawing.Point(244, 189);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 31);
+            this.label6.Size = new System.Drawing.Size(72, 25);
             this.label6.TabIndex = 21;
             this.label6.Text = "Stock :";
             // 
@@ -94,9 +96,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 237);
+            this.label5.Location = new System.Drawing.Point(15, 193);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 31);
+            this.label5.Size = new System.Drawing.Size(71, 25);
             this.label5.TabIndex = 20;
             this.label5.Text = "Color :";
             // 
@@ -104,9 +107,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 180);
+            this.label3.Location = new System.Drawing.Point(15, 146);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 31);
+            this.label3.Size = new System.Drawing.Size(77, 25);
             this.label3.TabIndex = 19;
             this.label3.Text = "Marca :";
             // 
@@ -114,48 +118,32 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 124);
+            this.label2.Location = new System.Drawing.Point(14, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 31);
+            this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 18;
             this.label2.Text = "Nombre :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 31);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "ID :";
             // 
             // txtMarcaNP
             // 
             this.txtMarcaNP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMarcaNP.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarcaNP.Location = new System.Drawing.Point(128, 174);
+            this.txtMarcaNP.Location = new System.Drawing.Point(96, 141);
+            this.txtMarcaNP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMarcaNP.Name = "txtMarcaNP";
-            this.txtMarcaNP.Size = new System.Drawing.Size(250, 37);
+            this.txtMarcaNP.Size = new System.Drawing.Size(188, 31);
             this.txtMarcaNP.TabIndex = 16;
             // 
             // txtNombreNP
             // 
             this.txtNombreNP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreNP.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreNP.Location = new System.Drawing.Point(146, 118);
+            this.txtNombreNP.Location = new System.Drawing.Point(110, 96);
+            this.txtNombreNP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreNP.Name = "txtNombreNP";
-            this.txtNombreNP.Size = new System.Drawing.Size(396, 37);
+            this.txtNombreNP.Size = new System.Drawing.Size(298, 31);
             this.txtNombreNP.TabIndex = 15;
-            // 
-            // txtIDnp
-            // 
-            this.txtIDnp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDnp.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDnp.Location = new System.Drawing.Point(82, 63);
-            this.txtIDnp.Name = "txtIDnp";
-            this.txtIDnp.Size = new System.Drawing.Size(134, 37);
-            this.txtIDnp.TabIndex = 14;
             // 
             // cbColorN
             // 
@@ -171,18 +159,20 @@
             "PLOMO",
             "NARANJA",
             "-OMITIR-"});
-            this.cbColorN.Location = new System.Drawing.Point(128, 230);
+            this.cbColorN.Location = new System.Drawing.Point(96, 187);
+            this.cbColorN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbColorN.Name = "cbColorN";
-            this.cbColorN.Size = new System.Drawing.Size(174, 39);
+            this.cbColorN.Size = new System.Drawing.Size(132, 31);
             this.cbColorN.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(243, 357);
+            this.label4.Location = new System.Drawing.Point(182, 290);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 31);
+            this.label4.Size = new System.Drawing.Size(31, 25);
             this.label4.TabIndex = 27;
             this.label4.Text = "S/";
             // 
@@ -196,9 +186,10 @@
             this.btnNuevoP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnNuevoP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoP.Location = new System.Drawing.Point(560, 351);
+            this.btnNuevoP.Location = new System.Drawing.Point(420, 285);
+            this.btnNuevoP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNuevoP.Name = "btnNuevoP";
-            this.btnNuevoP.Size = new System.Drawing.Size(270, 45);
+            this.btnNuevoP.Size = new System.Drawing.Size(202, 37);
             this.btnNuevoP.TabIndex = 28;
             this.btnNuevoP.Text = "NUEVO";
             this.btnNuevoP.UseVisualStyleBackColor = false;
@@ -211,8 +202,9 @@
             this.panel1.Controls.Add(this.pbCerrarNP);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(850, 44);
+            this.panel1.Size = new System.Drawing.Size(638, 36);
             this.panel1.TabIndex = 29;
             // 
             // pbCerrarNP
@@ -220,9 +212,10 @@
             this.pbCerrarNP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbCerrarNP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCerrarNP.Image = global::Proyecto_Final_Moanso.Properties.Resources.close_480px;
-            this.pbCerrarNP.Location = new System.Drawing.Point(788, 3);
+            this.pbCerrarNP.Location = new System.Drawing.Point(591, 2);
+            this.pbCerrarNP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbCerrarNP.Name = "pbCerrarNP";
-            this.pbCerrarNP.Size = new System.Drawing.Size(58, 36);
+            this.pbCerrarNP.Size = new System.Drawing.Size(44, 29);
             this.pbCerrarNP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbCerrarNP.TabIndex = 0;
             this.pbCerrarNP.TabStop = false;
@@ -233,9 +226,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(20, 297);
+            this.label8.Location = new System.Drawing.Point(15, 241);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 31);
+            this.label8.Size = new System.Drawing.Size(108, 25);
             this.label8.TabIndex = 30;
             this.label8.Text = "Categoria :";
             // 
@@ -262,26 +256,28 @@
             "Equipo de Bioseguridad",
             "Equipo de Desinfeccion",
             "Equipo de Seguridad"});
-            this.cbCategoria.Location = new System.Drawing.Point(159, 292);
+            this.cbCategoria.Location = new System.Drawing.Point(119, 237);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(347, 39);
+            this.cbCategoria.Size = new System.Drawing.Size(261, 31);
             this.cbCategoria.TabIndex = 31;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyecto_Final_Moanso.Properties.Resources.añadir_product_100;
-            this.pictureBox1.Location = new System.Drawing.Point(560, 62);
+            this.pictureBox1.Location = new System.Drawing.Point(420, 50);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 269);
+            this.pictureBox1.Size = new System.Drawing.Size(202, 219);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // NuevoProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 425);
+            this.ClientSize = new System.Drawing.Size(638, 345);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
@@ -295,12 +291,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMarcaNP);
             this.Controls.Add(this.txtNombreNP);
-            this.Controls.Add(this.txtIDnp);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NuevoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoProducto";
@@ -323,10 +318,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMarcaNP;
         private System.Windows.Forms.TextBox txtNombreNP;
-        private System.Windows.Forms.TextBox txtIDnp;
         private System.Windows.Forms.ComboBox cbColorN;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnNuevoP;

@@ -15,10 +15,24 @@ namespace Proyecto_Final_Moanso
     public partial class ActualizarProducto : Form
     {
         public bool ProductoActualizado { get; set; } = false;
+        private Entidad_Productos productoSeleccionado;
 
-        public ActualizarProducto()
+        public ActualizarProducto(Entidad_Productos producto)
         {
             InitializeComponent();
+            productoSeleccionado = producto;
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+            txtIDa.Text = productoSeleccionado.id.ToString();
+            txtNomA.Text = productoSeleccionado.nombre;
+            MarcaA.Text = productoSeleccionado.marca;
+            cbColorA.Text = productoSeleccionado.color;
+            txtStockA.Text = productoSeleccionado.stock.ToString();
+            cbCategoriaA.Text = productoSeleccionado.categoria;
+            txtPrecioA.Text = productoSeleccionado.precio_unidad.ToString("F2");
         }
         private void ActualizarProducto_Load(object sender, EventArgs e)
         {
@@ -54,34 +68,35 @@ namespace Proyecto_Final_Moanso
 
         private void btnActualizarP_Click(object sender, EventArgs e)
         {
-            if (txtIDa.Text == string.Empty || txtNomA.Text == string.Empty ||
-           txtStockA.Text == string.Empty || txtPrecioA.Text == string.Empty)
+            if (txtIDa.Text == string.Empty)
             {
                 MessageBox.Show("Faltan datos obligatorios", "Érror", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Entidad_Productos ePr = new Entidad_Productos();
-            ePr.id = int.Parse(txtIDa.Text);
-            ePr.nombre = txtNomA.Text;
-            ePr.marca = MarcaA.Text;
-            ePr.color = cbColorA.Text;
-            ePr.stock = int.Parse(txtStockA.Text);
-            ePr.categoria = cbCategoriaA.Text;
-            ePr.precio_unidad = double.Parse(txtPrecioA.Text);
-
-            string rpta = Logica_Productos.Guardado_PR(2, ePr); // 2 = Actualizar
-
-            if (rpta == "Vale")
+            try
             {
-                MessageBox.Show("Producto actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ProductoActualizado = true; // ✅ Marca que se actualizó
-                this.Close();               // ✅ Cierra el formulario
+                Entidad_Productos ePr = new Entidad_Productos();
+                ePr.id = int.Parse(txtIDa.Text);
+                ePr.nombre = txtNomA.Text.Trim();
+                ePr.marca = MarcaA.Text.Trim();
+                ePr.color = cbColorA.Text.Trim();
+                ePr.stock = int.Parse(txtStockA.Text.Trim());
+                ePr.categoria = cbCategoriaA.Text.Trim();
+                ePr.precio_unidad = double.Parse(txtPrecioA.Text.Trim());
+                Logica_Productos.Instancia.EditaProducto(ePr);
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(rpta, "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error.." + ex);
             }
+
+            MessageBox.Show("Producto actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ProductoActualizado = true;
+            this.Close();
+
+
+            
         }
     }
 }

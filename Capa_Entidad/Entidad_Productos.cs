@@ -16,5 +16,6 @@ namespace Capa_Entidad
         public int stock { get; set; }
         public string categoria { get; set; }
         public double precio_unidad { get; set; }
+        public bool estado { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,14 +14,13 @@ using System.Windows.Forms;
 namespace Proyecto_Final_Moanso
 {
     public partial class Frm_Clientes : Form
-    {
-        private int idClienteActual = 0;
+    {    
         public Frm_Clientes()
         {
             InitializeComponent();
             dtpFechRegC.MinDate = DateTime.Now;
             dtpFechRegC.CustomFormat = "dd/MM/yyyy";
-            MostrarClientes();
+            listarCliente();
 
         }
 
@@ -34,102 +34,108 @@ namespace Proyecto_Final_Moanso
             dtpFechRegC.Value = DateTime.Now;
         }
 
-        private void MostrarClientes()
+        public void listarCliente()
         {
-            dgvClientes.DataSource = Logica_Cliente.Listadocl("");
+            dgvClientes.DataSource = Logica_Cliente.Instancia.ListarCliente();
         }
 
         private void btnNuevoCli_Click(object sender, EventArgs e)
         {
+
+
             if (txtNomC.Text == "" || txtApeC.Text == "" || txtNumC.Text == "" || txtDniC.Text == "")
             {
                 MessageBox.Show("Ingresa todos los datos del cliente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Entidad_Cliente cliente = new Entidad_Cliente
+            try
             {
-                id = int.Parse(txtIDc.Text),
-                nombre = txtNomC.Text,
-                apellido = txtApeC.Text,
-                numero = int.Parse(txtNumC.Text),
-                dni = txtDniC.Text, // ⚠️ o usa ToString si cambias a string
-                fecha_registro = dtpFechRegC.Value
-            };
+                Entidad_Cliente eCl = new Entidad_Cliente();
+                eCl.nombre = txtNomC.Text.Trim();
+                eCl.apellido = txtApeC.Text.Trim();
+                eCl.numero = int.Parse(txtNumC.Text.Trim());
+                eCl.dni = txtDniC.Text.Trim();
+                eCl.fecha_registro = dtpFechRegC.Value;
+                eCl.estado = true;
+                Logica_Cliente.Instancia.InsertaCliente(eCl);
 
-            string rpta = Logica_Cliente.Guardado_cl(1, cliente);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
 
-            if (rpta == "Vale")
-            {
-                MessageBox.Show("Cliente guardado exitosamente", "Nuevo cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MostrarClientes();
-                LimpiarCampos();
-            }
-            else
-            {
-                MessageBox.Show(rpta, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            MessageBox.Show("Cliente guardado exitosamente", "Nuevo cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            listarCliente();
+            LimpiarCampos();
+
         }
 
         private void btnEliminarCli_Click(object sender, EventArgs e)
         {
-            if (txtIDc.Text == "")
-            {
-                MessageBox.Show("El ID es obligatorio para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
-            DialogResult confirm = MessageBox.Show("¿Estás seguro de eliminar este cliente?", "Eliminar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (confirm == DialogResult.Yes)
+            try
             {
-                string rpta = Logica_Cliente.Eliminar_cl(int.Parse(txtIDc.Text));
-                if (rpta == "Vale")
+                Entidad_Cliente c = new Entidad_Cliente();
+
+                int id;
+                if (int.TryParse(txtIDc.Text.Trim(), out id))
                 {
-                    MessageBox.Show("Cliente eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MostrarClientes();
-                    LimpiarCampos();
+                    c.id = id;
+                    Logica_Cliente.Instancia.DeshabilitarCliente(c);
                 }
                 else
                 {
-                    MessageBox.Show(rpta, "Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ingrese un ID válido antes de eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Detiene la ejecución si el ID no es válido
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            LimpiarCampos();
+            listarCliente();
+
+          
         }
 
         private void btnActualizarCli_Click(object sender, EventArgs e)
         {
+
             if (txtIDc.Text == "")
             {
                 MessageBox.Show("El ID del cliente es obligatorio para actualizar.", "Actualizar cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Entidad_Cliente cliente = new Entidad_Cliente
+            try
             {
-                id = int.Parse(txtIDc.Text),
-                nombre = txtNomC.Text.Trim(),
-                apellido = txtApeC.Text.Trim(),
-                numero = int.Parse(txtNumC.Text),
-                dni = txtDniC.Text.Trim(), // ⚠️ Cambiar a string si deseas todo el DNI
-                fecha_registro = dtpFechRegC.Value
-            };
+                Entidad_Cliente eCl = new Entidad_Cliente();
 
-            string rpta = Logica_Cliente.Guardado_cl(2, cliente);
-            if (rpta == "Vale")
-            {
-                MessageBox.Show("Cliente actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MostrarClientes();
-                LimpiarCampos();
+                eCl.id = int.Parse(txtIDc.Text.Trim());
+                eCl.nombre = txtNomC.Text.Trim();
+                eCl.apellido = txtApeC.Text.Trim();
+                eCl.numero = int.Parse(txtNumC.Text.Trim());
+                eCl.dni = txtDniC.Text.Trim();
+                eCl.fecha_registro = dtpFechRegC.Value;
+                Logica_Cliente.Instancia.EditaCliente(eCl);
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(rpta, "Error al actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error.." + ex);
             }
+            LimpiarCampos();
+            listarCliente();
+
+
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-                  MostrarClientes();
+                  listarCliente();
         }
 
 

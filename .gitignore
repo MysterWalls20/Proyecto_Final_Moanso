@@ -22,6 +22,12 @@ bld/
 [Bb]in/
 [Oo]bj/
 
+.vs/
+*.suo
+obj/
+bin/
+*.cache
+
 # Archivos generados por Visual Studio
 *.cache
 *.suo

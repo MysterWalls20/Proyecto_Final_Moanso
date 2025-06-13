@@ -11,24 +11,44 @@ namespace Capa_Logica
 {
     public class Logica_Cliente
     {
-        Datos_Cliente datos = new Datos_Cliente();
-
-        public static DataTable Listadocl(string cTexto)
+        #region sigleton
+        //Patron Singleton
+        // Variable estática para la instancia
+        private static readonly Logica_Cliente _instancia = new Logica_Cliente();
+        //privado para evitar la instanciación directa
+        public static Logica_Cliente Instancia
         {
-            Datos_Cliente datos = new Datos_Cliente();
-            return datos.Listadocl(cTexto);
+            get
+            {
+                return Logica_Cliente._instancia;
+            }
+        }
+        #endregion singleton
+
+        #region metodos
+
+        ///listado
+
+        public List<Entidad_Cliente> ListarCliente()
+        {
+            return Datos_Cliente.Instancia.ListarCliente();
+        }
+        ///inserta
+        public void InsertaCliente(Entidad_Cliente Cli)
+        {
+            Datos_Cliente.Instancia.InsertarCliente(Cli);
         }
 
-        public static string Guardado_cl(int nOpcion, Entidad_Cliente ecl)
+        //edita
+        public void EditaCliente(Entidad_Cliente Cli)
         {
-            Datos_Cliente datos = new Datos_Cliente();
-            return datos.Guardar_cl(nOpcion, ecl);
+            Datos_Cliente.Instancia.EditarCliente(Cli);
         }
-
-        public static string Eliminar_cl(int id)
+        public void DeshabilitarCliente(Entidad_Cliente Cli)
         {
-            Datos_Cliente datos = new Datos_Cliente();
-            return datos.Eliminar_cl(id);
+            Datos_Cliente.Instancia.DeshabilitarCliente(Cli);
         }
+        #endregion metodos
     }
 }
+

@@ -53,7 +53,7 @@ namespace Proyecto_Final_Moanso
         private void btnNuevoP_Click(object sender, EventArgs e)
         {
 
-            if (txtIDnp.Text == string.Empty || txtMarcaNP.Text == string.Empty ||
+            if (txtMarcaNP.Text == string.Empty ||
             txtNombreNP.Text == string.Empty || txtPrecioN.Text == string.Empty ||
             txtStockNP.Text == string.Empty)
             {
@@ -61,28 +61,30 @@ namespace Proyecto_Final_Moanso
             }
             else
             {
-                Entidad_Productos ePr = new Entidad_Productos();
-                string rpta = " ";
-                ePr.id = int.Parse(txtIDnp.Text);
-                ePr.nombre = txtNombreNP.Text;
-                ePr.marca = txtMarcaNP.Text;
-                ePr.color = cbColorN.Text;
-                ePr.stock = int.Parse(txtStockNP.Text);
-                ePr.categoria = cbCategoria.Text;
-                ePr.precio_unidad = double.Parse(txtPrecioN.Text);
 
-                rpta = Logica_Productos.Guardado_PR(1, ePr); // 1 = Nuevo producto
-
-                if (rpta == "Vale")
+                try
                 {
+                    Entidad_Productos ePr = new Entidad_Productos();
+                   
+                    ePr.nombre = txtNombreNP.Text;
+                    ePr.marca = txtMarcaNP.Text;
+                    ePr.color = cbColorN.Text;
+                    ePr.stock = int.Parse(txtStockNP.Text);
+                    ePr.categoria = cbCategoria.Text;
+                    ePr.precio_unidad = double.Parse(txtPrecioN.Text);
+
+                    Logica_Productos.Instancia.InsertaProducto(ePr);
+
                     MessageBox.Show("Los datos del producto se han guardado correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ProductoAgregado = true; // ✅ Indica que se guardó
-                    this.Close();            // ✅ Cierra el formulario
+                    this.Close();
+
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show(rpta, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error.." + ex);
                 }
+        
             }
         }
     }

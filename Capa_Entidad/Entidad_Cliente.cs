@@ -14,5 +14,6 @@ namespace Capa_Entidad
         public int numero { get; set; }
         public string dni { get; set; } // Para mayor facilidad en manejo de string
         public DateTime fecha_registro { get; set; }
+        public bool estado { get; set; }
     }
 }

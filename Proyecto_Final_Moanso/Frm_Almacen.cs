@@ -1,4 +1,5 @@
-﻿using Capa_Logica;
+﻿using Capa_Entidad;
+using Capa_Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace Proyecto_Final_Moanso
         public Frm_Almacen()
         {
             InitializeComponent();
+            MostrarProductos();
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -26,32 +28,49 @@ namespace Proyecto_Final_Moanso
         }
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            ActualizarProducto actualPodruct = new ActualizarProducto();
-            actualPodruct.ShowDialog();
+            Entidad_Productos productoVacio = new Entidad_Productos();
+            ActualizarProducto actualProducto = new ActualizarProducto(productoVacio);
+            actualProducto.ShowDialog();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dgvProductosAlm.SelectedRows.Count > 0)
             {
-                // Confirmación opcional
-                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar esta fila?", "Confirmar eliminación", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este producto?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                 {
-                    // Elimina la fila seleccionada
-                    dgvProductosAlm.Rows.RemoveAt(dgvProductosAlm.SelectedRows[0].Index);
+                    // Obtener el ID del producto seleccionado
+                    int idProducto = Convert.ToInt32(dgvProductosAlm.SelectedRows[0].Cells["id"].Value);
+
+                    // Crear entidad con solo el ID
+                    Entidad_Productos producto = new Entidad_Productos();
+                    producto.id = idProducto;
+
+                    // Llamar a la lógica para deshabilitar
+                    Logica_Productos.Instancia.DeshabilitarProducto(producto);
+
+                    // Refrescar la tabla
+                    MostrarProductos(); // Asegúrate de tener esta función en tu formulario
+
+                    // Limpiar selección y deshabilitar botones
+                    dgvProductosAlm.ClearSelection();
+                    btnActualizar.Enabled = false;
+                    btnEliminar.Enabled = false;
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, selecciona una fila para eliminar.");
+                MessageBox.Show("Por favor, selecciona un producto para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            MostrarProductos();
         }
+
 
         private void MostrarProductos()
         {
-            dgvProductosAlm.DataSource = Logica_Productos.ListadoPR("");
+            dgvProductosAlm.DataSource = Logica_Productos.Instancia.ListarProductos();
 
             // Asegúrate que estos nombres coincidan con los campos del DataTable
             dgvProductosAlm.Columns["id"].HeaderText = "ID";
@@ -75,17 +94,36 @@ namespace Proyecto_Final_Moanso
 
         private void dgvProductosAlm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex >= 0)
             {
-                ActualizarProducto frm = new ActualizarProducto();
-                // Puedes pasarle los datos seleccionados aquí si lo configuras
+                // Captura de fila actual
+                DataGridViewRow fila = dgvProductosAlm.Rows[e.RowIndex];
+
+                // Llenar objeto con datos de la fila
+                Entidad_Productos producto = new Entidad_Productos()
+                {
+                    id = Convert.ToInt32(fila.Cells["id"].Value),
+                    nombre = fila.Cells["nombre"].Value.ToString(),
+                    marca = fila.Cells["marca"].Value.ToString(),
+                    color = fila.Cells["color"].Value.ToString(),
+                    stock = Convert.ToInt32(fila.Cells["stock"].Value),
+                    categoria = fila.Cells["categoria"].Value.ToString(),
+                    precio_unidad = Convert.ToDouble(fila.Cells["precio_unidad"].Value)
+                };
+
+                // Pasar el producto al formulario de actualización
+                ActualizarProducto frm = new ActualizarProducto(producto);
                 frm.ShowDialog();
+                MostrarProductos();
 
                 if (frm.ProductoActualizado)
                 {
                     MostrarProductos();
                 }
             }
+
+
         }
     }
 }

@@ -12,24 +12,46 @@ namespace Capa_Logica
 {
     public class Logica_Productos
     {
-        Datos_Productos datos = new Datos_Productos();
 
-        public static DataTable ListadoPR(string cTexto)
+        #region sigleton
+        //Patron Singleton
+        // Variable estática para la instancia
+        private static readonly Logica_Productos _instancia = new Logica_Productos();
+        //privado para evitar la instanciación directa
+        public static Logica_Productos Instancia
         {
-            Datos_Productos dato = new Datos_Productos();
-            return dato.ListadoPR(cTexto);
+            get
+            {
+                return Logica_Productos._instancia;
+            }
+        }
+        #endregion singleton
+
+
+        #region metodos
+
+        //listado
+
+        public List<Entidad_Productos> ListarProductos()
+        {
+            return Datos_Productos.Instancia.ListarProductos();
+        }
+        //inserta
+        public void InsertaProducto(Entidad_Productos Pro)
+        {
+            Datos_Productos.Instancia.InsertarProductos(Pro);
         }
 
-        public static string Guardado_PR(int nOpcion, Entidad_Productos epr)
+        //edita
+        public void EditaProducto(Entidad_Productos Pro)
         {
-            Datos_Productos dato = new Datos_Productos();
-            return dato.Guardar_pr(nOpcion, epr);
+            Datos_Productos.Instancia.EditarProductos(Pro);
         }
+        public void DeshabilitarProducto(Entidad_Productos Pro)
+        {
+            Datos_Productos.Instancia.DeshabilitarProductos(Pro);
+        }
+        #endregion metodos
 
-        public static string Eliminar_PR(int id)
-        {
-            Datos_Productos dato = new Datos_Productos();
-            return dato.Eliminar_pr(id);
-        }
     }
 }

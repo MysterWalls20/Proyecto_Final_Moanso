@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Capa_Datos;
+using Capa_Entidad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +10,12 @@ namespace Capa_Logica
 {
     public class Logica_Empleado
     {
-        private Capa_Datos.Datos_Empleado loginDAO = new Capa_Datos.Datos_Empleado();
+        private static readonly Logica_Empleado _instancia = new Logica_Empleado();
+        public static Logica_Empleado Instancia => _instancia;
 
-        public bool ValidarLogin(Capa_Entidad.Entidad_Empleado login)
+        public bool Login(Entidad_Empleado emp)
         {
-            return loginDAO.VerificarLogin(login);
+            return Datos_Empleado.Instancia.Login(emp);
         }
     }
 }

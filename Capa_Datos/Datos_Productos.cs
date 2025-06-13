@@ -11,89 +11,152 @@ namespace Capa_Datos
 {
     public class Datos_Productos
     {
-        public DataTable ListadoPR (string cTexto)
-        {
-            SqlDataReader resultado;
-            DataTable tabla = new DataTable();
-            SqlConnection sqlcon = new SqlConnection();
 
+        #region sigleton
+        //Patron Singleton
+        // Variable estática para la instancia
+        private static readonly Datos_Productos _instancia = new Datos_Productos();
+        //privado para evitar la instanciación directa
+        public static Datos_Productos Instancia
+        {
+            get
+            {
+                return Datos_Productos._instancia;
+            }
+        }
+        #endregion singleton
+
+        #region metodos
+        //listado de Productos
+        public List<Entidad_Productos> ListarProductos()
+        {
+            SqlCommand cmd = null;
+            List<Entidad_Productos> lista = new List<Entidad_Productos>();
             try
             {
-                sqlcon = Conexion.getInstancia().CrearConexion();
-                SqlCommand command = new SqlCommand("USP_Listado_Productos", sqlcon);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
-                sqlcon.Open();
-                resultado = command.ExecuteReader();
-                tabla.Load(resultado);
-                return tabla;
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("spListaProducto", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Entidad_Productos Pro = new Entidad_Productos();
+
+                    Pro.id = Convert.ToInt32(dr["id"]);
+                    Pro.nombre = dr["nombre"].ToString();
+                    Pro.marca = dr["marca"].ToString();
+                    Pro.color = dr["color"].ToString();
+                    Pro.stock = Convert.ToInt32(dr["stock"]);
+                    Pro.categoria = dr["categoria"].ToString();
+                    Pro.precio_unidad = Convert.ToDouble(dr["precio_unidad"]);
+                    lista.Add(Pro);
+                }
+
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw ex;
+                throw e;
             }
             finally
             {
-                if (sqlcon.State == ConnectionState.Open) sqlcon.Close();
+                cmd.Connection.Close();
             }
+            return lista;
         }
 
-        public string Guardar_pr(int nOpcion, Entidad_Productos ePr)
+        //Insertar producto
+        public Boolean InsertarProductos(Entidad_Productos Pro)
         {
-            string rpta = "";
-            SqlConnection sqlcon = new SqlConnection();
+            SqlCommand cmd = null;
+            Boolean inserta = false;
             try
             {
-                sqlcon = Conexion.getInstancia().CrearConexion();
-                SqlCommand command = new SqlCommand("usp_GuardarProducto", sqlcon);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.Add("@nOpcion", SqlDbType.Int).Value = nOpcion;
-                command.Parameters.Add("@nId", SqlDbType.Int).Value = ePr.id;
-                command.Parameters.Add("@cNombre", SqlDbType.VarChar).Value = ePr.nombre;
-                command.Parameters.Add("@cMarca", SqlDbType.VarChar).Value = ePr.marca;
-                command.Parameters.Add("@cColor", SqlDbType.VarChar).Value = ePr.color;
-                command.Parameters.Add("@nStock", SqlDbType.Int).Value = ePr.stock;
-                command.Parameters.Add("@cCategoria", SqlDbType.VarChar).Value = ePr.categoria;
-                command.Parameters.Add("@nPrecio", SqlDbType.Decimal).Value = ePr.precio_unidad;
-                sqlcon.Open();
-                rpta = command.ExecuteNonQuery() == 1 ? "Vale" : "No se pudo registrar los datos";
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInsertaProductos", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@pNombre", SqlDbType.VarChar).Value = Pro.nombre;
+                cmd.Parameters.AddWithValue("@pMarca", SqlDbType.VarChar).Value = Pro.marca;
+                cmd.Parameters.AddWithValue("@pColor", SqlDbType.VarChar).Value = Pro.color;
+                cmd.Parameters.AddWithValue("@pStock", SqlDbType.Int).Value = Pro.stock;
+                cmd.Parameters.AddWithValue("@pCategoria", SqlDbType.VarChar).Value = Pro.categoria;
+                cmd.Parameters.AddWithValue("@pPrecio", SqlDbType.Decimal).Value = Pro.precio_unidad;
+                cmd.Parameters.AddWithValue("@pEstado", Pro.estado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserta = true;
+                }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-
-                rpta = ex.Message;
+                throw e;
             }
-            finally
-            {
-                if (sqlcon.State == ConnectionState.Open) sqlcon.Close();
-            }
-            return rpta;
+            finally { cmd.Connection.Close(); }
+            return inserta;
         }
 
-        public string Eliminar_pr(int codigo_ca)
+        //Edita Producto
+        public Boolean EditarProductos(Entidad_Productos Pro)
         {
-            string rpta = "";
-            SqlConnection sqlcon = new SqlConnection();
+            SqlCommand cmd = null;
+            Boolean edita = false;
             try
             {
-                sqlcon = Conexion.getInstancia().CrearConexion();
-                SqlCommand command = new SqlCommand("usp_EliminarProducto", sqlcon);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.Add("@nId", SqlDbType.Int).Value = codigo_ca;
-                sqlcon.Open();
-                rpta = command.ExecuteNonQuery() == 1 ? "Vale" : "No se pudo eliminar los datos";
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEditaProductos", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@pId", SqlDbType.Int).Value = Pro.id;
+                cmd.Parameters.AddWithValue("@pNombre", SqlDbType.VarChar).Value = Pro.nombre;
+                cmd.Parameters.AddWithValue("@pMarca", SqlDbType.VarChar).Value = Pro.marca;
+                cmd.Parameters.AddWithValue("@pColor", SqlDbType.VarChar).Value = Pro.color;
+                cmd.Parameters.AddWithValue("@pStock", SqlDbType.Int).Value = Pro.stock;
+                cmd.Parameters.AddWithValue("@pCategoria", SqlDbType.VarChar).Value = Pro.categoria;
+                cmd.Parameters.AddWithValue("@pPrecio", SqlDbType.Decimal).Value = Pro.precio_unidad;
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-
-                rpta = ex.Message;
+                throw e;
             }
-            finally
-            {
-                if (sqlcon.State == ConnectionState.Open) sqlcon.Close();
-            }
-            return rpta;
+            finally { cmd.Connection.Close(); }
+            return edita;
         }
+
+        //deshabilita Productos
+
+        public Boolean DeshabilitarProductos(Entidad_Productos Pro)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spDeshabilitaProductos", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@pId", Pro.id);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
+        }
+
+        #endregion metodos
 
     }
 }
