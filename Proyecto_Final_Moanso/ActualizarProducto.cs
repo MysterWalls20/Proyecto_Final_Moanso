@@ -36,8 +36,36 @@ namespace Proyecto_Final_Moanso
         }
         private void ActualizarProducto_Load(object sender, EventArgs e)
         {
+            try
+            {
+                cbCategoriaA.Items.Clear();
+                var categorias = Logica_Productos.Instancia.ObtenerCategorias();
+
+                foreach (string cat in categorias)
+                {
+                    cbCategoriaA.Items.Add(cat);
+                }
+
+                if (cbCategoriaA.Items.Count > 0)
+                    cbCategoriaA.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar categorías: " + ex.Message);
+            }
+
+            cbColorA.Items.Clear();
+            var colores = Logica_Productos.Instancia.ObtenerColores();
+
+            foreach (var color in colores)
+            {
+                cbColorA.Items.Add(color);
+            }
+
+            if (cbColorA.Items.Count > 0)
+                cbColorA.SelectedIndex = 0;
+
             txtNomA.KeyPress += textBoxSoloLetras_KeyPress;
-            MarcaA.KeyPress += textBoxSoloLetras_KeyPress;
             txtPrecioA.KeyPress += textBoxSoloNumeros_KeyPress;
             txtStockA.KeyPress += textBoxSoloNumeros_KeyPress;
         }
@@ -94,9 +122,6 @@ namespace Proyecto_Final_Moanso
             MessageBox.Show("Producto actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ProductoActualizado = true;
             this.Close();
-
-
-            
         }
     }
 }

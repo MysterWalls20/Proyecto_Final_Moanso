@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Datos
 {
-    internal class Conexion
+    public class Conexion
     {
         private string Base;
         private string Servidor;
@@ -19,12 +19,11 @@ namespace Capa_Datos
         {
 
             this.Base = "BD_Compania_Rubio";
-            this.Servidor = "DESKTOP-8TP23M5"; //Poner el nombre de tu servidor sql
+            this.Servidor = "USER"; //Poner el nombre de tu servidor sql
             this.Usuario = "sa";
             this.Clave = "clavedelSA";
             this.Seguridad = false;
         }
-
 
         //patron de Diseño Singleton
         private static readonly Conexion _instancia = new Conexion();

@@ -96,15 +96,6 @@
             this.cbColorA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbColorA.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbColorA.FormattingEnabled = true;
-            this.cbColorA.Items.AddRange(new object[] {
-            "BLANCO",
-            "AMARILLO",
-            "AZUL",
-            "ROJO",
-            "VERDE",
-            "PLOMO",
-            "NARANJA",
-            "-OMITIR-"});
             this.cbColorA.Location = new System.Drawing.Point(133, 230);
             this.cbColorA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbColorA.Name = "cbColorA";
@@ -115,10 +106,10 @@
             // 
             this.txtPrecioA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecioA.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioA.Location = new System.Drawing.Point(292, 353);
+            this.txtPrecioA.Location = new System.Drawing.Point(296, 353);
             this.txtPrecioA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioA.Name = "txtPrecioA";
-            this.txtPrecioA.Size = new System.Drawing.Size(115, 37);
+            this.txtPrecioA.Size = new System.Drawing.Size(110, 37);
             this.txtPrecioA.TabIndex = 42;
             // 
             // label7
@@ -218,6 +209,7 @@
             this.txtIDa.Location = new System.Drawing.Point(87, 63);
             this.txtIDa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIDa.Name = "txtIDa";
+            this.txtIDa.ReadOnly = true;
             this.txtIDa.Size = new System.Drawing.Size(134, 37);
             this.txtIDa.TabIndex = 32;
             // 
@@ -252,24 +244,6 @@
             this.cbCategoriaA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoriaA.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoriaA.FormattingEnabled = true;
-            this.cbCategoriaA.Items.AddRange(new object[] {
-            "Herramientas/Accesorios",
-            "Calzado de Seguridad",
-            "Protección Manual",
-            "Protección Anticaidas",
-            "Proteccion Auditiva",
-            "Protección Corporal",
-            "Proteccion De Cabeza",
-            "Protección Respiratoria",
-            "Protección para Soldadura",
-            "Ropa De Protección Textiles",
-            "Prootección Facial",
-            "Proteccion Visual",
-            "Reflectivos y Señalización",
-            "Bloqueo y Mas Seguridad",
-            "Equipo de Bioseguridad",
-            "Equipo de Desinfeccion",
-            "Equipo de Seguridad"});
             this.cbCategoriaA.Location = new System.Drawing.Point(164, 294);
             this.cbCategoriaA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategoriaA.Name = "cbCategoriaA";

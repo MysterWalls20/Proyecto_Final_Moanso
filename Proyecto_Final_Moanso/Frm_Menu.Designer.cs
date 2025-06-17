@@ -61,8 +61,9 @@
             this.pnTop.Controls.Add(this.pbCerrarPrograma);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1240, 67);
+            this.pnTop.Size = new System.Drawing.Size(955, 54);
             this.pnTop.TabIndex = 1;
             this.pnTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTop_MouseDown);
             // 
@@ -70,9 +71,10 @@
             // 
             this.pbMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMinimizar.Image = global::Proyecto_Final_Moanso.Properties.Resources.minimazar;
-            this.pbMinimizar.Location = new System.Drawing.Point(1079, 6);
+            this.pbMinimizar.Location = new System.Drawing.Point(835, 5);
+            this.pbMinimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbMinimizar.Name = "pbMinimizar";
-            this.pbMinimizar.Size = new System.Drawing.Size(71, 58);
+            this.pbMinimizar.Size = new System.Drawing.Size(53, 47);
             this.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinimizar.TabIndex = 2;
             this.pbMinimizar.TabStop = false;
@@ -82,9 +84,10 @@
             // 
             this.pbCerrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCerrarPrograma.Image = global::Proyecto_Final_Moanso.Properties.Resources.cerrar;
-            this.pbCerrarPrograma.Location = new System.Drawing.Point(1164, 3);
+            this.pbCerrarPrograma.Location = new System.Drawing.Point(899, 2);
+            this.pbCerrarPrograma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbCerrarPrograma.Name = "pbCerrarPrograma";
-            this.pbCerrarPrograma.Size = new System.Drawing.Size(71, 58);
+            this.pbCerrarPrograma.Size = new System.Drawing.Size(53, 47);
             this.pbCerrarPrograma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbCerrarPrograma.TabIndex = 1;
             this.pbCerrarPrograma.TabStop = false;
@@ -106,32 +109,35 @@
             this.pnMenu.Controls.Add(this.btnPedidos);
             this.pnMenu.Controls.Add(this.btnNuevaVenta);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnMenu.Location = new System.Drawing.Point(0, 67);
+            this.pnMenu.Location = new System.Drawing.Point(0, 54);
+            this.pnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(351, 649);
+            this.pnMenu.Size = new System.Drawing.Size(263, 546);
             this.pnMenu.TabIndex = 4;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DarkOrange;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(0, 377);
+            this.panel5.Location = new System.Drawing.Point(0, 298);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(43, 70);
+            this.panel5.Size = new System.Drawing.Size(33, 57);
             this.panel5.TabIndex = 4;
             // 
             // btnClientes
             // 
             this.btnClientes.BackColor = System.Drawing.Color.White;
             this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnClientes.FlatAppearance.BorderSize = 2;
             this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.Image = global::Proyecto_Final_Moanso.Properties.Resources.clientes_40;
-            this.btnClientes.Location = new System.Drawing.Point(42, 377);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClientes.Location = new System.Drawing.Point(32, 298);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(309, 72);
+            this.btnClientes.Size = new System.Drawing.Size(232, 58);
             this.btnClientes.TabIndex = 5;
             this.btnClientes.Text = " Clientes";
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -144,9 +150,10 @@
             this.pbLogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLogo1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbLogo1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbLogo1.Location = new System.Drawing.Point(11, 13);
+            this.pbLogo1.Location = new System.Drawing.Point(8, 11);
+            this.pbLogo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbLogo1.Name = "pbLogo1";
-            this.pbLogo1.Size = new System.Drawing.Size(330, 134);
+            this.pbLogo1.Size = new System.Drawing.Size(248, 100);
             this.pbLogo1.TabIndex = 1;
             this.pbLogo1.TabStop = false;
             // 
@@ -154,50 +161,55 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkOrange;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(0, 541);
+            this.panel4.Location = new System.Drawing.Point(0, 432);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(43, 70);
+            this.panel4.Size = new System.Drawing.Size(33, 57);
             this.panel4.TabIndex = 2;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkOrange;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(0, 460);
+            this.panel3.Location = new System.Drawing.Point(0, 366);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(43, 70);
+            this.panel3.Size = new System.Drawing.Size(33, 57);
             this.panel3.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkOrange;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(0, 214);
+            this.panel2.Location = new System.Drawing.Point(0, 166);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(43, 70);
+            this.panel2.Size = new System.Drawing.Size(33, 57);
             this.panel2.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(0, 295);
+            this.panel1.Location = new System.Drawing.Point(0, 232);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(43, 70);
+            this.panel1.Size = new System.Drawing.Size(33, 57);
             this.panel1.TabIndex = 0;
             // 
             // btnEmpleados
             // 
             this.btnEmpleados.BackColor = System.Drawing.Color.White;
             this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpleados.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEmpleados.FlatAppearance.BorderSize = 2;
             this.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpleados.Image = global::Proyecto_Final_Moanso.Properties.Resources.card_empleado_40;
-            this.btnEmpleados.Location = new System.Drawing.Point(42, 541);
-            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmpleados.Location = new System.Drawing.Point(32, 432);
             this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(309, 72);
+            this.btnEmpleados.Size = new System.Drawing.Size(232, 58);
             this.btnEmpleados.TabIndex = 1;
             this.btnEmpleados.Text = " Empleados";
             this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -208,14 +220,15 @@
             // 
             this.btnAlmacen.BackColor = System.Drawing.Color.White;
             this.btnAlmacen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlmacen.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlmacen.FlatAppearance.BorderSize = 2;
             this.btnAlmacen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnAlmacen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlmacen.Image = global::Proyecto_Final_Moanso.Properties.Resources.producto_40;
-            this.btnAlmacen.Location = new System.Drawing.Point(42, 295);
-            this.btnAlmacen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAlmacen.Location = new System.Drawing.Point(32, 232);
             this.btnAlmacen.Name = "btnAlmacen";
-            this.btnAlmacen.Size = new System.Drawing.Size(309, 72);
+            this.btnAlmacen.Size = new System.Drawing.Size(232, 58);
             this.btnAlmacen.TabIndex = 3;
             this.btnAlmacen.Text = " Almacen";
             this.btnAlmacen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -226,14 +239,15 @@
             // 
             this.btnPedidos.BackColor = System.Drawing.Color.White;
             this.btnPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPedidos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPedidos.FlatAppearance.BorderSize = 2;
             this.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedidos.Image = global::Proyecto_Final_Moanso.Properties.Resources.almacen_40;
-            this.btnPedidos.Location = new System.Drawing.Point(42, 459);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPedidos.Location = new System.Drawing.Point(32, 365);
             this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(309, 72);
+            this.btnPedidos.Size = new System.Drawing.Size(232, 58);
             this.btnPedidos.TabIndex = 3;
             this.btnPedidos.Text = " Pedidos";
             this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -245,14 +259,15 @@
             this.btnNuevaVenta.BackColor = System.Drawing.Color.White;
             this.btnNuevaVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNuevaVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevaVenta.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnNuevaVenta.FlatAppearance.BorderSize = 2;
             this.btnNuevaVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaVenta.Image = global::Proyecto_Final_Moanso.Properties.Resources.Dinero_efectivo_40;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(42, 214);
-            this.btnNuevaVenta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevaVenta.Location = new System.Drawing.Point(32, 166);
             this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Size = new System.Drawing.Size(309, 72);
+            this.btnNuevaVenta.Size = new System.Drawing.Size(232, 58);
             this.btnNuevaVenta.TabIndex = 2;
             this.btnNuevaVenta.Text = " Nueva Venta";
             this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -264,32 +279,31 @@
             this.pnPrincipal.BackColor = System.Drawing.Color.Gainsboro;
             this.pnPrincipal.Controls.Add(this.pbLogo2);
             this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPrincipal.Location = new System.Drawing.Point(351, 67);
+            this.pnPrincipal.Location = new System.Drawing.Point(263, 54);
+            this.pnPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(889, 649);
+            this.pnPrincipal.Size = new System.Drawing.Size(692, 546);
             this.pnPrincipal.TabIndex = 5;
             // 
             // pbLogo2
             // 
             this.pbLogo2.Image = global::Proyecto_Final_Moanso.Properties.Resources.Corporacion_Rubio;
-            this.pbLogo2.Location = new System.Drawing.Point(342, 17);
-            this.pbLogo2.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogo2.Location = new System.Drawing.Point(256, 14);
             this.pbLogo2.Name = "pbLogo2";
-            this.pbLogo2.Size = new System.Drawing.Size(221, 177);
+            this.pbLogo2.Size = new System.Drawing.Size(166, 144);
             this.pbLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogo2.TabIndex = 0;
             this.pbLogo2.TabStop = false;
             // 
             // Frm_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1240, 716);
+            this.ClientSize = new System.Drawing.Size(955, 600);
             this.Controls.Add(this.pnPrincipal);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";

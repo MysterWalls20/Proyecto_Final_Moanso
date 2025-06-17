@@ -33,13 +33,20 @@ namespace Capa_Logica
         {
             return Datos_Cliente.Instancia.ListarCliente();
         }
+
+        //Busca por dni
+        public Entidad_Cliente ObtenerClientePorDni(string dni)
+        {
+            return Datos_Cliente.Instancia.BuscarClientePorDni(dni);
+        }
+
         ///inserta
         public void InsertaCliente(Entidad_Cliente Cli)
         {
             Datos_Cliente.Instancia.InsertarCliente(Cli);
         }
 
-        //edita
+        //Edita
         public void EditaCliente(Entidad_Cliente Cli)
         {
             Datos_Cliente.Instancia.EditarCliente(Cli);

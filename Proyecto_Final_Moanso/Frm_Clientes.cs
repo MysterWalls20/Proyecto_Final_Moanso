@@ -18,9 +18,8 @@ namespace Proyecto_Final_Moanso
         public Frm_Clientes()
         {
             InitializeComponent();
-            dtpFechRegC.MinDate = DateTime.Now;
-            dtpFechRegC.CustomFormat = "dd/MM/yyyy";
             listarCliente();
+            txtFechaR.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
         }
 
@@ -31,7 +30,6 @@ namespace Proyecto_Final_Moanso
             txtApeC.Clear();
             txtNumC.Clear();
             txtDniC.Clear();
-            dtpFechRegC.Value = DateTime.Now;
         }
 
         public void listarCliente()
@@ -56,7 +54,7 @@ namespace Proyecto_Final_Moanso
                 eCl.apellido = txtApeC.Text.Trim();
                 eCl.numero = int.Parse(txtNumC.Text.Trim());
                 eCl.dni = txtDniC.Text.Trim();
-                eCl.fecha_registro = dtpFechRegC.Value;
+                eCl.fecha_registro = Convert.ToDateTime(txtFechaR.Text);
                 eCl.estado = true;
                 Logica_Cliente.Instancia.InsertaCliente(eCl);
 
@@ -120,7 +118,7 @@ namespace Proyecto_Final_Moanso
                 eCl.apellido = txtApeC.Text.Trim();
                 eCl.numero = int.Parse(txtNumC.Text.Trim());
                 eCl.dni = txtDniC.Text.Trim();
-                eCl.fecha_registro = dtpFechRegC.Value;
+                eCl.fecha_registro = Convert.ToDateTime(txtFechaR.Text);
                 Logica_Cliente.Instancia.EditaCliente(eCl);
             }
             catch (Exception ex)
@@ -156,12 +154,7 @@ namespace Proyecto_Final_Moanso
                 // Evitar error si la celda es null
                 if (row.Cells["fecha_registro"].Value != DBNull.Value)
                 {
-                    //dtpFechRegC.Value = Convert.ToDateTime(row.Cells["fecha_registro"].Value);
-                    DateTime fecha = Convert.ToDateTime(dgvClientes.Rows[e.RowIndex].Cells["fecha_registro"].Value);
-                    if (fecha < dtpFechRegC.MinDate)
-                        dtpFechRegC.Value = dtpFechRegC.MinDate;
-                    else
-                        dtpFechRegC.Value = fecha;
+                    txtFechaR.Text = Convert.ToString(row.Cells["fecha_registro"].Value);
                 }
             }
             else
@@ -170,7 +163,5 @@ namespace Proyecto_Final_Moanso
                 LimpiarCampos();
             }
         }
-    }
-      
-    
+    } 
 }

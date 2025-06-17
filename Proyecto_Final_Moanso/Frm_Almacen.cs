@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto_Final_Moanso
 {
@@ -32,32 +33,27 @@ namespace Proyecto_Final_Moanso
             ActualizarProducto actualProducto = new ActualizarProducto(productoVacio);
             actualProducto.ShowDialog();
         }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnDeshabilitar_Click(object sender, EventArgs e)
         {
             if (dgvProductosAlm.SelectedRows.Count > 0)
             {
-                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este producto?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas deshabilitar este producto?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                 {
                     // Obtener el ID del producto seleccionado
                     int idProducto = Convert.ToInt32(dgvProductosAlm.SelectedRows[0].Cells["id"].Value);
-
                     // Crear entidad con solo el ID
                     Entidad_Productos producto = new Entidad_Productos();
                     producto.id = idProducto;
-
                     // Llamar a la lógica para deshabilitar
                     Logica_Productos.Instancia.DeshabilitarProducto(producto);
-
                     // Refrescar la tabla
                     MostrarProductos(); // Asegúrate de tener esta función en tu formulario
-
                     // Limpiar selección y deshabilitar botones
                     dgvProductosAlm.ClearSelection();
                     btnActualizar.Enabled = false;
-                    btnEliminar.Enabled = false;
+                    btnDeshabilitar.Enabled = false;
                 }
             }
             else
@@ -66,12 +62,12 @@ namespace Proyecto_Final_Moanso
             }
             MostrarProductos();
         }
-
-
         private void MostrarProductos()
         {
-            dgvProductosAlm.DataSource = Logica_Productos.Instancia.ListarProductos();
+            cbCategoriaLP.SelectedIndex = -1;
+            cbCategoriaLP.Text = "";
 
+            dgvProductosAlm.DataSource = Logica_Productos.Instancia.ListarProductos();
             // Asegúrate que estos nombres coincidan con los campos del DataTable
             dgvProductosAlm.Columns["id"].HeaderText = "ID";
             dgvProductosAlm.Columns["nombre"].HeaderText = "Nombre";
@@ -84,6 +80,23 @@ namespace Proyecto_Final_Moanso
 
         private void Frm_Producto_Load(object sender, EventArgs e)
         {
+            try
+            {
+                cbCategoriaLP.Items.Clear();
+                var categorias = Logica_Productos.Instancia.ObtenerCategorias();
+
+                foreach (string cat in categorias)
+                {
+                    cbCategoriaLP.Items.Add(cat);
+                }
+
+                if (cbCategoriaLP.Items.Count > 0)
+                    cbCategoriaLP.SelectedIndex = 0; // Selecciona el primero por defecto
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar categorías: " + ex.Message);
+            }
             MostrarProductos(); // llamado al método
         }
 
@@ -122,8 +135,16 @@ namespace Proyecto_Final_Moanso
                     MostrarProductos();
                 }
             }
+        }
+        private void btnBuscarNom_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void btnBuscarCat_Click(object sender, EventArgs e)
+        {
+            string categoria = cbCategoriaLP.Text;
+            dgvProductosAlm.DataSource = Logica_Productos.Instancia.ObtenerProductosPorCategoria(categoria);
         }
     }
 }
