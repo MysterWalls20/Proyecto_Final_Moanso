@@ -26,25 +26,27 @@ namespace Proyecto_Final_Moanso
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            Entidad_Empleado emp = new Entidad_Empleado()
-            {
-                usuario = txtUsuario.Text.Trim(),
-                contrasena = txtContraseña.Text.Trim()
-            };
+            string user = txtUsuario.Text.Trim();
+            string pass = txtContraseña.Text.Trim();
 
-            bool loginCorrecto = Logica_Empleado.Instancia.Login(emp);
-
-            if (loginCorrecto)
+            if (user == "" || pass == "")
             {
-                MessageBox.Show("Acceso correcto", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Abrir siguiente ventana
+                MessageBox.Show("Ingrese el usuario y contraseña.");
+                return;
+            }
+
+            bool accesoValido = Logica_Empleado.Instancia.ValidarAcceso(user, pass);
+
+            if (accesoValido)
+            {
+                MessageBox.Show("¡Acceso permitido!");
+                Frm_Menu menu = new Frm_Menu();
+                menu.Show();
                 this.Hide();
-                Form formMenu = new Frm_Menu();
-                formMenu.Show();
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Credenciales incorrectas o cuenta deshabilitada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using Capa_Entidad;
+using Capa_Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,18 +14,33 @@ namespace Proyecto_Final_Moanso
 {
     public partial class Frm_NuevaVenta : Form
     {
-        Control panelPrincipal;
-        public Frm_NuevaVenta(Control panelPrincipal)
+        public Frm_NuevaVenta()
         {
             InitializeComponent();
             txtFechaV.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            this.panelPrincipal = panelPrincipal;
         }
         private void Frm_NuevaVenta_Load(object sender, EventArgs e)
         {
+            try
+            {
+                cbmMetodoPag.Items.Clear();
+
+                var metodos = Logica_Ventas.Instancia.ObtenerMetodosPago();
+
+                foreach (string metodo in metodos)
+                {
+                    cbmMetodoPag.Items.Add(metodo);
+                }
+
+                if (cbmMetodoPag.Items.Count > 0)
+                    cbmMetodoPag.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar métodos de pago: " + ex.Message);
+            }
             txtIdV.KeyPress += textBoxSoloNumeros_KeyPress;
             txtCantidadV.KeyPress += textBoxSoloNumeros_KeyPress;
-            txtDniV.KeyPress += textBoxSoloNumeros_KeyPress;
         }
         private void textBoxSoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -34,34 +50,111 @@ namespace Proyecto_Final_Moanso
                 e.Handled = true;
             }
         }
-        public void abrirFormHijo(Form formhijo)
-        {
-            if (this.panelPrincipal.Controls.Count > 0)
-                this.panelPrincipal.Controls.RemoveAt(0);
-            formhijo.TopLevel = false;
-            formhijo.Dock = DockStyle.Fill;
-            this.panelPrincipal.Controls.Add(formhijo);
-            this.panelPrincipal.Tag = formhijo;
-            this.panelPrincipal.Text = formhijo.Text;
-            formhijo.Show();
-        }
+
         private void btnVender_Click(object sender, EventArgs e)
         {
-            //Aqui se evalua si hay direccion por parte del usuario para reservar el envio y los productos pedidos
-            if(txtDireccionPed.Text != "" && txtDniV.Text != "" && txtClienV.Text != "" && dgvProductosV.Rows.Count > 0)
+            // si el CheckBox indica que es un pedido
+            if (chEnviar.Checked)
             {
-                //nos enviara al Frm_pedidos para terminar de asignar el envio, la venta y su estado.
-                abrirFormHijo(new Frm_Pedidos());
-            }
-            else if(dgvProductosV.Rows.Count > 0 && txtClienV.Text != "")
-            {
-                //registrar venta
+                if (txtDniV.Text == "" || txtDireccionPed.Text == "" || txtClienV.Text == "" || dgvProductosV.Rows.Count == 0 || cbmMetodoPag.Text == "")
+                {
+                    MessageBox.Show("Faltan datos para el pedido, ingresa todos los datos del cliente y productos.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    return;
+                }
+
+                Entidad_PedidoTemp pedidoTemp = new Entidad_PedidoTemp
+                {
+                    ClienteId = Convert.ToInt32(lblClienteId.Text),
+                    DireccionEntrega = txtDireccionPed.Text
+                };
+
+                foreach (DataGridViewRow row in dgvProductosV.Rows)
+                {
+                    pedidoTemp.Detalles.Add(new Entidad_DetalleVenta
+                    {
+                        IdProducto = Convert.ToInt32(row.Cells["IDv"].Value),
+                        Cantidad = Convert.ToInt32(row.Cells["cantPV"].Value),
+                        PrecioUnidad = Convert.ToDecimal(row.Cells["PrecioUpv"].Value),
+                        Subtotal = Convert.ToDecimal(row.Cells["PrecioTPV"].Value)
+                    });
+                }
+
+                Logica_PedidosTemporales.Instancia.PedidosPendientes.Add(pedidoTemp);
+                MessageBox.Show("Pedido temporal registrado. Ve al módulo de Pedidos para terminar de enviar el pedido.");
+                //this.Close(); // o limpiar el formulario
             }
             else
             {
-                MessageBox.Show("Ingrese los datos de los productos a vender", "Érror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Registrar venta normal
+                RegistrarVentaDirecta();
             }
         }
+        private void LimpiarFormularioVenta()
+        {
+            bool esPedido = chEnviar.Checked;
+            lblClienteId.Text = "";
+            lbPagoT.Text = "0.00";
+            dgvProductosV.Rows.Clear();
+            txtDniV.Text = "";
+            txtClienV.Text = "";
+            if (esPedido == true)
+            {
+                txtDireccionPed.Text = "";
+                txtDireccionPed.Enabled = false;
+                chEnviar.Checked = false;
+            }
+
+        }
+        private void RegistrarVentaDirecta()
+        {
+            if (txtDniV.Text == "" || txtDireccionPed.Text == "" || lblClienteId.Text == "" || dgvProductosV.Rows.Count == 0 || txtClienV.Text == "")
+            {
+                MessageBox.Show("Faltan datos para la venta.");
+                return;
+            }
+
+            int idVentaGenerada = 0;
+            decimal totalVenta = 0;
+
+            List<Entidad_DetalleVenta> detalles = new List<Entidad_DetalleVenta>();
+
+            foreach (DataGridViewRow row in dgvProductosV.Rows)
+            {
+                int idProducto = Convert.ToInt32(row.Cells["IDv"].Value);
+                int cantidad = Convert.ToInt32(row.Cells["cantPV"].Value);
+                decimal precioUnidad = Convert.ToDecimal(row.Cells["PrecioUpv"].Value);
+                decimal subtotal = Convert.ToDecimal(row.Cells["PrecioTPV"].Value);
+
+                totalVenta += subtotal;
+
+                detalles.Add(new Entidad_DetalleVenta
+                {
+                    IdProducto = idProducto,
+                    Cantidad = cantidad,
+                    PrecioUnidad = precioUnidad,
+                    Subtotal = subtotal
+                });
+            }
+
+            bool ventaRegistrada = Logica_Ventas.Instancia.RegistrarVenta(
+                Convert.ToInt32(lblClienteId.Text),
+                DateTime.Now,
+                totalVenta,
+                detalles,
+                out idVentaGenerada
+            );
+
+            if (ventaRegistrada)
+            {
+                MessageBox.Show("Pedido registrado correctamente.");
+                // Opcional: limpiar formulario
+            }
+            else
+            {
+                MessageBox.Show("Error al registrar pedido.");
+            }
+        }
+
         private void chEnviar_CheckedChanged(object sender, EventArgs e)
         {
             if(chEnviar.Checked)
@@ -70,24 +163,133 @@ namespace Proyecto_Final_Moanso
             }else
             {
                 txtDireccionPed.Enabled = false;
+                txtDireccionPed.Text = "";
             }
         }
 
-        private void txtIdV_Enter(object sender, EventArgs e)
+        private void txtIdV_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Busca el id del producto y carga los datos en los Texbox de arriba de la tabla de venta
-            if (txtIdV.Text == "")
+            if (e.KeyChar == (char)Keys.Enter)
             {
+                e.Handled = true; // evita el beep del Enter
+                int id;
+                if (int.TryParse(txtIdV.Text.Trim(), out id))
+                {
+                    var producto = Logica_Productos.Instancia.BuscarProductoPorID(id);
 
-            }
-            else{
-                Entidad_Productos ePr = new Entidad_Productos();
+                    if (producto != null)
+                    {
+                        txtProductV.Text = producto.nombre;
+                        txtMarcaV.Text = producto.marca;
+                        txtColorV.Text = producto.color;
+                        txtStockV.Text = producto.stock.ToString();
+                        txtCategoriaV.Text = producto.categoria;
+                        txtPrecioV.Text = producto.precio_unidad.ToString("0.00");
+                        txtCantidadV.Focus(); // Mover el foco a la cantidad automáticamente
+                    }
+                    else
+                    {
+                        MessageBox.Show("Producto no encontrado o deshabilitado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtIdV.SelectAll();
+                        txtIdV.Focus();
+                    }
+                }
             }
         }
 
-        private void txtDniV_Enter(object sender, EventArgs e)
+        private void txtCantidadV_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Busca al cliente y carga su nombre al texbox
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // para evitar beep
+
+                // Validaciones básicas
+                if (txtIdV.Text == "" || txtCantidadV.Text == "" || txtProductV.Text == "")
+                {
+                    MessageBox.Show("Por favor complete todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int stock = int.Parse(txtStockV.Text);
+                int cantidad = int.Parse(txtCantidadV.Text);
+
+                if (cantidad > stock)
+                {
+                    MessageBox.Show("Cantidad mayor al stock disponible.", "Stock insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCantidadV.Focus();
+                    return;
+                }
+
+                decimal precioUnitario = decimal.Parse(txtPrecioV.Text);
+                decimal subtotal = precioUnitario * cantidad;
+
+                // Agregar al DataGridView
+                dgvProductosV.Rows.Add(
+                    txtIdV.Text,
+                    txtProductV.Text,
+                    txtColorV.Text,
+                    txtCantidadV.Text,
+                    txtPrecioV.Text,
+                    subtotal.ToString(),
+                    cbmMetodoPag.Text
+                );
+
+                CalcularTotal();
+
+                // Limpiar campos
+                txtIdV.Clear();
+                txtProductV.Clear();
+                txtMarcaV.Clear();
+                txtColorV.Clear();
+                txtCategoriaV.Clear();
+                txtStockV.Clear();
+                txtPrecioV.Clear();
+                txtCantidadV.Clear();
+                txtIdV.Focus();
+            }
+        }
+        //lbPagoT.Text
+        private decimal CalcularTotal()
+        {
+            decimal total = 0;
+
+            foreach (DataGridViewRow fila in dgvProductosV.Rows)
+            {
+                total += Convert.ToDecimal(fila.Cells["PrecioTPV"].Value);
+            }
+
+            lbPagoT.Text = total.ToString("0.00");
+            return total;
+        }
+
+
+        private void txtDniV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+
+                string dni = txtDniV.Text.Trim();
+
+                if (dni.Length != 8 || !dni.All(char.IsDigit))
+                {
+                    MessageBox.Show("Ingrese un DNI válido de 8 dígitos.");
+                    return;
+                }
+
+                var cliente = Logica_Cliente.Instancia.ObtenerClientePorDni(dni);
+
+                if (cliente != null)
+                {
+                    txtClienV.Text = cliente.nombre + " " + cliente.apellido;
+                    lblClienteId.Text = Convert.ToString(cliente.id);
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no encontrado o está deshabilitado.");
+                    txtClienV.Clear();
+                }
+            }
         }
     }
 }

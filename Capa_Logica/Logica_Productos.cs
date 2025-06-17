@@ -27,21 +27,39 @@ namespace Capa_Logica
         }
         #endregion singleton
 
-
         #region metodos
 
         //listado
-
         public List<Entidad_Productos> ListarProductos()
         {
             return Datos_Productos.Instancia.ListarProductos();
+        }
+
+        //listado por categoria
+        public List<Entidad_Productos> ObtenerProductosPorCategoria(string categoria)
+        {
+            return Datos_Productos.Instancia.ListarProductosPorCategoria(categoria);
+        }
+        //Buscar por ID
+        public Entidad_Productos BuscarProductoPorID(int id)
+        {
+            return Datos_Productos.Instancia.BuscarProductoPorID(id);
+        }
+        //LLenar Categoria
+        public List<string> ObtenerCategorias()
+        {
+            return Datos_Productos.Instancia.ObtenerCategorias();
         }
         //inserta
         public void InsertaProducto(Entidad_Productos Pro)
         {
             Datos_Productos.Instancia.InsertarProductos(Pro);
         }
-
+        //LLenar Colores
+        public List<string> ObtenerColores()
+        {
+            return Datos_Productos.Instancia.ObtenerColores();
+        }
         //edita
         public void EditaProducto(Entidad_Productos Pro)
         {

@@ -27,7 +27,7 @@ namespace Capa_Datos
         #endregion singleton
 
         #region metodos
-        //listado de Productos
+        //listado de todos los Productos
         public List<Entidad_Productos> ListarProductos()
         {
             SqlCommand cmd = null;
@@ -65,6 +65,134 @@ namespace Capa_Datos
             return lista;
         }
 
+        //listado de los Productos por categoria
+        public List<Entidad_Productos> ListarProductosPorCategoria(string categoria)
+        {
+            SqlCommand cmd = null;
+            List<Entidad_Productos> lista = new List<Entidad_Productos>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("sp_ListarProductosPorCategoria", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Categoria", categoria);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Entidad_Productos pro = new Entidad_Productos
+                    {
+                        id = Convert.ToInt32(dr["id"]),
+                        nombre = dr["nombre"].ToString(),
+                        marca = dr["marca"].ToString(),
+                        color = dr["color"].ToString(),
+                        stock = Convert.ToInt32(dr["stock"]),
+                        categoria = dr["categoria"].ToString(),
+                        precio_unidad = Convert.ToDouble(dr["precio_unidad"])
+                    };
+                    lista.Add(pro);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
+
+        //Buscar producto por ID
+        public Entidad_Productos BuscarProductoPorID(int id)
+        {
+            SqlCommand cmd = null;
+            SqlDataReader dr = null;
+            Entidad_Productos pr = null;
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("sp_BuscarProductoPorID", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", id);
+
+                cn.Open();
+                dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    pr = new Entidad_Productos()
+                    {
+                        id = Convert.ToInt32(dr["id"]),
+                        nombre = dr["nombre"].ToString(),
+                        marca = dr["marca"].ToString(),
+                        color = dr["color"].ToString(),
+                        stock = Convert.ToInt32(dr["stock"]),
+                        categoria = dr["categoria"].ToString(),
+                        precio_unidad = Convert.ToDouble(dr["precio_unidad"])
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (dr != null) dr.Close();
+                if (cmd.Connection.State == ConnectionState.Open) cmd.Connection.Close();
+            }
+
+            return pr;
+        }
+        // Llenar Combobox de categorias
+        public List<string> ObtenerCategorias()
+        {
+            List<string> lista = new List<string>();
+
+            try
+            {
+                using (SqlConnection cn = Conexion.Instancia.Conectar())
+                {
+                    SqlCommand cmd = new SqlCommand("sp_ObtenerCategorias", cn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cn.Open();
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        lista.Add(dr["categoriaPr"].ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener categorías: " + ex.Message);
+            }
+
+            return lista;
+        }
+        // Llenar Combobox de colores
+        public List<string> ObtenerColores()
+        {
+            List<string> lista = new List<string>();
+
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("SELECT colorPr FROM ColoresPr ORDER BY id", cn);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    lista.Add(dr["colorPr"].ToString());
+                }
+            }
+
+            return lista;
+        }
         //Insertar producto
         public Boolean InsertarProductos(Entidad_Productos Pro)
         {
@@ -155,7 +283,6 @@ namespace Capa_Datos
             finally { cmd.Connection.Close(); }
             return delete;
         }
-
         #endregion metodos
 
     }

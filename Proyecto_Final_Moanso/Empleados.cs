@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,25 @@ namespace Proyecto_Final_Moanso
         }
         private void Empleados_Load(object sender, EventArgs e)
         {
+            try
+            {
+                cbCarUsuario.Items.Clear();
+
+                var roles = Logica_Empleado.Instancia.ObtenerRoles();
+
+                foreach (string rol in roles)
+                {
+                    cbCarUsuario.Items.Add(rol);
+                }
+
+                if (cbCarUsuario.Items.Count > 0)
+                    cbCarUsuario.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar roles de empleados: " + ex.Message);
+            }
+
             txtNomEmp.KeyPress += textBoxSoloLetras_KeyPress;
             txtNumEmp.KeyPress += textBoxSoloNumeros_KeyPress;
             txtSalario.KeyPress += textBoxSoloNumeros_KeyPress;
@@ -37,6 +57,11 @@ namespace Proyecto_Final_Moanso
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnNuevoEmp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

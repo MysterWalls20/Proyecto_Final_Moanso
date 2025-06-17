@@ -63,6 +63,46 @@ namespace Capa_Datos
             return lista;
         }
 
+        //Buscar por dni
+        public Entidad_Cliente BuscarClientePorDni(string dni)
+        {
+            SqlCommand cmd = null;
+            SqlDataReader dr = null;
+            Entidad_Cliente cliente = null;
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("sp_ObtenerClientePorDNI", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@dni", dni);
+                cn.Open();
+
+                dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    cliente = new Entidad_Cliente
+                    {
+                        nombre = dr["nombre"].ToString(),
+                        apellido = dr["apellido"].ToString()
+                    };
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (dr != null) dr.Close();
+                if (cmd != null) cmd.Connection.Close();
+            }
+
+            return cliente;
+        }
+
         //InsertaCliente
         public Boolean InsertarCliente(Entidad_Cliente Cli)
         {
@@ -73,7 +113,6 @@ namespace Capa_Datos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertaCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-
                 cmd.Parameters.AddWithValue("@cNombre", SqlDbType.VarChar).Value = Cli.nombre;
                 cmd.Parameters.AddWithValue("@cApellido", SqlDbType.VarChar).Value = Cli.apellido;
                 cmd.Parameters.AddWithValue("@cNumero", SqlDbType.Int).Value = Cli.numero;
@@ -152,7 +191,6 @@ namespace Capa_Datos
             finally { cmd.Connection.Close(); }
             return delete;
         }
-
         #endregion metodos
 
     }

@@ -21,8 +21,36 @@ namespace Proyecto_Final_Moanso
         }
         private void NuevoProducto_Load(object sender, EventArgs e)
         {
+            try
+            {
+                cbCategoria.Items.Clear();
+                var categorias = Logica_Productos.Instancia.ObtenerCategorias();
+
+                foreach (string cat in categorias)
+                {
+                    cbCategoria.Items.Add(cat);
+                }
+
+                if (cbCategoria.Items.Count > 0)
+                    cbCategoria.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar categorías: " + ex.Message);
+            }
+
+            cbColorN.Items.Clear();
+            var colores = Logica_Productos.Instancia.ObtenerColores();
+
+            foreach (var color in colores)
+            {
+                cbColorN.Items.Add(color);
+            }
+
+            if (cbColorN.Items.Count > 0)
+                cbColorN.SelectedIndex = 0;
+
             txtNombreNP.KeyPress += textBoxSoloLetras_KeyPress;
-            txtMarcaNP.KeyPress += textBoxSoloLetras_KeyPress;
             txtPrecioN.KeyPress += textBoxSoloNumeros_KeyPress;
             txtStockNP.KeyPress += textBoxSoloNumeros_KeyPress;
         }
