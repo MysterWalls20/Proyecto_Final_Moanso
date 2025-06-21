@@ -34,7 +34,6 @@ namespace Capa_Logica
         {
             return Datos_Productos.Instancia.ListarProductos();
         }
-
         //listado por categoria
         public List<Entidad_Productos> ObtenerProductosPorCategoria(string categoria)
         {
@@ -65,6 +64,7 @@ namespace Capa_Logica
         {
             Datos_Productos.Instancia.EditarProductos(Pro);
         }
+        //deshabilita
         public void DeshabilitarProducto(Entidad_Productos Pro)
         {
             Datos_Productos.Instancia.DeshabilitarProductos(Pro);

@@ -62,8 +62,7 @@ namespace Proyecto_Final_Moanso
             btnNuevaVenta.BackColor = Color.DarkOrange;
             btnAlmacen.BackColor = Color.White;
             btnClientes.BackColor = Color.White;
-            btnPedidos.BackColor = Color.White;
-            btnEmpleados.BackColor = Color.White;
+            btnReportes.BackColor = Color.White;
         }
         private void btnAlmacen_Click_1(object sender, EventArgs e)
         {
@@ -71,8 +70,7 @@ namespace Proyecto_Final_Moanso
             btnNuevaVenta.BackColor = Color.White;
             btnAlmacen.BackColor = Color.DarkOrange;
             btnClientes.BackColor = Color.White;
-            btnPedidos.BackColor = Color.White;
-            btnEmpleados.BackColor = Color.White;
+            btnReportes.BackColor = Color.White;
         }
         private void btnClientes_Click(object sender, EventArgs e)
         {
@@ -80,26 +78,15 @@ namespace Proyecto_Final_Moanso
             btnNuevaVenta.BackColor = Color.White;
             btnAlmacen.BackColor = Color.White;
             btnClientes.BackColor = Color.DarkOrange;
-            btnPedidos.BackColor = Color.White;
-            btnEmpleados.BackColor = Color.White;
+            btnReportes.BackColor = Color.White;
         }
-        private void btnPedidos_Click(object sender, EventArgs e)
+        private void btnReportes_Click(object sender, EventArgs e)
         {
-            abrirFormHijo(new Frm_Pedidos());
+            abrirFormHijo(new Frm_Reportes());
             btnNuevaVenta.BackColor = Color.White;
             btnAlmacen.BackColor = Color.White;
             btnClientes.BackColor = Color.White;
-            btnPedidos.BackColor = Color.DarkOrange;
-            btnEmpleados.BackColor = Color.White;
-        }
-        private void btnEmpleados_Click(object sender, EventArgs e)
-        {
-            abrirFormHijo(new Empleados());
-            btnNuevaVenta.BackColor = Color.White;
-            btnAlmacen.BackColor = Color.White;
-            btnClientes.BackColor = Color.White;
-            btnPedidos.BackColor = Color.White;
-            btnEmpleados.BackColor = Color.DarkOrange;
+            btnReportes.BackColor = Color.DarkOrange;
         }
         private void pbCerrarPrograma_MouseDown(object sender, MouseEventArgs e)
         {

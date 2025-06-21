@@ -1,27 +1,3 @@
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.exe.config
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.exe
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.pdb
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Entidad.dll
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Logica.dll
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Entidad.pdb
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Logica.pdb
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.AssemblyReference.cache
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.ActualizarProducto.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Almacen.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Login.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Menu.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_NuevaVenta.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Properties.Resources.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.GenerateResource.cache
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.CoreCompileInputs.cache
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Capa_Pre.3C51E38A.Up2Date
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.exe
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.pdb
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.NuevoProducto.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Clientes.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Pedidos.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Empleados.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.EstadoPedidos.resources
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.exe.config
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.exe
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.pdb
@@ -49,5 +25,27 @@ C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proye
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.CopyComplete
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.exe
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.ActualizarProducto.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Reportes.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Clientes.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Login.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Menu.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_NuevaVenta.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Almacen.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.NuevoProducto.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Properties.Resources.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.GenerateResource.cache
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.CoreCompileInputs.cache
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.exe.config
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.exe
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Entidad.dll
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Logica.dll
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Datos.dll
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Entidad.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Logica.pdb
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Capa_Datos.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Capa_Pre.3C51E38A.Up2Date
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.exe
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.pdb

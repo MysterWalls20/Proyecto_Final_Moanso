@@ -31,7 +31,9 @@ namespace Proyecto_Final_Moanso
 
             if (user == "" || pass == "")
             {
-                MessageBox.Show("Ingrese el usuario y contraseña.");
+                MessageBox.Show("Ingrese un usuario y contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsuario.Text = "";
+                txtContraseña.Text = "";
                 return;
             }
 
@@ -39,14 +41,14 @@ namespace Proyecto_Final_Moanso
 
             if (accesoValido)
             {
-                MessageBox.Show("¡Acceso permitido!");
+                MessageBox.Show("¡Acceso permitido!, usuario y contraseña correctas","Login correcto",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 Frm_Menu menu = new Frm_Menu();
                 menu.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Credenciales incorrectas o cuenta deshabilitada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Credenciales incorrectas o cuenta deshabilitada.", "Error de Login",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

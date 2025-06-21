@@ -42,9 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logica_Cliente.cs" />
-    <Compile Include="Logica_PedidosTemporales.cs" />
     <Compile Include="Logica_Productos.cs" />
     <Compile Include="Logica_Empleado.cs" />
+    <Compile Include="Logica_Ubigeo.cs" />
     <Compile Include="Logica_Ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

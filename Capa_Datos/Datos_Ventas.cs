@@ -53,64 +53,7 @@ namespace Capa_Datos
             }
             return idVentaGenerado;
         }
-        public bool RegistrarVentaDesdePedido(Entidad_PedidoTemp pedido)
-        {
-            try
-            {
-                using (SqlConnection cn = Conexion.Instancia.Conectar())
-                {
-                    cn.Open();
-                    SqlTransaction transaction = cn.BeginTransaction();
-
-                    try
-                    {
-                        SqlCommand cmdVenta = new SqlCommand("sp_RegistrarVentaDesdePedido", cn, transaction);
-                        cmdVenta.CommandType = CommandType.StoredProcedure;
-
-                        cmdVenta.Parameters.AddWithValue("@ClienteId", pedido.ClienteId);
-                        cmdVenta.Parameters.AddWithValue("@DireccionEntrega", pedido.DireccionEntrega);
-                        cmdVenta.Parameters.AddWithValue("@MetodoPago", "Pedido"); // o el método real
-                        cmdVenta.Parameters.AddWithValue("@Fecha", pedido.FechaPedido);
-
-                        SqlParameter idVentaOutput = new SqlParameter("@IdVenta", SqlDbType.Int)
-                        {
-                            Direction = ParameterDirection.Output
-                        };
-                        cmdVenta.Parameters.Add(idVentaOutput);
-
-                        cmdVenta.ExecuteNonQuery();
-
-                        int idVenta = (int)idVentaOutput.Value;
-
-                        foreach (Entidad_DetalleVenta det in pedido.Detalles)
-                        {
-                            SqlCommand cmdDetalle = new SqlCommand("sp_RegistrarDetalleVenta", cn, transaction);
-                            cmdDetalle.CommandType = CommandType.StoredProcedure;
-
-                            cmdDetalle.Parameters.AddWithValue("@IdVenta", idVenta);
-                            cmdDetalle.Parameters.AddWithValue("@IdProducto", det.IdProducto);
-                            cmdDetalle.Parameters.AddWithValue("@Cantidad", det.Cantidad);
-                            cmdDetalle.Parameters.AddWithValue("@PrecioUnidad", det.PrecioUnidad);
-                            cmdDetalle.Parameters.AddWithValue("@Subtotal", det.Subtotal);
-
-                            cmdDetalle.ExecuteNonQuery();
-                        }
-
-                        transaction.Commit();
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        throw new Exception("Error al registrar venta desde pedido: " + ex.Message);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error en la conexión o ejecución del procedimiento: " + ex.Message);
-            }
-        }
+        
         public List<string> ObtenerMetodosPago()
         {
             List<string> lista = new List<string>();

@@ -46,42 +46,6 @@ namespace Capa_Datos
             return loginCorrecto;
         }
 
-        public DataTable ObtenerEmpleadosPorRol(string rol)
-        {
-            using (SqlConnection cn = Conexion.Instancia.Conectar())
-            {
-                SqlCommand cmd = new SqlCommand("sp_ObtenerEmpleadosPorRol", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Rol", rol);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable tabla = new DataTable();
-                da.Fill(tabla);
-                return tabla;
-            }
-        }
-        public bool CambiarDisponibilidad(int idEmpleado, bool disponible)
-        {
-            try
-            {
-                using (SqlConnection cn = Conexion.Instancia.Conectar())
-                {
-                    SqlCommand cmd = new SqlCommand("sp_CambiarDisponibilidadEmp", cn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
-                    cmd.Parameters.AddWithValue("@Disponible", disponible ? 1 : 0);
-
-                    cn.Open();
-                    cmd.ExecuteNonQuery();
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al cambiar disponibilidad del empleado: " + ex.Message);
-            }
-        }
-
         public List<string> ObtenerRoles()
         {
             List<string> roles = new List<string>();
@@ -100,6 +64,5 @@ namespace Capa_Datos
 
             return roles;
         }
-
     }
 }

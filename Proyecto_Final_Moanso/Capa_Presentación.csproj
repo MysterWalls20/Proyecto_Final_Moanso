@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logorubioApp.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,23 +55,11 @@
     <Compile Include="ActualizarProducto.Designer.cs">
       <DependentUpon>ActualizarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empleados.cs">
+    <Compile Include="Frm_Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empleados.Designer.cs">
-      <DependentUpon>Empleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EstadoPedidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EstadoPedidos.Designer.cs">
-      <DependentUpon>EstadoPedidos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Pedidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Pedidos.Designer.cs">
-      <DependentUpon>Frm_Pedidos.cs</DependentUpon>
+    <Compile Include="Frm_Reportes.Designer.cs">
+      <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Clientes.cs">
       <SubType>Form</SubType>
@@ -111,14 +102,8 @@
     <EmbeddedResource Include="ActualizarProducto.resx">
       <DependentUpon>ActualizarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empleados.resx">
-      <DependentUpon>Empleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EstadoPedidos.resx">
-      <DependentUpon>EstadoPedidos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Pedidos.resx">
-      <DependentUpon>Frm_Pedidos.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Reportes.resx">
+      <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Clientes.resx">
       <DependentUpon>Frm_Clientes.cs</DependentUpon>
@@ -205,9 +190,6 @@
     <None Include="Resources\clientes-40.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\almacen-40.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\distribuidor-40.png" />
   </ItemGroup>
   <ItemGroup>
@@ -220,10 +202,17 @@
     <None Include="Resources\editar-archivo-100.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\card-empleado-40.png" />
+    <None Include="Resources\dinero-40.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dinero-40.png" />
+    <None Include="Resources\reporte-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logorubioApp.ico" />
+    <None Include="Resources\archivo-pdf.png" />
+    <None Include="Resources\Habilitar-30.png" />
+    <None Include="Resources\Deshabilitar-30.png" />
+    <None Include="Resources\logorubioApp.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

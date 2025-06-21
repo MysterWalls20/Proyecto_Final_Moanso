@@ -18,19 +18,6 @@ namespace Capa_Logica
         {
             return Datos_Empleado.Instancia.VerificarLogin(usuario, contraseña);
         }
-        public DataTable ListarEmpleadosPorRol(string rol)
-        {
-            return Datos_Empleado.Instancia.ObtenerEmpleadosPorRol(rol);
-        }
-        public bool MarcarDisponible(int idEmpleado)
-        {
-            return Datos_Empleado.Instancia.CambiarDisponibilidad(idEmpleado, true);
-        }
-
-        public bool MarcarNoDisponible(int idEmpleado)
-        {
-            return Datos_Empleado.Instancia.CambiarDisponibilidad(idEmpleado, false);
-        }
         public List<string> ObtenerRoles()
         {
             return Datos_Empleado.Instancia.ObtenerRoles();

@@ -48,14 +48,21 @@
             this.txtApeC = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNomC = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtIDc = new System.Windows.Forms.TextBox();
+            this.cmbDepartamento = new System.Windows.Forms.ComboBox();
+            this.cmbProvincia = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmbDistrito = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnEliminarCli = new System.Windows.Forms.Button();
             this.btnNuevoCli = new System.Windows.Forms.Button();
             this.btnActualizarCli = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtIDc = new System.Windows.Forms.TextBox();
-            this.txtFechaR = new System.Windows.Forms.TextBox();
+            this.btnBusCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,13 +75,15 @@
             this.imageList1.Images.SetKeyName(2, "Product-sale-report_25407.png");
             this.imageList1.Images.SetKeyName(3, "save_file_disk_open_searsh_loading_clipboard_1513(1).png");
             this.imageList1.Images.SetKeyName(4, "task_update_folder_progress_icon_142270.png");
+            this.imageList1.Images.SetKeyName(5, "Habilitar-30.png");
+            this.imageList1.Images.SetKeyName(6, "Deshabilitar-30.png");
             // 
             // txtBuscar
             // 
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(23, 46);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Location = new System.Drawing.Point(21, 35);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.MaxLength = 30;
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
@@ -85,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 15);
+            this.label2.Location = new System.Drawing.Point(16, 6);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 25);
@@ -121,8 +130,8 @@
             this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.EnableHeadersVisualStyles = false;
             this.dgvClientes.GridColor = System.Drawing.Color.Orange;
-            this.dgvClientes.Location = new System.Drawing.Point(23, 98);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvClientes.Location = new System.Drawing.Point(21, 84);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -144,7 +153,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(836, 276);
+            this.dgvClientes.Size = new System.Drawing.Size(900, 266);
             this.dgvClientes.TabIndex = 21;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
@@ -152,17 +161,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 567);
+            this.label6.Location = new System.Drawing.Point(187, 390);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(186, 26);
+            this.label6.Size = new System.Drawing.Size(107, 26);
             this.label6.TabIndex = 36;
-            this.label6.Text = "Fecha de registro :";
+            this.label6.Text = "Direccion:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(337, 514);
+            this.label4.Location = new System.Drawing.Point(319, 503);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 26);
             this.label4.TabIndex = 33;
@@ -172,8 +181,9 @@
             // 
             this.txtDniC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDniC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDniC.Location = new System.Drawing.Point(403, 511);
+            this.txtDniC.Location = new System.Drawing.Point(390, 501);
             this.txtDniC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDniC.MaxLength = 8;
             this.txtDniC.Name = "txtDniC";
             this.txtDniC.Size = new System.Drawing.Size(165, 33);
             this.txtDniC.TabIndex = 32;
@@ -182,7 +192,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 514);
+            this.label3.Location = new System.Drawing.Point(18, 503);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 26);
             this.label3.TabIndex = 31;
@@ -192,17 +202,18 @@
             // 
             this.txtNumC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumC.Location = new System.Drawing.Point(123, 511);
+            this.txtNumC.Location = new System.Drawing.Point(128, 501);
             this.txtNumC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNumC.MaxLength = 9;
             this.txtNumC.Name = "txtNumC";
-            this.txtNumC.Size = new System.Drawing.Size(181, 33);
+            this.txtNumC.Size = new System.Drawing.Size(170, 33);
             this.txtNumC.TabIndex = 30;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(303, 464);
+            this.label1.Location = new System.Drawing.Point(314, 445);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 26);
             this.label1.TabIndex = 29;
@@ -212,8 +223,9 @@
             // 
             this.txtApeC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApeC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApeC.Location = new System.Drawing.Point(413, 462);
+            this.txtApeC.Location = new System.Drawing.Point(426, 443);
             this.txtApeC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtApeC.MaxLength = 20;
             this.txtApeC.Name = "txtApeC";
             this.txtApeC.Size = new System.Drawing.Size(153, 33);
             this.txtApeC.TabIndex = 28;
@@ -222,7 +234,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 464);
+            this.label7.Location = new System.Drawing.Point(18, 445);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 26);
             this.label7.TabIndex = 27;
@@ -232,11 +244,126 @@
             // 
             this.txtNomC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomC.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomC.Location = new System.Drawing.Point(121, 462);
+            this.txtNomC.Location = new System.Drawing.Point(128, 443);
             this.txtNomC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNomC.MaxLength = 20;
             this.txtNomC.Name = "txtNomC";
             this.txtNomC.Size = new System.Drawing.Size(170, 33);
             this.txtNomC.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 389);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 26);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "ID :";
+            // 
+            // txtIDc
+            // 
+            this.txtIDc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIDc.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDc.Location = new System.Drawing.Point(73, 387);
+            this.txtIDc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDc.Name = "txtIDc";
+            this.txtIDc.ReadOnly = true;
+            this.txtIDc.Size = new System.Drawing.Size(85, 33);
+            this.txtIDc.TabIndex = 34;
+            // 
+            // cmbDepartamento
+            // 
+            this.cmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDepartamento.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDepartamento.FormattingEnabled = true;
+            this.cmbDepartamento.Location = new System.Drawing.Point(620, 393);
+            this.cmbDepartamento.Name = "cmbDepartamento";
+            this.cmbDepartamento.Size = new System.Drawing.Size(208, 31);
+            this.cmbDepartamento.TabIndex = 38;
+            this.cmbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cmbDepartamento_SelectedIndexChanged);
+            // 
+            // cmbProvincia
+            // 
+            this.cmbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProvincia.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProvincia.FormattingEnabled = true;
+            this.cmbProvincia.Location = new System.Drawing.Point(620, 459);
+            this.cmbProvincia.Name = "cmbProvincia";
+            this.cmbProvincia.Size = new System.Drawing.Size(268, 31);
+            this.cmbProvincia.TabIndex = 39;
+            this.cmbProvincia.SelectedIndexChanged += new System.EventHandler(this.cmbProvincia_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(615, 361);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(160, 26);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Departamento :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(615, 428);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(111, 26);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Provincia :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(573, 506);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 26);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Distrito:";
+            // 
+            // cmbDistrito
+            // 
+            this.cmbDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDistrito.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDistrito.FormattingEnabled = true;
+            this.cmbDistrito.Location = new System.Drawing.Point(670, 504);
+            this.cmbDistrito.Name = "cmbDistrito";
+            this.cmbDistrito.Size = new System.Drawing.Size(256, 30);
+            this.cmbDistrito.TabIndex = 43;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(304, 387);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.MaxLength = 38;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(275, 33);
+            this.textBox1.TabIndex = 45;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkOrange;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageKey = "Habilitar-30.png";
+            this.button2.ImageList = this.imageList1;
+            this.button2.Location = new System.Drawing.Point(742, 558);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 100);
+            this.button2.TabIndex = 44;
+            this.button2.Text = "\r\n\r\n\rHabilitar";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // btnMostrar
             // 
@@ -244,14 +371,14 @@
             this.btnMostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMostrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnMostrar.FlatAppearance.BorderSize = 2;
-            this.btnMostrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnMostrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.ForeColor = System.Drawing.Color.White;
             this.btnMostrar.ImageKey = "Product-sale-report_25407.png";
             this.btnMostrar.ImageList = this.imageList1;
-            this.btnMostrar.Location = new System.Drawing.Point(735, 524);
-            this.btnMostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMostrar.Location = new System.Drawing.Point(239, 558);
+            this.btnMostrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(124, 100);
             this.btnMostrar.TabIndex = 25;
@@ -265,18 +392,18 @@
             this.btnEliminarCli.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarCli.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEliminarCli.FlatAppearance.BorderSize = 2;
-            this.btnEliminarCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnEliminarCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnEliminarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarCli.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCli.ImageKey = "task_update_folder_progress_icon_142270.png";
+            this.btnEliminarCli.ImageKey = "Deshabilitar-30.png";
             this.btnEliminarCli.ImageList = this.imageList1;
-            this.btnEliminarCli.Location = new System.Drawing.Point(735, 402);
-            this.btnEliminarCli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCli.Location = new System.Drawing.Point(573, 558);
+            this.btnEliminarCli.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarCli.Name = "btnEliminarCli";
-            this.btnEliminarCli.Size = new System.Drawing.Size(124, 100);
+            this.btnEliminarCli.Size = new System.Drawing.Size(128, 100);
             this.btnEliminarCli.TabIndex = 24;
-            this.btnEliminarCli.Text = "\r\n\r\n\r\nEliminar-";
+            this.btnEliminarCli.Text = "\r\n\r\n\r\nDeshabilitar";
             this.btnEliminarCli.UseVisualStyleBackColor = false;
             this.btnEliminarCli.Click += new System.EventHandler(this.btnEliminarCli_Click);
             // 
@@ -286,18 +413,18 @@
             this.btnNuevoCli.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevoCli.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnNuevoCli.FlatAppearance.BorderSize = 2;
-            this.btnNuevoCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnNuevoCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnNuevoCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoCli.ForeColor = System.Drawing.Color.White;
             this.btnNuevoCli.ImageKey = "new_file256_25213(1).png";
             this.btnNuevoCli.ImageList = this.imageList1;
-            this.btnNuevoCli.Location = new System.Drawing.Point(589, 402);
-            this.btnNuevoCli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevoCli.Location = new System.Drawing.Point(73, 558);
+            this.btnNuevoCli.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevoCli.Name = "btnNuevoCli";
             this.btnNuevoCli.Size = new System.Drawing.Size(124, 100);
             this.btnNuevoCli.TabIndex = 22;
-            this.btnNuevoCli.Text = "\r\n\r\n\r\nNuevo+";
+            this.btnNuevoCli.Text = "\r\n\r\n\r\nNuevo";
             this.btnNuevoCli.UseVisualStyleBackColor = false;
             this.btnNuevoCli.Click += new System.EventHandler(this.btnNuevoCli_Click);
             // 
@@ -307,14 +434,14 @@
             this.btnActualizarCli.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizarCli.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnActualizarCli.FlatAppearance.BorderSize = 2;
-            this.btnActualizarCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnActualizarCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnActualizarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarCli.ForeColor = System.Drawing.Color.White;
             this.btnActualizarCli.ImageKey = "save_file_disk_open_searsh_loading_clipboard_1513(1).png";
             this.btnActualizarCli.ImageList = this.imageList1;
-            this.btnActualizarCli.Location = new System.Drawing.Point(589, 524);
-            this.btnActualizarCli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizarCli.Location = new System.Drawing.Point(406, 558);
+            this.btnActualizarCli.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizarCli.Name = "btnActualizarCli";
             this.btnActualizarCli.Size = new System.Drawing.Size(124, 100);
             this.btnActualizarCli.TabIndex = 23;
@@ -322,62 +449,36 @@
             this.btnActualizarCli.UseVisualStyleBackColor = false;
             this.btnActualizarCli.Click += new System.EventHandler(this.btnActualizarCli_Click);
             // 
-            // button1
+            // btnBusCliente
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Proyecto_Final_Moanso.Properties.Resources.search_26px;
-            this.button1.Location = new System.Drawing.Point(299, 46);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 38);
-            this.button1.TabIndex = 20;
-            this.button1.Text = " Buscar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 416);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 26);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "ID :";
-            // 
-            // txtIDc
-            // 
-            this.txtIDc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDc.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDc.Location = new System.Drawing.Point(67, 414);
-            this.txtIDc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIDc.Name = "txtIDc";
-            this.txtIDc.ReadOnly = true;
-            this.txtIDc.Size = new System.Drawing.Size(85, 33);
-            this.txtIDc.TabIndex = 34;
-            // 
-            // txtFechaR
-            // 
-            this.txtFechaR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFechaR.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaR.Location = new System.Drawing.Point(207, 567);
-            this.txtFechaR.Name = "txtFechaR";
-            this.txtFechaR.ReadOnly = true;
-            this.txtFechaR.Size = new System.Drawing.Size(166, 33);
-            this.txtFechaR.TabIndex = 37;
-            this.txtFechaR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnBusCliente.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnBusCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBusCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBusCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusCliente.Image = global::Proyecto_Final_Moanso.Properties.Resources.search_26px;
+            this.btnBusCliente.Location = new System.Drawing.Point(297, 36);
+            this.btnBusCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBusCliente.Name = "btnBusCliente";
+            this.btnBusCliente.Size = new System.Drawing.Size(66, 38);
+            this.btnBusCliente.TabIndex = 20;
+            this.btnBusCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBusCliente.UseVisualStyleBackColor = false;
             // 
             // Frm_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(889, 649);
-            this.Controls.Add(this.txtFechaR);
+            this.ClientSize = new System.Drawing.Size(942, 674);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cmbDistrito);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cmbProvincia);
+            this.Controls.Add(this.cmbDepartamento);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtIDc);
@@ -394,12 +495,14 @@
             this.Controls.Add(this.btnNuevoCli);
             this.Controls.Add(this.btnActualizarCli);
             this.Controls.Add(this.dgvClientes);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBusCliente);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Clientes";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Load += new System.EventHandler(this.Frm_Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -409,7 +512,7 @@
         #endregion
 
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBusCliente;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvClientes;
@@ -428,6 +531,13 @@
         private System.Windows.Forms.TextBox txtNomC;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtIDc;
-        private System.Windows.Forms.TextBox txtFechaR;
+        private System.Windows.Forms.ComboBox cmbDepartamento;
+        private System.Windows.Forms.ComboBox cmbProvincia;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cmbDistrito;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

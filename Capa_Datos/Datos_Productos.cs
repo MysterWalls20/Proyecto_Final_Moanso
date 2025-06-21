@@ -64,7 +64,6 @@ namespace Capa_Datos
             }
             return lista;
         }
-
         //listado de los Productos por categoria
         public List<Entidad_Productos> ListarProductosPorCategoria(string categoria)
         {
@@ -103,7 +102,6 @@ namespace Capa_Datos
             }
             return lista;
         }
-
         //Buscar producto por ID
         public Entidad_Productos BuscarProductoPorID(int id)
         {
@@ -171,7 +169,6 @@ namespace Capa_Datos
             {
                 throw new Exception("Error al obtener categorías: " + ex.Message);
             }
-
             return lista;
         }
         // Llenar Combobox de colores

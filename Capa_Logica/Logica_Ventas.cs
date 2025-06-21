@@ -70,10 +70,6 @@ namespace Capa_Logica
             }
             return exito;
         }
-        public bool RegistrarVentaDesdePedido(Entidad_PedidoTemp pedido)
-        {
-            return Datos_Ventas.Instancia.RegistrarVentaDesdePedido(pedido);
-        }
         public List<string> ObtenerMetodosPago()
         {
             return Datos_Ventas.Instancia.ObtenerMetodosPago();

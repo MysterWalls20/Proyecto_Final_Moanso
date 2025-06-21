@@ -24,9 +24,7 @@ namespace Proyecto_Final_Moanso
             try
             {
                 cbmMetodoPag.Items.Clear();
-
                 var metodos = Logica_Ventas.Instancia.ObtenerMetodosPago();
-
                 foreach (string metodo in metodos)
                 {
                     cbmMetodoPag.Items.Add(metodo);
@@ -50,64 +48,22 @@ namespace Proyecto_Final_Moanso
                 e.Handled = true;
             }
         }
-
         private void btnVender_Click(object sender, EventArgs e)
         {
-            // si el CheckBox indica que es un pedido
-            if (chEnviar.Checked)
-            {
-                if (txtDniV.Text == "" || txtDireccionPed.Text == "" || txtClienV.Text == "" || dgvProductosV.Rows.Count == 0 || cbmMetodoPag.Text == "")
-                {
-                    MessageBox.Show("Faltan datos para el pedido, ingresa todos los datos del cliente y productos.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    return;
-                }
 
-                Entidad_PedidoTemp pedidoTemp = new Entidad_PedidoTemp
-                {
-                    ClienteId = Convert.ToInt32(lblClienteId.Text),
-                    DireccionEntrega = txtDireccionPed.Text
-                };
-
-                foreach (DataGridViewRow row in dgvProductosV.Rows)
-                {
-                    pedidoTemp.Detalles.Add(new Entidad_DetalleVenta
-                    {
-                        IdProducto = Convert.ToInt32(row.Cells["IDv"].Value),
-                        Cantidad = Convert.ToInt32(row.Cells["cantPV"].Value),
-                        PrecioUnidad = Convert.ToDecimal(row.Cells["PrecioUpv"].Value),
-                        Subtotal = Convert.ToDecimal(row.Cells["PrecioTPV"].Value)
-                    });
-                }
-
-                Logica_PedidosTemporales.Instancia.PedidosPendientes.Add(pedidoTemp);
-                MessageBox.Show("Pedido temporal registrado. Ve al módulo de Pedidos para terminar de enviar el pedido.");
-                //this.Close(); // o limpiar el formulario
-            }
-            else
-            {
-                // Registrar venta normal
-                RegistrarVentaDirecta();
-            }
         }
         private void LimpiarFormularioVenta()
         {
-            bool esPedido = chEnviar.Checked;
             lblClienteId.Text = "";
             lbPagoT.Text = "0.00";
             dgvProductosV.Rows.Clear();
             txtDniV.Text = "";
             txtClienV.Text = "";
-            if (esPedido == true)
-            {
-                txtDireccionPed.Text = "";
-                txtDireccionPed.Enabled = false;
-                chEnviar.Checked = false;
-            }
 
         }
         private void RegistrarVentaDirecta()
         {
-            if (txtDniV.Text == "" || txtDireccionPed.Text == "" || lblClienteId.Text == "" || dgvProductosV.Rows.Count == 0 || txtClienV.Text == "")
+            if (txtDniV.Text == "" || txtDireccionV.Text == "" || lblClienteId.Text == "" || dgvProductosV.Rows.Count == 0 || txtClienV.Text == "")
             {
                 MessageBox.Show("Faltan datos para la venta.");
                 return;
@@ -154,19 +110,6 @@ namespace Proyecto_Final_Moanso
                 MessageBox.Show("Error al registrar pedido.");
             }
         }
-
-        private void chEnviar_CheckedChanged(object sender, EventArgs e)
-        {
-            if(chEnviar.Checked)
-            {
-                txtDireccionPed.Enabled = true;
-            }else
-            {
-                txtDireccionPed.Enabled = false;
-                txtDireccionPed.Text = "";
-            }
-        }
-
         private void txtIdV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -209,20 +152,16 @@ namespace Proyecto_Final_Moanso
                     MessageBox.Show("Por favor complete todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-
                 int stock = int.Parse(txtStockV.Text);
                 int cantidad = int.Parse(txtCantidadV.Text);
-
                 if (cantidad > stock)
                 {
                     MessageBox.Show("Cantidad mayor al stock disponible.", "Stock insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCantidadV.Focus();
                     return;
                 }
-
                 decimal precioUnitario = decimal.Parse(txtPrecioV.Text);
                 decimal subtotal = precioUnitario * cantidad;
-
                 // Agregar al DataGridView
                 dgvProductosV.Rows.Add(
                     txtIdV.Text,
@@ -233,9 +172,7 @@ namespace Proyecto_Final_Moanso
                     subtotal.ToString(),
                     cbmMetodoPag.Text
                 );
-
                 CalcularTotal();
-
                 // Limpiar campos
                 txtIdV.Clear();
                 txtProductV.Clear();
@@ -261,8 +198,6 @@ namespace Proyecto_Final_Moanso
             lbPagoT.Text = total.ToString("0.00");
             return total;
         }
-
-
         private void txtDniV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)

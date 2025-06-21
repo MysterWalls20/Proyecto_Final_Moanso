@@ -27,30 +27,27 @@ namespace Capa_Logica
 
         #region metodos
 
-        ///listado
-
+        //listado
         public List<Entidad_Cliente> ListarCliente()
         {
             return Datos_Cliente.Instancia.ListarCliente();
         }
-
         //Busca por dni
         public Entidad_Cliente ObtenerClientePorDni(string dni)
         {
             return Datos_Cliente.Instancia.BuscarClientePorDni(dni);
         }
-
         ///inserta
         public void InsertaCliente(Entidad_Cliente Cli)
         {
             Datos_Cliente.Instancia.InsertarCliente(Cli);
         }
-
-        //Edita
+        ///Edita
         public void EditaCliente(Entidad_Cliente Cli)
         {
             Datos_Cliente.Instancia.EditarCliente(Cli);
         }
+        //Deshabilita
         public void DeshabilitarCliente(Entidad_Cliente Cli)
         {
             Datos_Cliente.Instancia.DeshabilitarCliente(Cli);
