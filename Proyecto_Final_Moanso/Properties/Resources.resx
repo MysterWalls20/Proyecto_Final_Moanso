@@ -178,4 +178,16 @@
   <data name="archivo_pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\archivo-pdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="retroceder_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\retroceder-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editar_categ_color_42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editar-categ_color-42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="proveedor_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\proveedor-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orden_de_compra_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orden-de-compra-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -17,7 +17,6 @@ namespace Capa_Datos
 
         private Conexion()
         {
-
             this.Base = "BD_Compania_Rubio";
             this.Servidor = "USER"; //Poner el nombre de tu servidor sql
             this.Usuario = "sa";

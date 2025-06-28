@@ -174,7 +174,34 @@ namespace Proyecto_Final_Moanso
         private void btnBuscarCat_Click(object sender, EventArgs e)
         {
             string categoria = cbCategoriaLP.Text;
-            dgvProductosAlm.DataSource = Logica_Productos.Instancia.ObtenerProductosPorCategoria(categoria);
+            if(categoria == "")
+            {
+                MessageBox.Show("Por favor, selecciona una categoria.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                dgvProductosAlm.DataSource = Logica_Productos.Instancia.ObtenerProductosPorCategoria(categoria);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarProduct_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbCategoriaLP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

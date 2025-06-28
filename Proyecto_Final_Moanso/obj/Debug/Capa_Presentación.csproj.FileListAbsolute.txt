@@ -30,7 +30,6 @@ C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Pr
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Reportes.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Clientes.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Login.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Menu.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_NuevaVenta.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Almacen.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.NuevoProducto.resources
@@ -49,3 +48,7 @@ C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\bin\Debug\Ca
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Capa_Pre.3C51E38A.Up2Date
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.exe
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuVenta.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuPrincipal.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuAlmacen.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuCompra.resources

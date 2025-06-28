@@ -18,8 +18,7 @@ namespace Proyecto_Final_Moanso
         public Frm_Clientes()
         {
             InitializeComponent();
-            listarCliente();
-            //txtFechaR.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            //listarCliente();
         }
         private void LimpiarCampos()
         {
@@ -31,8 +30,8 @@ namespace Proyecto_Final_Moanso
         }
         private void Frm_Clientes_Load(object sender, EventArgs e)
         {
-            CargarDepartamentos();
-            cmbDepartamento.SelectedIndexChanged += cmbDepartamento_SelectedIndexChanged;
+            //CargarDepartamentos();
+            //cmbDepartamento.SelectedIndexChanged += cmbDepartamento_SelectedIndexChanged;
         }
         private void CargarDepartamentos()
         {

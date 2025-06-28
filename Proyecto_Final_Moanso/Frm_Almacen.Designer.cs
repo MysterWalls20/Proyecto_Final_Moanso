@@ -49,6 +49,7 @@
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosAlm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,13 +68,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(272, 8);
+            this.label3.Location = new System.Drawing.Point(306, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(323, 36);
+            this.label3.Size = new System.Drawing.Size(319, 32);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Gestion de Productos";
+            this.label3.Text = "Almacen de Productos";
             // 
             // dgvProductosAlm
             // 
@@ -104,7 +105,7 @@
             this.dgvProductosAlm.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductosAlm.EnableHeadersVisualStyles = false;
             this.dgvProductosAlm.GridColor = System.Drawing.Color.Orange;
-            this.dgvProductosAlm.Location = new System.Drawing.Point(10, 143);
+            this.dgvProductosAlm.Location = new System.Drawing.Point(10, 130);
             this.dgvProductosAlm.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductosAlm.Name = "dgvProductosAlm";
             this.dgvProductosAlm.ReadOnly = true;
@@ -128,7 +129,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             this.dgvProductosAlm.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProductosAlm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductosAlm.Size = new System.Drawing.Size(920, 355);
+            this.dgvProductosAlm.Size = new System.Drawing.Size(925, 294);
             this.dgvProductosAlm.TabIndex = 2;
             this.dgvProductosAlm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductosAlm_CellContentClick);
             this.dgvProductosAlm.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductosAlm_CellContentDoubleClick);
@@ -137,46 +138,50 @@
             // 
             this.txtBuscarProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscarProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarProduct.Location = new System.Drawing.Point(12, 94);
+            this.txtBuscarProduct.Location = new System.Drawing.Point(10, 84);
             this.txtBuscarProduct.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarProduct.MaxLength = 30;
             this.txtBuscarProduct.Multiline = true;
             this.txtBuscarProduct.Name = "txtBuscarProduct";
             this.txtBuscarProduct.Size = new System.Drawing.Size(339, 38);
             this.txtBuscarProduct.TabIndex = 1;
+            this.txtBuscarProduct.TextChanged += new System.EventHandler(this.txtBuscarProduct_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 61);
+            this.label1.Location = new System.Drawing.Point(5, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar por Nombre:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cbCategoriaLP
             // 
             this.cbCategoriaLP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoriaLP.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoriaLP.FormattingEnabled = true;
-            this.cbCategoriaLP.Location = new System.Drawing.Point(510, 93);
+            this.cbCategoriaLP.Location = new System.Drawing.Point(515, 83);
             this.cbCategoriaLP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategoriaLP.Name = "cbCategoriaLP";
             this.cbCategoriaLP.Size = new System.Drawing.Size(347, 37);
             this.cbCategoriaLP.TabIndex = 32;
+            this.cbCategoriaLP.SelectedIndexChanged += new System.EventHandler(this.cbCategoriaLP_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(505, 61);
+            this.label2.Location = new System.Drawing.Point(510, 52);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(229, 25);
             this.label2.TabIndex = 33;
             this.label2.Text = "Buscar por Categoria :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnHabilitar
             // 
@@ -190,10 +195,10 @@
             this.btnHabilitar.ForeColor = System.Drawing.Color.White;
             this.btnHabilitar.ImageKey = "Habilitar-30.png";
             this.btnHabilitar.ImageList = this.imageList1;
-            this.btnHabilitar.Location = new System.Drawing.Point(738, 534);
+            this.btnHabilitar.Location = new System.Drawing.Point(743, 491);
             this.btnHabilitar.Margin = new System.Windows.Forms.Padding(4);
             this.btnHabilitar.Name = "btnHabilitar";
-            this.btnHabilitar.Size = new System.Drawing.Size(130, 105);
+            this.btnHabilitar.Size = new System.Drawing.Size(130, 98);
             this.btnHabilitar.TabIndex = 39;
             this.btnHabilitar.Text = "\r\n\r\n\r\nHabilitar";
             this.btnHabilitar.UseVisualStyleBackColor = false;
@@ -207,14 +212,14 @@
             this.btnDeshabilitar.FlatAppearance.BorderSize = 2;
             this.btnDeshabilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnDeshabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeshabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeshabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeshabilitar.ForeColor = System.Drawing.Color.White;
             this.btnDeshabilitar.ImageKey = "Deshabilitar-30.png";
             this.btnDeshabilitar.ImageList = this.imageList1;
-            this.btnDeshabilitar.Location = new System.Drawing.Point(571, 534);
+            this.btnDeshabilitar.Location = new System.Drawing.Point(578, 491);
             this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(130, 105);
+            this.btnDeshabilitar.Size = new System.Drawing.Size(130, 98);
             this.btnDeshabilitar.TabIndex = 38;
             this.btnDeshabilitar.Text = "\r\n\r\n\r\nDeshabilitar";
             this.btnDeshabilitar.UseVisualStyleBackColor = false;
@@ -229,7 +234,7 @@
             this.btnBuscarCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarCat.Image = global::Proyecto_Final_Moanso.Properties.Resources.search_26px;
-            this.btnBuscarCat.Location = new System.Drawing.Point(866, 92);
+            this.btnBuscarCat.Location = new System.Drawing.Point(871, 82);
             this.btnBuscarCat.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarCat.Name = "btnBuscarCat";
             this.btnBuscarCat.Size = new System.Drawing.Size(64, 38);
@@ -247,7 +252,7 @@
             this.btnBuscarNom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarNom.Image = global::Proyecto_Final_Moanso.Properties.Resources.search_26px;
-            this.btnBuscarNom.Location = new System.Drawing.Point(360, 94);
+            this.btnBuscarNom.Location = new System.Drawing.Point(358, 84);
             this.btnBuscarNom.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarNom.Name = "btnBuscarNom";
             this.btnBuscarNom.Size = new System.Drawing.Size(64, 38);
@@ -268,10 +273,10 @@
             this.btnMostrar.ForeColor = System.Drawing.Color.White;
             this.btnMostrar.ImageKey = "Product-sale-report_25407.png";
             this.btnMostrar.ImageList = this.imageList1;
-            this.btnMostrar.Location = new System.Drawing.Point(406, 534);
+            this.btnMostrar.Location = new System.Drawing.Point(412, 491);
             this.btnMostrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(130, 105);
+            this.btnMostrar.Size = new System.Drawing.Size(130, 98);
             this.btnMostrar.TabIndex = 11;
             this.btnMostrar.Text = "\r\n\r\n\r\nMostrar";
             this.btnMostrar.UseVisualStyleBackColor = false;
@@ -289,10 +294,10 @@
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.ImageKey = "new_file256_25213(1).png";
             this.btnNuevo.ImageList = this.imageList1;
-            this.btnNuevo.Location = new System.Drawing.Point(73, 534);
+            this.btnNuevo.Location = new System.Drawing.Point(79, 491);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(130, 105);
+            this.btnNuevo.Size = new System.Drawing.Size(130, 98);
             this.btnNuevo.TabIndex = 8;
             this.btnNuevo.Text = "\r\n\r\n\r\nNuevo+";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -310,21 +315,40 @@
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.ImageKey = "save_file_disk_open_searsh_loading_clipboard_1513(1).png";
             this.btnActualizar.ImageList = this.imageList1;
-            this.btnActualizar.Location = new System.Drawing.Point(240, 534);
+            this.btnActualizar.Location = new System.Drawing.Point(246, 491);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(130, 105);
+            this.btnActualizar.Size = new System.Drawing.Size(130, 98);
             this.btnActualizar.TabIndex = 9;
             this.btnActualizar.Text = "\r\n\r\n\r\nActualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(684, 430);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(251, 39);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "Mostrar Deshabilitados";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Frm_Almacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(942, 674);
+            this.ClientSize = new System.Drawing.Size(950, 610);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnBuscarCat);
@@ -364,5 +388,6 @@
         private System.Windows.Forms.Button btnBuscarCat;
         private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Button btnHabilitar;
+        private System.Windows.Forms.Button button1;
     }
 }
