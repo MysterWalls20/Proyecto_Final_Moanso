@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Datos_Ciudad.cs" />
     <Compile Include="Datos_Cliente.cs" />
     <Compile Include="Datos_Productos.cs" />
     <Compile Include="Datos_Empleado.cs" />
+    <Compile Include="Datos_Proveedor.cs" />
+    <Compile Include="Datos_Rubro.cs" />
     <Compile Include="Datos_Ubigeo.cs" />
     <Compile Include="Datos_Ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

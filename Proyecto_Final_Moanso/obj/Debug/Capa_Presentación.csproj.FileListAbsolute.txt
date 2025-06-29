@@ -10,12 +10,8 @@ C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proye
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.AssemblyReference.cache
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.SuggestedBindingRedirects.cache
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.ActualizarProducto.resources
-C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Empleados.resources
-C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.EstadoPedidos.resources
-C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Pedidos.resources
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Clientes.resources
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Login.resources
-C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Menu.resources
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_NuevaVenta.resources
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Almacen.resources
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.NuevoProducto.resources
@@ -52,3 +48,9 @@ C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Pr
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuPrincipal.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuAlmacen.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuCompra.resources
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuAlmacen.resources
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuCompra.resources
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuPrincipal.resources
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Proveedor.resources
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Reportes.resources
+C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuVenta.resources

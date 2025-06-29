@@ -57,5 +57,24 @@ namespace Proyecto_Final_Moanso
         {
             pbCerrarPrograma.BackColor = Color.Red;
         }
+
+        public void abrirFormHijo(Form formhijo)
+        {
+            if (this.pnPrincipal.Controls.Count > 0)
+                this.pnPrincipal.Controls.RemoveAt(0);
+            formhijo.TopLevel = false;
+            formhijo.Dock = DockStyle.Fill;
+            this.pnPrincipal.Controls.Add(formhijo);
+            this.pnPrincipal.Tag = formhijo;
+            this.pnPrincipal.Text = formhijo.Text;
+            formhijo.Show();
+        }
+
+        private void btnMantProveedor_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new Frm_Proveedor());
+            btnMantProveedor.BackColor = Color.DarkOrange;
+            btnOrdenCompra.BackColor = Color.White;
+        }
     }
 }
