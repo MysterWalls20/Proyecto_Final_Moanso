@@ -54,3 +54,32 @@ C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proye
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Proveedor.resources
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Reportes.resources
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuVenta.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.exe.config
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.exe
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\bin\Debug\Proyecto_Final_Moanso.pdb
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\bin\Debug\Capa_Entidad.dll
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\bin\Debug\Capa_Logica.dll
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\bin\Debug\Capa_Datos.dll
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\bin\Debug\Capa_Entidad.pdb
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\bin\Debug\Capa_Logica.pdb
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\bin\Debug\Capa_Datos.pdb
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.AssemblyReference.cache
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.exe.config
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.ActualizarProducto.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuAlmacen.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuCompra.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuPrincipal.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Proveedor.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Reportes.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Clientes.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Login.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MenuVenta.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_NuevaVenta.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_Almacen.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.NuevoProducto.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Properties.Resources.resources
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.GenerateResource.cache
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Capa_Presentación.csproj.CoreCompileInputs.cache
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Capa_Pre.3C51E38A.Up2Date
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.exe
+C:\Users\CompuMorillas\3D Objects\X_1\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.pdb

@@ -189,5 +189,15 @@ namespace Proyecto_Final_Moanso
                 }
             }
         }
+
+        private void btnMostrarDesh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHabilitadProv_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
