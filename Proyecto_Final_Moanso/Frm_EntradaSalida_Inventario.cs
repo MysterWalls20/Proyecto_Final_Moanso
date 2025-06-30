@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mantedor_Cliente
+namespace Proyecto_Final_Moanso
 {
-    public partial class Form1 : Form
+    public partial class Frm_EntradaSalida_Inventario : Form
     {
-        public Form1()
+        public Frm_EntradaSalida_Inventario()
         {
             InitializeComponent();
         }

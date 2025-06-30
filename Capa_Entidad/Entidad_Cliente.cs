@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Capa_Entidad
 {
-    public class ECliente
+    public class Entidad_Cliente
     {
-        public int IdCliente { get; set; }
-        public string Direccion { get; set; }
-        public int IdDistrito { get; set; }
-        public int IdTipoCliente { get; set; }
-        public bool Estado { get; set; }
+        public int id { get; set; }
+        public string nombre { get; set; }  
+        public string apellido { get; set;}
+        public int numero { get; set; }
+        public string dni { get; set; } // Para mayor facilidad en manejo de string
+        public DateTime fecha_registro { get; set; }
+        public bool estado { get; set; }
     }
-
-    
 }

@@ -41,8 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CapaDatos.cs" />
-    <Compile Include="CapaNegocio.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Datos_Ciudad.cs" />
     <Compile Include="Datos_Cliente.cs" />

@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Entidad", "..\Capa_Ent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Logica", "..\Capa_Logica\Capa_Logica.csproj", "{C8BC190C-0F50-4091-833B-96B636799937}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mantedor_Cliente", "..\Mantedor_Cliente\Mantedor_Cliente.csproj", "{7AF56989-EFF6-46F9-8A43-3DCB5F3032F1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{C8BC190C-0F50-4091-833B-96B636799937}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8BC190C-0F50-4091-833B-96B636799937}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8BC190C-0F50-4091-833B-96B636799937}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7AF56989-EFF6-46F9-8A43-3DCB5F3032F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7AF56989-EFF6-46F9-8A43-3DCB5F3032F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7AF56989-EFF6-46F9-8A43-3DCB5F3032F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7AF56989-EFF6-46F9-8A43-3DCB5F3032F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

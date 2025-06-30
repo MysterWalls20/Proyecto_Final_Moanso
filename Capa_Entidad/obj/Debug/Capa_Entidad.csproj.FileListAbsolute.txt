@@ -16,9 +16,3 @@ C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Entidad\obj\Debug\Capa_Entida
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.CoreCompileInputs.cache
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
-C:\Users\CompuMorillas\3D Objects\X_1\Capa_Entidad\bin\Debug\Capa_Entidad.dll
-C:\Users\CompuMorillas\3D Objects\X_1\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
-C:\Users\CompuMorillas\3D Objects\X_1\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.AssemblyReference.cache
-C:\Users\CompuMorillas\3D Objects\X_1\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.CoreCompileInputs.cache
-C:\Users\CompuMorillas\3D Objects\X_1\Capa_Entidad\obj\Debug\Capa_Entidad.dll
-C:\Users\CompuMorillas\3D Objects\X_1\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
