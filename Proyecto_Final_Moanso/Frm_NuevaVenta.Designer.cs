@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtIdV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtPrecioV = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtDniV = new System.Windows.Forms.TextBox();
+            this.txtTipoCli = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtClienV = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,25 +54,28 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lbPagoT = new System.Windows.Forms.Label();
             this.dgvProductosV = new System.Windows.Forms.DataGridView();
+            this.IDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombrePV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MarC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColorPV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantPV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUpv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioTPV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.txtFechaV = new System.Windows.Forms.TextBox();
             this.lblClienteId = new System.Windows.Forms.Label();
             this.txtMarcaV = new System.Windows.Forms.TextBox();
             this.txtCategoriaV = new System.Windows.Forms.TextBox();
-            this.cbmMetodoPag = new System.Windows.Forms.ComboBox();
+            this.cbmTipoPag = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnAgregarProducto = new System.Windows.Forms.Button();
-            this.btnEliminarProducto = new System.Windows.Forms.Button();
+            this.txtPago = new System.Windows.Forms.TextBox();
+            this.btnAgregarProTabla = new System.Windows.Forms.Button();
+            this.btnEliminarProTabla = new System.Windows.Forms.Button();
             this.btnVender = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.IDp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombrePV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorPV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantPV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUpv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioTPV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancelarV = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lbVuelto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +104,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(203, 19);
+            this.label2.Location = new System.Drawing.Point(220, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 26);
             this.label2.TabIndex = 4;
@@ -111,7 +114,7 @@
             // 
             this.txtProductV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtProductV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductV.Location = new System.Drawing.Point(320, 17);
+            this.txtProductV.Location = new System.Drawing.Point(337, 17);
             this.txtProductV.Name = "txtProductV";
             this.txtProductV.ReadOnly = true;
             this.txtProductV.Size = new System.Drawing.Size(292, 33);
@@ -203,35 +206,35 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Precio U:";
             // 
-            // txtDniV
+            // txtTipoCli
             // 
-            this.txtDniV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDniV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDniV.Location = new System.Drawing.Point(81, 400);
-            this.txtDniV.MaxLength = 8;
-            this.txtDniV.Name = "txtDniV";
-            this.txtDniV.Size = new System.Drawing.Size(179, 33);
-            this.txtDniV.TabIndex = 17;
-            this.txtDniV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtDniV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDniV_KeyPress);
+            this.txtTipoCli.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTipoCli.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipoCli.Location = new System.Drawing.Point(445, 415);
+            this.txtTipoCli.MaxLength = 8;
+            this.txtTipoCli.Name = "txtTipoCli";
+            this.txtTipoCli.ReadOnly = true;
+            this.txtTipoCli.Size = new System.Drawing.Size(179, 33);
+            this.txtTipoCli.TabIndex = 17;
+            this.txtTipoCli.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTipoCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDniV_KeyPress);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 402);
+            this.label7.Location = new System.Drawing.Point(373, 417);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 26);
+            this.label7.Size = new System.Drawing.Size(59, 26);
             this.label7.TabIndex = 16;
-            this.label7.Text = "DNI:";
+            this.label7.Text = "Tipo:";
             // 
             // txtClienV
             // 
             this.txtClienV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtClienV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClienV.Location = new System.Drawing.Point(394, 401);
+            this.txtClienV.Location = new System.Drawing.Point(108, 414);
             this.txtClienV.Name = "txtClienV";
-            this.txtClienV.ReadOnly = true;
             this.txtClienV.Size = new System.Drawing.Size(221, 33);
             this.txtClienV.TabIndex = 19;
             // 
@@ -239,7 +242,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(303, 403);
+            this.label8.Location = new System.Drawing.Point(16, 417);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 26);
             this.label8.TabIndex = 18;
@@ -249,7 +252,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(21, 454);
+            this.label9.Location = new System.Drawing.Point(16, 467);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 26);
             this.label9.TabIndex = 21;
@@ -260,7 +263,7 @@
             this.txtDireccionV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccionV.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDireccionV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionV.Location = new System.Drawing.Point(139, 451);
+            this.txtDireccionV.Location = new System.Drawing.Point(133, 465);
             this.txtDireccionV.Name = "txtDireccionV";
             this.txtDireccionV.ReadOnly = true;
             this.txtDireccionV.Size = new System.Drawing.Size(275, 33);
@@ -270,7 +273,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(707, 487);
+            this.label11.Location = new System.Drawing.Point(482, 510);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(115, 26);
             this.label11.TabIndex = 25;
@@ -280,7 +283,7 @@
             // 
             this.lbPagoT.AutoSize = true;
             this.lbPagoT.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPagoT.Location = new System.Drawing.Point(869, 488);
+            this.lbPagoT.Location = new System.Drawing.Point(629, 510);
             this.lbPagoT.Name = "lbPagoT";
             this.lbPagoT.Size = new System.Drawing.Size(53, 26);
             this.lbPagoT.TabIndex = 26;
@@ -290,227 +293,64 @@
             // 
             this.dgvProductosV.AllowUserToAddRows = false;
             this.dgvProductosV.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvProductosV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvProductosV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProductosV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvProductosV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvProductosV.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductosV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductosV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProductosV.ColumnHeadersHeight = 35;
             this.dgvProductosV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProductosV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDp,
             this.NombrePV,
+            this.MarC,
             this.ColorPV,
             this.cantPV,
             this.PrecioUpv,
             this.PrecioTPV});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProductosV.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProductosV.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductosV.EnableHeadersVisualStyles = false;
             this.dgvProductosV.GridColor = System.Drawing.Color.Orange;
-            this.dgvProductosV.Location = new System.Drawing.Point(24, 115);
+            this.dgvProductosV.Location = new System.Drawing.Point(21, 115);
             this.dgvProductosV.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductosV.Name = "dgvProductosV";
             this.dgvProductosV.ReadOnly = true;
             this.dgvProductosV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductosV.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductosV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProductosV.RowHeadersVisible = false;
             this.dgvProductosV.RowHeadersWidth = 60;
             this.dgvProductosV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvProductosV.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvProductosV.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProductosV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductosV.Size = new System.Drawing.Size(784, 270);
+            this.dgvProductosV.Size = new System.Drawing.Size(784, 274);
             this.dgvProductosV.TabIndex = 28;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(675, 69);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 26);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Fecha V:";
-            // 
-            // txtFechaV
-            // 
-            this.txtFechaV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFechaV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaV.Location = new System.Drawing.Point(776, 67);
-            this.txtFechaV.Name = "txtFechaV";
-            this.txtFechaV.ReadOnly = true;
-            this.txtFechaV.Size = new System.Drawing.Size(148, 33);
-            this.txtFechaV.TabIndex = 30;
-            this.txtFechaV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblClienteId
-            // 
-            this.lblClienteId.AutoSize = true;
-            this.lblClienteId.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClienteId.Location = new System.Drawing.Point(278, 407);
-            this.lblClienteId.Name = "lblClienteId";
-            this.lblClienteId.Size = new System.Drawing.Size(17, 26);
-            this.lblClienteId.TabIndex = 31;
-            this.lblClienteId.Text = ".";
-            this.lblClienteId.Visible = false;
-            // 
-            // txtMarcaV
-            // 
-            this.txtMarcaV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMarcaV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarcaV.Location = new System.Drawing.Point(912, 18);
-            this.txtMarcaV.Name = "txtMarcaV";
-            this.txtMarcaV.ReadOnly = true;
-            this.txtMarcaV.Size = new System.Drawing.Size(10, 33);
-            this.txtMarcaV.TabIndex = 32;
-            this.txtMarcaV.Visible = false;
-            // 
-            // txtCategoriaV
-            // 
-            this.txtCategoriaV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCategoriaV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoriaV.Location = new System.Drawing.Point(620, 18);
-            this.txtCategoriaV.Name = "txtCategoriaV";
-            this.txtCategoriaV.ReadOnly = true;
-            this.txtCategoriaV.Size = new System.Drawing.Size(10, 33);
-            this.txtCategoriaV.TabIndex = 33;
-            this.txtCategoriaV.Visible = false;
-            // 
-            // cbmMetodoPag
-            // 
-            this.cbmMetodoPag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmMetodoPag.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbmMetodoPag.FormattingEnabled = true;
-            this.cbmMetodoPag.Location = new System.Drawing.Point(24, 536);
-            this.cbmMetodoPag.Name = "cbmMetodoPag";
-            this.cbmMetodoPag.Size = new System.Drawing.Size(284, 34);
-            this.cbmMetodoPag.TabIndex = 34;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(21, 501);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 26);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "Tipo de Pago:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(482, 536);
-            this.textBox1.MaxLength = 10000;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(107, 33);
-            this.textBox1.TabIndex = 36;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnAgregarProducto
-            // 
-            this.btnAgregarProducto.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnAgregarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAgregarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarProducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAgregarProducto.FlatAppearance.BorderSize = 2;
-            this.btnAgregarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
-            this.btnAgregarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProducto.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(820, 115);
-            this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(104, 120);
-            this.btnAgregarProducto.TabIndex = 51;
-            this.btnAgregarProducto.Text = "Agregar+";
-            this.btnAgregarProducto.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminarProducto
-            // 
-            this.btnEliminarProducto.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnEliminarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEliminarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarProducto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminarProducto.FlatAppearance.BorderSize = 2;
-            this.btnEliminarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
-            this.btnEliminarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarProducto.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarProducto.Location = new System.Drawing.Point(820, 265);
-            this.btnEliminarProducto.Name = "btnEliminarProducto";
-            this.btnEliminarProducto.Size = new System.Drawing.Size(104, 120);
-            this.btnEliminarProducto.TabIndex = 52;
-            this.btnEliminarProducto.Text = "Eliminar-";
-            this.btnEliminarProducto.UseVisualStyleBackColor = false;
-            // 
-            // btnVender
-            // 
-            this.btnVender.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnVender.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVender.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnVender.FlatAppearance.BorderSize = 2;
-            this.btnVender.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
-            this.btnVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVender.ForeColor = System.Drawing.Color.Black;
-            this.btnVender.Image = global::Proyecto_Final_Moanso.Properties.Resources.dinero_40;
-            this.btnVender.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVender.Location = new System.Drawing.Point(712, 526);
-            this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(212, 64);
-            this.btnVender.TabIndex = 1;
-            this.btnVender.Text = " GRABAR";
-            this.btnVender.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVender.UseVisualStyleBackColor = false;
-            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(712, 400);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 64);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // IDp
             // 
@@ -527,6 +367,14 @@
             this.NombrePV.Name = "NombrePV";
             this.NombrePV.ReadOnly = true;
             this.NombrePV.Width = 122;
+            // 
+            // MarC
+            // 
+            this.MarC.HeaderText = "Marca";
+            this.MarC.MinimumWidth = 6;
+            this.MarC.Name = "MarC";
+            this.MarC.ReadOnly = true;
+            this.MarC.Width = 92;
             // 
             // ColorPV
             // 
@@ -560,29 +408,215 @@
             this.PrecioTPV.ReadOnly = true;
             this.PrecioTPV.Width = 113;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(675, 69);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 26);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Fecha V:";
+            // 
+            // txtFechaV
+            // 
+            this.txtFechaV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFechaV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaV.Location = new System.Drawing.Point(776, 67);
+            this.txtFechaV.Name = "txtFechaV";
+            this.txtFechaV.ReadOnly = true;
+            this.txtFechaV.Size = new System.Drawing.Size(148, 33);
+            this.txtFechaV.TabIndex = 30;
+            this.txtFechaV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblClienteId
+            // 
+            this.lblClienteId.AutoSize = true;
+            this.lblClienteId.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClienteId.Location = new System.Drawing.Point(341, 416);
+            this.lblClienteId.Name = "lblClienteId";
+            this.lblClienteId.Size = new System.Drawing.Size(17, 26);
+            this.lblClienteId.TabIndex = 31;
+            this.lblClienteId.Text = ".";
+            this.lblClienteId.Visible = false;
+            // 
+            // txtMarcaV
+            // 
+            this.txtMarcaV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMarcaV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarcaV.Location = new System.Drawing.Point(912, 18);
+            this.txtMarcaV.Name = "txtMarcaV";
+            this.txtMarcaV.ReadOnly = true;
+            this.txtMarcaV.Size = new System.Drawing.Size(10, 33);
+            this.txtMarcaV.TabIndex = 32;
+            this.txtMarcaV.Visible = false;
+            // 
+            // txtCategoriaV
+            // 
+            this.txtCategoriaV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCategoriaV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoriaV.Location = new System.Drawing.Point(637, 18);
+            this.txtCategoriaV.Name = "txtCategoriaV";
+            this.txtCategoriaV.ReadOnly = true;
+            this.txtCategoriaV.Size = new System.Drawing.Size(10, 33);
+            this.txtCategoriaV.TabIndex = 33;
+            this.txtCategoriaV.Visible = false;
+            // 
+            // cbmTipoPag
+            // 
+            this.cbmTipoPag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmTipoPag.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmTipoPag.FormattingEnabled = true;
+            this.cbmTipoPag.Location = new System.Drawing.Point(21, 543);
+            this.cbmTipoPag.Name = "cbmTipoPag";
+            this.cbmTipoPag.Size = new System.Drawing.Size(284, 34);
+            this.cbmTipoPag.TabIndex = 34;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(16, 510);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(141, 26);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Tipo de Pago:";
+            // 
+            // txtPago
+            // 
+            this.txtPago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPago.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPago.Location = new System.Drawing.Point(334, 544);
+            this.txtPago.MaxLength = 10000;
+            this.txtPago.Name = "txtPago";
+            this.txtPago.Size = new System.Drawing.Size(122, 33);
+            this.txtPago.TabIndex = 36;
+            this.txtPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnAgregarProTabla
+            // 
+            this.btnAgregarProTabla.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnAgregarProTabla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAgregarProTabla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarProTabla.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAgregarProTabla.FlatAppearance.BorderSize = 2;
+            this.btnAgregarProTabla.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnAgregarProTabla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnAgregarProTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProTabla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProTabla.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarProTabla.Location = new System.Drawing.Point(820, 115);
+            this.btnAgregarProTabla.Name = "btnAgregarProTabla";
+            this.btnAgregarProTabla.Size = new System.Drawing.Size(104, 120);
+            this.btnAgregarProTabla.TabIndex = 51;
+            this.btnAgregarProTabla.Text = "Agregar+";
+            this.btnAgregarProTabla.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminarProTabla
+            // 
+            this.btnEliminarProTabla.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnEliminarProTabla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEliminarProTabla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarProTabla.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminarProTabla.FlatAppearance.BorderSize = 2;
+            this.btnEliminarProTabla.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnEliminarProTabla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnEliminarProTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarProTabla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarProTabla.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarProTabla.Location = new System.Drawing.Point(820, 269);
+            this.btnEliminarProTabla.Name = "btnEliminarProTabla";
+            this.btnEliminarProTabla.Size = new System.Drawing.Size(104, 120);
+            this.btnEliminarProTabla.TabIndex = 52;
+            this.btnEliminarProTabla.Text = "Eliminar-";
+            this.btnEliminarProTabla.UseVisualStyleBackColor = false;
+            // 
+            // btnVender
+            // 
+            this.btnVender.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnVender.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVender.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnVender.FlatAppearance.BorderSize = 2;
+            this.btnVender.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVender.ForeColor = System.Drawing.Color.Black;
+            this.btnVender.Image = global::Proyecto_Final_Moanso.Properties.Resources.dinero_40;
+            this.btnVender.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVender.Location = new System.Drawing.Point(712, 513);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(212, 64);
+            this.btnVender.TabIndex = 1;
+            this.btnVender.Text = " VENDER";
+            this.btnVender.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVender.UseVisualStyleBackColor = false;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
+            // 
+            // btnCancelarV
+            // 
+            this.btnCancelarV.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnCancelarV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCancelarV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarV.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancelarV.FlatAppearance.BorderSize = 2;
+            this.btnCancelarV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnCancelarV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnCancelarV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarV.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarV.Location = new System.Drawing.Point(712, 414);
+            this.btnCancelarV.Name = "btnCancelarV";
+            this.btnCancelarV.Size = new System.Drawing.Size(212, 64);
+            this.btnCancelarV.TabIndex = 53;
+            this.btnCancelarV.Text = "Cancelar";
+            this.btnCancelarV.UseVisualStyleBackColor = false;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(477, 501);
+            this.label13.Location = new System.Drawing.Point(329, 510);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 26);
+            this.label13.Size = new System.Drawing.Size(90, 26);
             this.label13.TabIndex = 54;
-            this.label13.Text = "Pago:";
+            this.label13.Text = "Pago: S/";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(482, 548);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 26);
+            this.label14.TabIndex = 55;
+            this.label14.Text = "Vuelto:";
+            // 
+            // lbVuelto
+            // 
+            this.lbVuelto.AutoSize = true;
+            this.lbVuelto.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVuelto.Location = new System.Drawing.Point(629, 548);
+            this.lbVuelto.Name = "lbVuelto";
+            this.lbVuelto.Size = new System.Drawing.Size(53, 26);
+            this.lbVuelto.TabIndex = 56;
+            this.lbVuelto.Text = "0.00";
             // 
             // Frm_NuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(942, 610);
+            this.ClientSize = new System.Drawing.Size(946, 610);
+            this.Controls.Add(this.lbVuelto);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnEliminarProducto);
-            this.Controls.Add(this.btnAgregarProducto);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnCancelarV);
+            this.Controls.Add(this.btnEliminarProTabla);
+            this.Controls.Add(this.btnAgregarProTabla);
+            this.Controls.Add(this.txtPago);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.cbmMetodoPag);
+            this.Controls.Add(this.cbmTipoPag);
             this.Controls.Add(this.txtCategoriaV);
             this.Controls.Add(this.txtMarcaV);
             this.Controls.Add(this.lblClienteId);
@@ -595,7 +629,7 @@
             this.Controls.Add(this.txtDireccionV);
             this.Controls.Add(this.txtClienV);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtDniV);
+            this.Controls.Add(this.txtTipoCli);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtPrecioV);
             this.Controls.Add(this.label6);
@@ -635,7 +669,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPrecioV;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDniV;
+        private System.Windows.Forms.TextBox txtTipoCli;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtClienV;
         private System.Windows.Forms.Label label8;
@@ -649,18 +683,21 @@
         private System.Windows.Forms.Label lblClienteId;
         private System.Windows.Forms.TextBox txtMarcaV;
         private System.Windows.Forms.TextBox txtCategoriaV;
-        private System.Windows.Forms.ComboBox cbmMetodoPag;
+        private System.Windows.Forms.ComboBox cbmTipoPag;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnAgregarProducto;
-        private System.Windows.Forms.Button btnEliminarProducto;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtPago;
+        private System.Windows.Forms.Button btnAgregarProTabla;
+        private System.Windows.Forms.Button btnEliminarProTabla;
+        private System.Windows.Forms.Button btnCancelarV;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDp;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombrePV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MarC;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorPV;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantPV;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUpv;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioTPV;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbVuelto;
     }
 }

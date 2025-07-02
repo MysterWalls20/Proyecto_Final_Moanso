@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Final_Moanso
 {
-    partial class Frm_Reportes
+    partial class Frm_ReportesVenta
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Reportes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ReportesVenta));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,15 +37,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.dgvProductosAlm = new System.Windows.Forms.DataGridView();
+            this.dgvReportesVenta = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMostrarPDF = new System.Windows.Forms.Button();
+            this.btnLeer = new System.Windows.Forms.Button();
             this.btnBusCliente = new System.Windows.Forms.Button();
-            this.btnMostrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosAlm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReportesVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -68,15 +68,15 @@
             this.label5.TabIndex = 43;
             this.label5.Text = "Reporte de Ventas:";
             // 
-            // dgvProductosAlm
+            // dgvReportesVenta
             // 
-            this.dgvProductosAlm.AllowUserToAddRows = false;
-            this.dgvProductosAlm.AllowUserToDeleteRows = false;
+            this.dgvReportesVenta.AllowUserToAddRows = false;
+            this.dgvReportesVenta.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvProductosAlm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProductosAlm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvProductosAlm.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProductosAlm.BackgroundColor = System.Drawing.Color.White;
+            this.dgvReportesVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvReportesVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvReportesVenta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvReportesVenta.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkOrange;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,9 +84,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductosAlm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProductosAlm.ColumnHeadersHeight = 35;
-            this.dgvProductosAlm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvReportesVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvReportesVenta.ColumnHeadersHeight = 35;
+            this.dgvReportesVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,14 +94,14 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProductosAlm.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProductosAlm.EnableHeadersVisualStyles = false;
-            this.dgvProductosAlm.GridColor = System.Drawing.Color.Orange;
-            this.dgvProductosAlm.Location = new System.Drawing.Point(54, 131);
-            this.dgvProductosAlm.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvProductosAlm.Name = "dgvProductosAlm";
-            this.dgvProductosAlm.ReadOnly = true;
-            this.dgvProductosAlm.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvReportesVenta.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvReportesVenta.EnableHeadersVisualStyles = false;
+            this.dgvReportesVenta.GridColor = System.Drawing.Color.Orange;
+            this.dgvReportesVenta.Location = new System.Drawing.Point(54, 131);
+            this.dgvReportesVenta.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvReportesVenta.Name = "dgvReportesVenta";
+            this.dgvReportesVenta.ReadOnly = true;
+            this.dgvReportesVenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkOrange;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,20 +109,20 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Orange;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductosAlm.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvProductosAlm.RowHeadersVisible = false;
-            this.dgvProductosAlm.RowHeadersWidth = 60;
-            this.dgvProductosAlm.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvReportesVenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvReportesVenta.RowHeadersVisible = false;
+            this.dgvReportesVenta.RowHeadersWidth = 60;
+            this.dgvReportesVenta.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvProductosAlm.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvProductosAlm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductosAlm.Size = new System.Drawing.Size(837, 345);
-            this.dgvProductosAlm.TabIndex = 44;
+            this.dgvReportesVenta.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvReportesVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReportesVenta.Size = new System.Drawing.Size(837, 345);
+            this.dgvReportesVenta.TabIndex = 44;
             // 
             // textBox1
             // 
@@ -166,22 +166,43 @@
             this.label2.TabIndex = 48;
             this.label2.Text = "Fecha de Venta :";
             // 
-            // button1
+            // btnMostrarPDF
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Proyecto_Final_Moanso.Properties.Resources.archivo_pdf;
-            this.button1.Location = new System.Drawing.Point(210, 489);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 102);
-            this.button1.TabIndex = 50;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnMostrarPDF.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnMostrarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarPDF.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMostrarPDF.FlatAppearance.BorderSize = 2;
+            this.btnMostrarPDF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnMostrarPDF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnMostrarPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarPDF.ForeColor = System.Drawing.Color.White;
+            this.btnMostrarPDF.Image = global::Proyecto_Final_Moanso.Properties.Resources.pdf_file_44;
+            this.btnMostrarPDF.Location = new System.Drawing.Point(260, 489);
+            this.btnMostrarPDF.Name = "btnMostrarPDF";
+            this.btnMostrarPDF.Size = new System.Drawing.Size(174, 71);
+            this.btnMostrarPDF.TabIndex = 50;
+            this.btnMostrarPDF.Text = "Mostrar";
+            this.btnMostrarPDF.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnMostrarPDF.UseVisualStyleBackColor = false;
+            // 
+            // btnLeer
+            // 
+            this.btnLeer.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnLeer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLeer.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLeer.FlatAppearance.BorderSize = 2;
+            this.btnLeer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnLeer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnLeer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLeer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLeer.ForeColor = System.Drawing.Color.White;
+            this.btnLeer.Location = new System.Drawing.Point(54, 489);
+            this.btnLeer.Name = "btnLeer";
+            this.btnLeer.Size = new System.Drawing.Size(168, 71);
+            this.btnLeer.TabIndex = 51;
+            this.btnLeer.Text = "Leer";
+            this.btnLeer.UseVisualStyleBackColor = false;
             // 
             // btnBusCliente
             // 
@@ -200,46 +221,25 @@
             this.btnBusCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBusCliente.UseVisualStyleBackColor = false;
             // 
-            // btnMostrar
-            // 
-            this.btnMostrar.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnMostrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMostrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnMostrar.FlatAppearance.BorderSize = 2;
-            this.btnMostrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
-            this.btnMostrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrar.ForeColor = System.Drawing.Color.White;
-            this.btnMostrar.ImageKey = "Product-sale-report_25407.png";
-            this.btnMostrar.ImageList = this.imageList1;
-            this.btnMostrar.Location = new System.Drawing.Point(54, 489);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(120, 102);
-            this.btnMostrar.TabIndex = 37;
-            this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMostrar.UseVisualStyleBackColor = false;
-            // 
-            // Frm_Reportes
+            // Frm_ReportesVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(942, 610);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLeer);
+            this.Controls.Add(this.btnMostrarPDF);
             this.Controls.Add(this.btnBusCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dgvProductosAlm);
+            this.Controls.Add(this.dgvReportesVenta);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnMostrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Frm_Reportes";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosAlm)).EndInit();
+            this.Name = "Frm_ReportesVenta";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReportesVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,14 +247,14 @@
 
         #endregion
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dgvProductosAlm;
+        private System.Windows.Forms.DataGridView dgvReportesVenta;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBusCliente;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMostrarPDF;
+        private System.Windows.Forms.Button btnLeer;
     }
 }

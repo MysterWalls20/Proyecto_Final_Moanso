@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class Frm_Reportes : Form
+    public partial class Frm_ReportesVenta : Form
     {
-        public Frm_Reportes()
+        public Frm_ReportesVenta()
         {
             InitializeComponent();
         }

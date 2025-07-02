@@ -50,10 +50,7 @@ namespace Proyecto_Final_Moanso
             cbmRubro.DisplayMember = "descripcion";
             cbmRubro.ValueMember = "id_rubro";
             cbmRubro.SelectedIndex = -1;
-
-            
         }
-
 
         private void MostrarProveedores()
         {
@@ -74,11 +71,8 @@ namespace Proyecto_Final_Moanso
             dgvProveedor.DataSource = listaFormateada;
         }
 
-
-
         private void btnNuevoProv_Click(object sender, EventArgs e)
         {
-
             if (txtDireccion.Text == "" || txtRazSoc.Text == "" || txtRuc.Text == "" )
             {
                 MessageBox.Show("Ingresa todos los datos del Proveedor", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -86,7 +80,6 @@ namespace Proyecto_Final_Moanso
             }
             try
             {
-
                 Entidad_Proveedor eProv = new Entidad_Proveedor();
                 eProv.razon_social = txtRazSoc.Text.Trim().ToLower();
                 eProv.ruc = int.Parse(txtRuc.Text.Trim());
@@ -97,7 +90,6 @@ namespace Proyecto_Final_Moanso
                 eProv.Ciudad = new Entidad_ciudad { id_ciudad = Convert.ToInt32(cbmCiudad.SelectedValue) };
                 eProv.Rubro = new Entidad_rubro { id_rubro = Convert.ToInt32(cbmRubro.SelectedValue) };
                 Logica_Proveedor.Instancia.InsertaProveedor(eProv);
-
 
             }
             catch (Exception ex)
@@ -138,7 +130,7 @@ namespace Proyecto_Final_Moanso
         {
             if (idProveedorSeleccionado == 0)
             {
-                MessageBox.Show("Seleccione un proveedor");
+                MessageBox.Show("Seleccione la fila de un proveedor para deshabilitar");
                 return;
             }
 
@@ -153,9 +145,9 @@ namespace Proyecto_Final_Moanso
             LimpiarCampos();
         }
 
-
         private int idProveedorSeleccionado = 0;
         private int ultimaFilaSeleccionada = -1;
+
         private void dgvProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -184,7 +176,6 @@ namespace Proyecto_Final_Moanso
 
                     cbmRubro.SelectedItem = cbmRubro.Items.Cast<Entidad_rubro>()
                         .FirstOrDefault(r => r.descripcion == fila.Cells["Rubro"].Value.ToString());
-
                     ultimaFilaSeleccionada = e.RowIndex;
                 }
             }

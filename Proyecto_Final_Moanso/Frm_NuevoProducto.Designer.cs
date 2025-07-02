@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Final_Moanso
 {
-    partial class NuevoProducto
+    partial class Frm_NuevoProducto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoProducto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_NuevoProducto));
             this.txtPrecioN = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtStockNP = new System.Windows.Forms.TextBox();
@@ -46,6 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnTopNP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrarNP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -192,7 +193,8 @@
             // pnTopNP
             // 
             this.pnTopNP.BackColor = System.Drawing.Color.DarkOrange;
-            this.pnTopNP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnTopNP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnTopNP.Controls.Add(this.label1);
             this.pnTopNP.Controls.Add(this.pbCerrarNP);
             this.pnTopNP.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTopNP.Location = new System.Drawing.Point(0, 0);
@@ -248,7 +250,18 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // NuevoProducto
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(5, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(217, 25);
+            this.label1.TabIndex = 70;
+            this.label1.Text = "Ingreso de Productos";
+            // 
+            // Frm_NuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -272,11 +285,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "NuevoProducto";
+            this.Name = "Frm_NuevoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoProducto";
             this.Load += new System.EventHandler(this.NuevoProducto_Load);
             this.pnTopNP.ResumeLayout(false);
+            this.pnTopNP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrarNP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -303,5 +317,6 @@
         private System.Windows.Forms.PictureBox pbCerrarNP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.Label label1;
     }
 }

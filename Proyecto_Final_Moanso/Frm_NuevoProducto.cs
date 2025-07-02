@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class NuevoProducto : Form
+    public partial class Frm_NuevoProducto : Form
     {
         public bool ProductoAgregado { get; set; } = false;
-        public NuevoProducto()
+        public Frm_NuevoProducto()
         {
             InitializeComponent();
         }

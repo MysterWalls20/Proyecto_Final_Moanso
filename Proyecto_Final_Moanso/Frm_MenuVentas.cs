@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class Frm_MenuVenta : Form
+    public partial class Frm_MenuVentas : Form
     {
-        public Frm_MenuVenta()
+        public Frm_MenuVentas()
         {
             InitializeComponent();
         }
@@ -56,26 +56,26 @@ namespace Proyecto_Final_Moanso
             this.pnPrincipal.Text = formhijo.Text;
             formhijo.Show();
         }
-        private void btnRealizaVenta_Click(object sender, EventArgs e)
+        private void btnRealizarVenta_Click(object sender, EventArgs e)
         {
             abrirFormHijo(new Frm_NuevaVenta());
-            btnRealizaVenta.BackColor = Color.DarkOrange;
+            btnRealizarVenta.BackColor = Color.DarkOrange;
             btnMantClientes.BackColor = Color.White;
-            btnReporteVentas.BackColor = Color.White;
+            btnReportesVenta.BackColor = Color.White;
         }
         private void btnMantClientes_Click(object sender, EventArgs e)
         {
-            abrirFormHijo(new Frm_Clientes());
-            btnRealizaVenta.BackColor = Color.White;
+            abrirFormHijo(new Frm_MantClientes());
+            btnRealizarVenta.BackColor = Color.White;
             btnMantClientes.BackColor = Color.DarkOrange;
-            btnReporteVentas.BackColor = Color.White;
+            btnReportesVenta.BackColor = Color.White;
         }
-        private void btnReporteVentas_Click(object sender, EventArgs e)
+        private void btnReportesVenta_Click(object sender, EventArgs e)
         {
-            abrirFormHijo(new Frm_Reportes());
-            btnRealizaVenta.BackColor = Color.White;
+            abrirFormHijo(new Frm_ReportesVenta());
+            btnRealizarVenta.BackColor = Color.White;
             btnMantClientes.BackColor = Color.White;
-            btnReporteVentas.BackColor = Color.DarkOrange;
+            btnReportesVenta.BackColor = Color.DarkOrange;
         }
 
         private void pbCerrarPrograma_MouseDown(object sender, MouseEventArgs e)

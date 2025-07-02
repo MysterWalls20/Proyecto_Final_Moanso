@@ -76,8 +76,6 @@ namespace Capa_Datos
 
 
         //Insertar Proveedor
-
-        // Insertar proveedor
         public bool InsertarProveedor(Entidad_Proveedor p)
         {
             SqlCommand cmd = null;

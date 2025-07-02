@@ -157,9 +157,6 @@
   <data name="icons_ocultar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons-ocultar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit_closethesession_close_6317" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit_closethesession_close_6317.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon_visible" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-visible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,9 +172,6 @@
   <data name="Habilitar_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Habilitar-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="archivo_pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\archivo-pdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="retroceder_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\retroceder-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,5 +183,17 @@
   </data>
   <data name="orden_de_compra_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\orden-de-compra-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crear_ordenReq_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crear-ordenReq-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pdf_file_44" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pdf-file-44.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="productos_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\productos-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Product_sale_report_25407" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Product-sale-report_25407.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -34,11 +34,13 @@
             this.pbCerrarPrograma2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnRealizarReq = new System.Windows.Forms.Button();
             this.btnMantCateg_Colores = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalirDeMenu = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnMantAlmacen = new System.Windows.Forms.Button();
+            this.btnMantProductos = new System.Windows.Forms.Button();
             this.pbLogo1 = new System.Windows.Forms.PictureBox();
             this.pnPrincipal = new System.Windows.Forms.Panel();
             this.pnTop.SuspendLayout();
@@ -58,7 +60,7 @@
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1299, 64);
+            this.pnTop.Size = new System.Drawing.Size(1302, 64);
             this.pnTop.TabIndex = 2;
             this.pnTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTop_MouseDown);
             // 
@@ -103,17 +105,48 @@
             // pnMenu
             // 
             this.pnMenu.BackColor = System.Drawing.Color.Black;
+            this.pnMenu.Controls.Add(this.panel3);
+            this.pnMenu.Controls.Add(this.btnRealizarReq);
             this.pnMenu.Controls.Add(this.btnMantCateg_Colores);
             this.pnMenu.Controls.Add(this.panel1);
             this.pnMenu.Controls.Add(this.btnSalirDeMenu);
             this.pnMenu.Controls.Add(this.panel2);
-            this.pnMenu.Controls.Add(this.btnMantAlmacen);
+            this.pnMenu.Controls.Add(this.btnMantProductos);
             this.pnMenu.Controls.Add(this.pbLogo1);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 64);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(349, 610);
+            this.pnMenu.Size = new System.Drawing.Size(354, 610);
             this.pnMenu.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(0, 313);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(43, 74);
+            this.panel3.TabIndex = 9;
+            // 
+            // btnRealizarReq
+            // 
+            this.btnRealizarReq.BackColor = System.Drawing.Color.White;
+            this.btnRealizarReq.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRealizarReq.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRealizarReq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnRealizarReq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRealizarReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRealizarReq.Image = global::Proyecto_Final_Moanso.Properties.Resources.crear_ordenReq_40;
+            this.btnRealizarReq.Location = new System.Drawing.Point(43, 312);
+            this.btnRealizarReq.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRealizarReq.Name = "btnRealizarReq";
+            this.btnRealizarReq.Size = new System.Drawing.Size(311, 75);
+            this.btnRealizarReq.TabIndex = 10;
+            this.btnRealizarReq.Text = "Realizar requerimiento";
+            this.btnRealizarReq.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRealizarReq.UseVisualStyleBackColor = false;
+            this.btnRealizarReq.Click += new System.EventHandler(this.btnRealizarReq_Click);
             // 
             // btnMantCateg_Colores
             // 
@@ -123,14 +156,14 @@
             this.btnMantCateg_Colores.FlatAppearance.BorderSize = 2;
             this.btnMantCateg_Colores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnMantCateg_Colores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantCateg_Colores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantCateg_Colores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMantCateg_Colores.Image = global::Proyecto_Final_Moanso.Properties.Resources.editar_categ_color_42;
-            this.btnMantCateg_Colores.Location = new System.Drawing.Point(43, 324);
+            this.btnMantCateg_Colores.Location = new System.Drawing.Point(43, 404);
             this.btnMantCateg_Colores.Margin = new System.Windows.Forms.Padding(4);
             this.btnMantCateg_Colores.Name = "btnMantCateg_Colores";
-            this.btnMantCateg_Colores.Size = new System.Drawing.Size(306, 79);
+            this.btnMantCateg_Colores.Size = new System.Drawing.Size(311, 79);
             this.btnMantCateg_Colores.TabIndex = 8;
-            this.btnMantCateg_Colores.Text = " Mantenedor categorias y colores";
+            this.btnMantCateg_Colores.Text = "Mantenedor categorias y colores";
             this.btnMantCateg_Colores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMantCateg_Colores.UseVisualStyleBackColor = false;
             this.btnMantCateg_Colores.Click += new System.EventHandler(this.btnMantCateg_Colores_Click);
@@ -139,7 +172,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(0, 325);
+            this.panel1.Location = new System.Drawing.Point(0, 405);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(43, 78);
@@ -153,7 +186,7 @@
             this.btnSalirDeMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
             this.btnSalirDeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalirDeMenu.Image = global::Proyecto_Final_Moanso.Properties.Resources.retroceder_48;
-            this.btnSalirDeMenu.Location = new System.Drawing.Point(120, 508);
+            this.btnSalirDeMenu.Location = new System.Drawing.Point(135, 516);
             this.btnSalirDeMenu.Name = "btnSalirDeMenu";
             this.btnSalirDeMenu.Size = new System.Drawing.Size(95, 68);
             this.btnSalirDeMenu.TabIndex = 6;
@@ -164,31 +197,30 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkOrange;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(0, 225);
+            this.panel2.Location = new System.Drawing.Point(0, 220);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(43, 74);
             this.panel2.TabIndex = 4;
             // 
-            // btnMantAlmacen
+            // btnMantProductos
             // 
-            this.btnMantAlmacen.BackColor = System.Drawing.Color.White;
-            this.btnMantAlmacen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMantAlmacen.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnMantAlmacen.FlatAppearance.BorderSize = 2;
-            this.btnMantAlmacen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.btnMantAlmacen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMantAlmacen.Image = global::Proyecto_Final_Moanso.Properties.Resources.producto_40;
-            this.btnMantAlmacen.Location = new System.Drawing.Point(43, 224);
-            this.btnMantAlmacen.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMantAlmacen.Name = "btnMantAlmacen";
-            this.btnMantAlmacen.Size = new System.Drawing.Size(306, 75);
-            this.btnMantAlmacen.TabIndex = 5;
-            this.btnMantAlmacen.Text = "Mantenedor almacen";
-            this.btnMantAlmacen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMantAlmacen.UseVisualStyleBackColor = false;
-            this.btnMantAlmacen.Click += new System.EventHandler(this.btnMantAlmacen_Click);
+            this.btnMantProductos.BackColor = System.Drawing.Color.White;
+            this.btnMantProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMantProductos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMantProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnMantProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantProductos.Image = global::Proyecto_Final_Moanso.Properties.Resources.productos_40;
+            this.btnMantProductos.Location = new System.Drawing.Point(43, 219);
+            this.btnMantProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMantProductos.Name = "btnMantProductos";
+            this.btnMantProductos.Size = new System.Drawing.Size(311, 75);
+            this.btnMantProductos.TabIndex = 5;
+            this.btnMantProductos.Text = "Mantenedor productos";
+            this.btnMantProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMantProductos.UseVisualStyleBackColor = false;
+            this.btnMantProductos.Click += new System.EventHandler(this.btnMantProductos_Click);
             // 
             // pbLogo1
             // 
@@ -196,7 +228,7 @@
             this.pbLogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLogo1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbLogo1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbLogo1.Location = new System.Drawing.Point(9, 13);
+            this.pbLogo1.Location = new System.Drawing.Point(10, 13);
             this.pbLogo1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbLogo1.Name = "pbLogo1";
             this.pbLogo1.Size = new System.Drawing.Size(329, 154);
@@ -207,16 +239,16 @@
             // 
             this.pnPrincipal.BackColor = System.Drawing.Color.Gainsboro;
             this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPrincipal.Location = new System.Drawing.Point(349, 64);
+            this.pnPrincipal.Location = new System.Drawing.Point(354, 64);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(950, 610);
+            this.pnPrincipal.Size = new System.Drawing.Size(948, 610);
             this.pnPrincipal.TabIndex = 4;
             // 
             // Frm_MenuAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 674);
+            this.ClientSize = new System.Drawing.Size(1302, 674);
             this.Controls.Add(this.pnPrincipal);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnTop);
@@ -244,10 +276,12 @@
         private System.Windows.Forms.PictureBox pbMinimizar;
         private System.Windows.Forms.PictureBox pbLogo1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnMantAlmacen;
+        private System.Windows.Forms.Button btnMantProductos;
         private System.Windows.Forms.Panel pnPrincipal;
         private System.Windows.Forms.Button btnSalirDeMenu;
         private System.Windows.Forms.Button btnMantCateg_Colores;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnRealizarReq;
     }
 }

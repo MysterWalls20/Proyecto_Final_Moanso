@@ -55,17 +55,23 @@
     <Compile Include="ActualizarProducto.Designer.cs">
       <DependentUpon>ActualizarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_ListaReq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ListaReq.Designer.cs">
+      <DependentUpon>Frm_ListaReq.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_MenuAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_MenuAlmacen.Designer.cs">
       <DependentUpon>Frm_MenuAlmacen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_MenuCompra.cs">
+    <Compile Include="Frm_MenuCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_MenuCompra.Designer.cs">
-      <DependentUpon>Frm_MenuCompra.cs</DependentUpon>
+    <Compile Include="Frm_MenuCompras.Designer.cs">
+      <DependentUpon>Frm_MenuCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -73,23 +79,41 @@
     <Compile Include="Frm_MenuPrincipal.Designer.cs">
       <DependentUpon>Frm_MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_NuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_NuevoCliente.Designer.cs">
+      <DependentUpon>Frm_NuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_OrdenesCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_OrdenesCompra.Designer.cs">
+      <DependentUpon>Frm_OrdenesCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Proveedor.Designer.cs">
       <DependentUpon>Frm_Proveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Reportes.cs">
+    <Compile Include="Frm_RealizarReq.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Reportes.Designer.cs">
-      <DependentUpon>Frm_Reportes.cs</DependentUpon>
+    <Compile Include="Frm_RealizarReq.Designer.cs">
+      <DependentUpon>Frm_RealizarReq.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Clientes.cs">
+    <Compile Include="Frm_ReportesVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Clientes.Designer.cs">
-      <DependentUpon>Frm_Clientes.cs</DependentUpon>
+    <Compile Include="Frm_ReportesVenta.Designer.cs">
+      <DependentUpon>Frm_ReportesVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_MantClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MantClientes.Designer.cs">
+      <DependentUpon>Frm_MantClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
@@ -97,11 +121,11 @@
     <Compile Include="Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_MenuVenta.cs">
+    <Compile Include="Frm_MenuVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_MenuVenta.Designer.cs">
-      <DependentUpon>Frm_MenuVenta.cs</DependentUpon>
+    <Compile Include="Frm_MenuVentas.Designer.cs">
+      <DependentUpon>Frm_MenuVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_NuevaVenta.cs">
       <SubType>Form</SubType>
@@ -109,55 +133,67 @@
     <Compile Include="Frm_NuevaVenta.Designer.cs">
       <DependentUpon>Frm_NuevaVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Almacen.cs">
+    <Compile Include="Frm_MantProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Almacen.Designer.cs">
-      <DependentUpon>Frm_Almacen.cs</DependentUpon>
+    <Compile Include="Frm_MantProductos.Designer.cs">
+      <DependentUpon>Frm_MantProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevoProducto.cs">
+    <Compile Include="Frm_NuevoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NuevoProducto.Designer.cs">
-      <DependentUpon>NuevoProducto.cs</DependentUpon>
+    <Compile Include="Frm_NuevoProducto.Designer.cs">
+      <DependentUpon>Frm_NuevoProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ActualizarProducto.resx">
       <DependentUpon>ActualizarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ListaReq.resx">
+      <DependentUpon>Frm_ListaReq.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuAlmacen.resx">
       <DependentUpon>Frm_MenuAlmacen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_MenuCompra.resx">
-      <DependentUpon>Frm_MenuCompra.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_MenuCompras.resx">
+      <DependentUpon>Frm_MenuCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuPrincipal.resx">
       <DependentUpon>Frm_MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NuevoCliente.resx">
+      <DependentUpon>Frm_NuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_OrdenesCompra.resx">
+      <DependentUpon>Frm_OrdenesCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Proveedor.resx">
       <DependentUpon>Frm_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Reportes.resx">
-      <DependentUpon>Frm_Reportes.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_RealizarReq.resx">
+      <DependentUpon>Frm_RealizarReq.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Clientes.resx">
-      <DependentUpon>Frm_Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_ReportesVenta.resx">
+      <DependentUpon>Frm_ReportesVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MantClientes.resx">
+      <DependentUpon>Frm_MantClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_MenuVenta.resx">
-      <DependentUpon>Frm_MenuVenta.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_MenuVentas.resx">
+      <DependentUpon>Frm_MenuVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NuevaVenta.resx">
       <DependentUpon>Frm_NuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Almacen.resx">
-      <DependentUpon>Frm_Almacen.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_MantProductos.resx">
+      <DependentUpon>Frm_MantProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NuevoProducto.resx">
-      <DependentUpon>NuevoProducto.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_NuevoProducto.resx">
+      <DependentUpon>Frm_NuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -194,9 +230,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Corporacion-Rubio.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit_closethesession_close_6317.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cerrar.png" />
@@ -245,11 +278,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logorubioApp.ico" />
+    <None Include="Resources\Product-sale-report_25407.png" />
+    <None Include="Resources\productos-40.png" />
+    <None Include="Resources\pdf-file-44.png" />
+    <None Include="Resources\crear-ordenReq-40.png" />
     <None Include="Resources\orden-de-compra-40.png" />
     <None Include="Resources\proveedor-40.png" />
     <None Include="Resources\editar-categ_color-42.png" />
     <None Include="Resources\retroceder-48.png" />
-    <None Include="Resources\archivo-pdf.png" />
     <None Include="Resources\Habilitar-30.png" />
     <None Include="Resources\Deshabilitar-30.png" />
     <None Include="Resources\logorubioApp.ico" />

@@ -21,22 +21,22 @@ namespace Proyecto_Final_Moanso
         }
         private void Frm_NuevaVenta_Load(object sender, EventArgs e)
         {
-            try
-            {
-                cbmMetodoPag.Items.Clear();
-                var metodos = Logica_Ventas.Instancia.ObtenerMetodosPago();
-                foreach (string metodo in metodos)
-                {
-                    cbmMetodoPag.Items.Add(metodo);
-                }
+            //try
+            //{
+            //    cbmTipoPag.Items.Clear();
+            //    var metodos = Logica_Ventas.Instancia.ObtenerMetodosPago();
+            //    foreach (string metodo in metodos)
+            //    {
+            //        cbmTipoPag.Items.Add(metodo);
+            //    }
 
-                if (cbmMetodoPag.Items.Count > 0)
-                    cbmMetodoPag.SelectedIndex = 0;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar métodos de pago: " + ex.Message);
-            }
+            //    if (cbmTipoPag.Items.Count > 0)
+            //        cbmTipoPag.SelectedIndex = 0;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error al cargar métodos de pago: " + ex.Message);
+            //}
             txtIdV.KeyPress += textBoxSoloNumeros_KeyPress;
             txtCantidadV.KeyPress += textBoxSoloNumeros_KeyPress;
         }
@@ -57,13 +57,13 @@ namespace Proyecto_Final_Moanso
             lblClienteId.Text = "";
             lbPagoT.Text = "0.00";
             dgvProductosV.Rows.Clear();
-            txtDniV.Text = "";
+            txtTipoCli.Text = "";
             txtClienV.Text = "";
 
         }
         private void RegistrarVentaDirecta()
         {
-            if (txtDniV.Text == "" || txtDireccionV.Text == "" || lblClienteId.Text == "" || dgvProductosV.Rows.Count == 0 || txtClienV.Text == "")
+            if (txtTipoCli.Text == "" || txtDireccionV.Text == "" || lblClienteId.Text == "" || dgvProductosV.Rows.Count == 0 || txtClienV.Text == "")
             {
                 MessageBox.Show("Faltan datos para la venta.");
                 return;
@@ -170,7 +170,7 @@ namespace Proyecto_Final_Moanso
                     txtCantidadV.Text,
                     txtPrecioV.Text,
                     subtotal.ToString(),
-                    cbmMetodoPag.Text
+                    cbmTipoPag.Text
                 );
                 CalcularTotal();
                 // Limpiar campos
@@ -204,7 +204,7 @@ namespace Proyecto_Final_Moanso
             {
                 e.Handled = true;
 
-                string dni = txtDniV.Text.Trim();
+                string dni = txtTipoCli.Text.Trim();
 
                 if (dni.Length != 8 || !dni.All(char.IsDigit))
                 {

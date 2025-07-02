@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class Frm_MenuCompra : Form
+    public partial class Frm_MenuCompras : Form
     {
-        public Frm_MenuCompra()
+        public Frm_MenuCompras()
         {
             InitializeComponent();
         }
@@ -74,7 +74,19 @@ namespace Proyecto_Final_Moanso
         {
             abrirFormHijo(new Frm_Proveedor());
             btnMantProveedor.BackColor = Color.DarkOrange;
-            btnOrdenCompra.BackColor = Color.White;
+            btnOrdenesCompra.BackColor = Color.White;
+        }
+
+        private void btnOrdenesCompra_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new Frm_OrdenesCompra());
+            btnMantProveedor.BackColor = Color.White;
+            btnOrdenesCompra.BackColor = Color.DarkOrange;
+        }
+
+        private void btnReportesCompra_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

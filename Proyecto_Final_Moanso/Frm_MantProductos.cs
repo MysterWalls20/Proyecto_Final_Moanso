@@ -13,17 +13,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class Frm_Almacen : Form
+    public partial class Frm_MantProductos : Form
     {
-        public Frm_Almacen()
+        public Frm_MantProductos()
         {
             InitializeComponent();
-            MostrarProductos();
+            //MostrarProductos();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            NuevoProducto nuevoProducto = new NuevoProducto();
+            Frm_NuevoProducto nuevoProducto = new Frm_NuevoProducto();
             nuevoProducto.ShowDialog();
         }
         private void btnActualizar_Click(object sender, EventArgs e)

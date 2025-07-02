@@ -73,16 +73,6 @@ namespace Proyecto_Final_Moanso.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap archivo_pdf {
-            get {
-                object obj = ResourceManager.GetObject("archivo_pdf", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
@@ -116,6 +106,16 @@ namespace Proyecto_Final_Moanso.Properties {
         internal static System.Drawing.Bitmap Corporacion_Rubio {
             get {
                 object obj = ResourceManager.GetObject("Corporacion-Rubio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crear_ordenReq_40 {
+            get {
+                object obj = ResourceManager.GetObject("crear_ordenReq_40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,16 +183,6 @@ namespace Proyecto_Final_Moanso.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exit_closethesession_close_6317 {
-            get {
-                object obj = ResourceManager.GetObject("exit_closethesession_close_6317", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Habilitar_30 {
             get {
                 object obj = ResourceManager.GetObject("Habilitar_30", resourceCulture);
@@ -253,9 +243,39 @@ namespace Proyecto_Final_Moanso.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pdf_file_44 {
+            get {
+                object obj = ResourceManager.GetObject("pdf_file_44", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Product_sale_report_25407 {
+            get {
+                object obj = ResourceManager.GetObject("Product_sale_report_25407", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap producto_40 {
             get {
                 object obj = ResourceManager.GetObject("producto_40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap productos_40 {
+            get {
+                object obj = ResourceManager.GetObject("productos_40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

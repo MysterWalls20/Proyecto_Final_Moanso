@@ -42,7 +42,7 @@ namespace Proyecto_Final_Moanso
             if (accesoValido)
             {
                 MessageBox.Show("¡Acceso permitido!, usuario y contraseña correctas","Login correcto",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                Frm_MenuVenta menu = new Frm_MenuVenta();
+                Frm_MenuVentas menu = new Frm_MenuVentas();
                 menu.Show();
                 this.Hide();
             }

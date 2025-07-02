@@ -17,8 +17,9 @@ namespace Capa_Datos
 
         private Conexion()
         {
-            this.Base = "BD_Compania_Rubio";
-            this.Servidor = "DESKTOP-8TP23M5"; //Poner el nombre de tu servidor sql
+            this.Base = "BD_Compania_Rubio"; 
+            //Poner el nombre de tu servidor sql
+            this.Servidor = "USER";  // Jhoan: USER , mrWalls: DESKTOP-8TP23M5
             this.Usuario = "sa";
             this.Clave = "clavedelSA";
             this.Seguridad = false;

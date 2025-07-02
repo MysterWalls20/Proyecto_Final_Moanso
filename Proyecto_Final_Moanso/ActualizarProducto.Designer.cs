@@ -226,6 +226,7 @@
             // pnTopAP
             // 
             this.pnTopAP.BackColor = System.Drawing.Color.DarkOrange;
+            this.pnTopAP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnTopAP.Controls.Add(this.pbCerrarAP);
             this.pnTopAP.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTopAP.Location = new System.Drawing.Point(0, 0);

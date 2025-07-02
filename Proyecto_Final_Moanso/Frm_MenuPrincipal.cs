@@ -30,7 +30,7 @@ namespace Proyecto_Final_Moanso
         }
         private void btnMVentas_Click(object sender, EventArgs e)
         {
-            Frm_MenuVenta menu = new Frm_MenuVenta();
+            Frm_MenuVentas menu = new Frm_MenuVentas();
             menu.Show();
             this.Hide();
         }
@@ -42,7 +42,7 @@ namespace Proyecto_Final_Moanso
         }
         private void btnMCompras_Click(object sender, EventArgs e)
         {
-            Frm_MenuCompra menu = new Frm_MenuCompra();
+            Frm_MenuCompras menu = new Frm_MenuCompras();
             menu.Show();
             this.Hide();
         }

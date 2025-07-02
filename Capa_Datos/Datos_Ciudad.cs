@@ -55,7 +55,6 @@ namespace Capa_Datos
 
             return lista;
         }
-
         #endregion
     }
 }

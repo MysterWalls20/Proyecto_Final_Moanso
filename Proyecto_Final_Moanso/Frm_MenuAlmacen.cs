@@ -56,16 +56,22 @@ namespace Proyecto_Final_Moanso
             this.pnPrincipal.Text = formhijo.Text;
             formhijo.Show();
         }
-        private void btnMantAlmacen_Click(object sender, EventArgs e)
+        private void btnMantProductos_Click(object sender, EventArgs e)
         {
-            abrirFormHijo(new Frm_Almacen());
-            btnMantAlmacen.BackColor = Color.DarkOrange;
+            abrirFormHijo(new Frm_MantProductos());
+            btnMantProductos.BackColor = Color.DarkOrange;
+            btnRealizarReq.BackColor = Color.White;
+        }
+        private void btnRealizarReq_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new Frm_RealizarReq());
+            btnMantProductos.BackColor = Color.White;
+            btnRealizarReq.BackColor = Color.DarkOrange;
         }
         private void btnMantCateg_Colores_Click(object sender, EventArgs e)
         {
 
         }
-
         private void btnSalirDeMenu_Click(object sender, EventArgs e)
         {
             Frm_MenuPrincipal MenuPrincipal = new Frm_MenuPrincipal();
