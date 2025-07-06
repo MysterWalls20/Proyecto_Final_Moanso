@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class Frm_Salida_Inventario : Form
+    public partial class Frm_ReOrdenCompra : Form
     {
-        public Frm_Salida_Inventario()
+
+        public Frm_ReOrdenCompra()
         {
             InitializeComponent();
+        }
+        private void btnGrabarReq_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

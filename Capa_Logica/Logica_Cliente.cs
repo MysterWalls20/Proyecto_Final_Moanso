@@ -27,30 +27,55 @@ namespace Capa_Logica
 
         #region metodos
 
-        //listado
-        public List<Entidad_Cliente> ListarCliente()
+        // Nuevo cliente natural
+        public void RegistrarClienteNatural(Entidad_Cliente cliente,
+                                            int idDepartamento,
+                                            int idProvincia,
+                                            int idDistrito,
+                                            int id_tipo_cliente)
         {
-            return Datos_Cliente.Instancia.ListarCliente();
+            Datos_Cliente.Instancia.RegistrarClienteNatural(cliente,
+                                                            idDepartamento,
+                                                            idProvincia,
+                                                            idDistrito,
+                                                            id_tipo_cliente
+            );
         }
-        //Busca por dni
-        public Entidad_Cliente ObtenerClientePorDni(string dni)
+
+        // Nuevo cliente juridico
+        public void RegistrarClienteJuridico(Entidad_Cliente cliente,
+                                     int idDepartamento,
+                                     int idProvincia,
+                                     int idDistrito,
+                                     int id_tipo_cliente)
         {
-            return Datos_Cliente.Instancia.BuscarClientePorDni(dni);
+            Datos_Cliente.Instancia.RegistrarClienteJuridico(cliente,
+                                                             idDepartamento,
+                                                             idProvincia,
+                                                             idDistrito,
+                                                             id_tipo_cliente
+            );
         }
-        ///inserta
-        public void InsertaCliente(Entidad_Cliente Cli)
+
+        // Listar clientes activos
+        public DataTable ListarClientesActivos()
         {
-            Datos_Cliente.Instancia.InsertarCliente(Cli);
+            return Datos_Cliente.Instancia.ListarClientesActivos();
         }
-        ///Edita
-        public void EditaCliente(Entidad_Cliente Cli)
+        //Listar clientes inactivos
+        public DataTable ListarClientesInactivos()
         {
-            Datos_Cliente.Instancia.EditarCliente(Cli);
+            return Datos_Cliente.Instancia.ListarClientesInactivos();
         }
-        //Deshabilita
-        public void DeshabilitarCliente(Entidad_Cliente Cli)
+        // Deshabilitar cliente
+        public void DeshabilitarCliente(int idCliente)
         {
-            Datos_Cliente.Instancia.DeshabilitarCliente(Cli);
+            Datos_Cliente.Instancia.DeshabilitarCliente(idCliente);
+        }
+        // Habilitar cliente
+        public void HabilitarCliente(int idCliente)
+        {
+            Datos_Cliente.Instancia.HabilitarCliente(idCliente);
         }
         #endregion metodos
     }

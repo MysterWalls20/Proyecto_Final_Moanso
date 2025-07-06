@@ -9,46 +9,20 @@ namespace Capa_Datos
 {
     public class Conexion
     {
-        private string Base;
-        private string Servidor;
-        private string Usuario;
-        private string Clave;
-        private bool Seguridad;
-
-        private Conexion()
-        {
-            this.Base = "BD_Compania_Rubio"; 
-            //Poner el nombre de tu servidor sql
-            this.Servidor = "USER";  // Jhoan: USER , mrWalls: DESKTOP-8TP23M5
-            this.Usuario = "sa";
-            this.Clave = "clavedelSA";
-            this.Seguridad = false;
-        }
-
-        //patron de Diseño Singleton
+        // Singleton
         private static readonly Conexion _instancia = new Conexion();
         public static Conexion Instancia
         {
-            get { return Conexion._instancia; }
+            get { return _instancia; }
         }
 
+        // Cadena de conexión unificada
+        private string cadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=BD_Compania_Rubio;Data Source=USER";
+
+        // Método para obtener la conexión (cerrada)
         public SqlConnection Conectar()
         {
-            SqlConnection cn = new SqlConnection();
-
-            if (this.Seguridad)
-            {
-                // Autenticación de Windows
-                cn.ConnectionString = $"Data Source={this.Servidor}; Initial Catalog={this.Base}; Integrated Security=True";
-            }
-            else
-            {
-                // Autenticación de SQL Server
-                cn.ConnectionString = $"Data Source={this.Servidor}; Initial Catalog={this.Base}; User ID={this.Usuario}; Password={this.Clave}";
-            }
-
-            return cn;
+            return new SqlConnection(cadenaConexion);
         }
-
     } 
 }

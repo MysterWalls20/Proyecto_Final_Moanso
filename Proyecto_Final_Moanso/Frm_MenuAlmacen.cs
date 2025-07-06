@@ -60,17 +60,22 @@ namespace Proyecto_Final_Moanso
         {
             abrirFormHijo(new Frm_MantProductos());
             btnMantProductos.BackColor = Color.DarkOrange;
-            btnRealizarReq.BackColor = Color.White;
+            btnReOrdenCompra.BackColor = Color.White;
+            btnMantenedoresProd.BackColor = Color.White;
         }
-        private void btnRealizarReq_Click(object sender, EventArgs e)
+        private void btnReOrdenCompra_Click(object sender, EventArgs e)
         {
-            abrirFormHijo(new Frm_RealizarReq());
+            abrirFormHijo(new Frm_ReOrdenCompra());
             btnMantProductos.BackColor = Color.White;
-            btnRealizarReq.BackColor = Color.DarkOrange;
+            btnReOrdenCompra.BackColor = Color.DarkOrange;
+            btnMantenedoresProd.BackColor = Color.White;
         }
-        private void btnMantCateg_Colores_Click(object sender, EventArgs e)
+        private void btnMantenedoresProd_Click(object sender, EventArgs e)
         {
-
+            abrirFormHijo(new Frm_MantenedoresDePr());
+            btnMantProductos.BackColor = Color.White;
+            btnReOrdenCompra.BackColor = Color.White;
+            btnMantenedoresProd.BackColor = Color.DarkOrange;
         }
         private void btnSalirDeMenu_Click(object sender, EventArgs e)
         {

@@ -18,75 +18,65 @@ namespace Proyecto_Final_Moanso
         public Frm_MantClientes()
         {
             InitializeComponent();
-            //listarCliente();
         }
         private void Frm_Clientes_Load(object sender, EventArgs e)
         {
-            //CargarDepartamentos();
-            //cmbDepartamento.SelectedIndexChanged += cmbDepartamento_SelectedIndexChanged;
+            CargarClientesActivos();
         }
-        public void listarCliente()
+        private void CargarClientesActivos()
         {
-            dgvClientes.DataSource = Logica_Cliente.Instancia.ListarCliente();
+            dgvClientes.DataSource = Logica_Cliente.Instancia.ListarClientesActivos();
+            int totalFilas = dgvClientes.AllowUserToAddRows
+            ? dgvClientes.Rows.Count - 1
+    :       dgvClientes.Rows.Count;
+            lbNumRegCli.Text = "" + totalFilas.ToString();
+
+        }
+        private void btnMostrarDesh_Click(object sender, EventArgs e)
+        {
+            dgvClientes.DataSource = Logica_Cliente.Instancia.ListarClientesInactivos();
+            int total = dgvClientes.AllowUserToAddRows
+            ? dgvClientes.Rows.Count - 1
+            : dgvClientes.Rows.Count;
+            lbNumRegCli.Text = "" + total;
         }
         private void btnNuevoCli_Click(object sender, EventArgs e)
         {
             Frm_NuevoCliente nuevoCliente = new Frm_NuevoCliente();
             nuevoCliente.ShowDialog();
-            //if (txtNomC.Text == "" || txtApeC.Text == "" || txtNumC.Text == "" || txtDniC.Text == "")
-            //{
-            //    MessageBox.Show("Ingresa todos los datos del cliente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-            //try
-            //{
-            //    Entidad_Cliente eCl = new Entidad_Cliente();
-            //    eCl.nombre = txtNomC.Text.Trim();
-            //    eCl.apellido = txtApeC.Text.Trim();
-            //    eCl.numero = int.Parse(txtNumC.Text.Trim());
-            //    eCl.dni = txtDniC.Text.Trim();
-            //    eCl.estado = true;
-            //    Logica_Cliente.Instancia.InsertaCliente(eCl);
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error.." + ex);
-            //}
-
-            //MessageBox.Show("Cliente guardado exitosamente", "Nuevo cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //listarCliente();
-            //LimpiarCampos();
-
+            CargarClientesActivos();
+        }
+        private void btnLeer_Click(object sender, EventArgs e)
+        {
+            CargarClientesActivos();
         }
 
-        private void btnEliminarCli_Click(object sender, EventArgs e)
+        private void btnModificarCli_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    Entidad_Cliente c = new Entidad_Cliente();
-            //    int id;
-            //    if (int.TryParse(txtIDc.Text.Trim(), out id))
-            //    {
-            //        c.id = id;
-            //        Logica_Cliente.Instancia.DeshabilitarCliente(c);
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Ingrese un ID válido antes de eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //        return; // Detiene la ejecución si el ID no es válido
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error: " + ex.Message);
-            //}
-            //LimpiarCampos();
-            //listarCliente();
-        }
+            if (dgvClientes.SelectedRows.Count > 0)
+            {
+                // Captura de fila actual seleccionada
+                DataGridViewRow fila = dgvClientes.SelectedRows[0];
+                // Llenar objeto con datos de la fila
+                Entidad_Cliente Mcliente = new Entidad_Cliente()
+                {
+                    ID = Convert.ToInt32(fila.Cells["ID"].Value),
+                    TipoCliente = fila.Cells["Tipo Cliente"].Value.ToString(),
+                    Nombre = fila.Cells["Nombre"].Value.ToString(),
+                    Apellido = fila.Cells["Apellido"].Value.ToString(),
+                    Dni = fila.Cells["Dni"].Value.ToString(),
+                    Ruc = long.Parse(fila.Cells["Ruc"].Value.ToString()),
+                    RazonSocial = fila.Cells["Razon S."].Value.ToString(),
+                    Rubro = fila.Cells["Rubro"].Value.ToString(),
+                    Numero = Convert.ToInt32(fila.Cells["Numero"].Value),
+                    Direccion = fila.Cells["Direccion"].Value.ToString()
+                };
 
-        private void btnActualizarCli_Click(object sender, EventArgs e)
-        {
+                // Pasar datos del producto al formulario de actualización
+                Frm_ModificarCliente ModificarCliente = new Frm_ModificarCliente(Mcliente);
+                ModificarCliente.ShowDialog();
+                CargarClientesActivos();
+            }
             //if (txtIDc.Text == "")
             //{
             //    MessageBox.Show("El ID del cliente es obligatorio para actualizar.", "Actualizar cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -110,28 +100,65 @@ namespace Proyecto_Final_Moanso
             //LimpiarCampos();
             //listarCliente();
         }
-        private void btnMostrar_Click(object sender, EventArgs e)
-        {
-            listarCliente();
-        }
-        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Si hay una fila válida seleccionada (no cabecera ni clic fuera del rango)
-            //if (e.RowIndex >= 0 && dgvClientes.Rows[e.RowIndex].Selected)
-            //{
-            //    DataGridViewRow row = dgvClientes.Rows[e.RowIndex];
 
-            //    txtIDc.Text = row.Cells["id"].Value.ToString();
-            //    txtNomC.Text = row.Cells["nombre"].Value.ToString();
-            //    txtApeC.Text = row.Cells["apellido"].Value.ToString();
-            //    txtNumC.Text = row.Cells["numero"].Value.ToString();
-            //    txtDniC.Text = row.Cells["dni"].Value.ToString();
-            //}
-            //else
-            //{
-            //    // Si no hay una fila válida o fue deseleccionada, limpiar campos
-            //    LimpiarCampos();
-            //}
+        private void btnDeshabilitarCli_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.SelectedRows.Count > 0)
+            {
+                int idCliente = Convert.ToInt32(dgvClientes.SelectedRows[0].Cells["ID"].Value);
+                string estado = dgvClientes.SelectedRows[0].Cells["Estado"].Value.ToString();
+
+                if (estado != "Activo")
+                {
+                    MessageBox.Show("Este cliente ya está deshabilitado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var confirm = MessageBox.Show("¿Desea deshabilitar este cliente?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                {
+                    Logica_Cliente.Instancia.DeshabilitarCliente(idCliente);
+                    MessageBox.Show("Cliente deshabilitado correctamente.");
+                    CargarClientesActivos(); // Actualizar vista
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cliente.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnHabilitarCli_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.SelectedRows.Count > 0)
+            {
+                int idCliente = Convert.ToInt32(dgvClientes.SelectedRows[0].Cells["ID"].Value);
+                string estado = dgvClientes.SelectedRows[0].Cells["Estado"].Value.ToString();
+
+                if (estado != "Inactivo")
+                {
+                    MessageBox.Show("Este cliente ya está habilitado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var confirm = MessageBox.Show("¿Desea habilitar este cliente?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                {
+                    Logica_Cliente.Instancia.HabilitarCliente(idCliente);
+                    MessageBox.Show("Cliente habilitado correctamente.");
+                    CargarClientesActivos(); // Actualizar vista
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cliente.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnBusCliente_Click(object sender, EventArgs e)
+        {
+            string Cliente = txtBuscarCli.Text;
+
         }
     } 
 }

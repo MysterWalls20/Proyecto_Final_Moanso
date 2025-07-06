@@ -56,6 +56,8 @@ C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Proyecto_Final_Moanso\obj\Debug\Pr
 C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_ReportesVenta.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MantProductos.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_NuevoProducto.resources
-C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_RealizarReq.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_OrdenesCompra.resources
 C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_ListaReq.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_ModificarCliente.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_MantenedoresDePr.resources
+C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Proyecto_Final_Moanso\obj\Debug\Proyecto_Final_Moanso.Frm_ReOrdenCompra.resources

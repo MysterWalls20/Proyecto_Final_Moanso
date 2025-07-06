@@ -42,7 +42,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbCategoriaLP = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMostrarDesh = new System.Windows.Forms.Button();
+            this.lbNumRegPro = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnHabilitar = new System.Windows.Forms.Button();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.btnBuscarCat = new System.Windows.Forms.Button();
@@ -50,8 +52,6 @@
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.lbNumRegPro = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosAlm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,7 +131,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             this.dgvProductosAlm.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProductosAlm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductosAlm.Size = new System.Drawing.Size(925, 294);
+            this.dgvProductosAlm.Size = new System.Drawing.Size(925, 292);
             this.dgvProductosAlm.TabIndex = 2;
             this.dgvProductosAlm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductosAlm_CellContentClick);
             this.dgvProductosAlm.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductosAlm_CellContentDoubleClick);
@@ -185,23 +185,43 @@
             this.label2.Text = "Buscar por Categoria :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // button1
+            // btnMostrarDesh
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(684, 430);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 39);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Mostrar Deshabilitados";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnMostrarDesh.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnMostrarDesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMostrarDesh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarDesh.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMostrarDesh.FlatAppearance.BorderSize = 2;
+            this.btnMostrarDesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarDesh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarDesh.Location = new System.Drawing.Point(645, 429);
+            this.btnMostrarDesh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMostrarDesh.Name = "btnMostrarDesh";
+            this.btnMostrarDesh.Size = new System.Drawing.Size(290, 40);
+            this.btnMostrarDesh.TabIndex = 49;
+            this.btnMostrarDesh.Text = "Mostrar Deshabilitados";
+            this.btnMostrarDesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMostrarDesh.UseVisualStyleBackColor = false;
+            // 
+            // lbNumRegPro
+            // 
+            this.lbNumRegPro.AutoSize = true;
+            this.lbNumRegPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumRegPro.Location = new System.Drawing.Point(216, 434);
+            this.lbNumRegPro.Name = "lbNumRegPro";
+            this.lbNumRegPro.Size = new System.Drawing.Size(24, 25);
+            this.lbNumRegPro.TabIndex = 53;
+            this.lbNumRegPro.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 434);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(194, 25);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Total de Registros:";
             // 
             // btnHabilitar
             // 
@@ -236,7 +256,7 @@
             this.btnDeshabilitar.ForeColor = System.Drawing.Color.White;
             this.btnDeshabilitar.ImageKey = "Deshabilitar-30.png";
             this.btnDeshabilitar.ImageList = this.imageList1;
-            this.btnDeshabilitar.Location = new System.Drawing.Point(578, 491);
+            this.btnDeshabilitar.Location = new System.Drawing.Point(577, 491);
             this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
             this.btnDeshabilitar.Size = new System.Drawing.Size(130, 98);
@@ -293,7 +313,7 @@
             this.btnMostrar.ForeColor = System.Drawing.Color.White;
             this.btnMostrar.ImageKey = "Product-sale-report_25407.png";
             this.btnMostrar.ImageList = this.imageList1;
-            this.btnMostrar.Location = new System.Drawing.Point(412, 491);
+            this.btnMostrar.Location = new System.Drawing.Point(245, 491);
             this.btnMostrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(130, 98);
@@ -319,7 +339,7 @@
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(130, 98);
             this.btnNuevo.TabIndex = 8;
-            this.btnNuevo.Text = "\r\n\r\n\r\nNuevo+";
+            this.btnNuevo.Text = "\r\n\r\n\r\nNuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -335,7 +355,7 @@
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.ImageKey = "save_file_disk_open_searsh_loading_clipboard_1513(1).png";
             this.btnActualizar.ImageList = this.imageList1;
-            this.btnActualizar.Location = new System.Drawing.Point(246, 491);
+            this.btnActualizar.Location = new System.Drawing.Point(412, 491);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(130, 98);
@@ -344,27 +364,7 @@
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // lbNumRegPro
-            // 
-            this.lbNumRegPro.AutoSize = true;
-            this.lbNumRegPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNumRegPro.Location = new System.Drawing.Point(216, 437);
-            this.lbNumRegPro.Name = "lbNumRegPro";
-            this.lbNumRegPro.Size = new System.Drawing.Size(24, 25);
-            this.lbNumRegPro.TabIndex = 53;
-            this.lbNumRegPro.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 435);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 25);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "Total de Registros:";
-            // 
-            // Frm_Almacen
+            // Frm_MantProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -372,7 +372,7 @@
             this.ClientSize = new System.Drawing.Size(950, 610);
             this.Controls.Add(this.lbNumRegPro);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMostrarDesh);
             this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnBuscarCat);
@@ -388,7 +388,7 @@
             this.Controls.Add(this.btnActualizar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Frm_Almacen";
+            this.Name = "Frm_MantProductos";
             this.Load += new System.EventHandler(this.Frm_Producto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosAlm)).EndInit();
             this.ResumeLayout(false);
@@ -412,7 +412,7 @@
         private System.Windows.Forms.Button btnBuscarCat;
         private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Button btnHabilitar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMostrarDesh;
         private System.Windows.Forms.Label lbNumRegPro;
         private System.Windows.Forms.Label label5;
     }

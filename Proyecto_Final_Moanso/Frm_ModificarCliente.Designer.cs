@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Final_Moanso
 {
-    partial class Frm_NuevoCliente
+    partial class Frm_ModificarCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnModificarCli = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,11 +45,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtRubro = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,13 +52,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtRubro = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.cboTipoCliente = new System.Windows.Forms.ComboBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,8 +73,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 47);
-            this.panel1.TabIndex = 48;
+            this.panel1.Size = new System.Drawing.Size(852, 47);
+            this.panel1.TabIndex = 49;
             // 
             // label2
             // 
@@ -83,19 +83,49 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(8, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 25);
+            this.label2.Size = new System.Drawing.Size(263, 25);
             this.label2.TabIndex = 69;
-            this.label2.Text = "Ingresar datos del cliente";
+            this.label2.Text = "Modificar datos del cliente";
             // 
-            // label14
+            // btnCancelar
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(263, 73);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(172, 25);
-            this.label14.TabIndex = 87;
-            this.label14.Text = "Tipo de Cliente :";
+            this.btnCancelar.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancelar.FlatAppearance.BorderSize = 2;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(480, 668);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(151, 70);
+            this.btnCancelar.TabIndex = 84;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnModificarCli
+            // 
+            this.btnModificarCli.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnModificarCli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnModificarCli.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarCli.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnModificarCli.FlatAppearance.BorderSize = 2;
+            this.btnModificarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCli.ForeColor = System.Drawing.Color.White;
+            this.btnModificarCli.Location = new System.Drawing.Point(262, 668);
+            this.btnModificarCli.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificarCli.Name = "btnModificarCli";
+            this.btnModificarCli.Size = new System.Drawing.Size(151, 70);
+            this.btnModificarCli.TabIndex = 83;
+            this.btnModificarCli.Text = "Modificar Datos";
+            this.btnModificarCli.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificarCli.UseVisualStyleBackColor = false;
+            this.btnModificarCli.Click += new System.EventHandler(this.btnModificarCli_Click);
             // 
             // groupBox3
             // 
@@ -112,12 +142,12 @@
             this.groupBox3.Controls.Add(this.txtNumero);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(37, 120);
+            this.groupBox3.Location = new System.Drawing.Point(15, 110);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(815, 282);
-            this.groupBox3.TabIndex = 86;
+            this.groupBox3.TabIndex = 87;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos ";
             // 
@@ -172,7 +202,6 @@
             this.cboProvincia.Name = "cboProvincia";
             this.cboProvincia.Size = new System.Drawing.Size(268, 30);
             this.cboProvincia.TabIndex = 66;
-            this.cboProvincia.SelectedIndexChanged += new System.EventHandler(this.cboProvincia_SelectedIndexChanged);
             // 
             // cboDepartamento
             // 
@@ -184,7 +213,6 @@
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(231, 30);
             this.cboDepartamento.TabIndex = 65;
-            this.cboDepartamento.SelectedIndexChanged += new System.EventHandler(this.cboDepartamento_SelectedIndexChanged);
             // 
             // txtRUC
             // 
@@ -255,67 +283,6 @@
             this.label3.TabIndex = 58;
             this.label3.Text = "Número :";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtRubro);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtRazonSocial);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(505, 428);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(347, 244);
-            this.groupBox2.TabIndex = 85;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cliente Juridico";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(16, 156);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 26);
-            this.label10.TabIndex = 64;
-            this.label10.Text = "Rubro:";
-            // 
-            // txtRubro
-            // 
-            this.txtRubro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRubro.Enabled = false;
-            this.txtRubro.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRubro.Location = new System.Drawing.Point(21, 185);
-            this.txtRubro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRubro.MaxLength = 25;
-            this.txtRubro.Name = "txtRubro";
-            this.txtRubro.Size = new System.Drawing.Size(269, 33);
-            this.txtRubro.TabIndex = 63;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(16, 63);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 26);
-            this.label12.TabIndex = 61;
-            this.label12.Text = "Razon Social:";
-            // 
-            // txtRazonSocial
-            // 
-            this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRazonSocial.Enabled = false;
-            this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRazonSocial.Location = new System.Drawing.Point(21, 96);
-            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRazonSocial.MaxLength = 30;
-            this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(294, 33);
-            this.txtRazonSocial.TabIndex = 62;
-            this.txtRazonSocial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtNombre);
@@ -325,12 +292,12 @@
             this.groupBox1.Controls.Add(this.txtDni);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(38, 428);
+            this.groupBox1.Location = new System.Drawing.Point(15, 402);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(440, 244);
-            this.groupBox1.TabIndex = 84;
+            this.groupBox1.TabIndex = 88;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente Natural";
             // 
@@ -403,94 +370,127 @@
             this.label4.TabIndex = 60;
             this.label4.Text = "DNI :";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txtRubro);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtRazonSocial);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(483, 402);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(347, 244);
+            this.groupBox2.TabIndex = 89;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Cliente Juridico";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(16, 156);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 26);
+            this.label10.TabIndex = 64;
+            this.label10.Text = "Rubro:";
+            // 
+            // txtRubro
+            // 
+            this.txtRubro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRubro.Enabled = false;
+            this.txtRubro.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRubro.Location = new System.Drawing.Point(21, 185);
+            this.txtRubro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRubro.MaxLength = 25;
+            this.txtRubro.Name = "txtRubro";
+            this.txtRubro.Size = new System.Drawing.Size(269, 33);
+            this.txtRubro.TabIndex = 63;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(16, 63);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(137, 26);
+            this.label12.TabIndex = 61;
+            this.label12.Text = "Razon Social:";
+            // 
+            // txtRazonSocial
+            // 
+            this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRazonSocial.Enabled = false;
+            this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazonSocial.Location = new System.Drawing.Point(21, 96);
+            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRazonSocial.MaxLength = 30;
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(294, 33);
+            this.txtRazonSocial.TabIndex = 62;
+            this.txtRazonSocial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(257, 67);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(172, 25);
+            this.label14.TabIndex = 91;
+            this.label14.Text = "Tipo de Cliente :";
+            // 
             // cboTipoCliente
             // 
             this.cboTipoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoCliente.FormattingEnabled = true;
-            this.cboTipoCliente.Location = new System.Drawing.Point(448, 73);
+            this.cboTipoCliente.Location = new System.Drawing.Point(442, 67);
             this.cboTipoCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoCliente.Name = "cboTipoCliente";
             this.cboTipoCliente.Size = new System.Drawing.Size(160, 28);
-            this.cboTipoCliente.TabIndex = 83;
+            this.cboTipoCliente.TabIndex = 90;
             this.cboTipoCliente.SelectedIndexChanged += new System.EventHandler(this.cboTipoCliente_SelectedIndexChanged);
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancelar.FlatAppearance.BorderSize = 2;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(505, 701);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(151, 57);
-            this.btnCancelar.TabIndex = 82;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRegistrar.FlatAppearance.BorderSize = 2;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(327, 701);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(151, 57);
-            this.btnRegistrar.TabIndex = 81;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // Frm_NuevoCliente
+            // Frm_ModificarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(890, 790);
+            this.ClientSize = new System.Drawing.Size(852, 760);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.cboTipoCliente);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cboTipoCliente);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.btnModificarCli);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_NuevoCliente";
+            this.Name = "Frm_ModificarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_NuevoCliente";
-            this.Load += new System.EventHandler(this.Frm_NuevoCliente_Load);
+            this.Text = "Frm_ModiFicarCliente";
+            this.Load += new System.EventHandler(this.Frm_ModificarCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnModificarCli;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -504,11 +504,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtRubro;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label7;
@@ -516,8 +511,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtRubro;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtRazonSocial;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cboTipoCliente;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnRegistrar;
     }
 }

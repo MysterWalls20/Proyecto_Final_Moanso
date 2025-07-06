@@ -1,4 +1,5 @@
 ﻿using Capa_Datos;
+using Capa_Entidad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,17 +13,14 @@ namespace Capa_Logica
     {
         private static readonly Logica_Ubigeo _instancia = new Logica_Ubigeo();
         public static Logica_Ubigeo Instancia => _instancia;
-        public List<Entidad_Departamento> ListarDepartamentos()
-        {
-            return Datos_Ubigeo.Instancia.ObtenerDepartamentos();
-        }
-        public List<Entidad_Provincia> ListarProvinciasPorDepartamento(int idDepartamento)
-        {
-            return Datos_Ubigeo.Instancia.ObtenerProvinciasPorDepartamento(idDepartamento);
-        }
-        public List<Entidad_Distrito> ListarDistritosPorProvincia(int idProvincia)
-        {
-            return Datos_Ubigeo.Instancia.ObtenerDistritosPorProvincia(idProvincia);
-        }
+
+        public List<Entidad_Ubigeo.Entidad_Departamento> ObtenerDepartamentos() => Datos_Ubigeo.Instancia.ListarDepartamentos();
+
+        public List<Entidad_Ubigeo.Entidad_Provincia> ObtenerProvincias(int idDepartamento) => Datos_Ubigeo.Instancia.ListarProvinciasPorDepartamento(idDepartamento);
+
+        public List<Entidad_Ubigeo.Entidad_Distrito> ObtenerDistritos(int idProvincia) => Datos_Ubigeo.Instancia.ListarDistritosPorProvincia(idProvincia);
+
+        public int ObtenerIdUbigeo(int idDepartamento, int idProvincia, int idDistrito) =>
+            Datos_Ubigeo.Instancia.ObtenerIdUbigeo(idDepartamento, idProvincia, idDistrito);
     }
 }

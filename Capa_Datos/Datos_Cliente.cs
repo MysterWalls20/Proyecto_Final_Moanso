@@ -27,170 +27,174 @@ namespace Capa_Datos
         #endregion singleton
 
         #region metodos
-        //listado de Clientes
-        public List<Entidad_Cliente> ListarCliente()
+
+        // Listar Clientes Activos
+        public DataTable ListarClientesActivos()
         {
-            SqlCommand cmd = null;
-            List<Entidad_Cliente> lista = new List<Entidad_Cliente>();
-            try
+            DataTable tabla = new DataTable();
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("spListaCliente", cn);
+                SqlCommand cmd = new SqlCommand("sp_ListarClientesActivos", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    Entidad_Cliente Cli = new Entidad_Cliente();
-                    Cli.id = Convert.ToInt32(dr["id"]);
-                    Cli.nombre = dr["nombre"].ToString();
-                    Cli.apellido = dr["apellido"].ToString();
-                    Cli.numero = Convert.ToInt32(dr["numero"]);
-                    Cli.dni = dr["dni"].ToString();
-                    Cli.fecha_registro = Convert.ToDateTime(dr["fecha_registro"]);
-                    lista.Add(Cli);
-                }
 
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
             }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                cmd.Connection.Close();
-            }
-            return lista;
+            return tabla;
         }
 
-        //Buscar por dni
-        public Entidad_Cliente BuscarClientePorDni(string dni)
+        // Listar Clientes Inactivos
+        public DataTable ListarClientesInactivos()
         {
-            SqlCommand cmd = null;
-            SqlDataReader dr = null;
-            Entidad_Cliente cliente = null;
-
-            try
+            DataTable tabla = new DataTable();
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("sp_ObtenerClientePorDNI", cn);
+                SqlCommand cmd = new SqlCommand("sp_ListarClientesInactivos", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@dni", dni);
                 cn.Open();
 
-                dr = cmd.ExecuteReader();
-
-                if (dr.Read())
-                {
-                    cliente = new Entidad_Cliente
-                    {
-                        nombre = dr["nombre"].ToString(),
-                        apellido = dr["apellido"].ToString()
-                    };
-                }
-
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (dr != null) dr.Close();
-                if (cmd != null) cmd.Connection.Close();
-            }
-
-            return cliente;
+            return tabla;
         }
 
-        //InsertaCliente
-        public Boolean InsertarCliente(Entidad_Cliente Cli)
+        // Metodo para Registrar Cliente Natural
+        public void RegistrarClienteNatural(Entidad_Cliente cliente,
+                                            int idDepartamento,
+                                            int idProvincia,
+                                            int idDistrito,
+                                            int id_tipo_cliente)
         {
-            SqlCommand cmd = null;
-            Boolean inserta = false;
-            try
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertaCliente", cn);
+                SqlCommand cmd = new SqlCommand("sp_InsertarClienteNatural", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@cNombre", SqlDbType.VarChar).Value = Cli.nombre;
-                cmd.Parameters.AddWithValue("@cApellido", SqlDbType.VarChar).Value = Cli.apellido;
-                cmd.Parameters.AddWithValue("@cNumero", SqlDbType.Int).Value = Cli.numero;
-                cmd.Parameters.AddWithValue("@cDNI", SqlDbType.VarChar).Value = Cli.dni;
-                cmd.Parameters.AddWithValue("@cFechaRegistro", Cli.fecha_registro);
-                cmd.Parameters.AddWithValue("@cEstado", Cli.estado);
+                cmd.Parameters.AddWithValue("@direccion", cliente.Direccion);
+                cmd.Parameters.AddWithValue("@numero", cliente.Numero);
+                cmd.Parameters.AddWithValue("@ruc", cliente.Ruc);
+                cmd.Parameters.AddWithValue("@id_tipo_cliente", id_tipo_cliente);
+                cmd.Parameters.AddWithValue("@idDepartamento", idDepartamento);
+                cmd.Parameters.AddWithValue("@idProvincia", idProvincia);
+                cmd.Parameters.AddWithValue("@idDistrito", idDistrito);
+                cmd.Parameters.AddWithValue("@nombre", cliente.Nombre);
+                cmd.Parameters.AddWithValue("@apellido", cliente.Apellido);
+                cmd.Parameters.AddWithValue("@dni", cliente.Dni);
+
                 cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    inserta = true;
-                }
+                cmd.ExecuteNonQuery();
             }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally { cmd.Connection.Close(); }
-            return inserta;
         }
 
+        // Metodo para Registrar Cliente Juridico
+        public void RegistrarClienteJuridico(Entidad_Cliente cliente,
+                                             int idDepartamento,
+                                             int idProvincia,
+                                             int idDistrito,
+                                             int id_tipo_cliente)
+        {
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("sp_InsertarClienteJuridico", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@direccion", cliente.Direccion);
+                cmd.Parameters.AddWithValue("@numero", cliente.Numero);
+                cmd.Parameters.AddWithValue("@ruc", cliente.Ruc);
+                cmd.Parameters.AddWithValue("@id_tipo_cliente", id_tipo_cliente);
+                cmd.Parameters.AddWithValue("@idDepartamento", idDepartamento);
+                cmd.Parameters.AddWithValue("@idProvincia", idProvincia);
+                cmd.Parameters.AddWithValue("@idDistrito", idDistrito);
+                cmd.Parameters.AddWithValue("@razon_social", cliente.RazonSocial);
+                cmd.Parameters.AddWithValue("@rubro", cliente.Rubro);
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        // Deshabilitar Cliente
+        public void DeshabilitarCliente(int idCliente)
+        {
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("sp_DeshabilitarCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdCliente", idCliente);
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        // Habilitar Cliente
+        public void HabilitarCliente(int idCliente)
+        {
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("sp_HabilitarCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdCliente", idCliente);
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
 
         //EditaCliente
-        public Boolean EditarCliente(Entidad_Cliente Cli)
-        {
-            SqlCommand cmd = null;
-            Boolean edita = false;
-            try
-            {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditaCliente", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@cId", SqlDbType.Int).Value = Cli.id;
-                cmd.Parameters.AddWithValue("@cNombre", SqlDbType.VarChar).Value = Cli.nombre;
-                cmd.Parameters.AddWithValue("@cApellido", SqlDbType.VarChar).Value = Cli.apellido;
-                cmd.Parameters.AddWithValue("@cNumero", SqlDbType.Int).Value = Cli.numero;
-                cmd.Parameters.AddWithValue("@cDNI", SqlDbType.VarChar).Value = Cli.dni;
-                cmd.Parameters.AddWithValue("@cFechaRegistro", Cli.fecha_registro);
-                cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    edita = true;
-                }
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally { cmd.Connection.Close(); }
-            return edita;
-        }
+        //public Boolean EditarCliente(Entidad_Cliente Cli)
+        //{
+        //    SqlCommand cmd = null;
+        //    Boolean edita = false;
+        //    try
+        //    {
+        //        SqlConnection cn = Conexion.Instancia.Conectar();
+        //        cmd = new SqlCommand("spEditaCliente", cn);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Parameters.AddWithValue("@cId", SqlDbType.Int).Value = Cli.id;
+        //        cmd.Parameters.AddWithValue("@cNombre", SqlDbType.VarChar).Value = Cli.nombre;
+        //        cmd.Parameters.AddWithValue("@cApellido", SqlDbType.VarChar).Value = Cli.apellido;
+        //        cmd.Parameters.AddWithValue("@cNumero", SqlDbType.Int).Value = Cli.numero;
+        //        cmd.Parameters.AddWithValue("@cDNI", SqlDbType.VarChar).Value = Cli.dni;
+        //        cmd.Parameters.AddWithValue("@cFechaRegistro", Cli.fecha_registro);
+        //        cn.Open();
+        //        int i = cmd.ExecuteNonQuery();
+        //        if (i > 0)
+        //        {
+        //            edita = true;
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        throw e;
+        //    }
+        //    finally { cmd.Connection.Close(); }
+        //    return edita;
+        //}
 
-        //deshabilitaCliente
-        public Boolean DeshabilitarCliente(Entidad_Cliente Cli)
-        {
-            SqlCommand cmd = null;
-            Boolean delete = false;
-            try
-            {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitaCliente", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@cId", Cli.id);
-                cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    delete = true;
-                }
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally { cmd.Connection.Close(); }
-            return delete;
-        }
+        ////deshabilitaCliente
+        //public Boolean DeshabilitarCliente(Entidad_Cliente Cli)
+        //{
+        //    SqlCommand cmd = null;
+        //    Boolean delete = false;
+        //    try
+        //    {
+        //        SqlConnection cn = Conexion.Instancia.Conectar();
+        //        cmd = new SqlCommand("spDeshabilitaCliente", cn);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Parameters.AddWithValue("@cId", Cli.id);
+        //        cn.Open();
+        //        int i = cmd.ExecuteNonQuery();
+        //        if (i > 0)
+        //        {
+        //            delete = true;
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        throw e;
+        //    }
+        //    finally { cmd.Connection.Close(); }
+        //    return delete;
+        //}
         #endregion metodos
 
     }

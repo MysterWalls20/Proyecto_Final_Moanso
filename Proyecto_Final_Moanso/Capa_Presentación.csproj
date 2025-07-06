@@ -61,6 +61,12 @@
     <Compile Include="Frm_ListaReq.Designer.cs">
       <DependentUpon>Frm_ListaReq.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_MantenedoresDePr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MantenedoresDePr.Designer.cs">
+      <DependentUpon>Frm_MantenedoresDePr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_MenuAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
     </Compile>
     <Compile Include="Frm_MenuPrincipal.Designer.cs">
       <DependentUpon>Frm_MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ModificarCliente.Designer.cs">
+      <DependentUpon>Frm_ModificarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_NuevoCliente.cs">
       <SubType>Form</SubType>
@@ -97,11 +109,11 @@
     <Compile Include="Frm_Proveedor.Designer.cs">
       <DependentUpon>Frm_Proveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_RealizarReq.cs">
+    <Compile Include="Frm_ReOrdenCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_RealizarReq.Designer.cs">
-      <DependentUpon>Frm_RealizarReq.cs</DependentUpon>
+    <Compile Include="Frm_ReOrdenCompra.Designer.cs">
+      <DependentUpon>Frm_ReOrdenCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_ReportesVenta.cs">
       <SubType>Form</SubType>
@@ -153,6 +165,9 @@
     <EmbeddedResource Include="Frm_ListaReq.resx">
       <DependentUpon>Frm_ListaReq.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MantenedoresDePr.resx">
+      <DependentUpon>Frm_MantenedoresDePr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuAlmacen.resx">
       <DependentUpon>Frm_MenuAlmacen.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuPrincipal.resx">
       <DependentUpon>Frm_MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ModificarCliente.resx">
+      <DependentUpon>Frm_ModificarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NuevoCliente.resx">
       <DependentUpon>Frm_NuevoCliente.cs</DependentUpon>
@@ -171,8 +189,8 @@
     <EmbeddedResource Include="Frm_Proveedor.resx">
       <DependentUpon>Frm_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_RealizarReq.resx">
-      <DependentUpon>Frm_RealizarReq.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_ReOrdenCompra.resx">
+      <DependentUpon>Frm_ReOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ReportesVenta.resx">
       <DependentUpon>Frm_ReportesVenta.cs</DependentUpon>

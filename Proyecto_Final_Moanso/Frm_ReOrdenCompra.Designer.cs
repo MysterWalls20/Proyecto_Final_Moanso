@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Final_Moanso
 {
-    partial class Frm_RealizarReq
+    partial class Frm_ReOrdenCompra
     {
         /// <summary>
         /// Required designer variable.
@@ -283,9 +283,9 @@
             this.btnGrabarReq.ForeColor = System.Drawing.Color.White;
             this.btnGrabarReq.Location = new System.Drawing.Point(36, 542);
             this.btnGrabarReq.Name = "btnGrabarReq";
-            this.btnGrabarReq.Size = new System.Drawing.Size(267, 55);
+            this.btnGrabarReq.Size = new System.Drawing.Size(276, 55);
             this.btnGrabarReq.TabIndex = 69;
-            this.btnGrabarReq.Text = "Grabar Requerimiento";
+            this.btnGrabarReq.Text = "Grabar Orden de Compra";
             this.btnGrabarReq.UseVisualStyleBackColor = false;
             this.btnGrabarReq.Click += new System.EventHandler(this.btnGrabarReq_Click);
             // 

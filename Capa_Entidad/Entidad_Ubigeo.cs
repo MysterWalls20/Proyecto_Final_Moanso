@@ -18,7 +18,7 @@ namespace Capa_Entidad
         {
             public int IdProvincia { get; set; }
             public string NombreProvincia { get; set; }
-            public int IdDepart { get; set; }
+            public int IdDepartamento { get; set; }
         }
 
         public class Entidad_Distrito

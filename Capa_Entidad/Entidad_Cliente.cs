@@ -8,12 +8,16 @@ namespace Capa_Entidad
 {
     public class Entidad_Cliente
     {
-        public int id { get; set; }
-        public string nombre { get; set; }  
-        public string apellido { get; set;}
-        public int numero { get; set; }
-        public string dni { get; set; } // Para mayor facilidad en manejo de string
-        public DateTime fecha_registro { get; set; }
-        public bool estado { get; set; }
+        public int ID { get; set; }
+        public string TipoCliente { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Dni { get; set; }
+        public long Ruc { get; set; }
+        public string RazonSocial { get; set; }
+        public string Rubro { get; set; }
+        public int Numero { get; set; }
+        public string Direccion { get; set; }
+        public string Ubigeo { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Capa_Entidad;
+using Capa_Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,68 +19,151 @@ namespace Proyecto_Final_Moanso
         {
             InitializeComponent();
         }
-        private void chkNatural_CheckedChanged(object sender, EventArgs e)
+        private void Frm_NuevoCliente_Load(object sender, EventArgs e)
         {
-            if (chkNatural.Checked)
-            {
-                LimpiarCamposJ();
-                chkJuridico.Checked = false;
-                txtNomC.Enabled = true;
-                txtApeC.Enabled = true;
-                txtDniC.Enabled = true;
-                txtNumC.Enabled = true;
-                txtDIreccionC.Enabled = true;
-            }
-            else
-            {
-                LimpiarCamposN();
-                txtNomC.Enabled = false;
-                txtApeC.Enabled = false;
-                txtDniC.Enabled = false;
-                txtNumC.Enabled = false;
-                txtDIreccionC.Enabled = false;
-            }
-        }
-        private void chkJuridico_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkJuridico.Checked)
-            {
-                LimpiarCamposN();
-                chkNatural.Checked = false;
-                txtRuc.Enabled = true;
-                txtRazonS.Enabled = true;
-                txtNumC.Enabled = true;
-                txtDIreccionC.Enabled = true;
-            }
-            else
-            {
-                LimpiarCamposJ();
-                txtRuc.Enabled = false;
-                txtRazonS.Enabled = false;
-                txtNumC.Enabled = false;
-                txtDIreccionC.Enabled = false;
-            }
-        }
-        private void LimpiarCamposN()
-        {
-            txtNomC.Clear();
-            txtApeC.Clear();
-            txtDniC.Clear();
-            txtNumC.Clear();
-            txtDIreccionC.Clear();
-        }
-        private void LimpiarCamposJ()
-        {
-            txtRuc.Clear();
-            txtRazonS.Clear();
-            txtNumC.Clear();
-            txtDIreccionC.Clear();
-        }
-        private void btnGuardarCli_Click(object sender, EventArgs e)
-        {
+            cboTipoCliente.Items.Clear();
+            cboTipoCliente.Items.Add("Natural");
+            cboTipoCliente.Items.Add("Jurídico");
+            cboTipoCliente.SelectedIndex = -1;
 
+            cboDepartamento.DataSource = Logica_Ubigeo.Instancia.ObtenerDepartamentos();
+            cboDepartamento.DisplayMember = "NombreDepartamento";
+            cboDepartamento.ValueMember = "IdDepartamento";
+            cboDepartamento.SelectedIndex = -1;
+
+            cboTipoCliente.SelectedIndexChanged += cboTipoCliente_SelectedIndexChanged;
         }
-        private void btnCancelarCli_Click(object sender, EventArgs e)
+
+        private void cboTipoCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bool esNatural = cboTipoCliente.Text == "Natural";
+
+            // Natural
+            txtNombre.Enabled = esNatural;
+            txtApellido.Enabled = esNatural;
+            txtDni.Enabled = esNatural;
+
+            // Jurídico
+            txtRazonSocial.Enabled = !esNatural;
+            txtRubro.Enabled = !esNatural;
+
+            txtDireccion.Enabled = true;
+            txtNumero.Enabled = true;
+            txtRUC.Enabled = true;
+        }
+
+        private void cboDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboDepartamento.SelectedValue is int idDepartamento)
+            {
+                cboProvincia.DataSource = Logica_Ubigeo.Instancia.ObtenerProvincias(idDepartamento);
+                cboProvincia.DisplayMember = "NombreProvincia";
+                cboProvincia.ValueMember = "IdProvincia";
+                cboProvincia.SelectedIndex = -1;
+            }
+        }
+        private void cboProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboProvincia.SelectedValue is int idProvincia)
+            {
+                cboDistrito.DataSource = Logica_Ubigeo.Instancia.ObtenerDistritos(idProvincia);
+                cboDistrito.DisplayMember = "NombreDistrito";
+                cboDistrito.ValueMember = "IdDistrito";
+                cboDistrito.SelectedIndex = -1;
+            }
+        }
+        //private void LimpiarCamposN()
+        //{
+        //    txtNomC.Clear();
+        //    txtApeC.Clear();
+        //    txtDniC.Clear();
+        //    txtNumC.Clear();
+        //    txtDIreccionC.Clear();
+        //}
+        //private void LimpiarCamposJ()
+        //{
+        //    txtRuc.Clear();
+        //    txtRazonS.Clear();
+        //    txtNumC.Clear();
+        //    txtDIreccionC.Clear();
+        //}
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (cboTipoCliente.Text == "")
+            {
+                MessageBox.Show("Por favor, seleccione un tipo de cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                int idDepartamento = (int)cboDepartamento.SelectedValue;
+                int idProvincia = (int)cboProvincia.SelectedValue;
+                int idDistrito = (int)cboDistrito.SelectedValue;
+
+                //int idUbigeo = Logica_Ubigeo.Instancia.ObtenerIdUbigeo(idDepartamento, idProvincia, idDistrito);
+
+                string tipoCliente = cboTipoCliente.Text;
+
+                if (tipoCliente == "Natural")
+                {
+                    if (cboDepartamento.Text == "" || txtDireccion.Text == "" || txtNumero.Text == ""
+                        || txtRUC.Text == "" || txtNombre.Text == "" || txtApellido.Text == "" || txtDni.Text == "")
+                    {
+                        MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        Entidad_Cliente cliente = new Entidad_Cliente
+                        {
+                            Direccion = txtDireccion.Text,
+                            Numero = Convert.ToInt32(txtNumero.Text),
+                            Ruc = Convert.ToInt64(txtRUC.Text),
+                            Nombre = txtNombre.Text,
+                            Apellido = txtApellido.Text,
+                            Dni = txtDni.Text
+                        };
+                        Logica_Cliente.Instancia.RegistrarClienteNatural(
+                         cliente,
+                         idDepartamento,
+                         idProvincia,
+                         idDistrito,
+                         1 // id_tipo_cliente → Natural
+                        );
+                    }
+                }
+                else if (tipoCliente == "Jurídico")
+                {
+                    if (cboDepartamento.Text == "" || txtDireccion.Text == "" || txtNumero.Text == ""
+                        || txtRUC.Text == "" || txtRazonSocial.Text == "" || txtRubro.Text == "")
+                    {
+                        MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        Entidad_Cliente cliente = new Entidad_Cliente
+                        {
+                            Direccion = txtDireccion.Text,
+                            Numero = Convert.ToInt32(txtNumero.Text),
+                            Ruc = Convert.ToInt64(txtRUC.Text),
+                            RazonSocial = txtRazonSocial.Text,
+                            Rubro = txtRubro.Text
+                        };
+
+                        Logica_Cliente.Instancia.RegistrarClienteJuridico(
+                            cliente,
+                            idDepartamento,
+                            idProvincia,
+                            idDistrito,
+                            2 // id_tipo_cliente → Jurídico
+                        );
+                    }
+                }
+                MessageBox.Show("Cliente registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

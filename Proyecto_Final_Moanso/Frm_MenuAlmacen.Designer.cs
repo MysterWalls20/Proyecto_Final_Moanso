@@ -35,8 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnRealizarReq = new System.Windows.Forms.Button();
-            this.btnMantCateg_Colores = new System.Windows.Forms.Button();
+            this.btnReOrdenCompra = new System.Windows.Forms.Button();
+            this.btnMantenedoresProd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalirDeMenu = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -106,8 +106,8 @@
             // 
             this.pnMenu.BackColor = System.Drawing.Color.Black;
             this.pnMenu.Controls.Add(this.panel3);
-            this.pnMenu.Controls.Add(this.btnRealizarReq);
-            this.pnMenu.Controls.Add(this.btnMantCateg_Colores);
+            this.pnMenu.Controls.Add(this.btnReOrdenCompra);
+            this.pnMenu.Controls.Add(this.btnMantenedoresProd);
             this.pnMenu.Controls.Add(this.panel1);
             this.pnMenu.Controls.Add(this.btnSalirDeMenu);
             this.pnMenu.Controls.Add(this.panel2);
@@ -129,44 +129,43 @@
             this.panel3.Size = new System.Drawing.Size(43, 74);
             this.panel3.TabIndex = 9;
             // 
-            // btnRealizarReq
+            // btnReOrdenCompra
             // 
-            this.btnRealizarReq.BackColor = System.Drawing.Color.White;
-            this.btnRealizarReq.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRealizarReq.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRealizarReq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.btnRealizarReq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRealizarReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRealizarReq.Image = global::Proyecto_Final_Moanso.Properties.Resources.crear_ordenReq_40;
-            this.btnRealizarReq.Location = new System.Drawing.Point(43, 312);
-            this.btnRealizarReq.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRealizarReq.Name = "btnRealizarReq";
-            this.btnRealizarReq.Size = new System.Drawing.Size(311, 75);
-            this.btnRealizarReq.TabIndex = 10;
-            this.btnRealizarReq.Text = "Realizar requerimiento";
-            this.btnRealizarReq.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRealizarReq.UseVisualStyleBackColor = false;
-            this.btnRealizarReq.Click += new System.EventHandler(this.btnRealizarReq_Click);
+            this.btnReOrdenCompra.BackColor = System.Drawing.Color.White;
+            this.btnReOrdenCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReOrdenCompra.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnReOrdenCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnReOrdenCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReOrdenCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReOrdenCompra.Image = global::Proyecto_Final_Moanso.Properties.Resources.crear_ordenReq_40;
+            this.btnReOrdenCompra.Location = new System.Drawing.Point(43, 312);
+            this.btnReOrdenCompra.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReOrdenCompra.Name = "btnReOrdenCompra";
+            this.btnReOrdenCompra.Size = new System.Drawing.Size(311, 75);
+            this.btnReOrdenCompra.TabIndex = 10;
+            this.btnReOrdenCompra.Text = " Orden de Compra";
+            this.btnReOrdenCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReOrdenCompra.UseVisualStyleBackColor = false;
+            this.btnReOrdenCompra.Click += new System.EventHandler(this.btnReOrdenCompra_Click);
             // 
-            // btnMantCateg_Colores
+            // btnMantenedoresProd
             // 
-            this.btnMantCateg_Colores.BackColor = System.Drawing.Color.White;
-            this.btnMantCateg_Colores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMantCateg_Colores.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnMantCateg_Colores.FlatAppearance.BorderSize = 2;
-            this.btnMantCateg_Colores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.btnMantCateg_Colores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantCateg_Colores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMantCateg_Colores.Image = global::Proyecto_Final_Moanso.Properties.Resources.editar_categ_color_42;
-            this.btnMantCateg_Colores.Location = new System.Drawing.Point(43, 404);
-            this.btnMantCateg_Colores.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMantCateg_Colores.Name = "btnMantCateg_Colores";
-            this.btnMantCateg_Colores.Size = new System.Drawing.Size(311, 79);
-            this.btnMantCateg_Colores.TabIndex = 8;
-            this.btnMantCateg_Colores.Text = "Mantenedor categorias y colores";
-            this.btnMantCateg_Colores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMantCateg_Colores.UseVisualStyleBackColor = false;
-            this.btnMantCateg_Colores.Click += new System.EventHandler(this.btnMantCateg_Colores_Click);
+            this.btnMantenedoresProd.BackColor = System.Drawing.Color.White;
+            this.btnMantenedoresProd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMantenedoresProd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMantenedoresProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnMantenedoresProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenedoresProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantenedoresProd.Image = global::Proyecto_Final_Moanso.Properties.Resources.editar_categ_color_42;
+            this.btnMantenedoresProd.Location = new System.Drawing.Point(43, 404);
+            this.btnMantenedoresProd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMantenedoresProd.Name = "btnMantenedoresProd";
+            this.btnMantenedoresProd.Size = new System.Drawing.Size(311, 79);
+            this.btnMantenedoresProd.TabIndex = 8;
+            this.btnMantenedoresProd.Text = " Mantenedores del producto";
+            this.btnMantenedoresProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMantenedoresProd.UseVisualStyleBackColor = false;
+            this.btnMantenedoresProd.Click += new System.EventHandler(this.btnMantenedoresProd_Click);
             // 
             // panel1
             // 
@@ -217,7 +216,7 @@
             this.btnMantProductos.Name = "btnMantProductos";
             this.btnMantProductos.Size = new System.Drawing.Size(311, 75);
             this.btnMantProductos.TabIndex = 5;
-            this.btnMantProductos.Text = "Mantenedor productos";
+            this.btnMantProductos.Text = " Mantenedor productos";
             this.btnMantProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMantProductos.UseVisualStyleBackColor = false;
             this.btnMantProductos.Click += new System.EventHandler(this.btnMantProductos_Click);
@@ -279,9 +278,9 @@
         private System.Windows.Forms.Button btnMantProductos;
         private System.Windows.Forms.Panel pnPrincipal;
         private System.Windows.Forms.Button btnSalirDeMenu;
-        private System.Windows.Forms.Button btnMantCateg_Colores;
+        private System.Windows.Forms.Button btnMantenedoresProd;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnRealizarReq;
+        private System.Windows.Forms.Button btnReOrdenCompra;
     }
 }

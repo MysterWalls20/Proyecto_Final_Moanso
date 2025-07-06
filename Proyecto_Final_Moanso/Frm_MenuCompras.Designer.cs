@@ -31,23 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MenuCompras));
             this.pnTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbMinimizar = new System.Windows.Forms.PictureBox();
-            this.pbCerrarPrograma = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnReportesCompra = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnPrincipal = new System.Windows.Forms.Panel();
+            this.btnReportesCompra = new System.Windows.Forms.Button();
             this.btnOrdenesCompra = new System.Windows.Forms.Button();
             this.pbLogo1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnMantProveedor = new System.Windows.Forms.Button();
             this.btnSalirDeMenu = new System.Windows.Forms.Button();
-            this.pnPrincipal = new System.Windows.Forms.Panel();
+            this.pbMinimizar = new System.Windows.Forms.PictureBox();
+            this.pbCerrarPrograma = new System.Windows.Forms.PictureBox();
             this.pnTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCerrarPrograma)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrarPrograma)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
@@ -74,33 +74,6 @@
             this.label1.Size = new System.Drawing.Size(262, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "Menú de Compras";
-            // 
-            // pbMinimizar
-            // 
-            this.pbMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMinimizar.Image = global::Proyecto_Final_Moanso.Properties.Resources.minimazar;
-            this.pbMinimizar.Location = new System.Drawing.Point(1137, 2);
-            this.pbMinimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbMinimizar.Name = "pbMinimizar";
-            this.pbMinimizar.Size = new System.Drawing.Size(71, 57);
-            this.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMinimizar.TabIndex = 2;
-            this.pbMinimizar.TabStop = false;
-            this.pbMinimizar.Click += new System.EventHandler(this.pbMinimizar_Click);
-            // 
-            // pbCerrarPrograma
-            // 
-            this.pbCerrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbCerrarPrograma.Image = global::Proyecto_Final_Moanso.Properties.Resources.cerrar;
-            this.pbCerrarPrograma.Location = new System.Drawing.Point(1227, 2);
-            this.pbCerrarPrograma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbCerrarPrograma.Name = "pbCerrarPrograma";
-            this.pbCerrarPrograma.Size = new System.Drawing.Size(71, 57);
-            this.pbCerrarPrograma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCerrarPrograma.TabIndex = 1;
-            this.pbCerrarPrograma.TabStop = false;
-            this.pbCerrarPrograma.Click += new System.EventHandler(this.pbCerrarPrograma_Click);
-            this.pbCerrarPrograma.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbCerrarPrograma_MouseDown);
             // 
             // panel1
             // 
@@ -130,6 +103,36 @@
             this.panel4.Size = new System.Drawing.Size(43, 70);
             this.panel4.TabIndex = 13;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(0, 308);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(43, 70);
+            this.panel2.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(0, 222);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(43, 70);
+            this.panel3.TabIndex = 8;
+            // 
+            // pnPrincipal
+            // 
+            this.pnPrincipal.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnPrincipal.Location = new System.Drawing.Point(352, 64);
+            this.pnPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnPrincipal.Name = "pnPrincipal";
+            this.pnPrincipal.Size = new System.Drawing.Size(950, 610);
+            this.pnPrincipal.TabIndex = 10;
+            // 
             // btnReportesCompra
             // 
             this.btnReportesCompra.BackColor = System.Drawing.Color.White;
@@ -150,16 +153,6 @@
             this.btnReportesCompra.UseVisualStyleBackColor = false;
             this.btnReportesCompra.Click += new System.EventHandler(this.btnReportesCompra_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(0, 308);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(43, 70);
-            this.panel2.TabIndex = 11;
-            // 
             // btnOrdenesCompra
             // 
             this.btnOrdenesCompra.BackColor = System.Drawing.Color.White;
@@ -175,7 +168,7 @@
             this.btnOrdenesCompra.Name = "btnOrdenesCompra";
             this.btnOrdenesCompra.Size = new System.Drawing.Size(309, 71);
             this.btnOrdenesCompra.TabIndex = 12;
-            this.btnOrdenesCompra.Text = "Ordenes de Compra";
+            this.btnOrdenesCompra.Text = " Realizar Compra";
             this.btnOrdenesCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdenesCompra.UseVisualStyleBackColor = false;
             this.btnOrdenesCompra.Click += new System.EventHandler(this.btnOrdenesCompra_Click);
@@ -192,16 +185,6 @@
             this.pbLogo1.Size = new System.Drawing.Size(329, 139);
             this.pbLogo1.TabIndex = 10;
             this.pbLogo1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(0, 222);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(43, 70);
-            this.panel3.TabIndex = 8;
             // 
             // btnMantProveedor
             // 
@@ -239,15 +222,32 @@
             this.btnSalirDeMenu.UseVisualStyleBackColor = true;
             this.btnSalirDeMenu.Click += new System.EventHandler(this.btnSalirDeMenu_Click);
             // 
-            // pnPrincipal
+            // pbMinimizar
             // 
-            this.pnPrincipal.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPrincipal.Location = new System.Drawing.Point(352, 64);
-            this.pnPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(950, 610);
-            this.pnPrincipal.TabIndex = 10;
+            this.pbMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMinimizar.Image = global::Proyecto_Final_Moanso.Properties.Resources.minimazar;
+            this.pbMinimizar.Location = new System.Drawing.Point(1137, 2);
+            this.pbMinimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbMinimizar.Name = "pbMinimizar";
+            this.pbMinimizar.Size = new System.Drawing.Size(71, 57);
+            this.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMinimizar.TabIndex = 2;
+            this.pbMinimizar.TabStop = false;
+            this.pbMinimizar.Click += new System.EventHandler(this.pbMinimizar_Click);
+            // 
+            // pbCerrarPrograma
+            // 
+            this.pbCerrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCerrarPrograma.Image = global::Proyecto_Final_Moanso.Properties.Resources.cerrar;
+            this.pbCerrarPrograma.Location = new System.Drawing.Point(1227, 2);
+            this.pbCerrarPrograma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbCerrarPrograma.Name = "pbCerrarPrograma";
+            this.pbCerrarPrograma.Size = new System.Drawing.Size(71, 57);
+            this.pbCerrarPrograma.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCerrarPrograma.TabIndex = 1;
+            this.pbCerrarPrograma.TabStop = false;
+            this.pbCerrarPrograma.Click += new System.EventHandler(this.pbCerrarPrograma_Click);
+            this.pbCerrarPrograma.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbCerrarPrograma_MouseDown);
             // 
             // Frm_MenuCompras
             // 
@@ -265,10 +265,10 @@
             this.Text = "Menu Compras";
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCerrarPrograma)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrarPrograma)).EndInit();
             this.ResumeLayout(false);
 
         }

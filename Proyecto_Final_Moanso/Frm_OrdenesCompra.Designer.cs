@@ -97,7 +97,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             this.dgvOrdenesCompra.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvOrdenesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenesCompra.Size = new System.Drawing.Size(797, 294);
+            this.dgvOrdenesCompra.Size = new System.Drawing.Size(797, 240);
             this.dgvOrdenesCompra.TabIndex = 3;
             // 
             // txtBuscar

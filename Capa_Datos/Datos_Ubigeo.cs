@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_Entidad;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,20 +12,26 @@ namespace Capa_Datos
 {
     public class Datos_Ubigeo
     {
+        #region singleton
         private static readonly Datos_Ubigeo _instancia = new Datos_Ubigeo();
         public static Datos_Ubigeo Instancia => _instancia;
-        // Obtener Departamentos
-        public List<Entidad_Departamento> ObtenerDepartamentos()
+        #endregion singleton
+
+        #region metodos
+
+        // Listar Departamentos
+        public List<Entidad_Ubigeo.Entidad_Departamento> ListarDepartamentos()
         {
-            List<Entidad_Departamento> lista = new List<Entidad_Departamento>();
+            var lista = new List<Entidad_Ubigeo.Entidad_Departamento>();
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                SqlCommand cmd = new SqlCommand("SELECT idDepartamento, departamento FROM Departamentos", cn);
+                SqlCommand cmd = new SqlCommand("sp_ListarDepartamentos", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    lista.Add(new Entidad_Departamento
+                    lista.Add(new Entidad_Ubigeo.Entidad_Departamento
                     {
                         IdDepartamento = Convert.ToInt32(dr["idDepartamento"]),
                         NombreDepartamento = dr["departamento"].ToString()
@@ -33,40 +40,45 @@ namespace Capa_Datos
             }
             return lista;
         }
-        // Obtener Provincias por departamento
-        public List<Entidad_Provincia> ObtenerProvinciasPorDepartamento(int idDepartamento)
+
+        // Listar Provincias
+        public List<Entidad_Ubigeo.Entidad_Provincia> ListarProvinciasPorDepartamento(int idDepartamento)
         {
-            List<Entidad_Provincia> lista = new List<Entidad_Provincia>();
+            var lista = new List<Entidad_Ubigeo.Entidad_Provincia>();
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                SqlCommand cmd = new SqlCommand("SELECT idProvincia, provincia FROM Provincia WHERE idDepart = @id", cn);
-                cmd.Parameters.AddWithValue("@id", idDepartamento);
+                SqlCommand cmd = new SqlCommand("sp_ListarProvinciasPorDepartamento", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idDepartamento", idDepartamento);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    lista.Add(new Entidad_Provincia
+                    lista.Add(new Entidad_Ubigeo.Entidad_Provincia
                     {
                         IdProvincia = Convert.ToInt32(dr["idProvincia"]),
                         NombreProvincia = dr["provincia"].ToString(),
-                        IdDepart = idDepartamento
+                        IdDepartamento = idDepartamento
                     });
                 }
             }
             return lista;
         }
-        public List<Entidad_Distrito> ObtenerDistritosPorProvincia(int idProvincia)
+
+        // Listar Distritos
+        public List<Entidad_Ubigeo.Entidad_Distrito> ListarDistritosPorProvincia(int idProvincia)
         {
-            List<Entidad_Distrito> lista = new List<Entidad_Distrito>();
+            var lista = new List<Entidad_Ubigeo.Entidad_Distrito>();
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                SqlCommand cmd = new SqlCommand("SELECT idDistrito, distrito FROM Distrito WHERE idProvin = @id", cn);
-                cmd.Parameters.AddWithValue("@id", idProvincia);
+                SqlCommand cmd = new SqlCommand("sp_ListarDistritosPorProvincia", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idProvincia", idProvincia);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    lista.Add(new Entidad_Distrito
+                    lista.Add(new Entidad_Ubigeo.Entidad_Distrito
                     {
                         IdDistrito = Convert.ToInt32(dr["idDistrito"]),
                         NombreDistrito = dr["distrito"].ToString(),
@@ -76,5 +88,26 @@ namespace Capa_Datos
             }
             return lista;
         }
+
+        // Obtener ID de Ubigeo
+        public int ObtenerIdUbigeo(int idDepartamento, int idProvincia, int idDistrito)
+        {
+            int idUbigeo = 0;
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("sp_ObtenerIdUbigeo", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idDepartamento", idDepartamento);
+                cmd.Parameters.AddWithValue("@idProvincia", idProvincia);
+                cmd.Parameters.AddWithValue("@idDistrito", idDistrito);
+                cn.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                    idUbigeo = Convert.ToInt32(result);
+            }
+            return idUbigeo;
+        }
+
+        #endregion metodos
     }
 }

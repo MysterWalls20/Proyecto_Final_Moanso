@@ -200,31 +200,31 @@ namespace Proyecto_Final_Moanso
         }
         private void txtDniV_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                e.Handled = true;
+            //if (e.KeyChar == (char)Keys.Enter)
+            //{
+            //    e.Handled = true;
 
-                string dni = txtTipoCli.Text.Trim();
+            //    string dni = txtTipoCli.Text.Trim();
 
-                if (dni.Length != 8 || !dni.All(char.IsDigit))
-                {
-                    MessageBox.Show("Ingrese un DNI válido de 8 dígitos.");
-                    return;
-                }
+            //    if (dni.Length != 8 || !dni.All(char.IsDigit))
+            //    {
+            //        MessageBox.Show("Ingrese un DNI válido de 8 dígitos.");
+            //        return;
+            //    }
 
-                var cliente = Logica_Cliente.Instancia.ObtenerClientePorDni(dni);
+            //    var cliente = Logica_Cliente.Instancia.ObtenerClientePorDni(dni);
 
-                if (cliente != null)
-                {
-                    txtClienV.Text = cliente.nombre + " " + cliente.apellido;
-                    lblClienteId.Text = Convert.ToString(cliente.id);
-                }
-                else
-                {
-                    MessageBox.Show("Cliente no encontrado o está deshabilitado.");
-                    txtClienV.Clear();
-                }
-            }
+            //    if (cliente != null)
+            //    {
+            //        txtClienV.Text = cliente.nombre + " " + cliente.apellido;
+            //        lblClienteId.Text = Convert.ToString(cliente.id);
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Cliente no encontrado o está deshabilitado.");
+            //        txtClienV.Clear();
+            //    }
+            //}
         }
     }
 }

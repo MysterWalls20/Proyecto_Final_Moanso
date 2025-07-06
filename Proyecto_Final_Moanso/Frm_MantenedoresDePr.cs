@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Moanso
 {
-    public partial class Frm_RealizarReq : Form
+    public partial class Frm_MantenedoresDePr : Form
     {
-        public Frm_RealizarReq()
+        public Frm_MantenedoresDePr()
         {
             InitializeComponent();
         }
 
-        private void btnGrabarReq_Click(object sender, EventArgs e)
+        private void btnHabTal_Click(object sender, EventArgs e)
         {
 
         }
