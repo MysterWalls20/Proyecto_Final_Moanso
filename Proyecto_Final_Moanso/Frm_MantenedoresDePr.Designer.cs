@@ -30,8 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MantCategoria = new System.Windows.Forms.TabPage();
-            this.btnHabilitar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnHabCat = new System.Windows.Forms.Button();
+            this.btnBusCat = new System.Windows.Forms.Button();
             this.txtIdCat = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEditCat = new System.Windows.Forms.Button();
@@ -99,7 +99,7 @@
             this.tabControl1.Controls.Add(this.MantTalla);
             this.tabControl1.Controls.Add(this.MantMarca);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(38, 25);
+            this.tabControl1.Location = new System.Drawing.Point(39, 25);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -110,8 +110,8 @@
             // 
             this.MantCategoria.BackColor = System.Drawing.Color.Transparent;
             this.MantCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MantCategoria.Controls.Add(this.btnHabilitar);
-            this.MantCategoria.Controls.Add(this.btnLimpiar);
+            this.MantCategoria.Controls.Add(this.btnHabCat);
+            this.MantCategoria.Controls.Add(this.btnBusCat);
             this.MantCategoria.Controls.Add(this.txtIdCat);
             this.MantCategoria.Controls.Add(this.label3);
             this.MantCategoria.Controls.Add(this.btnEditCat);
@@ -131,39 +131,42 @@
             this.MantCategoria.TabIndex = 0;
             this.MantCategoria.Text = "Mantenedor Categorias";
             // 
-            // btnHabilitar
+            // btnHabCat
             // 
-            this.btnHabilitar.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnHabilitar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHabilitar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHabilitar.FlatAppearance.BorderSize = 2;
-            this.btnHabilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.btnHabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHabilitar.ForeColor = System.Drawing.Color.White;
-            this.btnHabilitar.Location = new System.Drawing.Point(634, 469);
-            this.btnHabilitar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHabilitar.Name = "btnHabilitar";
-            this.btnHabilitar.Size = new System.Drawing.Size(137, 38);
-            this.btnHabilitar.TabIndex = 47;
-            this.btnHabilitar.Text = "Habilitar";
-            this.btnHabilitar.UseVisualStyleBackColor = false;
+            this.btnHabCat.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnHabCat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHabCat.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHabCat.FlatAppearance.BorderSize = 2;
+            this.btnHabCat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnHabCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHabCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHabCat.ForeColor = System.Drawing.Color.White;
+            this.btnHabCat.Location = new System.Drawing.Point(634, 469);
+            this.btnHabCat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHabCat.Name = "btnHabCat";
+            this.btnHabCat.Size = new System.Drawing.Size(137, 38);
+            this.btnHabCat.TabIndex = 47;
+            this.btnHabCat.Text = "Habilitar";
+            this.btnHabCat.UseVisualStyleBackColor = false;
+            this.btnHabCat.Click += new System.EventHandler(this.btnHabCat_Click);
             // 
-            // btnLimpiar
+            // btnBusCat
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(354, 81);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(104, 31);
-            this.btnLimpiar.TabIndex = 46;
-            this.btnLimpiar.Text = "Buscar";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnBusCat.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnBusCat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBusCat.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBusCat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnBusCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusCat.ForeColor = System.Drawing.Color.White;
+            this.btnBusCat.Location = new System.Drawing.Point(354, 81);
+            this.btnBusCat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBusCat.Name = "btnBusCat";
+            this.btnBusCat.Size = new System.Drawing.Size(104, 31);
+            this.btnBusCat.TabIndex = 46;
+            this.btnBusCat.Text = "Buscar";
+            this.btnBusCat.UseVisualStyleBackColor = false;
+            this.btnBusCat.Click += new System.EventHandler(this.btnBusCat_Click);
             // 
             // txtIdCat
             // 
@@ -203,10 +206,12 @@
             this.btnEditCat.TabIndex = 43;
             this.btnEditCat.Text = "Editar";
             this.btnEditCat.UseVisualStyleBackColor = false;
+            this.btnEditCat.Click += new System.EventHandler(this.btnEditCat_Click);
             // 
             // cbkEstCat
             // 
             this.cbkEstCat.AutoSize = true;
+            this.cbkEstCat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbkEstCat.Location = new System.Drawing.Point(543, 41);
             this.cbkEstCat.Margin = new System.Windows.Forms.Padding(4);
             this.cbkEstCat.Name = "cbkEstCat";
@@ -232,6 +237,7 @@
             this.btnRegCat.TabIndex = 41;
             this.btnRegCat.Text = "Registar";
             this.btnRegCat.UseVisualStyleBackColor = false;
+            this.btnRegCat.Click += new System.EventHandler(this.btnRegCat_Click);
             // 
             // dgvCategoria
             // 
@@ -280,6 +286,7 @@
             this.btnDeshCat.TabIndex = 31;
             this.btnDeshCat.Text = "Deshabilitar";
             this.btnDeshCat.UseVisualStyleBackColor = false;
+            this.btnDeshCat.Click += new System.EventHandler(this.btnDeshCat_Click);
             // 
             // label1
             // 
@@ -320,6 +327,7 @@
             this.btnHabCol.BackColor = System.Drawing.Color.DarkOrange;
             this.btnHabCol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHabCol.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHabCol.FlatAppearance.BorderSize = 2;
             this.btnHabCol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnHabCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHabCol.ForeColor = System.Drawing.Color.White;
@@ -330,12 +338,14 @@
             this.btnHabCol.TabIndex = 54;
             this.btnHabCol.Text = "Habilitar";
             this.btnHabCol.UseVisualStyleBackColor = false;
+            this.btnHabCol.Click += new System.EventHandler(this.btnHabCol_Click);
             // 
             // btnEditCol
             // 
             this.btnEditCol.BackColor = System.Drawing.Color.DarkOrange;
             this.btnEditCol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditCol.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditCol.FlatAppearance.BorderSize = 2;
             this.btnEditCol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnEditCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditCol.ForeColor = System.Drawing.Color.White;
@@ -346,12 +356,14 @@
             this.btnEditCol.TabIndex = 53;
             this.btnEditCol.Text = "Editar";
             this.btnEditCol.UseVisualStyleBackColor = false;
+            this.btnEditCol.Click += new System.EventHandler(this.btnEditCol_Click);
             // 
             // btnRegCol
             // 
             this.btnRegCol.BackColor = System.Drawing.Color.DarkOrange;
             this.btnRegCol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegCol.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRegCol.FlatAppearance.BorderSize = 2;
             this.btnRegCol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnRegCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegCol.ForeColor = System.Drawing.Color.White;
@@ -362,12 +374,14 @@
             this.btnRegCol.TabIndex = 52;
             this.btnRegCol.Text = "Registar";
             this.btnRegCol.UseVisualStyleBackColor = false;
+            this.btnRegCol.Click += new System.EventHandler(this.btnRegCol_Click);
             // 
             // DeshCol
             // 
             this.DeshCol.BackColor = System.Drawing.Color.DarkOrange;
             this.DeshCol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeshCol.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.DeshCol.FlatAppearance.BorderSize = 2;
             this.DeshCol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.DeshCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeshCol.ForeColor = System.Drawing.Color.White;
@@ -378,17 +392,25 @@
             this.DeshCol.TabIndex = 51;
             this.DeshCol.Text = "Deshabilitar";
             this.DeshCol.UseVisualStyleBackColor = false;
+            this.DeshCol.Click += new System.EventHandler(this.DeshCol_Click);
             // 
             // btnBusCol
             // 
+            this.btnBusCol.BackColor = System.Drawing.Color.DarkOrange;
             this.btnBusCol.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBusCol.Location = new System.Drawing.Point(319, 82);
+            this.btnBusCol.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBusCol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnBusCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusCol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusCol.ForeColor = System.Drawing.Color.White;
+            this.btnBusCol.Location = new System.Drawing.Point(319, 81);
             this.btnBusCol.Margin = new System.Windows.Forms.Padding(4);
             this.btnBusCol.Name = "btnBusCol";
             this.btnBusCol.Size = new System.Drawing.Size(103, 28);
             this.btnBusCol.TabIndex = 50;
             this.btnBusCol.Text = "Buscar";
-            this.btnBusCol.UseVisualStyleBackColor = true;
+            this.btnBusCol.UseVisualStyleBackColor = false;
+            this.btnBusCol.Click += new System.EventHandler(this.btnBusCol_Click);
             // 
             // txtIdColor
             // 
@@ -403,6 +425,7 @@
             // cbkEstCol
             // 
             this.cbkEstCol.AutoSize = true;
+            this.cbkEstCol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbkEstCol.Location = new System.Drawing.Point(500, 37);
             this.cbkEstCol.Margin = new System.Windows.Forms.Padding(4);
             this.cbkEstCol.Name = "cbkEstCol";
@@ -488,76 +511,108 @@
             // 
             // btnHabTal
             // 
+            this.btnHabTal.BackColor = System.Drawing.Color.DarkOrange;
             this.btnHabTal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHabTal.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHabTal.FlatAppearance.BorderSize = 2;
+            this.btnHabTal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnHabTal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHabTal.Location = new System.Drawing.Point(519, 318);
+            this.btnHabTal.ForeColor = System.Drawing.Color.White;
+            this.btnHabTal.Location = new System.Drawing.Point(621, 466);
             this.btnHabTal.Margin = new System.Windows.Forms.Padding(4);
             this.btnHabTal.Name = "btnHabTal";
             this.btnHabTal.Size = new System.Drawing.Size(137, 38);
             this.btnHabTal.TabIndex = 54;
             this.btnHabTal.Text = "Habilitar";
-            this.btnHabTal.UseVisualStyleBackColor = true;
+            this.btnHabTal.UseVisualStyleBackColor = false;
             this.btnHabTal.Click += new System.EventHandler(this.btnHabTal_Click);
             // 
             // btnEditTal
             // 
+            this.btnEditTal.BackColor = System.Drawing.Color.DarkOrange;
             this.btnEditTal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditTal.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditTal.FlatAppearance.BorderSize = 2;
+            this.btnEditTal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnEditTal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditTal.Location = new System.Drawing.Point(208, 318);
+            this.btnEditTal.ForeColor = System.Drawing.Color.White;
+            this.btnEditTal.Location = new System.Drawing.Point(281, 466);
             this.btnEditTal.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditTal.Name = "btnEditTal";
             this.btnEditTal.Size = new System.Drawing.Size(124, 38);
             this.btnEditTal.TabIndex = 53;
             this.btnEditTal.Text = "Editar";
-            this.btnEditTal.UseVisualStyleBackColor = true;
+            this.btnEditTal.UseVisualStyleBackColor = false;
+            this.btnEditTal.Click += new System.EventHandler(this.btnEditTal_Click);
             // 
             // btnRegTal
             // 
+            this.btnRegTal.BackColor = System.Drawing.Color.DarkOrange;
             this.btnRegTal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegTal.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRegTal.FlatAppearance.BorderSize = 2;
+            this.btnRegTal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnRegTal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegTal.Location = new System.Drawing.Point(31, 318);
+            this.btnRegTal.ForeColor = System.Drawing.Color.White;
+            this.btnRegTal.Location = new System.Drawing.Point(94, 466);
             this.btnRegTal.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegTal.Name = "btnRegTal";
             this.btnRegTal.Size = new System.Drawing.Size(150, 38);
             this.btnRegTal.TabIndex = 52;
             this.btnRegTal.Text = "Registar";
-            this.btnRegTal.UseVisualStyleBackColor = true;
+            this.btnRegTal.UseVisualStyleBackColor = false;
+            this.btnRegTal.Click += new System.EventHandler(this.btnRegTal_Click);
             // 
             // btnDeshTal
             // 
+            this.btnDeshTal.BackColor = System.Drawing.Color.DarkOrange;
             this.btnDeshTal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeshTal.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDeshTal.FlatAppearance.BorderSize = 2;
+            this.btnDeshTal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnDeshTal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeshTal.Location = new System.Drawing.Point(359, 318);
+            this.btnDeshTal.ForeColor = System.Drawing.Color.White;
+            this.btnDeshTal.Location = new System.Drawing.Point(440, 466);
             this.btnDeshTal.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeshTal.Name = "btnDeshTal";
             this.btnDeshTal.Size = new System.Drawing.Size(143, 38);
             this.btnDeshTal.TabIndex = 51;
             this.btnDeshTal.Text = "Deshabilitar";
-            this.btnDeshTal.UseVisualStyleBackColor = true;
+            this.btnDeshTal.UseVisualStyleBackColor = false;
+            this.btnDeshTal.Click += new System.EventHandler(this.btnDeshTal_Click);
             // 
             // txtBusTal
             // 
+            this.txtBusTal.BackColor = System.Drawing.Color.DarkOrange;
             this.txtBusTal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtBusTal.Location = new System.Drawing.Point(243, 68);
+            this.txtBusTal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.txtBusTal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtBusTal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusTal.ForeColor = System.Drawing.Color.White;
+            this.txtBusTal.Location = new System.Drawing.Point(304, 82);
             this.txtBusTal.Margin = new System.Windows.Forms.Padding(4);
             this.txtBusTal.Name = "txtBusTal";
             this.txtBusTal.Size = new System.Drawing.Size(103, 28);
             this.txtBusTal.TabIndex = 50;
             this.txtBusTal.Text = "Buscar";
-            this.txtBusTal.UseVisualStyleBackColor = true;
+            this.txtBusTal.UseVisualStyleBackColor = false;
+            this.txtBusTal.Click += new System.EventHandler(this.txtBusTal_Click);
             // 
             // txtIdTalla
             // 
-            this.txtIdTalla.Location = new System.Drawing.Point(131, 70);
+            this.txtIdTalla.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdTalla.Location = new System.Drawing.Point(210, 82);
             this.txtIdTalla.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdTalla.Name = "txtIdTalla";
-            this.txtIdTalla.Size = new System.Drawing.Size(81, 27);
+            this.txtIdTalla.Size = new System.Drawing.Size(81, 28);
             this.txtIdTalla.TabIndex = 49;
             // 
             // cbkEstTal
             // 
             this.cbkEstTal.AutoSize = true;
-            this.cbkEstTal.Location = new System.Drawing.Point(421, 38);
+            this.cbkEstTal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbkEstTal.Location = new System.Drawing.Point(494, 42);
             this.cbkEstTal.Margin = new System.Windows.Forms.Padding(4);
             this.cbkEstTal.Name = "cbkEstTal";
             this.cbkEstTal.Size = new System.Drawing.Size(89, 24);
@@ -567,7 +622,8 @@
             // 
             // txtTalla
             // 
-            this.txtTalla.Location = new System.Drawing.Point(131, 36);
+            this.txtTalla.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTalla.Location = new System.Drawing.Point(210, 41);
             this.txtTalla.Margin = new System.Windows.Forms.Padding(4);
             this.txtTalla.Name = "txtTalla";
             this.txtTalla.Size = new System.Drawing.Size(251, 27);
@@ -576,32 +632,34 @@
             // dgvTalla
             // 
             this.dgvTalla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTalla.Location = new System.Drawing.Point(65, 124);
+            this.dgvTalla.Location = new System.Drawing.Point(112, 133);
             this.dgvTalla.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTalla.Name = "dgvTalla";
             this.dgvTalla.RowHeadersWidth = 51;
-            this.dgvTalla.Size = new System.Drawing.Size(517, 155);
+            this.dgvTalla.Size = new System.Drawing.Size(628, 290);
             this.dgvTalla.TabIndex = 38;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(61, 76);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(108, 84);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.Size = new System.Drawing.Size(86, 22);
             this.label7.TabIndex = 33;
-            this.label7.Text = "ID Talla";
+            this.label7.Text = "ID Talla:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(61, 39);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(108, 44);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 20);
+            this.label8.Size = new System.Drawing.Size(61, 22);
             this.label8.TabIndex = 32;
-            this.label8.Text = "Talla";
+            this.label8.Text = "Talla:";
             // 
             // label9
             // 
@@ -639,75 +697,109 @@
             // 
             // btnHabMarc
             // 
+            this.btnHabMarc.BackColor = System.Drawing.Color.DarkOrange;
             this.btnHabMarc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHabMarc.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHabMarc.FlatAppearance.BorderSize = 2;
+            this.btnHabMarc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnHabMarc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHabMarc.Location = new System.Drawing.Point(511, 315);
+            this.btnHabMarc.ForeColor = System.Drawing.Color.White;
+            this.btnHabMarc.Location = new System.Drawing.Point(621, 467);
             this.btnHabMarc.Margin = new System.Windows.Forms.Padding(4);
             this.btnHabMarc.Name = "btnHabMarc";
             this.btnHabMarc.Size = new System.Drawing.Size(137, 38);
             this.btnHabMarc.TabIndex = 54;
             this.btnHabMarc.Text = "Habilitar";
-            this.btnHabMarc.UseVisualStyleBackColor = true;
+            this.btnHabMarc.UseVisualStyleBackColor = false;
+            this.btnHabMarc.Click += new System.EventHandler(this.btnHabMarc_Click);
             // 
             // btnEditMarc
             // 
+            this.btnEditMarc.BackColor = System.Drawing.Color.DarkOrange;
             this.btnEditMarc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditMarc.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditMarc.FlatAppearance.BorderSize = 2;
+            this.btnEditMarc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnEditMarc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditMarc.Location = new System.Drawing.Point(200, 315);
+            this.btnEditMarc.ForeColor = System.Drawing.Color.White;
+            this.btnEditMarc.Location = new System.Drawing.Point(284, 467);
             this.btnEditMarc.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditMarc.Name = "btnEditMarc";
             this.btnEditMarc.Size = new System.Drawing.Size(124, 38);
             this.btnEditMarc.TabIndex = 53;
             this.btnEditMarc.Text = "Editar";
-            this.btnEditMarc.UseVisualStyleBackColor = true;
+            this.btnEditMarc.UseVisualStyleBackColor = false;
+            this.btnEditMarc.Click += new System.EventHandler(this.btnEditMarc_Click);
             // 
             // btnRegMarc
             // 
+            this.btnRegMarc.BackColor = System.Drawing.Color.DarkOrange;
             this.btnRegMarc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegMarc.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRegMarc.FlatAppearance.BorderSize = 2;
+            this.btnRegMarc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnRegMarc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegMarc.Location = new System.Drawing.Point(23, 315);
+            this.btnRegMarc.ForeColor = System.Drawing.Color.White;
+            this.btnRegMarc.Location = new System.Drawing.Point(98, 467);
             this.btnRegMarc.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegMarc.Name = "btnRegMarc";
             this.btnRegMarc.Size = new System.Drawing.Size(150, 38);
             this.btnRegMarc.TabIndex = 52;
             this.btnRegMarc.Text = "Registar";
-            this.btnRegMarc.UseVisualStyleBackColor = true;
+            this.btnRegMarc.UseVisualStyleBackColor = false;
+            this.btnRegMarc.Click += new System.EventHandler(this.btnRegMarc_Click);
             // 
             // btnDeshMarc
             // 
+            this.btnDeshMarc.BackColor = System.Drawing.Color.DarkOrange;
             this.btnDeshMarc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeshMarc.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDeshMarc.FlatAppearance.BorderSize = 2;
+            this.btnDeshMarc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnDeshMarc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeshMarc.Location = new System.Drawing.Point(351, 315);
+            this.btnDeshMarc.ForeColor = System.Drawing.Color.White;
+            this.btnDeshMarc.Location = new System.Drawing.Point(443, 467);
             this.btnDeshMarc.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeshMarc.Name = "btnDeshMarc";
             this.btnDeshMarc.Size = new System.Drawing.Size(143, 38);
             this.btnDeshMarc.TabIndex = 51;
             this.btnDeshMarc.Text = "Deshabilitar";
-            this.btnDeshMarc.UseVisualStyleBackColor = true;
+            this.btnDeshMarc.UseVisualStyleBackColor = false;
+            this.btnDeshMarc.Click += new System.EventHandler(this.btnDeshMarc_Click);
             // 
             // btnBusMarc
             // 
+            this.btnBusMarc.BackColor = System.Drawing.Color.DarkOrange;
             this.btnBusMarc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBusMarc.Location = new System.Drawing.Point(228, 70);
+            this.btnBusMarc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBusMarc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnBusMarc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusMarc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusMarc.ForeColor = System.Drawing.Color.White;
+            this.btnBusMarc.Location = new System.Drawing.Point(312, 83);
             this.btnBusMarc.Margin = new System.Windows.Forms.Padding(4);
             this.btnBusMarc.Name = "btnBusMarc";
             this.btnBusMarc.Size = new System.Drawing.Size(103, 28);
             this.btnBusMarc.TabIndex = 50;
             this.btnBusMarc.Text = "Buscar";
-            this.btnBusMarc.UseVisualStyleBackColor = true;
+            this.btnBusMarc.UseVisualStyleBackColor = false;
+            this.btnBusMarc.Click += new System.EventHandler(this.btnBusMarc_Click);
             // 
             // txtIdMarca
             // 
-            this.txtIdMarca.Location = new System.Drawing.Point(137, 73);
+            this.txtIdMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdMarca.Location = new System.Drawing.Point(221, 83);
             this.txtIdMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdMarca.Name = "txtIdMarca";
-            this.txtIdMarca.Size = new System.Drawing.Size(81, 27);
+            this.txtIdMarca.Size = new System.Drawing.Size(81, 28);
             this.txtIdMarca.TabIndex = 49;
             // 
             // cbkEstMarc
             // 
             this.cbkEstMarc.AutoSize = true;
-            this.cbkEstMarc.Location = new System.Drawing.Point(409, 34);
+            this.cbkEstMarc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbkEstMarc.Location = new System.Drawing.Point(499, 43);
             this.cbkEstMarc.Margin = new System.Windows.Forms.Padding(4);
             this.cbkEstMarc.Name = "cbkEstMarc";
             this.cbkEstMarc.Size = new System.Drawing.Size(89, 24);
@@ -717,7 +809,8 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(119, 32);
+            this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMarca.Location = new System.Drawing.Point(221, 40);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(251, 27);
@@ -726,32 +819,34 @@
             // dgvMarca
             // 
             this.dgvMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarca.Location = new System.Drawing.Point(65, 128);
+            this.dgvMarca.Location = new System.Drawing.Point(110, 131);
             this.dgvMarca.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMarca.Name = "dgvMarca";
             this.dgvMarca.RowHeadersWidth = 51;
-            this.dgvMarca.Size = new System.Drawing.Size(517, 155);
+            this.dgvMarca.Size = new System.Drawing.Size(628, 290);
             this.dgvMarca.TabIndex = 39;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(61, 76);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(107, 85);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 20);
+            this.label10.Size = new System.Drawing.Size(95, 22);
             this.label10.TabIndex = 33;
-            this.label10.Text = "ID Marca";
+            this.label10.Text = "ID Marca:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(61, 36);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(107, 43);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 20);
+            this.label11.Size = new System.Drawing.Size(70, 22);
             this.label11.TabIndex = 32;
-            this.label11.Text = "Marca";
+            this.label11.Text = "Marca:";
             // 
             // label12
             // 
@@ -794,8 +889,8 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage MantCategoria;
-        private System.Windows.Forms.Button btnHabilitar;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnHabCat;
+        private System.Windows.Forms.Button btnBusCat;
         private System.Windows.Forms.TextBox txtIdCat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnEditCat;

@@ -9,6 +9,7 @@ namespace Capa_Entidad
     public class Entidad_rubro
     {
         public int id_rubro { get; set; }
-        public string descripcion { get; set; }
+        public string rubro { get; set; }
+        public bool estado { get; set; }
     }
 }

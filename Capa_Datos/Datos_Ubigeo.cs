@@ -108,6 +108,29 @@ namespace Capa_Datos
             return idUbigeo;
         }
 
+        //Para proveedor
+
+        public (int idDepartamento, int idProvincia, int idDistrito) ObtenerUbigeoCompleto(int idUbigeo)
+        {
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("sp_ObtenerUbigeoPorID", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idUbigeo", idUbigeo);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    int idDepartamento = Convert.ToInt32(dr["idDepartamento"]);
+                    int idProvincia = Convert.ToInt32(dr["idProvincia"]);
+                    int idDistrito = Convert.ToInt32(dr["idDistrito"]);
+                    return (idDepartamento, idProvincia, idDistrito);
+                }
+            }
+
+            return (0, 0, 0);
+        }
         #endregion metodos
     }
 }

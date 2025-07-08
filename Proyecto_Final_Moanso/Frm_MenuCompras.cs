@@ -69,24 +69,38 @@ namespace Proyecto_Final_Moanso
             this.pnPrincipal.Text = formhijo.Text;
             formhijo.Show();
         }
-
+        private void btnRealizaCompra_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new Frm_ReCompra());
+            btnRealizaCompra.BackColor = Color.DarkOrange;
+            btnMantenedorRubro.BackColor = Color.White;
+            btnMantProveedor.BackColor = Color.White;
+            btnReportesCompra.BackColor = Color.White;
+            
+        }
+        private void btnMantenedorRubro_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new Frm_MantRubro());
+            btnRealizaCompra.BackColor = Color.White;
+            btnMantenedorRubro.BackColor = Color.DarkOrange;
+            btnMantProveedor.BackColor = Color.White;
+            btnReportesCompra.BackColor = Color.White;
+        }
         private void btnMantProveedor_Click(object sender, EventArgs e)
         {
             abrirFormHijo(new Frm_Proveedor());
+            btnRealizaCompra.BackColor = Color.White;
+            btnMantenedorRubro.BackColor = Color.White;
             btnMantProveedor.BackColor = Color.DarkOrange;
-            btnOrdenesCompra.BackColor = Color.White;
-        }
-
-        private void btnOrdenesCompra_Click(object sender, EventArgs e)
-        {
-            abrirFormHijo(new Frm_OrdenesCompra());
-            btnMantProveedor.BackColor = Color.White;
-            btnOrdenesCompra.BackColor = Color.DarkOrange;
+            btnReportesCompra.BackColor = Color.White;
         }
 
         private void btnReportesCompra_Click(object sender, EventArgs e)
         {
-
+            btnRealizaCompra.BackColor = Color.White;
+            btnMantenedorRubro.BackColor = Color.White;
+            btnMantProveedor.BackColor = Color.White;
+            btnReportesCompra.BackColor = Color.DarkOrange;
         }
     }
 }

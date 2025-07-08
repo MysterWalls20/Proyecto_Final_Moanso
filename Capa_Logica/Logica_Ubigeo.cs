@@ -22,5 +22,17 @@ namespace Capa_Logica
 
         public int ObtenerIdUbigeo(int idDepartamento, int idProvincia, int idDistrito) =>
             Datos_Ubigeo.Instancia.ObtenerIdUbigeo(idDepartamento, idProvincia, idDistrito);
+
+
+
+
+
+
+        //Proveedor
+
+        public (int idDepartamento, int idProvincia, int idDistrito) ObtenerUbigeoCompleto(int idUbigeo)
+        {
+            return Datos_Ubigeo.Instancia.ObtenerUbigeoCompleto(idUbigeo);
+        }
     }
 }

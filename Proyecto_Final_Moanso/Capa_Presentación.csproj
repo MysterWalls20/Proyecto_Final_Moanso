@@ -67,6 +67,12 @@
     <Compile Include="Frm_MantenedoresDePr.Designer.cs">
       <DependentUpon>Frm_MantenedoresDePr.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_MantRubro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MantRubro.Designer.cs">
+      <DependentUpon>Frm_MantRubro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_MenuAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,11 +103,11 @@
     <Compile Include="Frm_NuevoCliente.Designer.cs">
       <DependentUpon>Frm_NuevoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_OrdenesCompra.cs">
+    <Compile Include="Frm_ReCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_OrdenesCompra.Designer.cs">
-      <DependentUpon>Frm_OrdenesCompra.cs</DependentUpon>
+    <Compile Include="Frm_ReCompra.Designer.cs">
+      <DependentUpon>Frm_ReCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Proveedor.cs">
       <SubType>Form</SubType>
@@ -168,6 +174,9 @@
     <EmbeddedResource Include="Frm_MantenedoresDePr.resx">
       <DependentUpon>Frm_MantenedoresDePr.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MantRubro.resx">
+      <DependentUpon>Frm_MantRubro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuAlmacen.resx">
       <DependentUpon>Frm_MenuAlmacen.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,8 +192,8 @@
     <EmbeddedResource Include="Frm_NuevoCliente.resx">
       <DependentUpon>Frm_NuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_OrdenesCompra.resx">
-      <DependentUpon>Frm_OrdenesCompra.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_ReCompra.resx">
+      <DependentUpon>Frm_ReCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Proveedor.resx">
       <DependentUpon>Frm_Proveedor.cs</DependentUpon>

@@ -34,31 +34,54 @@ namespace Capa_Logica
         {
             return Datos_Productos.Instancia.ListarProductos();
         }
-        //listado por categoria
-        public List<Entidad_Productos> ObtenerProductosPorCategoria(string categoria)
+        //Buscar por categoria
+        public List<Entidad_Productos> BuscarProductoPorCategoria(int idCategoria)
         {
-            return Datos_Productos.Instancia.ListarProductosPorCategoria(categoria);
+            return Datos_Productos.Instancia.BuscarProductoPorCategoria(idCategoria);
         }
+
         //Buscar por ID
-        public Entidad_Productos BuscarProductoPorID(int id)
+        public Entidad_Productos ObtenerProductoPorId(int id)
         {
-            return Datos_Productos.Instancia.BuscarProductoPorID(id);
+            return Datos_Productos.Instancia.ObtenerProductoPorId(id);
         }
-        //LLenar Categoria
-        public List<string> ObtenerCategorias()
+
+        //Buscar por nombre
+        public List<Entidad_Productos> BuscarProductoPorNombre(string nombre)
+        {
+            return Datos_Productos.Instancia.BuscarProductoPorNombre(nombre);
+        }
+
+        // Llenar Categorías
+        public List<KeyValuePair<int, string>> ObtenerCategorias()
         {
             return Datos_Productos.Instancia.ObtenerCategorias();
         }
+
+        // Llenar Marca
+        public List<KeyValuePair<int, string>> ObtenerMarca()
+        {
+            return Datos_Productos.Instancia.ObtenerMarca();
+        }
+
+        // Llenar Talla
+        public List<KeyValuePair<int, string>> ObtenerTalla()
+        {
+            return Datos_Productos.Instancia.ObtenerTalla();
+        }
+
+        // Llenar Colores
+        public List<KeyValuePair<int, string>> ObtenerColores()
+        {
+            return Datos_Productos.Instancia.ObtenerColores();
+        }
+
         //inserta
         public void InsertaProducto(Entidad_Productos Pro)
         {
             Datos_Productos.Instancia.InsertarProductos(Pro);
         }
-        //LLenar Colores
-        public List<string> ObtenerColores()
-        {
-            return Datos_Productos.Instancia.ObtenerColores();
-        }
+
         //edita
         public void EditaProducto(Entidad_Productos Pro)
         {
@@ -69,7 +92,23 @@ namespace Capa_Logica
         {
             Datos_Productos.Instancia.DeshabilitarProductos(Pro);
         }
-        #endregion metodos
 
+        //habilita
+        public void HabilitarProducto(Entidad_Productos Pro)
+        {
+            Datos_Productos.Instancia.HabilitarProductos(Pro);
+        }
+
+        //Listar cliente no activado
+        public List<Entidad_Productos> ListarProductosNoListado()
+        {
+            return Datos_Productos.Instancia.ListarProductosNoListado();
+        }
+
+        public Entidad_Productos BuscarProductoPorID(int idProducto)
+        {
+            return Datos_Productos.Instancia.BuscarProductoPorID(idProducto);
+        }
+        #endregion metodos
     }
 }

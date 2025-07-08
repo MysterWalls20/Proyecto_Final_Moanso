@@ -41,13 +41,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.MarcaA = new System.Windows.Forms.TextBox();
             this.txtNomA = new System.Windows.Forms.TextBox();
             this.txtIDa = new System.Windows.Forms.TextBox();
             this.pnTopAP = new System.Windows.Forms.Panel();
             this.pbCerrarAP = new System.Windows.Forms.PictureBox();
             this.cbCategoriaA = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.cmbtalla = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtPrecioC = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnTopAP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrarAP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,14 +65,13 @@
             this.btnActualizarP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizarP.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnActualizarP.FlatAppearance.BorderSize = 2;
-            this.btnActualizarP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnActualizarP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnActualizarP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.btnActualizarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarP.Location = new System.Drawing.Point(559, 345);
+            this.btnActualizarP.Location = new System.Drawing.Point(559, 388);
             this.btnActualizarP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizarP.Name = "btnActualizarP";
-            this.btnActualizarP.Size = new System.Drawing.Size(269, 46);
+            this.btnActualizarP.Size = new System.Drawing.Size(269, 52);
             this.btnActualizarP.TabIndex = 29;
             this.btnActualizarP.Text = "ACTUALIZAR";
             this.btnActualizarP.UseVisualStyleBackColor = false;
@@ -76,7 +81,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(21, 245);
+            this.label8.Location = new System.Drawing.Point(19, 245);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 31);
             this.label8.TabIndex = 45;
@@ -85,10 +90,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(329, 345);
+            this.label4.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(373, 404);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 31);
+            this.label4.Size = new System.Drawing.Size(40, 33);
             this.label4.TabIndex = 44;
             this.label4.Text = "S/";
             // 
@@ -97,7 +102,7 @@
             this.cbColorA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbColorA.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbColorA.FormattingEnabled = true;
-            this.cbColorA.Location = new System.Drawing.Point(123, 299);
+            this.cbColorA.Location = new System.Drawing.Point(122, 299);
             this.cbColorA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbColorA.Name = "cbColorA";
             this.cbColorA.Size = new System.Drawing.Size(175, 39);
@@ -107,7 +112,7 @@
             // 
             this.txtPrecioA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecioA.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioA.Location = new System.Drawing.Point(373, 344);
+            this.txtPrecioA.Location = new System.Drawing.Point(424, 403);
             this.txtPrecioA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioA.MaxLength = 6;
             this.txtPrecioA.Name = "txtPrecioA";
@@ -119,17 +124,17 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(329, 302);
+            this.label7.Location = new System.Drawing.Point(314, 360);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 31);
+            this.label7.Size = new System.Drawing.Size(178, 31);
             this.label7.TabIndex = 41;
-            this.label7.Text = "Precio U:";
+            this.label7.Text = "Precio Venta U:";
             // 
             // txtStockA
             // 
             this.txtStockA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStockA.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStockA.Location = new System.Drawing.Point(410, 187);
+            this.txtStockA.Location = new System.Drawing.Point(419, 187);
             this.txtStockA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStockA.MaxLength = 6;
             this.txtStockA.Name = "txtStockA";
@@ -141,7 +146,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(317, 189);
+            this.label6.Location = new System.Drawing.Point(324, 189);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 31);
             this.label6.TabIndex = 39;
@@ -151,7 +156,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 302);
+            this.label5.Location = new System.Drawing.Point(19, 302);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 31);
             this.label5.TabIndex = 38;
@@ -161,7 +166,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 189);
+            this.label3.Location = new System.Drawing.Point(19, 189);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 31);
             this.label3.TabIndex = 37;
@@ -171,7 +176,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 133);
+            this.label2.Location = new System.Drawing.Point(17, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 31);
             this.label2.TabIndex = 36;
@@ -181,29 +186,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 78);
+            this.label1.Location = new System.Drawing.Point(19, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 31);
             this.label1.TabIndex = 35;
             this.label1.Text = "ID :";
             // 
-            // MarcaA
-            // 
-            this.MarcaA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MarcaA.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MarcaA.Location = new System.Drawing.Point(138, 187);
-            this.MarcaA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MarcaA.MaxLength = 24;
-            this.MarcaA.Name = "MarcaA";
-            this.MarcaA.Size = new System.Drawing.Size(159, 37);
-            this.MarcaA.TabIndex = 34;
-            this.MarcaA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtNomA
             // 
             this.txtNomA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomA.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomA.Location = new System.Drawing.Point(147, 127);
+            this.txtNomA.Location = new System.Drawing.Point(156, 127);
             this.txtNomA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNomA.MaxLength = 100;
             this.txtNomA.Name = "txtNomA";
@@ -215,7 +208,7 @@
             // 
             this.txtIDa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDa.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDa.Location = new System.Drawing.Point(83, 72);
+            this.txtIDa.Location = new System.Drawing.Point(81, 72);
             this.txtIDa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIDa.Name = "txtIDa";
             this.txtIDa.ReadOnly = true;
@@ -227,6 +220,7 @@
             // 
             this.pnTopAP.BackColor = System.Drawing.Color.DarkOrange;
             this.pnTopAP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnTopAP.Controls.Add(this.label10);
             this.pnTopAP.Controls.Add(this.pbCerrarAP);
             this.pnTopAP.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTopAP.Location = new System.Drawing.Point(0, 0);
@@ -255,7 +249,7 @@
             this.cbCategoriaA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoriaA.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoriaA.FormattingEnabled = true;
-            this.cbCategoriaA.Location = new System.Drawing.Point(162, 242);
+            this.cbCategoriaA.Location = new System.Drawing.Point(171, 242);
             this.cbCategoriaA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategoriaA.Name = "cbCategoriaA";
             this.cbCategoriaA.Size = new System.Drawing.Size(363, 39);
@@ -264,19 +258,100 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyecto_Final_Moanso.Properties.Resources.editar_archivo_100;
-            this.pictureBox1.Location = new System.Drawing.Point(559, 63);
+            this.pictureBox1.Location = new System.Drawing.Point(559, 72);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(269, 270);
+            this.pictureBox1.Size = new System.Drawing.Size(269, 296);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // cmbMarca
+            // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarca.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(122, 187);
+            this.cmbMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(175, 39);
+            this.cmbMarca.TabIndex = 56;
+            // 
+            // cmbtalla
+            // 
+            this.cmbtalla.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbtalla.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbtalla.FormattingEnabled = true;
+            this.cmbtalla.Location = new System.Drawing.Point(409, 299);
+            this.cmbtalla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbtalla.Name = "cmbtalla";
+            this.cmbtalla.Size = new System.Drawing.Size(125, 39);
+            this.cmbtalla.TabIndex = 58;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(319, 302);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 31);
+            this.label9.TabIndex = 57;
+            this.label9.Text = "Talla :";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(73, 403);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 33);
+            this.label12.TabIndex = 61;
+            this.label12.Text = "S/";
+            // 
+            // txtPrecioC
+            // 
+            this.txtPrecioC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrecioC.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioC.Location = new System.Drawing.Point(124, 402);
+            this.txtPrecioC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrecioC.MaxLength = 6;
+            this.txtPrecioC.Name = "txtPrecioC";
+            this.txtPrecioC.Size = new System.Drawing.Size(109, 37);
+            this.txtPrecioC.TabIndex = 60;
+            this.txtPrecioC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft PhagsPa", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(19, 360);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(200, 31);
+            this.label11.TabIndex = 59;
+            this.label11.Text = "Precio Compra U:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(11, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(286, 25);
+            this.label10.TabIndex = 71;
+            this.label10.Text = "Modificar datos del Producto";
             // 
             // ActualizarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 417);
+            this.ClientSize = new System.Drawing.Size(851, 465);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtPrecioC);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.cmbtalla);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cmbMarca);
             this.Controls.Add(this.cbCategoriaA);
             this.Controls.Add(this.pnTopAP);
             this.Controls.Add(this.label8);
@@ -290,7 +365,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.MarcaA);
             this.Controls.Add(this.txtNomA);
             this.Controls.Add(this.txtIDa);
             this.Controls.Add(this.btnActualizarP);
@@ -303,6 +377,7 @@
             this.Text = "ActualizarProducto";
             this.Load += new System.EventHandler(this.ActualizarProducto_Load);
             this.pnTopAP.ResumeLayout(false);
+            this.pnTopAP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrarAP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -325,11 +400,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox MarcaA;
         private System.Windows.Forms.TextBox txtNomA;
         private System.Windows.Forms.TextBox txtIDa;
         private System.Windows.Forms.Panel pnTopAP;
         private System.Windows.Forms.PictureBox pbCerrarAP;
         private System.Windows.Forms.ComboBox cbCategoriaA;
+        private System.Windows.Forms.ComboBox cmbMarca;
+        private System.Windows.Forms.ComboBox cmbtalla;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtPrecioC;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }

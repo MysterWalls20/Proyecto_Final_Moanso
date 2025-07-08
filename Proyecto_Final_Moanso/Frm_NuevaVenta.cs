@@ -110,35 +110,6 @@ namespace Proyecto_Final_Moanso
                 MessageBox.Show("Error al registrar pedido.");
             }
         }
-        private void txtIdV_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                e.Handled = true; // evita el beep del Enter
-                int id;
-                if (int.TryParse(txtIdV.Text.Trim(), out id))
-                {
-                    var producto = Logica_Productos.Instancia.BuscarProductoPorID(id);
-
-                    if (producto != null)
-                    {
-                        txtProductV.Text = producto.nombre;
-                        txtMarcaV.Text = producto.marca;
-                        txtColorV.Text = producto.color;
-                        txtStockV.Text = producto.stock.ToString();
-                        txtCategoriaV.Text = producto.categoria;
-                        txtPrecioV.Text = producto.precio_unidad.ToString("0.00");
-                        txtCantidadV.Focus(); // Mover el foco a la cantidad automáticamente
-                    }
-                    else
-                    {
-                        MessageBox.Show("Producto no encontrado o deshabilitado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtIdV.SelectAll();
-                        txtIdV.Focus();
-                    }
-                }
-            }
-        }
 
         private void txtCantidadV_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -178,7 +149,7 @@ namespace Proyecto_Final_Moanso
                 txtProductV.Clear();
                 txtMarcaV.Clear();
                 txtColorV.Clear();
-                txtCategoriaV.Clear();
+                txtTallaV.Clear();
                 txtStockV.Clear();
                 txtPrecioV.Clear();
                 txtCantidadV.Clear();
@@ -225,6 +196,46 @@ namespace Proyecto_Final_Moanso
             //        txtClienV.Clear();
             //    }
             //}
+        }
+
+        private void txtIdV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (int.TryParse(txtIdV.Text.Trim(), out int idProducto))
+                {
+                    Entidad_Productos prod = new Logica_Productos().BuscarProductoPorID(idProducto);
+
+                    if (prod != null)
+                    {
+                        txtProductV.Text = prod.nombre;
+                        txtMarcaV.Text = prod.marca;
+                        txtColorV.Text = prod.color;
+                        txtTallaV.Text = prod.tallas;
+                        txtPrecioV.Text = prod.precio_unidad.ToString("0.00");
+                        txtStockV.Text = prod.stock.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Producto no encontrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarCampos();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un ID válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                e.SuppressKeyPress = true; // evita el beep del Enter
+            }
+        }
+        private void LimpiarCampos()
+        {
+            txtProductV.Clear();
+            txtMarcaV.Clear();
+            txtColorV.Clear();
+            txtTallaV.Clear();
+            txtPrecioV.Clear();
+            txtStockV.Clear();
         }
     }
 }

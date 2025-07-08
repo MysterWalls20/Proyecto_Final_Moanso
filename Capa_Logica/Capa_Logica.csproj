@@ -41,12 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logica_Ciudad.cs" />
+    <Compile Include="Logica_Categoria.cs" />
     <Compile Include="Logica_Cliente.cs" />
+    <Compile Include="Logica_Color.cs" />
+    <Compile Include="Logica_Marca.cs" />
     <Compile Include="Logica_Productos.cs" />
     <Compile Include="Logica_Empleado.cs" />
     <Compile Include="Logica_Proveedor.cs" />
     <Compile Include="Logica_Rubro.cs" />
+    <Compile Include="Logica_Talla.cs" />
     <Compile Include="Logica_Ubigeo.cs" />
     <Compile Include="Logica_Ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

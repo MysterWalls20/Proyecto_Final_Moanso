@@ -27,122 +27,83 @@ namespace Capa_Datos
 
         #region Metodo
 
-
-        //Listar Proveedor
-        public List<Entidad_Proveedor> ListarProveedor()
+        //Listar Proveedor Activo
+        public DataTable ListarProveedoresActivos()
         {
-            SqlCommand cmd = null;
-            List<Entidad_Proveedor> lista = new List<Entidad_Proveedor>();
-            try
+            DataTable tabla = new DataTable();
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListaProveedor", cn);
+                SqlCommand cmd = new SqlCommand("sp_ListarProveedoresActivos", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    Entidad_Proveedor prov = new Entidad_Proveedor
-                    {
-                        id = Convert.ToInt32(dr["id_proveedor"]),
-                        razon_social = dr["razon_social"].ToString(),
-                        ruc = Convert.ToInt32(dr["ruc"]),
-                        direccion = dr["direccion"].ToString(),
-                        telefono = Convert.ToInt32(dr["telefono"]),
-                        email = dr["email"].ToString(),
 
-                        Ciudad = new Entidad_ciudad
-                        {
-                            nombre = dr["ciudad"].ToString()
-                        },
-                        Rubro = new Entidad_rubro
-                        {
-                            descripcion = dr["rubro"].ToString()
-                        }
-                    };
-                    lista.Add(prov);
-                }
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
             }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                cmd.Connection.Close();
-            }
-            return lista;
+            return tabla;
         }
 
+        //Listar Proveedor Inactivo
+        public DataTable ListarProveedoresInactivos()
+        {
+            DataTable tabla = new DataTable();
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("sp_ListarProveedoresInactivos", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+            }
+            return tabla;
+        }
 
         //Insertar Proveedor
-        public bool InsertarProveedor(Entidad_Proveedor p)
+
+        public void RegistrarProveedor(Entidad_Proveedor proveedor,
+                               int idDepartamento,
+                               int idProvincia,
+                               int idDistrito)
         {
-            SqlCommand cmd = null;
-            bool inserta = false;
-            try
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertaProveedor", cn);
+                SqlCommand cmd = new SqlCommand("sp_InsertarProveedor", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@razon_social", p.razon_social);
-                cmd.Parameters.AddWithValue("@ruc", p.ruc);
-                cmd.Parameters.AddWithValue("@direccion", p.direccion);
-                cmd.Parameters.AddWithValue("@telefono", p.telefono);
-                cmd.Parameters.AddWithValue("@email", p.email);
-                cmd.Parameters.AddWithValue("@estado", p.estado);
-                cmd.Parameters.AddWithValue("@id_ciudad", p.Ciudad.id_ciudad);
-                cmd.Parameters.AddWithValue("@id_rubro", p.Rubro.id_rubro);
+                cmd.Parameters.AddWithValue("@razon_social", proveedor.razon_social);
+                cmd.Parameters.AddWithValue("@ruc", proveedor.ruc);
+                cmd.Parameters.AddWithValue("@direccion", proveedor.direccion);
+                cmd.Parameters.AddWithValue("@telefono", proveedor.telefono);
+                cmd.Parameters.AddWithValue("@estado", proveedor.estado);
+                cmd.Parameters.AddWithValue("@id_rubro", proveedor.Rubro.id_rubro);
+                cmd.Parameters.AddWithValue("@idDepartamento", idDepartamento);
+                cmd.Parameters.AddWithValue("@idProvincia", idProvincia);
+                cmd.Parameters.AddWithValue("@idDistrito", idDistrito);
 
                 cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0) inserta = true;
+                cmd.ExecuteNonQuery();
             }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                cmd.Connection.Close();
-            }
-            return inserta;
         }
 
         // Editar proveedor
-        public bool EditarProveedor(Entidad_Proveedor p)
+        public void EditarProveedor(Entidad_Proveedor proveedor)
         {
-            SqlCommand cmd = null;
-            bool edita = false;
-            try
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditaProveedor", cn);
+                SqlCommand cmd = new SqlCommand("sp_EditarProveedor", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@id_proveedor", p.id);
-                cmd.Parameters.AddWithValue("@razon_social", p.razon_social);
-                cmd.Parameters.AddWithValue("@ruc", p.ruc);
-                cmd.Parameters.AddWithValue("@direccion", p.direccion);
-                cmd.Parameters.AddWithValue("@telefono", p.telefono);
-                cmd.Parameters.AddWithValue("@email", p.email);
-                cmd.Parameters.AddWithValue("@id_ciudad", p.Ciudad.id_ciudad);
-                cmd.Parameters.AddWithValue("@id_rubro", p.Rubro.id_rubro);
+                cmd.Parameters.AddWithValue("@id_proveedor", proveedor.id);
+                cmd.Parameters.AddWithValue("@razon_social", (object)proveedor.razon_social ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@ruc", proveedor.ruc != 0 ? (object)proveedor.ruc : DBNull.Value);
+                cmd.Parameters.AddWithValue("@direccion", (object)proveedor.direccion ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@telefono", proveedor.telefono != 0 ? (object)proveedor.telefono : DBNull.Value);
+                cmd.Parameters.AddWithValue("@id_rubro", proveedor.Rubro?.id_rubro ?? (object)DBNull.Value);
 
                 cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0) edita = true;
+                cmd.ExecuteNonQuery();
             }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                cmd.Connection.Close();
-            }
-            return edita;
         }
 
         // Deshabilitar proveedor 
@@ -171,58 +132,91 @@ namespace Capa_Datos
             return delete;
         }
 
-        //Buscar Proveedor
-        public Entidad_Proveedor BuscarProveedorPorRUC(string ruc)
+        //Habilitar
+        public bool habilitarProveedor(Entidad_Proveedor Prov)
+        {
+            SqlCommand cmd = null;
+            bool agregar = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spHabilitaProveedor", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_proveedor", Prov.id);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0) agregar = true;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return agregar;
+        }
+
+        //Buscar Proveedor Por ID
+        public Entidad_Proveedor BuscarProveedorPorID(int id)
         {
             SqlCommand cmd = null;
             SqlDataReader dr = null;
-            Entidad_Proveedor proveedor = null;
+            Entidad_Proveedor prov = null;
 
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("sp_ObtenerProveedorPorRUC", cn);
+                cmd = new SqlCommand("sp_BuscarProveedorPorID", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ruc", ruc);
+                cmd.Parameters.AddWithValue("@idProveedor", id);
                 cn.Open();
 
                 dr = cmd.ExecuteReader();
-
                 if (dr.Read())
                 {
-                    proveedor = new Entidad_Proveedor
+                    prov = new Entidad_Proveedor
                     {
                         id = Convert.ToInt32(dr["id_proveedor"]),
                         razon_social = dr["razon_social"].ToString(),
                         ruc = Convert.ToInt32(dr["ruc"]),
                         direccion = dr["direccion"].ToString(),
                         telefono = Convert.ToInt32(dr["telefono"]),
-                        email = dr["email"].ToString(),
-
-                        Ciudad = new Entidad_ciudad
-                        {
-                            id_ciudad = Convert.ToInt32(dr["id_ciudad"]),
-                            nombre = dr["nombre_ciudad"].ToString()
-                        },
                         Rubro = new Entidad_rubro
                         {
-                            id_rubro = Convert.ToInt32(dr["id_rubro"]),
-                            descripcion = dr["descripcion_rubro"].ToString()
-                        }
+                            id_rubro = Convert.ToInt32(dr["id_rubro"])
+                        },
+                        id_ubigeo = Convert.ToInt32(dr["id_ubigeo"])
                     };
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw ex;
+                throw e;
             }
             finally
             {
-                if (dr != null) dr.Close();
-                if (cmd != null) cmd.Connection.Close();
+                cmd.Connection.Close();
             }
 
-            return proveedor;
+            return prov;
+        }
+
+        //Buscar Proveedor por nombre
+        public DataTable BuscarProveedorPorNombre(string nombre)
+        {
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("sp_BuscarProveedorPorNombre", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable tabla = new DataTable();
+                da.Fill(tabla);
+                return tabla;
+            }
         }
         #endregion
     }

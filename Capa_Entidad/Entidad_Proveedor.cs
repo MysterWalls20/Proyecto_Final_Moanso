@@ -13,11 +13,13 @@ namespace Capa_Entidad
         public int ruc { get; set; }
         public string direccion { get; set; }
         public int telefono { get; set; }
-        public string email { get; set; }
+        public int id_ubigeo { get; set; }
         public bool estado { get; set; }
 
         // Relación con Ciudad y Rubro
-        public Entidad_ciudad Ciudad { get; set; }
         public Entidad_rubro Rubro { get; set; }
+        public Entidad_Ubigeo.Entidad_Departamento Departamento { get; set; }
+        public Entidad_Ubigeo.Entidad_Provincia provincia { get; set; }
+        public Entidad_Ubigeo.Entidad_Distrito distrito { get; set; }
     }
 }

@@ -28,62 +28,67 @@ namespace Proyecto_Final_Moanso
         }
         private void btnNuevoP_Click(object sender, EventArgs e)
         {
-            if (txtMarcaNP.Text == string.Empty ||
-            txtNombreNP.Text == string.Empty || txtPrecioN.Text == string.Empty ||
-            txtStockNP.Text == string.Empty)
+            if (string.IsNullOrWhiteSpace(txtNombreNP.Text) ||
+            string.IsNullOrWhiteSpace(txtPrecioN.Text) ||
+            string.IsNullOrWhiteSpace(txtStockNP.Text))
             {
                 MessageBox.Show("Falta ingresar los datos requeridos", "Aviso de Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            try
             {
-                try
+                Entidad_Productos NPr = new Entidad_Productos
                 {
-                    Entidad_Productos NPr = new Entidad_Productos();
-                    NPr.nombre = txtNombreNP.Text;
-                    NPr.marca = txtMarcaNP.Text;
-                    NPr.color = cbColorN.Text;
-                    NPr.stock = int.Parse(txtStockNP.Text);
-                    NPr.categoria = cbCategoria.Text;
-                    NPr.precio_unidad = double.Parse(txtPrecioN.Text);
-                    Logica_Productos.Instancia.InsertaProducto(NPr);
-                    MessageBox.Show("Los datos del producto se han guardado correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ProductoAgregado = true; // ✅ Indica que se guardó
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error.." + ex);
-                }
+                    nombre = txtNombreNP.Text,
+                    id_marca = ((KeyValuePair<int, string>)cmbMarca.SelectedItem).Key,
+                    id_color = ((KeyValuePair<int, string>)cmbColor.SelectedItem).Key,
+                    id_talla = ((KeyValuePair<int, string>)cmbtalla.SelectedItem).Key,
+                    id_categoria = ((KeyValuePair<int, string>)cbCategoria.SelectedItem).Key,
+                    stock = int.Parse(txtStockNP.Text),
+                    precio_unidad = double.Parse(txtPrecioN.Text),
+                    precio_Compra = double.Parse(txtPrecioN.Text),
+                    estado = true
+                };
+
+                Logica_Productos.Instancia.InsertaProducto(NPr);
+
+                MessageBox.Show("Los datos del producto se han guardado correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ProductoAgregado = true;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar producto: " + ex.Message);
             }
         }
         private void CargarComboboxs()
         {
-            // Combobox Categorias
-            try
-            {
-                cbCategoria.Items.Clear();
-                var categorias = Logica_Productos.Instancia.ObtenerCategorias();
-                foreach (string cat in categorias)
-                {
-                    cbCategoria.Items.Add(cat);
-                }
-                if (cbCategoria.Items.Count > 0)
-                    cbCategoria.SelectedIndex = -1;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar categorías: " + ex.Message);
-            }
-            // Combobox colores
-            cbColorN.Items.Clear();
-            var colores = Logica_Productos.Instancia.ObtenerColores();
-            foreach (var color in colores)
-            {
-                cbColorN.Items.Add(color);
-            }
-            if (cbColorN.Items.Count > 0)
-                cbColorN.SelectedIndex = -1;
+            // Categorías
+            cbCategoria.DataSource = Logica_Productos.Instancia.ObtenerCategorias();
+            cbCategoria.DisplayMember = "Value";
+            cbCategoria.ValueMember = "Key";
+            cbCategoria.SelectedIndex = -1;
+
+            // Marcas
+            cmbMarca.DataSource = Logica_Productos.Instancia.ObtenerMarca();
+            cmbMarca.DisplayMember = "Value";
+            cmbMarca.ValueMember = "Key";
+            cmbMarca.SelectedIndex = -1;
+
+            // Colores
+            cmbColor.DataSource = Logica_Productos.Instancia.ObtenerColores();
+            cmbColor.DisplayMember = "Value";
+            cmbColor.ValueMember = "Key";
+            cmbColor.SelectedIndex = -1;
+
+            // Tallas
+            cmbtalla.DataSource = Logica_Productos.Instancia.ObtenerTalla();
+            cmbtalla.DisplayMember = "Value";
+            cmbtalla.ValueMember = "Key";
+            cmbtalla.SelectedIndex = -1;
         }
+
         private void textBoxSoloLetras_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir letras, tecla de borrar (Backspace) y espacio

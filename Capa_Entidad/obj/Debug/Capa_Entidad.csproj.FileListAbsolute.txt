@@ -10,9 +10,9 @@ C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Capa_
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.CoreCompileInputs.cache
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\Users\OPEN SERVICE EIRL\Documents\GIT REPOSITORIO\Proyecto_Final_Moanso\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Entidad\bin\Debug\Capa_Entidad.dll
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.AssemblyReference.cache
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.CoreCompileInputs.cache
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Entidad\obj\Debug\Capa_Entidad.dll
-C:\Users\ACER\OneDrive\Escritorio\Sistema EPP\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Capa_Entidad\obj\Debug\Capa_Entidad.csproj.CoreCompileInputs.cache
+C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+C:\Users\ACER\OneDrive\Escritorio\Sistema Epp\Capa_Entidad\obj\Debug\Capa_Entidad.pdb

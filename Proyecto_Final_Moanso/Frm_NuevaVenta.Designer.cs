@@ -58,6 +58,7 @@
             this.NombrePV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorPV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTall = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantPV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioUpv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioTPV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +66,7 @@
             this.txtFechaV = new System.Windows.Forms.TextBox();
             this.lblClienteId = new System.Windows.Forms.Label();
             this.txtMarcaV = new System.Windows.Forms.TextBox();
-            this.txtCategoriaV = new System.Windows.Forms.TextBox();
+            this.txtTallaV = new System.Windows.Forms.TextBox();
             this.cbmTipoPag = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtPago = new System.Windows.Forms.TextBox();
@@ -88,7 +89,7 @@
             this.txtIdV.Size = new System.Drawing.Size(95, 33);
             this.txtIdV.TabIndex = 0;
             this.txtIdV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIdV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdV_KeyPress);
+            this.txtIdV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIdV_KeyDown);
             // 
             // label1
             // 
@@ -210,11 +211,11 @@
             // 
             this.txtTipoCli.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTipoCli.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoCli.Location = new System.Drawing.Point(445, 415);
+            this.txtTipoCli.Location = new System.Drawing.Point(508, 415);
             this.txtTipoCli.MaxLength = 8;
             this.txtTipoCli.Name = "txtTipoCli";
             this.txtTipoCli.ReadOnly = true;
-            this.txtTipoCli.Size = new System.Drawing.Size(179, 33);
+            this.txtTipoCli.Size = new System.Drawing.Size(155, 33);
             this.txtTipoCli.TabIndex = 17;
             this.txtTipoCli.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTipoCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDniV_KeyPress);
@@ -223,11 +224,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(373, 417);
+            this.label7.Location = new System.Drawing.Point(365, 417);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 26);
+            this.label7.Size = new System.Drawing.Size(131, 26);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Tipo:";
+            this.label7.Text = "Tipo Cliente:";
             // 
             // txtClienV
             // 
@@ -237,6 +238,7 @@
             this.txtClienV.Name = "txtClienV";
             this.txtClienV.Size = new System.Drawing.Size(221, 33);
             this.txtClienV.TabIndex = 19;
+            this.txtClienV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -313,6 +315,7 @@
             this.NombrePV,
             this.MarC,
             this.ColorPV,
+            this.ColTall,
             this.cantPV,
             this.PrecioUpv,
             this.PrecioTPV});
@@ -326,7 +329,7 @@
             this.dgvProductosV.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductosV.EnableHeadersVisualStyles = false;
             this.dgvProductosV.GridColor = System.Drawing.Color.Orange;
-            this.dgvProductosV.Location = new System.Drawing.Point(21, 115);
+            this.dgvProductosV.Location = new System.Drawing.Point(11, 115);
             this.dgvProductosV.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductosV.Name = "dgvProductosV";
             this.dgvProductosV.ReadOnly = true;
@@ -349,24 +352,24 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             this.dgvProductosV.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProductosV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductosV.Size = new System.Drawing.Size(784, 274);
+            this.dgvProductosV.Size = new System.Drawing.Size(800, 274);
             this.dgvProductosV.TabIndex = 28;
             // 
             // IDp
             // 
-            this.IDp.HeaderText = "Id:";
+            this.IDp.HeaderText = "ID";
             this.IDp.MinimumWidth = 6;
             this.IDp.Name = "IDp";
             this.IDp.ReadOnly = true;
-            this.IDp.Width = 61;
+            this.IDp.Width = 58;
             // 
             // NombrePV
             // 
-            this.NombrePV.HeaderText = "Producto:";
+            this.NombrePV.HeaderText = "Producto";
             this.NombrePV.MinimumWidth = 6;
             this.NombrePV.Name = "NombrePV";
             this.NombrePV.ReadOnly = true;
-            this.NombrePV.Width = 122;
+            this.NombrePV.Width = 117;
             // 
             // MarC
             // 
@@ -378,35 +381,43 @@
             // 
             // ColorPV
             // 
-            this.ColorPV.HeaderText = "Color:";
+            this.ColorPV.HeaderText = "Color";
             this.ColorPV.MinimumWidth = 6;
             this.ColorPV.Name = "ColorPV";
             this.ColorPV.ReadOnly = true;
-            this.ColorPV.Width = 89;
+            this.ColorPV.Width = 84;
+            // 
+            // ColTall
+            // 
+            this.ColTall.HeaderText = "Talla";
+            this.ColTall.MinimumWidth = 6;
+            this.ColTall.Name = "ColTall";
+            this.ColTall.ReadOnly = true;
+            this.ColTall.Width = 80;
             // 
             // cantPV
             // 
-            this.cantPV.HeaderText = "Cantidad";
+            this.cantPV.HeaderText = "Cant.";
             this.cantPV.MinimumWidth = 6;
             this.cantPV.Name = "cantPV";
             this.cantPV.ReadOnly = true;
-            this.cantPV.Width = 115;
+            this.cantPV.Width = 83;
             // 
             // PrecioUpv
             // 
-            this.PrecioUpv.HeaderText = "Precio U:";
+            this.PrecioUpv.HeaderText = "Precio U";
             this.PrecioUpv.MinimumWidth = 6;
             this.PrecioUpv.Name = "PrecioUpv";
             this.PrecioUpv.ReadOnly = true;
-            this.PrecioUpv.Width = 115;
+            this.PrecioUpv.Width = 110;
             // 
             // PrecioTPV
             // 
-            this.PrecioTPV.HeaderText = "Precio T:";
+            this.PrecioTPV.HeaderText = "Precio T";
             this.PrecioTPV.MinimumWidth = 6;
             this.PrecioTPV.Name = "PrecioTPV";
             this.PrecioTPV.ReadOnly = true;
-            this.PrecioTPV.Width = 113;
+            this.PrecioTPV.Width = 108;
             // 
             // label10
             // 
@@ -433,7 +444,7 @@
             // 
             this.lblClienteId.AutoSize = true;
             this.lblClienteId.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClienteId.Location = new System.Drawing.Point(341, 416);
+            this.lblClienteId.Location = new System.Drawing.Point(340, 416);
             this.lblClienteId.Name = "lblClienteId";
             this.lblClienteId.Size = new System.Drawing.Size(17, 26);
             this.lblClienteId.TabIndex = 31;
@@ -451,16 +462,16 @@
             this.txtMarcaV.TabIndex = 32;
             this.txtMarcaV.Visible = false;
             // 
-            // txtCategoriaV
+            // txtTallaV
             // 
-            this.txtCategoriaV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCategoriaV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoriaV.Location = new System.Drawing.Point(637, 18);
-            this.txtCategoriaV.Name = "txtCategoriaV";
-            this.txtCategoriaV.ReadOnly = true;
-            this.txtCategoriaV.Size = new System.Drawing.Size(10, 33);
-            this.txtCategoriaV.TabIndex = 33;
-            this.txtCategoriaV.Visible = false;
+            this.txtTallaV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTallaV.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTallaV.Location = new System.Drawing.Point(637, 18);
+            this.txtTallaV.Name = "txtTallaV";
+            this.txtTallaV.ReadOnly = true;
+            this.txtTallaV.Size = new System.Drawing.Size(10, 33);
+            this.txtTallaV.TabIndex = 33;
+            this.txtTallaV.Visible = false;
             // 
             // cbmTipoPag
             // 
@@ -505,9 +516,9 @@
             this.btnAgregarProTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProTabla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarProTabla.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarProTabla.Location = new System.Drawing.Point(820, 115);
+            this.btnAgregarProTabla.Location = new System.Drawing.Point(824, 115);
             this.btnAgregarProTabla.Name = "btnAgregarProTabla";
-            this.btnAgregarProTabla.Size = new System.Drawing.Size(104, 120);
+            this.btnAgregarProTabla.Size = new System.Drawing.Size(100, 120);
             this.btnAgregarProTabla.TabIndex = 51;
             this.btnAgregarProTabla.Text = "Agregar+";
             this.btnAgregarProTabla.UseVisualStyleBackColor = false;
@@ -524,9 +535,9 @@
             this.btnEliminarProTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarProTabla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarProTabla.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarProTabla.Location = new System.Drawing.Point(820, 269);
+            this.btnEliminarProTabla.Location = new System.Drawing.Point(824, 269);
             this.btnEliminarProTabla.Name = "btnEliminarProTabla";
-            this.btnEliminarProTabla.Size = new System.Drawing.Size(104, 120);
+            this.btnEliminarProTabla.Size = new System.Drawing.Size(100, 120);
             this.btnEliminarProTabla.TabIndex = 52;
             this.btnEliminarProTabla.Text = "Eliminar-";
             this.btnEliminarProTabla.UseVisualStyleBackColor = false;
@@ -617,7 +628,7 @@
             this.Controls.Add(this.txtPago);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cbmTipoPag);
-            this.Controls.Add(this.txtCategoriaV);
+            this.Controls.Add(this.txtTallaV);
             this.Controls.Add(this.txtMarcaV);
             this.Controls.Add(this.lblClienteId);
             this.Controls.Add(this.txtFechaV);
@@ -682,7 +693,7 @@
         private System.Windows.Forms.TextBox txtFechaV;
         private System.Windows.Forms.Label lblClienteId;
         private System.Windows.Forms.TextBox txtMarcaV;
-        private System.Windows.Forms.TextBox txtCategoriaV;
+        private System.Windows.Forms.TextBox txtTallaV;
         private System.Windows.Forms.ComboBox cbmTipoPag;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtPago;
@@ -690,14 +701,15 @@
         private System.Windows.Forms.Button btnEliminarProTabla;
         private System.Windows.Forms.Button btnCancelarV;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbVuelto;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDp;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombrePV;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarC;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorPV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTall;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantPV;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUpv;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioTPV;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lbVuelto;
     }
 }

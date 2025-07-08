@@ -18,7 +18,6 @@ namespace Proyecto_Final_Moanso
         public Frm_Proveedor()
         {
             InitializeComponent();
-            CargarCiudad();
             CargarRubro();
             MostrarProveedores();
         }
@@ -29,108 +28,201 @@ namespace Proyecto_Final_Moanso
             txtRazSoc.Clear();
             txtRuc.Clear();
             txtDireccion.Clear();
-            txtEmail.Clear();
             txtTelefono.Clear();
-            cbmCiudad.SelectedIndex = -1;
             cbmRubro.SelectedIndex = -1;
+            cboDepartamento.SelectedIndex = -1;
+            cboDistrito.SelectedIndex = -1;
+            cboProvincia.SelectedIndex = -1;
             dgvProveedor.ClearSelection();
-        }
-
-        private void CargarCiudad()
-        {
-            cbmCiudad.DataSource = Logica_Ciudad.Instancia.ListarCiudad();
-            cbmCiudad.DisplayMember = "nombre";
-            cbmCiudad.ValueMember = "id_ciudad";
-            cbmCiudad.SelectedIndex = -1;
         }
 
         private void CargarRubro()
         {
             cbmRubro.DataSource = Logica_Rubro.Instancia.ListarRubro();
-            cbmRubro.DisplayMember = "descripcion";
+            cbmRubro.DisplayMember = "rubro";
             cbmRubro.ValueMember = "id_rubro";
             cbmRubro.SelectedIndex = -1;
         }
 
         private void MostrarProveedores()
         {
-            var lista = Logica_Proveedor.Instancia.ListarProveedor();
+            dgvProveedor.DataSource = Logica_Proveedor.Instancia.ListarProveedoresActivos();
 
-            var listaFormateada = lista.Select(p => new
-            {
-                ID = p.id,
-                RazonSocial = p.razon_social,
-                RUC = p.ruc,
-                Direccion = p.direccion,
-                Telefono = p.telefono,
-                Email = p.email,
-                Ciudad = p.Ciudad.nombre,           
-                Rubro = p.Rubro.descripcion         
-            }).ToList();
-
-            dgvProveedor.DataSource = listaFormateada;
+            int totalFilas = dgvProveedor.AllowUserToAddRows
+                ? dgvProveedor.Rows.Count - 1
+                : dgvProveedor.Rows.Count;
         }
 
-        private void btnNuevoProv_Click(object sender, EventArgs e)
+        private void MostrarProveedoresInactivo()
         {
-            if (txtDireccion.Text == "" || txtRazSoc.Text == "" || txtRuc.Text == "" )
+            dgvProveedor.DataSource = Logica_Proveedor.Instancia.ListarProveedoresInactivos();
+
+            int totalFilas = dgvProveedor.AllowUserToAddRows
+                ? dgvProveedor.Rows.Count - 1
+                : dgvProveedor.Rows.Count;
+        }
+        private void Frm_Proveedor_Load(object sender, EventArgs e)
+        {
+            cboDepartamento.DataSource = Logica_Ubigeo.Instancia.ObtenerDepartamentos();
+            cboDepartamento.DisplayMember = "NombreDepartamento";
+            cboDepartamento.ValueMember = "IdDepartamento";
+            cboDepartamento.SelectedIndex = -1;
+        }
+        private void cboDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboDepartamento.SelectedValue is int idDepartamento)
             {
-                MessageBox.Show("Ingresa todos los datos del Proveedor", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboProvincia.DataSource = Logica_Ubigeo.Instancia.ObtenerProvincias(idDepartamento);
+                cboProvincia.DisplayMember = "NombreProvincia";
+                cboProvincia.ValueMember = "IdProvincia";
+                cboProvincia.SelectedIndex = -1;
+            }
+        }
+        private void cboProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboProvincia.SelectedValue is int idProvincia)
+            {
+                cboDistrito.DataSource = Logica_Ubigeo.Instancia.ObtenerDistritos(idProvincia);
+                cboDistrito.DisplayMember = "NombreDistrito";
+                cboDistrito.ValueMember = "IdDistrito";
+                cboDistrito.SelectedIndex = -1;
+            }
+        }
+        private void dgvProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || dgvProveedor.Rows[e.RowIndex].IsNewRow)
+                return;
+
+            if (ultimaFilaSeleccionada == e.RowIndex)
+            {
+                // Deselecciona si ya estaba seleccionada
+                dgvProveedor.ClearSelection();
+                ultimaFilaSeleccionada = -1;
+                LimpiarCampos();
+                idProveedorSeleccionado = 0;
                 return;
             }
+
+            ultimaFilaSeleccionada = e.RowIndex;
+
+            DataGridViewRow fila = dgvProveedor.Rows[e.RowIndex];
+            idProveedorSeleccionado = Convert.ToInt32(fila.Cells[0].Value); // Usa el índice o nombre correcto
+
+            // Buscar proveedor desde BD
+            Entidad_Proveedor proveedor = Logica_Proveedor.Instancia.BuscarProveedorPorID(idProveedorSeleccionado);
+
+            if (proveedor != null)
+            {
+                txtRazSoc.Text = proveedor.razon_social;
+                txtRuc.Text = proveedor.ruc.ToString();
+                txtDireccion.Text = proveedor.direccion;
+                txtTelefono.Text = proveedor.telefono.ToString();
+                cbmRubro.SelectedValue = proveedor.Rubro.id_rubro;
+                // puedes cargar también ubigeo si quieres
+
+                // Obtener Ubigeo
+                var (idDep, idProv, idDist) = Logica_Ubigeo.Instancia.ObtenerUbigeoCompleto(proveedor.id_ubigeo);
+
+                // Asignar Departamento
+                cboDepartamento.SelectedValue = idDep;
+
+                // Cargar provincias
+                cboProvincia.DataSource = Logica_Ubigeo.Instancia.ObtenerProvincias(idDep);
+                cboProvincia.DisplayMember = "NombreProvincia";
+                cboProvincia.ValueMember = "IdProvincia";
+                cboProvincia.SelectedValue = idProv;
+
+                // Cargar distritos
+                cboDistrito.DataSource = Logica_Ubigeo.Instancia.ObtenerDistritos(idProv);
+                cboDistrito.DisplayMember = "NombreDistrito";
+                cboDistrito.ValueMember = "IdDistrito";
+                cboDistrito.SelectedValue = idDist;
+            }
+        }
+        private void btnNuevoProv_Click(object sender, EventArgs e)
+        {
+            if (txtRazSoc.Text == "" || txtRuc.Text == "" || txtDireccion.Text == "" || txtTelefono.Text == ""
+            || cbmRubro.SelectedIndex == -1 || cboDepartamento.SelectedIndex == -1
+            || cboProvincia.SelectedIndex == -1 || cboDistrito.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
-                Entidad_Proveedor eProv = new Entidad_Proveedor();
-                eProv.razon_social = txtRazSoc.Text.Trim().ToLower();
-                eProv.ruc = int.Parse(txtRuc.Text.Trim());
-                eProv.direccion = txtDireccion.Text.Trim() ;
-                eProv.telefono = int.Parse(txtTelefono.Text.Trim());
-                eProv.email = txtEmail.Text.Trim();
-                eProv.estado = true;
-                eProv.Ciudad = new Entidad_ciudad { id_ciudad = Convert.ToInt32(cbmCiudad.SelectedValue) };
-                eProv.Rubro = new Entidad_rubro { id_rubro = Convert.ToInt32(cbmRubro.SelectedValue) };
-                Logica_Proveedor.Instancia.InsertaProveedor(eProv);
+                Entidad_Proveedor eProv = new Entidad_Proveedor
+                {
+                    razon_social = txtRazSoc.Text.Trim(),
+                    ruc = Convert.ToInt32(txtRuc.Text),
+                    direccion = txtDireccion.Text.Trim(),
+                    telefono = Convert.ToInt32(txtTelefono.Text),
+                    estado = true,
+                    Rubro = new Entidad_rubro
+                    {
+                        id_rubro = Convert.ToInt32(cbmRubro.SelectedValue)
+                    }
+                };
 
+                int idDepartamento = Convert.ToInt32(cboDepartamento.SelectedValue);
+                int idProvincia = Convert.ToInt32(cboProvincia.SelectedValue);
+                int idDistrito = Convert.ToInt32(cboDistrito.SelectedValue);
+
+                Logica_Proveedor.Instancia.RegistrarProveedor(eProv, idDepartamento, idProvincia, idDistrito);
+
+                MessageBox.Show("Proveedor registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarProveedores();
+                LimpiarCampos();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error al registrar proveedor: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            MostrarProveedores();
-            LimpiarCampos();
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             MostrarProveedores();
+            LimpiarCampos();
         }
 
         private void btnActualizarProv_Click(object sender, EventArgs e)
         {
-            Entidad_Proveedor prov = new Entidad_Proveedor
+            if (idProveedorSeleccionado == 0)
             {
-                id = idProveedorSeleccionado,
-                razon_social = txtRazSoc.Text,
-                ruc = int.Parse(txtRuc.Text),
-                direccion = txtDireccion.Text,
-                telefono = int.Parse(txtTelefono.Text),
-                email = txtEmail.Text,
-                estado = true,
-                Ciudad = (Entidad_ciudad)cbmCiudad.SelectedItem,
-                Rubro = (Entidad_rubro)cbmRubro.SelectedItem
-            };
+                MessageBox.Show("Seleccione un proveedor para actualizar.");
+                return;
+            }
+            try
+            {
+                Entidad_Proveedor prov = new Entidad_Proveedor
+                {
+                    id = idProveedorSeleccionado,
+                    razon_social = string.IsNullOrWhiteSpace(txtRazSoc.Text) ? null : txtRazSoc.Text.Trim(),
+                    direccion = string.IsNullOrWhiteSpace(txtDireccion.Text) ? null : txtDireccion.Text.Trim(),
+                    ruc = string.IsNullOrWhiteSpace(txtRuc.Text) ? 0 : Convert.ToInt32(txtRuc.Text),
+                    telefono = string.IsNullOrWhiteSpace(txtTelefono.Text) ? 0 : Convert.ToInt32(txtTelefono.Text),
+                    Rubro = cbmRubro.SelectedValue != null
+                                ? new Entidad_rubro { id_rubro = Convert.ToInt32(cbmRubro.SelectedValue) }
+                                : null
+                };
 
-            Logica_Proveedor.Instancia.EditaCliente(prov);
-            MessageBox.Show("Proveedor actualizado");
-            MostrarProveedores();
-            LimpiarCampos();
+                Logica_Proveedor.Instancia.EditaProveedor(prov);
+                MessageBox.Show("Proveedor actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarProveedores();
+                LimpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar proveedor: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEliminarProv_Click(object sender, EventArgs e)
         {
             if (idProveedorSeleccionado == 0)
             {
-                MessageBox.Show("Seleccione la fila de un proveedor para deshabilitar");
+                MessageBox.Show("Seleccione un proveedor de la tabla.");
                 return;
             }
 
@@ -140,44 +232,89 @@ namespace Proyecto_Final_Moanso
             };
 
             Logica_Proveedor.Instancia.DeshabilitarProveedor(prov);
-            MessageBox.Show("Proveedor inhabilitado");
+            MessageBox.Show("Proveedor inhabilitado correctamente.");
             MostrarProveedores();
             LimpiarCampos();
+            idProveedorSeleccionado = 0;
         }
 
         private int idProveedorSeleccionado = 0;
         private int ultimaFilaSeleccionada = -1;
-
-        private void dgvProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnHabilitadProv_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (idProveedorSeleccionado == 0)
             {
-                if (e.RowIndex == ultimaFilaSeleccionada)
+                MessageBox.Show("Seleccione un proveedor de la tabla.");
+                return;
+            }
+
+            Entidad_Proveedor prov = new Entidad_Proveedor
+            {
+                id = idProveedorSeleccionado
+            };
+            Logica_Proveedor.Instancia.habilitarProveedor(prov);
+            MessageBox.Show("Proveedor habilitado correctamente.");
+            MostrarProveedores();
+            LimpiarCampos();
+            idProveedorSeleccionado = 0;
+        }
+
+        private void btnMostrarDesh_Click(object sender, EventArgs e)
+        {
+            MostrarProveedoresInactivo();
+            LimpiarCampos();
+        }
+
+        private void btnBusProveedor_Click(object sender, EventArgs e)
+        {
+            string nombre = txtBuscar.Text.Trim();
+
+            if (string.IsNullOrEmpty(nombre))
+            {
+                MessageBox.Show("Ingrese un nombre para buscar.");
+                return;
+            }
+
+            DataTable resultado = Logica_Proveedor.Instancia.BuscarProveedorPorNombre(nombre);
+
+            if (resultado.Rows.Count > 0)
+            {
+                dgvProveedor.DataSource = resultado;
+
+                // Simular clic en primera fila para llenar los datos
+                DataGridViewRow fila = dgvProveedor.Rows[0];
+                idProveedorSeleccionado = Convert.ToInt32(fila.Cells["id_proveedor"].Value);
+
+                Entidad_Proveedor proveedor = Logica_Proveedor.Instancia.BuscarProveedorPorID(idProveedorSeleccionado);
+
+                if (proveedor != null)
                 {
-                    // Si haces clic otra vez en la misma fila, limpia los campos
-                    LimpiarCampos();
-                    idProveedorSeleccionado = 0;
-                    ultimaFilaSeleccionada = -1;
+                    txtRazSoc.Text = proveedor.razon_social;
+                    txtRuc.Text = proveedor.ruc.ToString();
+                    txtDireccion.Text = proveedor.direccion;
+                    txtTelefono.Text = proveedor.telefono.ToString();
+                    cbmRubro.SelectedValue = proveedor.Rubro.id_rubro;
+
+                    var (idDep, idProv, idDist) = Logica_Ubigeo.Instancia.ObtenerUbigeoCompleto(proveedor.id_ubigeo);
+
+                    cboDepartamento.SelectedValue = idDep;
+
+                    cboProvincia.DataSource = Logica_Ubigeo.Instancia.ObtenerProvincias(idDep);
+                    cboProvincia.DisplayMember = "NombreProvincia";
+                    cboProvincia.ValueMember = "IdProvincia";
+                    cboProvincia.SelectedValue = idProv;
+
+                    cboDistrito.DataSource = Logica_Ubigeo.Instancia.ObtenerDistritos(idProv);
+                    cboDistrito.DisplayMember = "NombreDistrito";
+                    cboDistrito.ValueMember = "IdDistrito";
+                    cboDistrito.SelectedValue = idDist;
                 }
-                else
-                {
-                    // Cargar datos en los campos
-                    DataGridViewRow fila = dgvProveedor.Rows[e.RowIndex];
-
-                    idProveedorSeleccionado = Convert.ToInt32(fila.Cells["ID"].Value);
-                    txtRazSoc.Text = fila.Cells["RazonSocial"].Value.ToString();
-                    txtRuc.Text = fila.Cells["RUC"].Value.ToString();
-                    txtDireccion.Text = fila.Cells["Direccion"].Value.ToString();
-                    txtTelefono.Text = fila.Cells["Telefono"].Value.ToString();
-                    txtEmail.Text = fila.Cells["Email"].Value.ToString();
-
-                    cbmCiudad.SelectedItem = cbmCiudad.Items.Cast<Entidad_ciudad>()
-                        .FirstOrDefault(c => c.nombre == fila.Cells["Ciudad"].Value.ToString());
-
-                    cbmRubro.SelectedItem = cbmRubro.Items.Cast<Entidad_rubro>()
-                        .FirstOrDefault(r => r.descripcion == fila.Cells["Rubro"].Value.ToString());
-                    ultimaFilaSeleccionada = e.RowIndex;
-                }
+            }
+            else
+            {
+                MessageBox.Show("No se encontró proveedor con ese nombre.");
+                dgvProveedor.DataSource = null;
+                LimpiarCampos();
             }
         }
     }

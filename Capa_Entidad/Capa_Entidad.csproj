@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entidad_ciudad.cs" />
+    <Compile Include="Entidad_Categoria.cs" />
     <Compile Include="Entidad_Cliente.cs" />
+    <Compile Include="Entidad_Color.cs" />
     <Compile Include="Entidad_DetalleVenta.cs" />
+    <Compile Include="Entidad_Marca.cs" />
     <Compile Include="Entidad_Productos.cs" />
     <Compile Include="Entidad_Empleado.cs" />
     <Compile Include="Entidad_Proveedor.cs" />
     <Compile Include="Entidad_rubro.cs" />
+    <Compile Include="Entidad_Talla.cs" />
     <Compile Include="Entidad_Ubigeo.cs" />
     <Compile Include="Entidad_Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

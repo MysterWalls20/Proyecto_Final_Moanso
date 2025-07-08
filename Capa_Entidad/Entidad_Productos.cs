@@ -15,7 +15,17 @@ namespace Capa_Entidad
         public string color { get; set; }
         public int stock { get; set; }
         public string categoria { get; set; }
+        public string tallas { get; set; }
         public double precio_unidad { get; set; }
+        public double precio_Compra { get; set; }
+        public DateTime fecha_registro { get; set; }
         public bool estado { get; set; }
+
+        //ID
+
+        public int id_talla { get; set; }
+        public int id_marca { get; set; }
+        public int id_color { get; set; }
+        public int id_categoria { get; set; }
     }
 }
