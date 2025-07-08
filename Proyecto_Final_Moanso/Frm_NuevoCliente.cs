@@ -18,6 +18,7 @@ namespace Proyecto_Final_Moanso
         public Frm_NuevoCliente()
         {
             InitializeComponent();
+            CargarRubro();
         }
         private void Frm_NuevoCliente_Load(object sender, EventArgs e)
         {
@@ -45,7 +46,7 @@ namespace Proyecto_Final_Moanso
 
             // Jurídico
             txtRazonSocial.Enabled = !esNatural;
-            txtRubro.Enabled = !esNatural;
+            cbmRubro.Enabled = !esNatural;
 
             txtDireccion.Enabled = true;
             txtNumero.Enabled = true;
@@ -72,21 +73,14 @@ namespace Proyecto_Final_Moanso
                 cboDistrito.SelectedIndex = -1;
             }
         }
-        //private void LimpiarCamposN()
-        //{
-        //    txtNomC.Clear();
-        //    txtApeC.Clear();
-        //    txtDniC.Clear();
-        //    txtNumC.Clear();
-        //    txtDIreccionC.Clear();
-        //}
-        //private void LimpiarCamposJ()
-        //{
-        //    txtRuc.Clear();
-        //    txtRazonS.Clear();
-        //    txtNumC.Clear();
-        //    txtDIreccionC.Clear();
-        //}
+
+        private void CargarRubro()
+        {
+            cbmRubro.DataSource = Logica_Rubro.Instancia.ListarRubro();
+            cbmRubro.DisplayMember = "rubro";
+            cbmRubro.ValueMember = "id_rubro";
+            cbmRubro.SelectedIndex = -1;
+        }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -134,7 +128,7 @@ namespace Proyecto_Final_Moanso
                 else if (tipoCliente == "Jurídico")
                 {
                     if (cboDepartamento.Text == "" || txtDireccion.Text == "" || txtNumero.Text == ""
-                        || txtRUC.Text == "" || txtRazonSocial.Text == "" || txtRubro.Text == "")
+                        || txtRUC.Text == "" || txtRazonSocial.Text == "" || cbmRubro.Text == "")
                     {
                         MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
@@ -146,7 +140,7 @@ namespace Proyecto_Final_Moanso
                             Numero = Convert.ToInt32(txtNumero.Text),
                             Ruc = Convert.ToInt64(txtRUC.Text),
                             RazonSocial = txtRazonSocial.Text,
-                            Rubro = txtRubro.Text
+                            Rubro = cbmRubro.Text
                         };
 
                         Logica_Cliente.Instancia.RegistrarClienteJuridico(

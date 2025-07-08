@@ -321,7 +321,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(407, 335);
+            this.label1.Location = new System.Drawing.Point(410, 335);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 26);
             this.label1.TabIndex = 67;
@@ -387,7 +387,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(726, 321);
+            this.label6.Location = new System.Drawing.Point(726, 322);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 26);
             this.label6.TabIndex = 75;
@@ -409,7 +409,7 @@
             this.cboDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDistrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDistrito.FormattingEnabled = true;
-            this.cboDistrito.Location = new System.Drawing.Point(102, 437);
+            this.cboDistrito.Location = new System.Drawing.Point(104, 428);
             this.cboDistrito.Margin = new System.Windows.Forms.Padding(4);
             this.cboDistrito.Name = "cboDistrito";
             this.cboDistrito.Size = new System.Drawing.Size(254, 30);
@@ -420,7 +420,7 @@
             this.cboProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProvincia.FormattingEnabled = true;
-            this.cboProvincia.Location = new System.Drawing.Point(121, 395);
+            this.cboProvincia.Location = new System.Drawing.Point(121, 385);
             this.cboProvincia.Margin = new System.Windows.Forms.Padding(4);
             this.cboProvincia.Name = "cboProvincia";
             this.cboProvincia.Size = new System.Drawing.Size(260, 30);
@@ -432,10 +432,10 @@
             this.cboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDepartamento.FormattingEnabled = true;
-            this.cboDepartamento.Location = new System.Drawing.Point(165, 352);
+            this.cboDepartamento.Location = new System.Drawing.Point(178, 340);
             this.cboDepartamento.Margin = new System.Windows.Forms.Padding(4);
             this.cboDepartamento.Name = "cboDepartamento";
-            this.cboDepartamento.Size = new System.Drawing.Size(225, 30);
+            this.cboDepartamento.Size = new System.Drawing.Size(212, 30);
             this.cboDepartamento.TabIndex = 79;
             this.cboDepartamento.SelectedIndexChanged += new System.EventHandler(this.cboDepartamento_SelectedIndexChanged);
             // 
@@ -443,7 +443,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 437);
+            this.label9.Location = new System.Drawing.Point(8, 428);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 26);
             this.label9.TabIndex = 84;
@@ -453,7 +453,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(9, 395);
+            this.label8.Location = new System.Drawing.Point(9, 385);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 26);
             this.label8.TabIndex = 83;
@@ -463,7 +463,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 353);
+            this.label7.Location = new System.Drawing.Point(8, 341);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(149, 26);
             this.label7.TabIndex = 82;

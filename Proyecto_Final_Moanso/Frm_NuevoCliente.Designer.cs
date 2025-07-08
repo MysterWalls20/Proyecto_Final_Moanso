@@ -46,7 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtRubro = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -59,6 +58,7 @@
             this.cboTipoCliente = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.cbmRubro = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -257,8 +257,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbmRubro);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtRubro);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtRazonSocial);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -280,18 +280,6 @@
             this.label10.Size = new System.Drawing.Size(74, 26);
             this.label10.TabIndex = 64;
             this.label10.Text = "Rubro:";
-            // 
-            // txtRubro
-            // 
-            this.txtRubro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRubro.Enabled = false;
-            this.txtRubro.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRubro.Location = new System.Drawing.Point(21, 185);
-            this.txtRubro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRubro.MaxLength = 25;
-            this.txtRubro.Name = "txtRubro";
-            this.txtRubro.Size = new System.Drawing.Size(269, 33);
-            this.txtRubro.TabIndex = 63;
             // 
             // label12
             // 
@@ -455,6 +443,18 @@
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // cbmRubro
+            // 
+            this.cbmRubro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmRubro.Enabled = false;
+            this.cbmRubro.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmRubro.FormattingEnabled = true;
+            this.cbmRubro.Location = new System.Drawing.Point(21, 193);
+            this.cbmRubro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbmRubro.Name = "cbmRubro";
+            this.cbmRubro.Size = new System.Drawing.Size(223, 34);
+            this.cbmRubro.TabIndex = 88;
+            // 
             // Frm_NuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -506,7 +506,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtRubro;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -519,5 +518,6 @@
         private System.Windows.Forms.ComboBox cboTipoCliente;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.ComboBox cbmRubro;
     }
 }

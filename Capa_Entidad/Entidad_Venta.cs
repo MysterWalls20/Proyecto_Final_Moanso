@@ -10,11 +10,9 @@ namespace Capa_Entidad
     {
         public int IdVenta { get; set; }
         public int IdCliente { get; set; }
+        public int Id_FormaPago { get; set; }
         public DateTime Fecha { get; set; }
-        public string metodoPago { get; set; }
-        public decimal Total { get; set; }
-        public bool EsPedido { get; set; } = false;
-        public string Direccion { get; set; } = string.Empty;
+        public double Total { get; set; }
         public List<Entidad_DetalleVenta> Detalles { get; set; }
     }
 }

@@ -170,31 +170,25 @@ namespace Capa_Datos
         //    return edita;
         //}
 
-        ////deshabilitaCliente
-        //public Boolean DeshabilitarCliente(Entidad_Cliente Cli)
-        //{
-        //    SqlCommand cmd = null;
-        //    Boolean delete = false;
-        //    try
-        //    {
-        //        SqlConnection cn = Conexion.Instancia.Conectar();
-        //        cmd = new SqlCommand("spDeshabilitaCliente", cn);
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        cmd.Parameters.AddWithValue("@cId", Cli.id);
-        //        cn.Open();
-        //        int i = cmd.ExecuteNonQuery();
-        //        if (i > 0)
-        //        {
-        //            delete = true;
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        throw e;
-        //    }
-        //    finally { cmd.Connection.Close(); }
-        //    return delete;
-        //}
+        public DataTable BuscarClientePorNombre(string nombre)
+        {
+            DataTable tabla = new DataTable();
+
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                if (cn.State != ConnectionState.Open)
+                    cn.Open();
+
+                SqlCommand cmd = new SqlCommand("sp_BuscarClientePorNombre", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+            }
+
+            return tabla;
+        }
         #endregion metodos
 
     }

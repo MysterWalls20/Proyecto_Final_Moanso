@@ -77,6 +77,12 @@ namespace Capa_Logica
         {
             Datos_Cliente.Instancia.HabilitarCliente(idCliente);
         }
+        // Buscar cliente por ID
+        Datos_Cliente datos = new Datos_Cliente();
+        public DataTable BuscarClientePorNombre(string nombre)
+        {
+            return datos.BuscarClientePorNombre(nombre);
+        }
         #endregion metodos
     }
 }

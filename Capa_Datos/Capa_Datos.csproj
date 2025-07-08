@@ -45,7 +45,9 @@
     <Compile Include="Datos_Categoria.cs" />
     <Compile Include="Datos_Cliente.cs" />
     <Compile Include="Datos_Color.cs" />
+    <Compile Include="Datos_DetalleOrdenCompra.cs" />
     <Compile Include="Datos_Marca.cs" />
+    <Compile Include="Datos_OrdenCompra.cs" />
     <Compile Include="Datos_Productos.cs" />
     <Compile Include="Datos_Empleado.cs" />
     <Compile Include="Datos_Proveedor.cs" />

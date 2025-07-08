@@ -1,4 +1,5 @@
 ﻿using Capa_Entidad;
+using Capa_Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,12 @@ namespace Proyecto_Final_Moanso
             cboTipoCliente.Items.Add("Natural");
             cboTipoCliente.Items.Add("Jurídico");
             cboTipoCliente.Text = clienteSelect.TipoCliente;
+            cboTipoCliente.Enabled = false;
+
+            cboDepartamento.DataSource = Logica_Ubigeo.Instancia.ObtenerDepartamentos();
+            cboDepartamento.DisplayMember = "NombreDepartamento";
+            cboDepartamento.ValueMember = "IdDepartamento";
+            cboDepartamento.SelectedIndex = -1;
             CargarDatosCliente();
         }
         private void cboTipoCliente_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,6 +79,28 @@ namespace Proyecto_Final_Moanso
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cboDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboDepartamento.SelectedValue is int idDepartamento)
+            {
+                cboProvincia.DataSource = Logica_Ubigeo.Instancia.ObtenerProvincias(idDepartamento);
+                cboProvincia.DisplayMember = "NombreProvincia";
+                cboProvincia.ValueMember = "IdProvincia";
+                cboProvincia.SelectedIndex = -1;
+            }
+        }
+
+        private void cboProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboProvincia.SelectedValue is int idProvincia)
+            {
+                cboDistrito.DataSource = Logica_Ubigeo.Instancia.ObtenerDistritos(idProvincia);
+                cboDistrito.DisplayMember = "NombreDistrito";
+                cboDistrito.ValueMember = "IdDistrito";
+                cboDistrito.SelectedIndex = -1;
+            }
         }
     }
 }

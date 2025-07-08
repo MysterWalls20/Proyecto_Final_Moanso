@@ -44,7 +44,9 @@
     <Compile Include="Logica_Categoria.cs" />
     <Compile Include="Logica_Cliente.cs" />
     <Compile Include="Logica_Color.cs" />
+    <Compile Include="Logica_DetalleOrdenCompra.cs" />
     <Compile Include="Logica_Marca.cs" />
+    <Compile Include="Logica_OrdenCompra.cs" />
     <Compile Include="Logica_Productos.cs" />
     <Compile Include="Logica_Empleado.cs" />
     <Compile Include="Logica_Proveedor.cs" />
